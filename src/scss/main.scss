@@ -1,0 +1,214 @@
+/* main.scss */
+@import "bootstrap-tabulex";  /* Custom bootstrap components importer */
+@import "variables-tabulex";  /* Custom variables */
+// @import "bootstrap/theme";
+@import "font-awesome";
+
+
+//
+// Custom mixin's
+// --------------------------------------------------
+@mixin calc($property, $expression...) {
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: -o-calc(#{$expression});
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
+
+//
+// Tabulex only variables
+// --------------------------------------------------
+$navbar-height:         70px;
+$navbar-subbar-height:  140px;
+$nav-mainmenu-width:    270px;
+$gutter-normal:         floor($grid-gutter-width / 2);
+$gutter-small:          floor($grid-gutter-width / 4);
+$icon-size:             24px;
+
+//
+// Basic blocks
+// --------------------------------------------------
+
+body {
+  padding: 0;
+  padding-top: $navbar-height;
+
+  &.include-subbar {
+    padding-top: $navbar-subbar-height;
+  }
+}
+
+#main-container  {
+  height: auto;
+  min-height: 100%;
+  width: 100%;
+  position: relative;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+
+#content-div {
+  width: 100%;
+  float: right;
+  padding-left: 0;
+  @include transition(all 0.5s ease);
+
+  .content-div_wrapper {
+    position: relative;
+  }
+}
+
+@media (max-width: $screen-md-min - 1px){
+  .container {
+    width: 100%;
+  }
+}
+@media (min-width: $screen-md-min){
+  #content-div {
+    @include calc(width, #{"100% -  #{$nav-mainmenu-width + 5px}"});
+    // margin-left: $nav-mainmenu-width + 10px;
+    float: right;
+    padding-left: $gutter-normal;
+  }
+}
+
+
+//
+// Iconography
+// --------------------------------------------------
+
+.fa {
+  position: relative;
+  width: $icon-size;
+  &:before {
+    position: absolute;
+    font-size: $icon-size;
+    top: - ($icon-size * 0.75);
+  }
+}
+
+
+
+//
+// Navbar
+// --------------------------------------------------
+
+#header.navbar.navbar-default {
+  background-color: $navbar-default-bg;
+  min-height: 40px;
+  z-index: 99999;
+
+  .container {
+    //padding-left: $gutter-small;
+    //padding-right: $gutter-small;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .navbar-nav {
+    margin: 0;
+
+    > .open > a,
+    > .active > a {
+      background-color: darken($navbar-default-bg, 5%);
+      @include box-shadow(none);
+    }
+
+    > li {
+      float: left;
+      > a {
+        color: white;
+        &:hover, &:active {
+          background-color: darken($navbar-default-bg, 5%);
+        }
+      }
+    }
+  }
+
+  .navbar-toggle {
+    float: left;
+    border: 0;
+    border-radius: 0;
+    display: block;
+    padding: 13px 10px;
+    margin: 0 10px;
+    margin-bottom: 0;
+
+    &:hover, &:active {
+      background-color: darken($navbar-default-bg, 5%);
+    }
+
+    .icon-bar {
+      background-color: white;
+    }
+  }
+
+  .navbar-right {
+    float: right
+  }
+
+  .navbar-left {
+    float: left;
+  }
+}
+
+@media (max-width: $screen-sm-max){
+  .container {
+    width: 100%;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  #header.navbar.navbar-default {
+    .container {
+      //padding-left: $gutter-normal;
+      //padding-right: $gutter-normal;
+    }
+    .navbar-toggle {
+      padding: 18px 10px;
+    }
+  }
+}
+
+@media (min-width: $screen-md) {
+  #header.navbar.navbar-default {
+    .navbar-toggle {
+      display: none;
+    }
+  }
+}
+
+.nav-mainmenu {
+  margin-left: ( $nav-mainmenu-width + $gutter-normal ) * -1;
+  width: $nav-mainmenu-width;
+  position: absolute;
+  @include transition(all 0.5s ease);
+
+  .nav-mainmenu_list {
+    background-color: rgba(255,255,255,0.9);
+    float: left;
+    position: relative;
+    width: $nav-mainmenu-width;
+    z-index: 9990;
+
+    > li {
+      float: none;
+    }
+  }
+
+  &.is-open {
+    margin-left: 0;
+  }
+}
+
+
+@media (min-width: $screen-md){
+  .nav-mainmenu {
+    margin-left: 0;
+    position: relative;
+  }
+}
+
+.overlay {
+  background-color: red;
+}
