@@ -1,0 +1,88 @@
+@import "vendor/bootstrap";
+@import "vendor/font-awesome/font-awesome.scss";
+
+
+/* CUSTOM styles */
+body {
+  padding-top: 50px;
+}
+
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+pre {
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-clipboard {
+  display: block;
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.show-grid [class^=col-] {
+  padding: 10px;
+  background-color: rgba(86,61,124,.15);
+  border: 1px solid rgba(86,61,124,.2);
+}
+
+.navbar-inverse {
+  background-image: none;
+  //background-color: rgba(117,91,126, 0.8); /* 755b7e */
+  background-color: rgba(#1A657E, 0.9); /* 755b7e */
+
+  .navbar-nav > li > a {
+    color: white;
+  }
+}
+
+/* PANEL */
+.panel-heading {
+  border: none;
+
+  h4.panel-title {
+    font: bold 14px "Trebuchet MS";
+    //font-weight: bold;
+    color: #999;
+    line-height: 18px;
+
+    i {
+      vertical-align: middle;
+      margin-right: 4px;
+      font-size: 16px;
+      color: #fbae08;
+    }
+  }
+
+  a.toggle_collapse {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+
+    i {
+      color: #cdcdcd;
+      font-style: 16px;
+    }
+  }
+}
+
+.panel {
+  box-shadow: none;
+}
+
+.panel-default {
+  border-color: #ccc;
+  border-radius: 2px;
+
+  > .panel-heading {
+    position: relative;
+    background-color: transparent;
+  }
+}
