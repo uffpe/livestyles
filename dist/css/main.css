@@ -7379,10 +7379,10 @@ body {
     float: right;
     padding-left: 15px; } }
 
-.fa {
+.navbar .fa {
   position: relative;
   width: 24px; }
-  .fa:before {
+  .navbar .fa:before {
     position: absolute;
     font-size: 24px;
     top: -18px; }
@@ -7461,3 +7461,59 @@ body {
 
 .overlay {
   background-color: red; }
+
+/* CUSTOM styles */
+pre {
+  padding: 0;
+  position: relative;
+  overflow: hidden; }
+
+.btn-clipboard {
+  display: block;
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0; }
+
+.show-grid [class^=col-] {
+  padding: 10px;
+  background-color: rgba(86, 61, 124, 0.15);
+  border: 1px solid rgba(86, 61, 124, 0.2); }
+
+.navbar-inverse {
+  background-image: none;
+  background-color: rgba(26, 101, 126, 0.9);
+  /* 755b7e */ }
+  .navbar-inverse .navbar-nav > li > a {
+    color: white; }
+
+/* PANEL */
+.panel-heading {
+  border: none; }
+  .panel-heading h4.panel-title {
+    font: bold 14px "Trebuchet MS";
+    color: #999;
+    line-height: 18px; }
+    .panel-heading h4.panel-title i {
+      vertical-align: middle;
+      margin-right: 4px;
+      font-size: 16px;
+      color: #fbae08; }
+  .panel-heading a.toggle_collapse {
+    position: absolute;
+    right: 8px;
+    top: 8px; }
+    .panel-heading a.toggle_collapse i {
+      color: #cdcdcd;
+      font-size: 16px; }
+
+.panel {
+  box-shadow: none; }
+
+.panel-default {
+  border-color: #ccc;
+  border-radius: 2px; }
+  .panel-default > .panel-heading {
+    position: relative;
+    background-color: transparent; }
