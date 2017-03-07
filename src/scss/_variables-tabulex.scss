@@ -8,6 +8,15 @@ $bootstrap-sass-asset-helper: false !default;
 //
 //## Gray and brand colors for use across Bootstrap.
 
+
+$blue-steel-base:         #497B99; // Tabulex
+$blue-steel-light:        #6B9CBA; // Tabulex
+$green-hornet:            #7F9379; // Tabulex
+
+$gandalf-the-grey-ba:     #E5E5E3; // Tabulex
+$grey-x-dark:             #484848; // Tabulex
+$grey-x-light:            #F9F9F5; // Tabulex
+
 $gray-base:              #000 !default;
 $gray-darker:            lighten($gray-base, 13.5%) !default; // #222
 $gray-dark:              lighten($gray-base, 20%) !default;   // #333
@@ -15,11 +24,12 @@ $gray:                   lighten($gray-base, 33.5%) !default; // #555
 $gray-light:             lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 
-$brand-primary:         #1A657E; // Tabulex
+$brand-primary:         $blue-steel-base; // Tabulex
 $brand-success:         #5cb85c !default;
 $brand-info:            #5bc0de !default;
 $brand-warning:         #f0ad4e !default;
 $brand-danger:          #d9534f !default;
+
 
 
 //== Scaffolding
@@ -27,7 +37,7 @@ $brand-danger:          #d9534f !default;
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               #fff !default;
+$body-bg:               $grey-x-light; // Tabulex
 //** Global text color on `<body>`.
 $text-color:            $gray-dark !default;
 
@@ -362,7 +372,7 @@ $container-lg:                 $container-large-desktop !default;
 //##
 
 // Basics of a navbar
-$navbar-height:                    40px; // Tabulex
+$navbar-height:                    50px; // Tabulex
 $navbar-margin-bottom:             $line-height-computed !default;
 $navbar-border-radius:             $border-radius-base !default;
 $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
@@ -395,12 +405,12 @@ $navbar-default-toggle-border-color:       #ddd !default;
 
 //=== Inverted navbar
 // Reset inverted navbar basics
-$navbar-inverse-color:                      lighten($gray-light, 15%) !default;
-$navbar-inverse-bg:                         #222 !default;
+$navbar-inverse-color:                      white; // tabulex
+$navbar-inverse-bg:                         $brand-primary; // Tabulex
 $navbar-inverse-border:                     darken($navbar-inverse-bg, 10%) !default;
 
 // Inverted navbar links
-$navbar-inverse-link-color:                 lighten($gray-light, 15%) !default;
+$navbar-inverse-link-color:                 white; // Tabulex
 $navbar-inverse-link-hover-color:           #fff !default;
 $navbar-inverse-link-hover-bg:              transparent !default;
 $navbar-inverse-link-active-color:          $navbar-inverse-link-hover-color !default;
@@ -427,8 +437,8 @@ $navbar-inverse-toggle-border-color:        #333 !default;
 $nav-link-padding:                          10px 15px !default;
 $nav-link-hover-bg:                         $gray-lighter !default;
 
-$nav-disabled-link-color:                   $gray-light !default;
-$nav-disabled-link-hover-color:             $gray-light !default;
+$nav-disabled-link-color:                   $gray-lighter !default;
+$nav-disabled-link-hover-color:             $gray-lighter !default;
 
 //== Tabs
 $nav-tabs-border-color:                     #ddd !default;

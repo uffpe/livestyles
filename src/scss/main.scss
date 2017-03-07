@@ -1,6 +1,6 @@
 /* main.scss */
-@import "bootstrap-tabulex";  /* Custom bootstrap components importer */
 @import "variables-tabulex";  /* Custom variables */
+@import "bootstrap-tabulex";  /* Custom bootstrap components importer */
 // @import "bootstrap/theme";
 @import "font-awesome";
 
@@ -23,7 +23,7 @@ $navbar-subbar-height:  140px;
 $nav-mainmenu-width:    270px;
 $gutter-normal:         floor($grid-gutter-width / 2);
 $gutter-small:          floor($grid-gutter-width / 4);
-$icon-size:             24px;
+$icon-size:             20px;
 
 //
 // Basic blocks
@@ -76,79 +76,96 @@ body {
 //
 // Iconography
 // --------------------------------------------------
-
-.navbar .fa { // Note: be more specific
+/*
+#header.navbar .fa { // Note: be more specific
   position: relative;
-  width: $icon-size;
+  vertical-align: middle;
+  font-size: $icon-size;
+
   &:before {
-    position: absolute;
-    font-size: $icon-size;
-    top: - ($icon-size * 0.75);
+    // position: absolute;
+    // font-size: $icon-size;
+    // top: - ($icon-size * 0.75);
   }
 }
+*/
 
-
+.fa-stack {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  vertical-align: middle;
+}
 
 //
 // Navbar
 // --------------------------------------------------
 
-#header.navbar.navbar-default {
-  background-color: $navbar-default-bg;
-  min-height: 40px;
-  z-index: 99999;
+#header.navbar {
+    &.navbar-inverse {
+    // background-color: $navbar-inverse-bg;
+    // min-height: 50px;
+    z-index: 99999;
 
-  .container {
-    //padding-left: $gutter-small;
-    //padding-right: $gutter-small;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .navbar-nav {
-    margin: 0;
-
-    > .open > a,
-    > .active > a {
-      background-color: darken($navbar-default-bg, 5%);
-      @include box-shadow(none);
+    > .container {
+      padding-left: 0;
+      padding-right: 0;
     }
 
-    > li {
-      float: left;
-      > a {
-        color: white;
-        &:hover, &:active {
-          background-color: darken($navbar-default-bg, 5%);
+    .navbar-nav {
+      margin: 0;
+
+      > .open > a,
+      > .active > a {
+        background-color: darken($navbar-inverse-bg, 5%);
+        @include box-shadow(none);
+      }
+
+      > li {
+        float: left;
+        > a {
+          padding: 15px 10px;
+
+          &:hover, &:active {
+            background-color: darken($navbar-inverse-bg, 5%);
+          }
         }
       }
     }
-  }
 
-  .navbar-toggle {
-    float: left;
-    border: 0;
-    border-radius: 0;
-    display: block;
-    padding: 13px 10px;
-    margin: 0 10px;
-    margin-bottom: 0;
+    .navbar-toggle {
+      float: left;
+      border: 0;
+      border-radius: 0;
+      display: block;
+      padding: 18px 10px;
+      margin: 0 10px;
+      margin-bottom: 0;
 
-    &:hover, &:active {
-      background-color: darken($navbar-default-bg, 5%);
+      &:hover, &:active {
+        background-color: darken($navbar-inverse-bg, 5%);
+      }
+
+      .icon-bar {
+        background-color: white;
+      }
     }
 
-    .icon-bar {
-      background-color: white;
+    .navbar-right {
+      float: right;
+      fa {
+        padding-left: 10px;
+      }
     }
-  }
 
-  .navbar-right {
-    float: right
-  }
-
-  .navbar-left {
-    float: left;
+    .navbar-left {
+      float: left;
+      fa {
+        padding-right: 10px;
+      }
+    }
   }
 }
 
@@ -159,7 +176,7 @@ body {
 }
 
 @media (min-width: $screen-sm-min) {
-  #header.navbar.navbar-default {
+  #header.navbar.navbar-inverse {
     .container {
       //padding-left: $gutter-normal;
       //padding-right: $gutter-normal;
@@ -171,7 +188,7 @@ body {
 }
 
 @media (min-width: $screen-md) {
-  #header.navbar.navbar-default {
+  #header.navbar.navbar-inverse {
     .navbar-toggle {
       display: none;
     }
@@ -185,14 +202,46 @@ body {
   @include transition(all 0.5s ease);
 
   .nav-mainmenu_list {
-    background-color: rgba(255,255,255,0.9);
+    // background-color: rgba(255,255,255,0.9);
     float: left;
     position: relative;
     width: $nav-mainmenu-width;
     z-index: 9990;
 
     > li {
-      float: none;
+      a {
+        background-color: white;
+        border: 0;
+        border-radius: 0;
+        color: $blue-steel-base;
+        font-weight: 600;
+        margin-bottom: 3px;
+        min-height: 40px;
+        padding: 0;
+
+        > .fa-stack {
+          background-color: $blue-steel-base;
+          color: white;
+          height: 40px;
+          width: 40px;
+          margin-right: 6px;
+
+          .fa-stack-1x  {
+            font-size: 24px;
+            line-height: 40px;
+          }
+        }
+      }
+      ul {
+        border-bottom: 1px solid $gandalf-the-grey-ba;
+        padding-left: 0;
+        margin-bottom: 4px;
+
+        > li {
+          border: 0;
+          padding-left: 50px;
+        }
+      }
     }
   }
 
@@ -236,12 +285,12 @@ pre {
 }
 
 .navbar-inverse {
-  background-image: none;
+  // background-image: none;
   //background-color: rgba(117,91,126, 0.8); /* 755b7e */
-  background-color: rgba(#1A657E, 0.9); /* 755b7e */
+  // background-color: rgba(#1A657E, 0.9); /* 755b7e */
 
   .navbar-nav > li > a {
-    color: white;
+    // color: white;
   }
 }
 

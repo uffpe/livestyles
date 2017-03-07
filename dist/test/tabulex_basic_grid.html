@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="iso-8859-1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Tabulex basic grid</title>
+
+        <!-- Bootstrap -->
+        <link href="../css/main.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body class="">
+
+
+        <div id="main-container">
+            <div class="overlay"></div>
+
+            <nav id="header" class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="nav navbar-nav navbar-left">
+                        <button type="button" class="navbar-toggle" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                <!--<div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav sidebar-nav">
+                        <li class="active"><a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-dashboard fa-stack-1x "></i></span> Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li class="dropdown-header">Nav header</li>
+                                <li><a href="#">Separated link</a></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                <!--</div>&lt;!&ndash;/.nav-collapse &ndash;&gt;-->
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Link</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="hidden-xs">Bruce banner<span class="hidden-xs hidden-sm"> - Teacher</span></span> <i class="fa fa-user fa-lg" aria-hidden="true"></i> </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- /container -->
+            </nav>
+
+
+            <div class="container">
+
+                <!-- Main menu -->
+                <nav id="mainmenu" class="nav-mainmenu" role="navigation" aria-label="Hovedmenu">
+                    <ul class="nav-mainmenu_list nav nav-stacked list-group">
+                        <li class="active"><a href="#menu1" class="list-group-item">
+                            <span class="fa-stack fa-lg" aria-hidden="true"><i class="fa fa-dashboard fa-stack-1x "></i></span>
+                            Forside</a>
+                        </a></li>
+                        <li><a href="#menu2" class="list-group-item">
+                            <span class="fa-stack fa-lg" aria-hidden="true"><i class="fa fa-dashboard fa-stack-1x "></i></span>
+                            Her og nu
+                        </a></li>
+                        <li><a href="#menu3" class="list-group-item">
+                            <span class="fa-stack fa-lg" aria-hidden="true"><i class="fa fa-dashboard fa-stack-1x "></i></span>
+                            Find børn
+                        </a></li>
+                        <li><a href="#menu4" class="list-group-item">
+                            <span class="fa-stack fa-lg" aria-hidden="true"><i class="fa fa-dashboard fa-stack-1x "></i></span>
+                            Hvem er hvor
+                        </a></li>
+                        <li class="collapse">
+                            <a href="#menu5" class="list-group-item" data-toggle="collapse" data-parent="#mainmenu" role="button">
+                                <span class="fa-stack fa-lg" aria-hidden="true"><i class="fa fa-dashboard fa-stack-1x "></i></span>
+                                Kommunikation <span class="caret"></span>
+                            </a>
+                            <ul class="collapse list-group-submenu" id="menu5">
+                                <li class="list-group-item" data-parent="#menu5"><a href="#">Action</a></li>
+                                <li class="list-group-item" data-parent="#menu5"><a href="#">Another action</a></li>
+                                <li class="list-group-item" data-parent="#menu5"><a href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="collapse">
+                            <a href="#menu6" class="list-group-item" data-toggle="collapse" data-parent="#mainmenu" role="button">
+                                <span class="fa-stack fa-lg" aria-hidden="true"><i class="fa fa-dashboard fa-stack-1x "></i></span>
+                                Planlægning <span class="caret"></span>
+                            </a>
+                            <ul class="collapse list-group-submenu" id="menu6">
+                                <li class="list-group-item" data-parent="#menu6"><a href="#">Action</a></li>
+                                <li class="list-group-item" data-parent="#menu6"><a href="#">Another action</a></li>
+                                <li class="list-group-item" data-parent="#menu6"><a href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#menu7" class="list-group-item">
+                            <span class="fa-stack fa-lg" aria-hidden="true"><i class="fa fa-dashboard fa-stack-1x "></i></span>
+                            Lister
+                        </a></li>
+                        <li class="collapse">
+                            <a href="#menu8" class="list-group-item" data-toggle="collapse" data-parent="#mainmenu" role="button">
+                                <span class="fa-stack fa-lg" aria-hidden="true"><i class="fa fa-dashboard fa-stack-1x "></i></span>
+                                Administratorer <span class="caret"></span>
+                            </a>
+                            <ul class="collapse list-group-submenu" id="menu8">
+                                <li class="list-group-item" data-parent="#menu8"><a href="#">Action</a></li>
+                                <li class="list-group-item" data-parent="#menu8"><a href="#">Another action</a></li>
+                                <li class="list-group-item" data-parent="#menu8"><a href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav><!-- /#nav-mainmenu -->
+
+                <!-- Page Content -->
+                <div id="content-div">
+                    <div class="content-div_wrapper">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h1>Overskrift</h1>
+                                    <p>This testpage shows the basic responsive and grid for the main content. It also have the top navigantion and the main sidemenu.  </p>
+                                    <p>Make sure to keep all page content within the <code>#content-div_wrapper</code>.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- /#page-content-wrapper -->
+            </div><!-- /container -->
+
+        </div><!-- /#main_container -->
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/lib/bootstrap.min.js"></script>
+    <script src="../js/tabulex.js"></script>
+</body>
+</html>
