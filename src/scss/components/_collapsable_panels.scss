@@ -1,0 +1,44 @@
+/* PANEL */
+.panel-heading {
+  border: none;
+
+  h4.panel-title {
+    font: bold 16px "Trebuchet MS";
+    font-weight: bold;
+    color: #999;
+    line-height: 18px;
+
+    i {
+      vertical-align: middle;
+      margin-right: 3px;
+      margin-top: -2px;
+      font-size: 20px;
+      color: #fbae08;
+    }
+  }
+
+  a.toggle_collapse {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+
+    i {
+      color: #cdcdcd;
+      font-size: 16px;
+    }
+  }
+}
+
+.panel {
+  box-shadow: none;
+}
+
+.panel-default {
+  border-color: #ccc;
+  border-radius: 2px;
+
+  > .panel-heading {
+    position: relative;
+    background-color: transparent;
+  }
+}

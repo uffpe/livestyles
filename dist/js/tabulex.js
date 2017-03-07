@@ -55,19 +55,21 @@ $(document).ready(function () {
             pre[i].appendChild(button);
         }
 
-        var copyCode = new Clipboard('.btn-clipboard', {
-            target: function(trigger) {
-                return trigger.previousElementSibling;
-            }
-        });
+        if ($('.btn-clipboard').length) {
+            var copyCode = new Clipboard('.btn-clipboard', {
+                target: function(trigger) {
+                    return trigger.previousElementSibling;
+                }
+            });
 
-        copyCode.on('success', function(event) {
-            event.clearSelection();
-            event.trigger.textContent = 'Copied';
-            window.setTimeout(function() {
-                event.trigger.textContent = 'Copy';
-            }, 2000);
-        });
+            copyCode.on('success', function(event) {
+                event.clearSelection();
+                event.trigger.textContent = 'Copied';
+                window.setTimeout(function() {
+                    event.trigger.textContent = 'Copy';
+                }, 2000);
+            });
+        }
     })();
 
 });

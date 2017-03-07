@@ -32,6 +32,7 @@ $icon-size:             20px;
 body {
   padding: 0;
   padding-top: $navbar-height;
+  background-color: #faf7f1;
 
   &.include-subbar {
     padding-top: $navbar-subbar-height;
@@ -293,47 +294,6 @@ pre {
     // color: white;
   }
 }
-
-/* PANEL */
-.panel-heading {
-  border: none;
-
-  h4.panel-title {
-    font: bold 14px "Trebuchet MS";
-    //font-weight: bold;
-    color: #999;
-    line-height: 18px;
-
-    i {
-      vertical-align: middle;
-      margin-right: 4px;
-      font-size: 16px;
-      color: #fbae08;
-    }
-  }
-
-  a.toggle_collapse {
-    position: absolute;
-    right: 8px;
-    top: 8px;
-
-    i {
-      color: #cdcdcd;
-      font-size: 16px;
-    }
-  }
-}
-
-.panel {
-  box-shadow: none;
-}
-
-.panel-default {
-  border-color: #ccc;
-  border-radius: 2px;
-
-  > .panel-heading {
-    position: relative;
-    background-color: transparent;
-  }
-}
+// Collapsable panels
+@import 'components/collapsable_panels';
+@import 'components/child_grid';

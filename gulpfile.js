@@ -1,12 +1,14 @@
 /* gulpfile.js */
 var
     gulp = require('gulp'),
+    browserSync = require('browser-sync').create(),
+    reload = browserSync.reload,
     sass = require('gulp-sass');
 
 // source and distribution folder
 var
-    source = 'src/',
-    dest = 'dist/';
+    source = './src/',
+    dest = './dist/';
 
 // Bootstrap scss source
 var bootstrapSass = {
@@ -49,7 +51,8 @@ gulp.task('fonts', function () {
 gulp.task('sass', ['fonts'], function () {
     return gulp.src(scss.in)
         .pipe(sass(scss.sassOpts))
-        .pipe(gulp.dest(scss.out));
+        .pipe(gulp.dest(scss.out))
+        .pipe(browserSync.stream());
 });
 
 // default task
@@ -58,4 +61,15 @@ gulp.task('default', ['sass', 'fonts']);
 // Rerun the task when a file changes
 gulp.task('watch', function() {
     gulp.watch(scss.watch, ['sass']);
+});
+
+// Static Server + watching scss/html files
+gulp.task('serve', ['sass'], function() {
+
+    browserSync.init({
+        server: "./dist"
+    });
+
+    gulp.watch(scss.watch, ['sass']);
+    gulp.watch("dist/*.html").on('change', browserSync.reload);
 });
