@@ -7345,7 +7345,8 @@ button.close {
 
 body {
   padding: 0;
-  padding-top: 70px; }
+  padding-top: 70px;
+  background-color: #faf7f1; }
   body.include-subbar {
     padding-top: 140px; }
 
@@ -7492,13 +7493,15 @@ pre {
 .panel-heading {
   border: none; }
   .panel-heading h4.panel-title {
-    font: bold 14px "Trebuchet MS";
+    font: bold 16px "Trebuchet MS";
+    font-weight: bold;
     color: #999;
     line-height: 18px; }
     .panel-heading h4.panel-title i {
       vertical-align: middle;
-      margin-right: 4px;
-      font-size: 16px;
+      margin-right: 3px;
+      margin-top: -2px;
+      font-size: 20px;
       color: #fbae08; }
   .panel-heading a.toggle_collapse {
     position: absolute;
@@ -7517,3 +7520,39 @@ pre {
   .panel-default > .panel-heading {
     position: relative;
     background-color: transparent; }
+
+.group_selector .col-xs-1, .group_selector .col-xs-2, .group_selector .col-xs-3, .group_selector .col-xs-4, .group_selector .col-xs-5, .group_selector .col-xs-6, .group_selector .col-xs-7, .group_selector .col-xs-8, .group_selector .col-xs-9, .group_selector .col-xs-10, .group_selector .col-xs-11, .group_selector .col-xs-12, .group_selector .col-sm-1, .group_selector .col-sm-2, .group_selector .col-sm-3, .group_selector .col-sm-4, .group_selector .col-sm-5, .group_selector .col-sm-6, .group_selector .col-sm-7, .group_selector .col-sm-8, .group_selector .col-sm-9, .group_selector .col-sm-10, .group_selector .col-sm-11, .group_selector .col-sm-12, .group_selector .col-md-1, .group_selector .col-md-2, .group_selector .col-md-3, .group_selector .col-md-4, .group_selector .col-md-5, .group_selector .col-md-6, .group_selector .col-md-7, .group_selector .col-md-8, .group_selector .col-md-9, .group_selector .col-md-10, .group_selector .col-md-11, .group_selector .col-md-12, .group_selector .col-lg-1, .group_selector .col-lg-2, .group_selector .col-lg-3, .group_selector .col-lg-4, .group_selector .col-lg-5, .group_selector .col-lg-6, .group_selector .col-lg-7, .group_selector .col-lg-8, .group_selector .col-lg-9, .group_selector .col-lg-10, .group_selector .col-lg-11, .group_selector .col-lg-12 {
+  padding-left: 5px;
+  padding-right: 5px; }
+
+.page_header {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-family: "Trebuchet MS"; }
+
+.group_selector__button {
+  position: relative;
+  padding-left: 40px;
+  text-align: left;
+  margin-bottom: 10px;
+  background-color: white;
+  border: solid #ccc 1px;
+  border-radius: 2px;
+  height: 40px;
+  font-family: "Trebuchet MS"; }
+
+.group_selector__button__icon {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 28px;
+  height: 28px;
+  background-color: #aaa; }
+
+.group_selector .active_users {
+  margin-top: 2px;
+  font-size: 12px;
+  color: #aaa; }
+  .group_selector .active_users i {
+    color: #666;
+    font-size: 14px; }
