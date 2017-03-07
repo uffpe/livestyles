@@ -1,0 +1,46 @@
+// Reducing default gutter from column grids
+%no-gutter {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.group_selector {
+  &__button {
+    position: relative;
+    padding-left: 40px;
+    text-align: left;
+    margin-bottom: 10px;
+    background-color: white;
+    border: solid #ccc 1px;
+    border-radius: 2px;
+    height: 40px;
+  }
+
+  &__button__icon {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 28px;
+    height: 28px;
+    background-color: #aaa;
+  }
+
+  @each $breakpoint in map_keys($grid-breakpoints) {
+    @for $i from 1 through $grid-columns {
+      .col-#{$breakpoint}-#{$i} {
+        @extend %no-gutter;
+      }
+    }
+  }
+
+  .active_users {
+    margin-top: 2px;
+    font-size: 12px;
+    color: #aaa;
+
+    i {
+      color: #666;
+      font-size: 14px;
+    }
+  }
+}
