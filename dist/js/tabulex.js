@@ -30,7 +30,8 @@ $(document).ready(function () {
 
     // Adding functionality to collapsed elements
     (function() {
-        $(".panel-heading a").click(function(){
+        $(".panel-heading a").click(function(e){
+            e.preventDefault();
             var collapse_elem = $(this).closest('.panel').find('.panel-collapse');
             collapse_elem.collapse('toggle');
             $(this).find('i').toggleClass('fa-chevron-down fa-chevron-up');

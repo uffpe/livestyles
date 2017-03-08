@@ -7519,6 +7519,10 @@ pre {
   background-color: rgba(86, 61, 124, 0.15);
   border: 1px solid rgba(86, 61, 124, 0.2); }
 
+.no-gutter > [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0; }
+
 /* PANEL */
 .panel-heading {
   border: none; }
@@ -7586,3 +7590,17 @@ pre {
   .group_selector .active_users i {
     color: #666;
     font-size: 14px; }
+
+.personal_data .avatar_image {
+  width: 160px;
+  height: 160px;
+  margin-bottom: 10px;
+  background-color: #ccc;
+  border: solid 1px #333;
+  background-image: url("http://1.gravatar.com/avatar/767fc9c115a1b989444c755db47feb60?s=160&r=pg&d=mm"); }
+
+.personal_data .control-label {
+  text-align: left; }
+
+.personal_data .zip {
+  padding-right: 10px; }

@@ -294,6 +294,12 @@ pre {
     // color: white;
   }
 }
+
+.no-gutter > [class*='col-'] {
+  padding-right:0;
+  padding-left:0;
+}
 // Collapsable panels
 @import 'components/collapsable_panels';
 @import 'components/child_grid';
+@import 'components/personal_data';
