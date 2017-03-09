@@ -17,16 +17,26 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body class="">
+<body class="include-subbar">
 
 
 <div id="main-container">
-    <div class="overlay"></div>
+    <div class="main-wrapper__overlay"></div>
 
-    <nav id="header" class="navbar navbar-default navbar-fixed-top">
+    <nav id="header" class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
-            <div class="nav navbar-nav navbar-left">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+
+            <div class="navbar-clock">
+                <a href="#clock">
+                    <span class="hidden-xs">11:25:13</span>
+                    <i class="fa fa-clock-o fa-lg hidden-xs" aria-hidden="true"></i>
+                    <span>10-03-2017</span>
+                    <i class="fa fa-calendar fa-md visible-xs-inline" aria-hidden="true"></i>
+                </a>
+            </div>
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -34,29 +44,63 @@
                 </button>
             </div>
 
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="/">Link</a></li>
+            <ul class="nav navbar-nav navbar-left">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="hidden-xs">Bruce banner<span class="hidden-xs hidden-sm"> - Teacher</span></span> <i class="fa fa-user" aria-hidden="true"></i> </a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-building fa-lg" aria-hidden="true"></i>
+                        <span class="hidden-xs">Afdeling B</span>
+                        <span class="caret"></span>
+                    </a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#Afd-a">Afdeling A</a></li>
+                        <li><a href="#Afd-b">Afdeling B</a></li>
+                        <li class="dropdown-submenu">
+                            <a href="#Afd-c" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                Afdeling C <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#Sommerfuglen">Sommerfuglen</a></li>
+                        <li><a href="#Stjernen">Stjernen</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#link">
+                    <i class="fa fa-ban fa-lg" aria-hidden="true"></i>
+                </a></li>
+                <li><a href="#link">
+                    <i class="fa fa-comment-o fa-lg" aria-hidden="true"></i>
+                </a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <span class="hidden-xs">Bruce banner
+                                    <span class="hidden-xs hidden-sm txt_secondary"> - Teacher </span>
+                                </span> <i class="fa fa-user fa-lg" aria-hidden="true"></i> <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">First link </a></li>
+                        <li><a href="#">Second link</a></li>
+                        <li><a href="#">This is the third link</a></li>
+                        <li><a href="#">4th link</a></li>
                     </ul>
                 </li>
             </ul>
         </div><!-- /container -->
     </nav>
 
-    <div class="container">
+    <div class="main-wrapper__content container">
 
         <!-- Main menu -->
-        <nav id="mainmenu" class="nav-mainmenu" role="navigation" aria-label="Hovedmenu">
-            <ul class="nav-mainmenu_list nav nav-stacked list-group">
+        <nav class="nav-mainmenu" role="navigation" aria-label="Hovedmenu">
+            <ul class="nav-mainmenu__list nav nav-stacked list-group">
                 <li class="active"><a href="#menu1" class="list-group-item">
-                    <span class="fa-stack fa-lg" aria-hidden="true"><i class="fa fa-dashboard fa-stack-1x "></i></span>
+                    <span class="fa-stack fa-lg" aria-hidden="true"><i class="fa fa-dashboard fa-stack-1x"></i></span>
                     Forside</a>
                     </a></li>
                 <li><a href="#menu2" class="list-group-item">
@@ -113,7 +157,29 @@
 
         <!-- Page Content -->
         <div id="content-div">
-            <div class="content-div_wrapper">
+            <div class="content-div__wrapper">
+                <nav id="sub-header" class="navbar navbar-inverse navbar-fixed-top">
+                    <div class="container">
+                        <!-- Navbar links - right -->
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    Vælg <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#gem"><span class="hidden-xs">Gem alt</span> <i class="fa fa-save fa-lg" aria-hidden="true"></i></a>
+                            </li>
+                        </ul><!-- Navbar links - right -->
+
+                    </div><!-- /.container-fluid -->
+                </nav>
+
                 <div class="container-fluid">
                     <div class="row page_header">
                         <div class="col-md-12">
