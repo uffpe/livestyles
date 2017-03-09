@@ -1,19 +1,20 @@
 .personal_data {
-
-  .avatar_image {
-    width: 160px;
-    height: 160px;
-    margin-bottom: 10px;
-    background-color: #ccc;
-    border: solid 1px #333;
-    background-image: url('http://1.gravatar.com/avatar/767fc9c115a1b989444c755db47feb60?s=160&r=pg&d=mm');
-  }
-
    .control-label {
     text-align: left;
+
+     i {
+       font-size: 16px;
+       width: 18px;
+     }
   }
   .zip {
     padding-right: 10px;
+  }
+
+  .profile-image {
+    border: solid 1px #333;
+    margin-bottom: 10px;
+    border-radius: 2px;
   }
 
 }
