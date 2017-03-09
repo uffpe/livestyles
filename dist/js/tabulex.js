@@ -3,13 +3,14 @@ $(document).ready(function () {
 
     // Main menu open/close variables
     var trigger = '.navbar-toggle',
-        mainmenu = '#mainmenu',
-        overlay = '.overlay',
+        mainmenu = '.nav-mainmenu',
+        overlay = '.main-wrapper__overlay',
         isOpen = false;
 
     // Main menu open/close triggers
     $(trigger).click(function (e) {
         e.stopPropagation();
+        console.log("Open menu");
         if (isOpen == true) {
             close_mainmenu();
         } else {
@@ -17,7 +18,7 @@ $(document).ready(function () {
             // Close menu if click outside menu
             $(document).one('click',function(elm) {
                 // console.log(elm.target.className);
-                if($('#mainmenu').has(elm.target).length === 0) {
+                if($(mainmenu).has(elm.target).length === 0) {
                     close_mainmenu();
                 }
                 // elm.stopPropagation();
@@ -39,6 +40,20 @@ $(document).ready(function () {
         isOpen = false;
     }
 
+    // Main menu - Multi-level function
+    (function() {
+        var submenu = 'li.dropdown-submenu';
+        $(submenu).click(function(event) {
+            console.log("Open submenu");
+            event.stopPropagation();
+            if ($(this).hasClass('open')){
+                $(this).removeClass('open');
+            }else{
+                $(submenu).removeClass('open');
+                $(this).addClass('open');
+            }
+        });
+    })();
 
 
     // Adding functionality to collapsed elements
