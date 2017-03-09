@@ -53,7 +53,30 @@ $snippets = [
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
-</nav>'
+</nav>',
+    'modal' => '<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>'
 ];
 
 $highlight = '<div class="starter-template">
@@ -152,6 +175,14 @@ $dropdown = '<div class="dropdown">
 </nav>
 
 <div class="container">
+    <div class="row">
+        <?= $snippets['modal'] ?>
+        <div class="col-sm-12">
+            <pre><code class="html"><?= htmlentities($snippets['modal']) ?></code></pre>
+        </div>
+    </div>
+    <hr>
+
     <div class="row">
         <?= $snippets['nav-bar'] ?>
         <div class="col-sm-8 col-sm-offset-2">
