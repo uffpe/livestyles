@@ -1,32 +1,60 @@
 
 $(document).ready(function () {
-    var trigger = $('.navbar-toggle'),
-        mainmenu = $('#mainmenu'),
-        overlay = $('.overlay'),
-        isClosed = false;
 
-    trigger.click(function () {
-        open_mainmenu();
+    // Main menu open/close variables
+    var trigger = '.navbar-toggle',
+        mainmenu = '.nav-mainmenu',
+        overlay = '.main-wrapper__overlay',
+        isOpen = false;
+
+    // Main menu open/close triggers
+    $(trigger).click(function (e) {
+        e.stopPropagation();
+        console.log("Open menu");
+        if (isOpen == true) {
+            close_mainmenu();
+        } else {
+            open_mainmenu();
+            // Close menu if click outside menu
+            $(document).one('click',function(elm) {
+                // console.log(elm.target.className);
+                if($(mainmenu).has(elm.target).length === 0) {
+                    close_mainmenu();
+                }
+                // elm.stopPropagation();
+            });
+        }
     });
 
+    // Main menu open function
     function open_mainmenu() {
-
-        if (isClosed == true) {
-            overlay.hide();
-            mainmenu.removeClass('is-open');
-            mainmenu.addClass('is-closed');
-            isClosed = false;
-        } else {
-            overlay.show();
-            mainmenu.removeClass('is-closed');
-            mainmenu.addClass('is-open');
-            isClosed = true;
-        }
+        $(mainmenu + ',' + trigger + ',' + overlay).removeClass('is-closed');
+        $(mainmenu + ',' + trigger + ',' + overlay).addClass('is-open');
+        isOpen = true;
     }
 
-    $('[data-toggle="offcanvas"]').click(function () {
-        $('#main-container').toggleClass('toggled');
-    });
+    // Main menu close function
+    function close_mainmenu() {
+        $(mainmenu + ',' + trigger + ',' + overlay).removeClass('is-open');
+        $(mainmenu + ',' + trigger + ',' + overlay).addClass('is-closed');
+        isOpen = false;
+    }
+
+    // Main menu - Multi-level function
+    (function() {
+        var submenu = 'li.dropdown-submenu';
+        $(submenu).click(function(event) {
+            console.log("Open submenu");
+            event.stopPropagation();
+            if ($(this).hasClass('open')){
+                $(this).removeClass('open');
+            }else{
+                $(submenu).removeClass('open');
+                $(this).addClass('open');
+            }
+        });
+    })();
+
 
     // Adding functionality to collapsed elements
     (function() {
