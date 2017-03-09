@@ -40,6 +40,7 @@ $icon-size:             20px;
   body {
     padding: 0;
     padding-top: $navbar-height + $gutter-normal;
+    overflow: scroll;
 
     &.include-subbar {
       padding-top: ($navbar-height * 2) + $gutter-normal;
@@ -391,6 +392,15 @@ $icon-size:             20px;
     border: 1px solid rgba(86,61,124,.2);
   }
 
-  // Collapsable panels
-  @import 'components/collapsable_panels';
-  @import 'components/child_grid';
+.no-gutter > [class*='col-'] {
+   padding-right:0;
+   padding-left:0;
+ }
+
+.no-gutter-left > [class*='col-'] {
+  padding-left:0;
+}
+// Collapsable panels
+@import 'components/collapsable_panels';
+@import 'components/child_grid';
+@import 'components/personal_data';

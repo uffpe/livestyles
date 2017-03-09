@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="iso-8859-1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Stamkort demo | IST</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/main.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="">
+
+
+<div id="main-container">
+    <div class="overlay"></div>
+
+    <nav id="header" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="nav navbar-nav navbar-left">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/">Link</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="hidden-xs">Bruce banner<span class="hidden-xs hidden-sm"> - Teacher</span></span> <i class="fa fa-user" aria-hidden="true"></i> </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /container -->
+    </nav>
+
+    <div class="container">
+
+        <!-- Main menu -->
+        <nav id="mainmenu" class="nav-mainmenu" role="navigation" aria-label="Hovedmenu">
+            <ul class="nav-mainmenu_list nav nav-stacked list-group">
+                <li class="active"><a href="#menu1" class="list-group-item">
+                    <span class="fa-stack fa-lg" aria-hidden="true"><i class="fa fa-dashboard fa-stack-1x "></i></span>
+                    Forside</a>
+                    </a></li>
+                <li><a href="#menu2" class="list-group-item">
+                    <span class="fa-stack fa-lg" aria-hidden="true"><i class="fa fa-dashboard fa-stack-1x "></i></span>
+                    Her og nu
+                </a></li>
+                <li><a href="#menu3" class="list-group-item">
+                    <span class="fa-stack fa-lg" aria-hidden="true"><i class="fa fa-dashboard fa-stack-1x "></i></span>
+                    Find børn
+                </a></li>
+                <li><a href="#menu4" class="list-group-item">
+                    <span class="fa-stack fa-lg" aria-hidden="true"><i class="fa fa-dashboard fa-stack-1x "></i></span>
+                    Hvem er hvor
+                </a></li>
+                <li class="collapse">
+                    <a href="#menu5" class="list-group-item" data-toggle="collapse" data-parent="#mainmenu" role="button">
+                        <span class="fa-stack fa-lg" aria-hidden="true"><i class="fa fa-dashboard fa-stack-1x "></i></span>
+                        Kommunikation <span class="caret"></span>
+                    </a>
+                    <ul class="collapse list-group-submenu" id="menu5">
+                        <li class="list-group-item" data-parent="#menu5"><a href="#">Action</a></li>
+                        <li class="list-group-item" data-parent="#menu5"><a href="#">Another action</a></li>
+                        <li class="list-group-item" data-parent="#menu5"><a href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="collapse">
+                    <a href="#menu6" class="list-group-item" data-toggle="collapse" data-parent="#mainmenu" role="button">
+                        <span class="fa-stack fa-lg" aria-hidden="true"><i class="fa fa-dashboard fa-stack-1x "></i></span>
+                        Planlægning <span class="caret"></span>
+                    </a>
+                    <ul class="collapse list-group-submenu" id="menu6">
+                        <li class="list-group-item" data-parent="#menu6"><a href="#">Action</a></li>
+                        <li class="list-group-item" data-parent="#menu6"><a href="#">Another action</a></li>
+                        <li class="list-group-item" data-parent="#menu6"><a href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li><a href="#menu7" class="list-group-item">
+                    <span class="fa-stack fa-lg" aria-hidden="true"><i class="fa fa-dashboard fa-stack-1x "></i></span>
+                    Lister
+                </a></li>
+                <li class="collapse">
+                    <a href="#menu8" class="list-group-item" data-toggle="collapse" data-parent="#mainmenu" role="button">
+                        <span class="fa-stack fa-lg" aria-hidden="true"><i class="fa fa-dashboard fa-stack-1x "></i></span>
+                        Administratorer <span class="caret"></span>
+                    </a>
+                    <ul class="collapse list-group-submenu" id="menu8">
+                        <li class="list-group-item" data-parent="#menu8"><a href="#">Action</a></li>
+                        <li class="list-group-item" data-parent="#menu8"><a href="#">Another action</a></li>
+                        <li class="list-group-item" data-parent="#menu8"><a href="#">Something else here</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav><!-- /#nav-mainmenu -->
+
+        <!-- Page Content -->
+        <div id="content-div">
+            <div class="content-div_wrapper">
+                <div class="container-fluid">
+                    <div class="row page_header">
+                        <div class="col-md-12">
+                            Stamkort: Bruce Wayne (0A)
+                            <div class="pull-right hidden-xs">* Vis p&aring; legeliste <input type="checkbox"></div>
+                        </div>
+                    </div>
+                    <form class="form-horizontal">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="panel panel-default personal_data">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title"><i class="fa fa-address-card"></i> Stamdata</h4>
+                                        <a href="#" class="toggle_collapse"><i class="fa fa-chevron-down"></i></a>
+
+                                    </div>
+                                    <div class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-sm-7 col-lg-6">
+                                                    <h5>Person data:</h5>
+
+                                                    <div class="form-group">
+                                                        <label for="" class="col-sm-4 control-label"><i class="fa fa-phone" aria-hidden="true"></i> Hjem</label>
+                                                        <div class="col-sm-8">
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control" id="" name="" placeholder="">
+                                                                <div class="input-group-addon"><input type="checkbox" name="" value=""> *</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="" class="col-sm-4 control-label"><i class="fa fa-mobile" aria-hidden="true"></i> Mobil</label>
+                                                        <div class="col-sm-8">
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control" id="" name="" placeholder="">
+                                                                <div class="input-group-addon"><input type="checkbox" name="" value=""> *</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="" class="col-sm-4 control-label"><i class="fa fa-envelope" aria-hidden="true"></i> Email</label>
+                                                        <div class="col-sm-8">
+                                                            <div class="input-group">
+                                                                <input type="email" class="form-control" id="" name="" placeholder="">
+                                                                <div class="input-group-addon"><input type="checkbox" name="" value=""> *</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="" class="col-sm-4 control-label"><i class="fa fa-home" aria-hidden="true"></i> Adresse</label>
+                                                        <div class="col-sm-8">
+                                                            <div class="input-group">
+                                                                <textarea class="form-control" name="" readonly="readonly">Wayne Manor
+1234 Gotham City</textarea>
+                                                                <div class="input-group-addon"><input type="checkbox" name="" value=""> *</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="" class="col-sm-4 control-label">CPR-nr.</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control" id="" name="" value="123456-7890" placeholder="" readonly="readonly">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="" class="col-sm-4 control-label">Evt. kaldenavn</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control" id="" name="" value="" placeholder="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-5 col-lg-6">
+                                                    <h5>Person billede:</h5>
+                                                    <div class="row">
+                                                        <div class="col-lg-6 col-md-12">
+                                                            <img class="img-responsive profile-image" src="http://1.gravatar.com/avatar/767fc9c115a1b989444c755db47feb60?s=400&r=pg&d=mm" alt="">
+                                                        </div>
+                                                        <div class="col-lg-6 col-md-12">
+                                                            <div class="btn-toolbar" role="toolbar" aria-label="...">
+                                                                <button class="btn btn-default btn-block"><i class="fa fa-upload" aria-hidden="true"></i> Upload</button>
+                                                                <button class="btn btn-default btn-block"><i class="fa fa-trash" aria-hidden="true"></i> Slet</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <hr>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-6 col-sm-push-6">
+                                                    <h5>L&aelig;geoplysninger:</h5>
+                                                    <div class="form-group">
+                                                        <label for="" class="col-sm-4 control-label">Navn</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control" id="" name="" placeholder="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="" class="col-sm-4 control-label">Adresse</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control" id="" name="" placeholder="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="" class="col-sm-4 control-label">Postnr./by</label>
+                                                        <div class="col-sm-8 no-gutter">
+                                                            <div class="col-xs-4 col-sm-5 col-md-4 zip">
+                                                                <input type="text" class="form-control" maxlength="4" id="" name="" value="" placeholder="">
+                                                            </div>
+                                                            <div class="col-xs-8 col-sm-7 col-md-8">
+                                                                <input type="text" class="form-control" id="" name="" value="" placeholder="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="" class="col-sm-4 control-label">Telefon</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control" id="" name="" value="" placeholder="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="" class="col-sm-4 control-label">Web</label>
+                                                        <div class="col-sm-8">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon">http://</span>
+                                                                <input type="text" class="form-control" id="" name="" value="" placeholder="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-6 col-sm-pull-6">
+                                                    <h5>Intern bem&aelig;rkning:</h5>
+                                                    <textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
+                                                    <div class="pull-right small">500 tegn tilbage</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="panel panel-default personal_data">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <i class="fa fa-list" aria-hidden="true"></i> Tilladelser</h4>
+                                        <a href="#" class="toggle_collapse"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                                    </div>
+                                    <div class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-sm-12">content here...</div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="panel panel-default personal_data">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <i class="fa fa-users" aria-hidden="true"></i> For&aelig;ldre</h4>
+                                        <a href="#" class="toggle_collapse"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                                    </div>
+                                    <div class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-sm-12">content here...</div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="panel panel-default personal_data">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <i class="fa fa-child" aria-hidden="true"></i> S&oslash;skende</h4>
+                                        <a href="#" class="toggle_collapse"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                                    </div>
+                                    <div class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-sm-12">content here...</div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div><!-- /container -->
+
+</div><!-- /#main_container -->
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../js/lib/bootstrap.min.js"></script>
+<script src="../js/tabulex.js"></script>
+</body>
+</html>
