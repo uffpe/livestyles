@@ -1,0 +1,410 @@
+/* main.scss */
+@import "variables-tabulex";  /* Custom variables */
+@import "bootstrap-tabulex";  /* Custom bootstrap components importer */
+// @import "bootstrap/theme";
+@import "font-awesome";
+
+
+//
+// Custom mixin's
+// --------------------------------------------------
+@mixin calc($property, $expression...) {
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: -o-calc(#{$expression});
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
+
+@mixin filter($filter-type,$filter-amount) {
+  -webkit-filter: $filter-type+unquote('(#{$filter-amount})');
+  -moz-filter: $filter-type+unquote('(#{$filter-amount})');
+  -ms-filter: $filter-type+unquote('(#{$filter-amount})');
+  -o-filter: $filter-type+unquote('(#{$filter-amount})');
+  filter: $filter-type+unquote('(#{$filter-amount})');
+}
+
+
+//
+// Tabulex only variables
+// --------------------------------------------------
+$navbar-height:         50px;
+$nav-mainmenu-width:    270px;
+$gutter-normal:         floor($grid-gutter-width / 2);
+$gutter-small:          floor($grid-gutter-width / 4);
+$icon-size:             20px;
+
+//
+// Basic blocks
+// --------------------------------------------------
+
+  body {
+    padding: 0;
+    padding-top: $navbar-height + $gutter-normal;
+    overflow-y: scroll;
+
+    &.include-subbar {
+      padding-top: ($navbar-height * 2) + $gutter-normal;
+    }
+  }
+
+  .main-wrapper  {
+    height: auto;
+    min-height: 100%;
+    width: 100%;
+    position: relative;
+    -webkit-font-smoothing: subpixel-antialiased;
+
+    &__overlay {
+      position: fixed;
+      // display: none;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $gray-dark;
+      opacity: 0;
+      z-index: -1;
+      @include transition(opacity 0.5s ease);
+
+      &.is-open {
+        opacity: 0.2;
+        z-index: 1;
+      }
+    }
+
+    &__content {
+      z-index: 1;
+      position: relative;
+    }
+  }
+
+  #content-div {
+    width: 100%;
+    float: right;
+    padding-left: 0;
+    @include transition(all 0.5s ease);
+
+    @media (min-width: $screen-md-min){
+      @include calc(width, #{"100% -  #{$nav-mainmenu-width + 5px}"});
+      float: right;
+      padding-left: $gutter-normal;
+    }
+
+    .content-div--wrapper {
+      position: relative;
+    }
+  }
+
+
+  .container {
+    @media (max-width: $screen-sm-max){
+      width: 100%;
+    }
+  }
+
+//
+// Iconography
+// --------------------------------------------------
+
+  .fa-stack {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+  }
+
+//
+// Navbar Header & subheader
+// --------------------------------------------------
+
+  #header, #sub-header {
+    &.navbar.navbar-inverse {
+      z-index: 99999;
+
+      > .container {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .navbar-nav {
+        margin: 0;
+        z-index: 10;
+
+        > .open > a,
+        > .active > a {
+          background-color: darken($navbar-inverse-bg, 5%);
+          @include box-shadow(none);
+        }
+
+        > li {
+          float: left;
+          > a {
+            padding: 15px 10px;
+
+            &:hover, &:active {
+              background-color: darken($navbar-inverse-bg, 5%);
+            }
+          }
+        }
+
+        @media (max-width: $screen-xs-max){
+          .dropdown.open {
+            position: initial;
+            .dropdown-menu {
+              background-color: white;
+              border-bottom: 2px solid $gandalf-the-grey;
+              float: left;
+              right: 0;
+              margin-top: 0;
+              position: absolute;
+              width: 100vw;
+
+              > li {
+                position: relative;
+                > a {
+                  color: $grey-x-dark;
+                  border-top: 1px solid $gandalf-the-grey;
+                }
+                &:first-child a {
+                  border: 0;
+                }
+              }
+            }
+
+          }
+        }
+      }
+
+      .navbar-right {
+        float: right;
+        .fa {
+          padding-left: 2px;
+        }
+      }
+
+      .navbar-left {
+        float: left;
+        .fa {
+          padding-right: 2px;
+        }
+      }
+    }
+  }
+
+  #header {
+    &.navbar.navbar-inverse {
+      margin-bottom: 0;
+
+      .txt_secondary {
+        color: $blue-steel-xx-light;
+      }
+
+      .navbar-clock {
+        left: 0;
+        margin:0 auto;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        //z-index: -1;
+        > a {
+          color: white;
+          display: inline-block;
+          line-height: 20px;
+          padding: 15px 10px;
+          position: relative;
+
+          &:hover, &:active {
+            background-color: darken($navbar-inverse-bg, 5%);
+            text-decoration: none;
+          }
+        }
+        //@media (max-width: $screen-xs-max) {
+        //  span {
+        //    display: block;
+        //  }
+        //}
+      }
+
+      .navbar-header {
+        float: left;
+        margin: 0;
+
+        .navbar-toggle {
+          float: left;
+          border: 0;
+          border-radius: 0;
+          display: block;
+          padding: 18px 10px;
+          margin: 0 10px;
+          margin-bottom: 0;
+
+          &:hover, &:active {
+            background-color: darken($navbar-inverse-bg, 5%);
+          }
+
+          .icon-bar {
+            background-color: white;
+          }
+
+          @media (min-width: $screen-sm-min) {
+              padding: 18px 10px;
+          }
+
+          @media (min-width: $screen-md) {
+            display: none;
+          }
+        }
+
+      }
+    }
+  }
+
+  #sub-header {
+    &.navbar.navbar-inverse {
+      top: $navbar-height + 1px;
+      //border-top: 1px solid $blue-steel-light;
+      //@include translucent($brand-primary, 0.85);
+      background-color: rgba($brand-primary, 0.85);
+      border-top: 1px solid $grey-x-light;
+    }
+  }
+
+
+
+
+
+  //
+  // Navbar Main menu - Sidebar
+  // --------------------------------------------------
+
+  .nav-mainmenu {
+    margin-left: ( $nav-mainmenu-width + $gutter-normal ) * -1;
+    width: $nav-mainmenu-width;
+    position: absolute;
+    @include transition(all 0.5s ease);
+
+    @media (min-width: $screen-md){
+      margin-left: 0;
+      position: relative;
+    }
+
+    &__list {
+      // background-color: rgba(255,255,255,0.9);
+      float: left;
+      position: relative;
+      width: $nav-mainmenu-width;
+      z-index: 99990;
+
+      li {
+        padding: 0;
+        .list-group-item:first-child {
+          border-radius: 0;
+        }
+      }
+
+      > li {
+        a {
+          background-color: white;
+          border: 0;
+          border-radius: 0;
+          color: $grey-x-dark;
+          font-weight: 600;
+          margin-bottom: 3px !important;
+          min-height: 40px;
+          text-decoration: none;
+          padding: 0;
+
+          &:hover, &:focus, &:active {
+            background-color: $blue-steel-xx-light;
+          }
+
+          .caret {
+            float: right;
+            margin: 18px 18px 0 18px;
+          }
+
+          > .fa-stack {
+            background-color: $blue-steel-base;
+            color: white;
+            height: 40px;
+            width: 40px;
+            margin-right: 6px;
+
+            .fa-stack-1x  {
+              font-size: 24px;
+              line-height: 40px;
+            }
+          }
+        }
+        ul {
+          padding-left: 0;
+          margin-bottom: 4px;
+
+          > li {
+            border: 0;
+            //padding-left: 50px;
+
+            a {
+              display: block;
+              font-weight: 400;
+              line-height: 20px;
+              margin-bottom: 0;
+              padding: 10px;
+              padding-left: 50px;
+            }
+
+            &.list-group-item {
+
+            }
+          }
+        }
+      }
+    }
+
+    &.is-open {
+      margin-left: 0;
+    }
+  }
+
+  /* CUSTOM styles */
+  pre {
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-clipboard {
+    display: block;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .show-grid [class^=col-] {
+    padding: 10px;
+    background-color: rgba(86,61,124,.15);
+    border: 1px solid rgba(86,61,124,.2);
+  }
+
+.no-gutter > [class*='col-'] {
+   padding-right:0;
+   padding-left:0;
+ }
+
+.no-gutter-left > [class*='col-'] {
+  padding-left:0;
+}
+// Collapsable panels
+@import 'components/collapsable_panels';
+@import 'components/child_grid';
+@import 'components/personal_data';
+
+body {
+  //background-color: hotpink;
+}

@@ -1,4 +1,9 @@
-vendor/
-node_modules/
-npm-debug.log
+/node_modules
+/public/storage
+/public/hot
+/storage/*.key
+/vendor
+/.idea
 .idea/
+Homestead.json
+Homestead.yaml

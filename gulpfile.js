@@ -7,8 +7,8 @@ var
 
 // source and distribution folder
 var
-    source = './src/',
-    dest = './dist/';
+    source = './resources/assets/',
+    dest = './public/';
 
 // Bootstrap scss source
 var bootstrapSass = {
@@ -29,9 +29,9 @@ var fonts = {
 
 // Our scss source folder: .scss files
 var scss = {
-    in: source + 'scss/main.scss',
+    in: source + 'sass/main.scss',
     out: dest + 'css/',
-    watch: source + 'scss/**/*',
+    watch: source + 'sass/**/*',
     sassOpts: {
         outputStyle: 'nested',
         precison: 3,
@@ -66,10 +66,14 @@ gulp.task('watch', function() {
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass'], function() {
 
+    // browserSync.init({
+    //     server: "./public"
+    // });
+
     browserSync.init({
-        server: "./dist"
+        proxy: "livestyles.dev"
     });
 
     gulp.watch(scss.watch, ['sass']);
-    gulp.watch("dist/**/*.html").on('change', browserSync.reload);
+    // gulp.watch("dist/**/*.html").on('change', browserSync.reload);
 });
