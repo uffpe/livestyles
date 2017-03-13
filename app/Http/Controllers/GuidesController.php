@@ -120,11 +120,12 @@ class guidesController extends Controller
             ['url' => '#menu2', 'label' => 'Her og nu', 'icon' => 'fa-dashboard', 'is_active' => true],
             ['url' => '#menu3', 'label' => 'Find b&oslash;rn', 'icon' => 'fa-dashboard', 'is_active' => false],
             ['url' => '#menu4', 'label' => 'Hvem er hvor', 'icon' => 'fa-dashboard', 'is_active' => false],
-            ['url' => '#menu5', 'label' => 'Kommunikation', 'icon' => 'fa-dashboard', 'is_active' => false],
+            ['url' => '#menu5', 'label' => 'Kommunikation', 'icon' => 'fa-dashboard', 'is_active' => false, 'sub_items' => ['Action', 'Another action', 'Something else']],
             ['url' => '#menu6', 'label' => 'Planl&aelig;gning', 'icon' => 'fa-dashboard', 'is_active' => false],
             ['url' => '#menu7', 'label' => 'Lister', 'icon' => 'fa-dashboard', 'is_active' => false],
             ['url' => '#menu8', 'label' => 'Administratorer', 'icon' => 'fa-dashboard', 'is_active' => false],
         ];
+//        $main_menu = [];
 
         return view('demo.guide', ['snippets' => $snippets, 'has_submenu' => false, 'main_menu_items' => $main_menu]);
     }

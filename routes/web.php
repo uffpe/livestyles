@@ -19,7 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::group(['prefix' => 'demo', 'middleware' => 'auth'], function()
+Route::group(['prefix' => 'demo'], function()
 {
     Route::get('/', function() {
         return redirect('/demo/guide');
@@ -27,19 +27,20 @@ Route::group(['prefix' => 'demo', 'middleware' => 'auth'], function()
 
     Route::get('login', function() {
         return view('demo/login', ['has_submenu' => false]);
-    });
+    })->name('login-demo');
 
     Route::get('personal-data', function() {
         return view('demo/personal_data', ['has_submenu' => true]);
-    });
+    })->name('personal-data');
 
     Route::get('child-grid', function() {
         return view('demo/child_grid', ['has_submenu' => false]);
-    });
+    })->name('child-grid');
 
     Route::get('tabulex-basic-grid', function() {
         return view('demo/tabulex_basic_grid', ['has_submenu' => true]);
-    });
+    })->name('basic-grid');
 
-    Route::get('guide', 'GuidesController@index');
+    Route::get('guide', 'GuidesController@index')
+        ->name('guide');
 });

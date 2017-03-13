@@ -7,6 +7,10 @@
     font-weight: bold;
     color: #999;
     line-height: 18px;
+    width: 96%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     i {
       vertical-align: middle;
