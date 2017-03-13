@@ -22,7 +22,6 @@ Route::get('/home', 'HomeController@index');
 Route::group(['prefix' => 'demo', 'middleware' => 'auth'], function()
 {
     Route::get('/', function() {
-//        return 'hello';
         return redirect('/demo/guide');
     });
 
@@ -36,6 +35,10 @@ Route::group(['prefix' => 'demo', 'middleware' => 'auth'], function()
 
     Route::get('child-grid', function() {
         return view('demo/child_grid', ['has_submenu' => false]);
+    });
+
+    Route::get('tabulex-basic-grid', function() {
+        return view('demo/tabulex_basic_grid', ['has_submenu' => false]);
     });
 
     Route::get('guide', 'GuidesController@index');
