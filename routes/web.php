@@ -38,7 +38,7 @@ Route::group(['prefix' => 'demo', 'middleware' => 'auth'], function()
     });
 
     Route::get('tabulex-basic-grid', function() {
-        return view('demo/tabulex_basic_grid', ['has_submenu' => false]);
+        return view('demo/tabulex_basic_grid', ['has_submenu' => true]);
     });
 
     Route::get('guide', 'GuidesController@index');
