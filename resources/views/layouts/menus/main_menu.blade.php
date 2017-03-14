@@ -3,19 +3,29 @@
     <ul class="nav-mainmenu__list nav nav-stacked list-group">
         @if(!empty($main_menu_items))
             @foreach($main_menu_items as $menu_item)
-                <li{!! $menu_item['is_active'] === true ? ' class="active"' : '' !!}{!! !empty($menu_item['sub_items']) ? ' class="collapse"' : '' !!}>
-                    <a href="{{ $menu_item['url'] }}" class="list-group-item">
-                        <span class="fa-stack fa-lg" aria-hidden="true"><i class="fa {{ $menu_item['icon'] }} fa-stack-1x"></i></span>
-                        {{$menu_item['label']}}
-                    </a>
-                    @if(!empty($menu_item['sub_items']))
-                        <ul class="list-group-submenu collapse in" id="menu5" aria-expanded="true">
-                        @foreach($menu_item['sub_items'] as $sub_item)
-                            <li class="list-group-item" data-parent="#menu5"><a href="#">Action</a></li>
-                        @endforeach
-                        </ul>
-                    @endif
-                </li>
+                @if(!empty($menu_item['sub_items']))
+                    <li class="collapse{!! $menu_item['is_active'] === true ? ' active' : '' !!}">
+                        <a href="#{{ $menu_item['url'] }}" class="list-group-item collapsed" data-toggle="collapse" data-parent="#mainmenu" role="button" aria-expanded="false">
+                            <span class="fa-stack fa-lg" aria-hidden="true"><i class="fa {{ $menu_item['icon'] }} fa-stack-1x"></i></span>
+                            {{$menu_item['label']}}
+                            <span class="caret"></span>
+                        </a>
+                        @if(!empty($menu_item['sub_items']))
+                            <ul class="list-group-submenu collapse" id="{{ $menu_item['url'] }}" aria-expanded="true">
+                            @foreach($menu_item['sub_items'] as $sub_item)
+                                <li class="list-group-item" data-parent="#{{ $menu_item['url'] }}"><a href="#">{{ $sub_item }}</a></li>
+                            @endforeach
+                            </ul>
+                        @endif
+                    </li>
+                @else
+                    <li{!! $menu_item['is_active'] === true ? ' class="active"' : '' !!}{!! !empty($menu_item['sub_items']) ? ' class="collapse"' : '' !!}>
+                        <a href="#{{ $menu_item['url'] }}" class="list-group-item">
+                            <span class="fa-stack fa-lg" aria-hidden="true"><i class="fa {{ $menu_item['icon'] }} fa-stack-1x"></i></span>
+                            {{$menu_item['label']}}
+                        </a>
+                    </li>
+                @endif
             @endforeach
         @else
         <li class="active"><a href="#menu1" class="list-group-item">

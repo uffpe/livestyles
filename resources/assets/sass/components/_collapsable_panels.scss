@@ -3,7 +3,6 @@
   border: none;
 
   h4.panel-title {
-    font: bold 16px "Trebuchet MS";
     font-weight: bold;
     color: #999;
     line-height: 18px;
@@ -45,4 +44,65 @@
     position: relative;
     background-color: transparent;
   }
+}
+
+.panel_selector {
+    margin-bottom: 4px;
+
+    .panel-heading {
+      padding: 0;
+      background-color: #ededed;
+    }
+
+    .panel-collapse {
+      border-top: solid 1px #ddd;
+    }
+
+    h4.panel-title {
+      position: relative;
+
+      a {
+        display: block;
+        padding: 10px 15px 10px 40px;
+        margin-right: 14px;
+        text-decoration: none;
+
+        i {
+          font-size: 25px;
+          padding: 4px;
+          margin: 0;
+          background-color: #333;
+          color: white;
+          position: absolute;
+          top: 2px;
+          left: 2px;
+
+          &.red {
+            background-color: #c22d32;
+          }
+        }
+
+        span.count {
+          margin-right: 4px;
+        }
+      }
+    }
+    a.toggle_collapse {
+      right: 0;
+      padding: 10px;
+      margin: -10px 0;
+      border-left: solid 1px #ccc;
+    }
+
+    .panel-body {
+      .row {
+        margin-bottom: 6px;
+      }
+
+      i {
+        font-size: 20px;
+        margin-right: 10px;
+        margin-left: -3px;
+      }
+    }
 }

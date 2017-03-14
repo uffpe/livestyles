@@ -45,9 +45,26 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1>Overskrift</h1>
-                        <p>This testpage shows the basic responsive and grid for the main content. It also have the top navigantion and the main sidemenu.  </p>
-                        <p>Make sure to keep all page content within the <code>#content-div_wrapper</code>.</p>
+                        <h1>h1 - Big header</h1>
+                        <p>"Oswald", Helvetica, Arial, sans-serif  - line-height: 1.5 - font-size: 36px - font-weight: 500</p>
+                        <hr>
+                        <h2>h2 - Main UI header</h2>
+                        <p>"Oswald", Helvetica, Arial, sans-serif  - line-height: 1.5 - font-size: 30px - font-weight: 500</p>
+                        <hr>
+                        <h3>h3 - Sub header</h3>
+                        <p>"Oswald", Helvetica, Arial, sans-serif  - line-height: 1.5 - font-size: 24px - font-weight: 500</p>
+                        <hr>
+                        <h4>h4 - Small header</h4>
+                        <p>"Roboto", Helvetica, Arial, sans-serif  - line-height: 1.5 - font-size: 18px - font-weight: 500</p>
+                        <hr>
+                        <p>p - Body text</p>
+                        <p>"Roboto", Helvetica, Arial, sans-serif  - line-height: 1.5 - font-size: 14px - font-weight: 300</p>
+                        <hr>
+                        <strong>strong - Important body text</strong>
+                        <p>"Roboto", Helvetica, Arial, sans-serif  - line-height: 1.5 - font-size: 14px - font-weight: 500</p>
+                        <hr>
+                        <small>small - Caption text</small>
+                        <p>"Roboto", Helvetica, Arial, sans-serif  - line-height: 1 - font-size: 12px - font-weight: 300</p>
                     </div>
                 </div>
             </div>

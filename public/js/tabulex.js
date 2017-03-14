@@ -58,7 +58,7 @@ $(document).ready(function () {
 
     // Adding functionality to collapsed elements
     (function() {
-        $(".panel-heading a").click(function(e){
+        $(".panel-heading a.toggle_collapse").click(function(e){
             e.preventDefault();
             var collapse_elem = $(this).closest('.panel').find('.panel-collapse');
             collapse_elem.collapse('toggle');

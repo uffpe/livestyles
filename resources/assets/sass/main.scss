@@ -4,6 +4,12 @@
 // @import "bootstrap/theme";
 @import "font-awesome";
 
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,300,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,300,700");
+
+h4, .h4, h5, .h5, h6, .h6 {
+  font-family: $font-family-sans-serif;
+}
 
 //
 // Custom mixin's
@@ -293,6 +299,7 @@ $icon-size:             20px;
     z-index: $zindex-modal;
 
     @media (min-width: $screen-md){
+      z-index: $zindex-sub-navbar-fixed;
       margin-left: 0;
       position: relative;
     }
@@ -401,6 +408,21 @@ $icon-size:             20px;
 
 .no-gutter-left > [class*='col-'] {
   padding-left:0;
+}
+
+#change_department .modal-footer {
+  text-align: left;
+
+
+}
+
+.department_selector {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+  }
 }
 
 // login page

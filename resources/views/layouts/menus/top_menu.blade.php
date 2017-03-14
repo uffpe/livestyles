@@ -21,7 +21,7 @@
 
         <ul class="nav navbar-nav navbar-left">
             <li class="dropdown">
-                <a href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                <a href="#" role="button" data-toggle="modal" data-target="#change_department">
                     <i class="fa fa-home fa-lg" aria-hidden="true"></i>
                     <span class="hidden-xs">Afdeling B</span>
                 </a>
