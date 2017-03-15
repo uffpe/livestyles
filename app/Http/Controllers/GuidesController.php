@@ -116,14 +116,14 @@ class guidesController extends Controller
         ];
 
         $main_menu = [
-            ['url' => 'menu1', 'label' => 'Forside', 'icon' => 'fa-dashboard', 'is_active' => false],
-            ['url' => 'menu2', 'label' => 'Her og nu', 'icon' => 'fa-dashboard', 'is_active' => true],
-            ['url' => 'menu3', 'label' => 'Find b&oslash;rn', 'icon' => 'fa-dashboard', 'is_active' => false],
-            ['url' => 'menu4', 'label' => 'Hvem er hvor', 'icon' => 'fa-dashboard', 'is_active' => false],
-            ['url' => 'menu5', 'label' => 'Kommunikation', 'icon' => 'fa-dashboard', 'is_active' => false, 'sub_items' => ['Action', 'Another action', 'Something else']],
-            ['url' => 'menu6', 'label' => 'Planl&aelig;gning', 'icon' => 'fa-dashboard', 'is_active' => false, 'sub_items' => ['Action', 'Another action', 'Something else']],
-            ['url' => 'menu7', 'label' => 'Lister', 'icon' => 'fa-dashboard', 'is_active' => false],
-            ['url' => 'menu8', 'label' => 'Administratorer', 'icon' => 'fa-dashboard', 'is_active' => false, 'sub_items' => ['Action', 'Another action', 'Something else']],
+            ['url' => 'menu1', 'label' => 'Forside', 'icon' => 'home', 'is_active' => false],
+            ['url' => 'menu2', 'label' => 'Her og nu', 'icon' => 'access_timed', 'is_active' => true],
+            ['url' => 'menu3', 'label' => 'Find b&oslash;rn', 'icon' => 'accessibility', 'is_active' => false],
+            ['url' => 'menu4', 'label' => 'Hvem er hvor', 'icon' => 'map', 'is_active' => false],
+            ['url' => 'menu5', 'label' => 'Kommunikation', 'icon' => 'chat', 'is_active' => false, 'sub_items' => ['Action', 'Another action', 'Something else']],
+            ['url' => 'menu6', 'label' => 'Planl&aelig;gning', 'icon' => 'event', 'is_active' => false, 'sub_items' => ['Action', 'Another action', 'Something else']],
+            ['url' => 'menu7', 'label' => 'Lister', 'icon' => 'list', 'is_active' => false],
+            ['url' => 'menu8', 'label' => 'Administratorer', 'icon' => 'settings', 'is_active' => false, 'sub_items' => ['Action', 'Another action', 'Something else']],
         ];
 //        $main_menu = [];
 
