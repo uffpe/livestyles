@@ -1,12 +1,20 @@
 <!-- Main menu -->
 <nav class="nav-mainmenu" role="navigation" aria-label="Hovedmenu">
     <ul class="nav-mainmenu__list nav nav-stacked list-group">
+
+        <li class="list-group-header"><a href="#close" class="list-group-item">
+                <span class="fa-stack" aria-hidden="true">
+                   <i class="mdi md-24" aria-hidden="true">close</i>
+                </span>
+                Menu
+            </a></li>
+
         @if(!empty($main_menu_items))
             @foreach($main_menu_items as $menu_item)
                 @if(!empty($menu_item['sub_items']))
                     <li class="collapse{!! $menu_item['is_active'] === true ? ' active' : '' !!}">
                         <a href="#{{ $menu_item['url'] }}" class="list-group-item collapsed" data-toggle="collapse" data-parent="#mainmenu" role="button" aria-expanded="false">
-                            <span class="fa-stack fa-lg" aria-hidden="true"><i class="fa {{ $menu_item['icon'] }} fa-stack-1x"></i></span>
+                            <span class="fa-stack" aria-hidden="true"><i class="fa {{ $menu_item['icon'] }} fa-stack-1x"></i></span>
                             {{$menu_item['label']}}
                             <span class="caret"></span>
                         </a>
@@ -21,40 +29,40 @@
                 @else
                     <li{!! $menu_item['is_active'] === true ? ' class="active"' : '' !!}{!! !empty($menu_item['sub_items']) ? ' class="collapse"' : '' !!}>
                         <a href="#{{ $menu_item['url'] }}" class="list-group-item">
-                            <span class="fa-stack fa-lg" aria-hidden="true"><i class="fa {{ $menu_item['icon'] }} fa-stack-1x"></i></span>
+                            <span class="fa-stack" aria-hidden="true"><i class="fa {{ $menu_item['icon'] }} fa-stack-1x"></i></span>
                             {{$menu_item['label']}}
                         </a>
                     </li>
                 @endif
             @endforeach
         @else
-        <li class="active"><a href="#menu1" class="list-group-item">
-               <span class="fa-stack fa-lg" aria-hidden="true">
+        <li><a href="#menu1" class="list-group-item">
+               <span class="fa-stack" aria-hidden="true">
                    <i class="mdi md-24" aria-hidden="true">home</i>
                </span>
                 Forside</a>
             </a></li>
         <li><a href="#menu2" class="list-group-item">
-                <span class="fa-stack fa-lg" aria-hidden="true">
+                <span class="fa-stack" aria-hidden="true">
                     <i class="mdi md-24" aria-hidden="true">access_time</i>
                 </span>
                 Her og nu
             </a></li>
         <li><a href="#menu3" class="list-group-item">
-                <span class="fa-stack fa-lg" aria-hidden="true">
+                <span class="fa-stack" aria-hidden="true">
                     <i class="mdi md-24" aria-hidden="true">accessibility</i>
                 </span>
                 Find b&oslash;rn
             </a></li>
         <li><a href="#menu4" class="list-group-item">
-                <span class="fa-stack fa-lg" aria-hidden="true">
+                <span class="fa-stack" aria-hidden="true">
                     <i class="mdi md-24" aria-hidden="true">map</i>
                 </span>
                 Hvem er hvor
             </a></li>
         <li class="collapse">
             <a href="#menu5" class="list-group-item" data-toggle="collapse" data-parent="#mainmenu" role="button">
-                <span class="fa-stack fa-lg" aria-hidden="true">
+                <span class="fa-stack" aria-hidden="true">
                    <i class="mdi md-24" aria-hidden="true">chat</i>
                 </span>
                 Kommunikation <span class="caret"></span>
@@ -67,7 +75,7 @@
         </li>
         <li class="collapse">
             <a href="#menu6" class="list-group-item" data-toggle="collapse" data-parent="#mainmenu" role="button">
-                <span class="fa-stack fa-lg" aria-hidden="true">
+                <span class="fa-stack" aria-hidden="true">
                     <i class="mdi md-24" aria-hidden="true">event</i>
                 </span>
                 Planl&aelig;ning <span class="caret"></span>
@@ -79,14 +87,14 @@
             </ul>
         </li>
         <li><a href="#menu7" class="list-group-item">
-                <span class="fa-stack fa-lg" aria-hidden="true">
+                <span class="fa-stack" aria-hidden="true">
                     <i class="mdi md-24" aria-hidden="true">list</i>
                 </span>
                 Lister
             </a></li>
         <li class="collapse">
             <a href="#menu8" class="list-group-item" data-toggle="collapse" data-parent="#mainmenu" role="button">
-                <span class="fa-stack fa-lg" aria-hidden="true">
+                <span class="fa-stack" aria-hidden="true">
                     <i class="mdi md-24" aria-hidden="true">settings</i>
                 </span>
                 Administratorer <span class="caret"></span>

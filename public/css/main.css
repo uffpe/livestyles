@@ -7507,9 +7507,13 @@ body {
   border-top: 1px solid #F9F9F5; }
 
 .nav-mainmenu {
+  background-color: white;
   margin-left: -285px;
   width: 270px;
-  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
   -webkit-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -7517,8 +7521,10 @@ body {
   @media (min-width: 992px) {
     .nav-mainmenu {
       z-index: 1020;
-      margin-left: 0;
-      position: relative; } }
+      position: absolute;
+      margin-left: 0; }
+      .nav-mainmenu.list-group-header {
+        display: none; } }
   .nav-mainmenu__list {
     float: left;
     position: relative;
@@ -7532,23 +7538,24 @@ body {
       border: 0;
       border-radius: 0;
       color: #484848;
-      font-weight: 600;
-      margin-bottom: 3px !important;
       min-height: 40px;
       text-decoration: none;
-      padding: 0; }
+      padding: 0;
+      padding-top: 2px; }
       .nav-mainmenu__list > li a:hover, .nav-mainmenu__list > li a:focus, .nav-mainmenu__list > li a:active {
         background-color: #CEDFE9; }
       .nav-mainmenu__list > li a .caret {
         float: right;
         margin: 18px 18px 0 18px; }
       .nav-mainmenu__list > li a > .fa-stack {
-        background-color: #497B99;
-        color: white;
+        background-color: transparent;
+        color: #497B99;
+        display: inline-block;
         height: 40px;
-        width: 40px;
-        margin-right: 6px;
-        padding: 8px; }
+        padding: 8px;
+        position: relative;
+        vertical-align: middle;
+        width: 40px; }
         .nav-mainmenu__list > li a > .fa-stack .fa-stack-1x {
           font-size: 24px;
           line-height: 40px; }
@@ -7564,6 +7571,14 @@ body {
           margin-bottom: 0;
           padding: 10px;
           padding-left: 50px; }
+    .nav-mainmenu__list > li.list-group-header > a {
+      background-color: #497B99;
+      color: white; }
+      .nav-mainmenu__list > li.list-group-header > a > .fa-stack {
+        color: white; }
+    @media (min-width: 992px) {
+      .nav-mainmenu__list > li.list-group-header {
+        display: none; } }
   .nav-mainmenu.is-open {
     margin-left: 0; }
 

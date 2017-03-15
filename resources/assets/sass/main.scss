@@ -293,16 +293,24 @@ $icon-size:             20px;
   // --------------------------------------------------
 
   .nav-mainmenu {
+    background-color: white;
     margin-left: ( $nav-mainmenu-width + $gutter-normal ) * -1;
     width: $nav-mainmenu-width;
-    position: absolute;
+    height: 100%;
+    left:0;
+    top: 0;
+    position: fixed;
     @include transition(all 0.5s ease);
     z-index: $zindex-modal;
 
     @media (min-width: $screen-md){
       z-index: $zindex-sub-navbar-fixed;
+      position: absolute;
       margin-left: 0;
-      position: relative;
+      //position: relative;
+      &.list-group-header {
+        display: none;
+      }
     }
 
     &__list {
@@ -319,16 +327,18 @@ $icon-size:             20px;
       }
 
       > li {
+
         a {
           background-color: white;
           border: 0;
           border-radius: 0;
           color: $grey-x-dark;
-          font-weight: 600;
-          margin-bottom: 3px !important;
+          //font-weight: 600;
+          //margin-bottom: 3px !important;
           min-height: 40px;
           text-decoration: none;
           padding: 0;
+          padding-top: 2px;
 
           &:hover, &:focus, &:active {
             background-color: $blue-steel-xx-light;
@@ -340,12 +350,15 @@ $icon-size:             20px;
           }
 
           > .fa-stack {
-            background-color: $blue-steel-base;
-            color: white;
+            background-color: transparent;
+            color: $blue-steel-base;
+            display: inline-block;
             height: 40px;
-            width: 40px;
-            margin-right: 6px;
+            //margin-right: 6px;
             padding: 8px;
+            position: relative;
+            vertical-align: middle;
+            width: 40px;
 
             .fa-stack-1x  {
               font-size: 24px;
@@ -372,6 +385,22 @@ $icon-size:             20px;
 
           }
         }
+
+        &.list-group-header {
+          & > a {
+            background-color: $brand-primary;
+            color: white;
+
+            > .fa-stack {
+              color: white;
+            }
+          }
+
+          @media (min-width: $screen-md){
+            display: none;
+          }
+        }
+
       }
     }
 
