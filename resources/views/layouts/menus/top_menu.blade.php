@@ -4,7 +4,7 @@
         <div class="navbar-clock">
             <a href="#clock">
                 <span class="hidden-xs">{{ date('H:i:s') }}</span>
-                <i class="fa fa-clock-o fa-lg hidden-xs" aria-hidden="true"></i>
+                <i class="mdi md-18" aria-hidden="true" style="margin-bottom: -4px">access_time</i>
                 <span>{{ date('d-m-Y') }}</span>
                 <i class="fa fa-calendar fa-md visible-xs-inline" aria-hidden="true"></i>
             </a>
@@ -22,7 +22,7 @@
         <ul class="nav navbar-nav navbar-left">
             <li class="dropdown">
                 <a href="#" role="button" data-toggle="modal" data-target="#change_department">
-                    <i class="fa fa-home fa-lg" aria-hidden="true"></i>
+                    <i class="mdi md-18" aria-hidden="true" style="margin-bottom: -4px">home</i>
                     <span class="hidden-xs">Afdeling B</span>
                 </a>
             </li>
@@ -30,10 +30,10 @@
 
         <ul class="nav navbar-nav navbar-right">
             <li><a href="#link">
-                    <i class="fa fa-ban fa-lg" aria-hidden="true"></i>
+                    <i class="mdi md-18" aria-hidden="true" style="margin-bottom: -4px">block</i>
                 </a></li>
             <li><a href="#link">
-                    <i class="fa fa-comment-o fa-lg" aria-hidden="true"></i>
+                    <i class="mdi md-18" aria-hidden="true" style="margin-bottom: -4px">chat_bubble_outline</i>
                 </a>
             </li>
 
@@ -46,7 +46,9 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                         <span class="hidden-xs">{{ Auth::user()->name }}
                             <span class="hidden-xs hidden-sm txt_secondary"> - Teacher </span>
-                        </span> <i class="fa fa-user fa-lg" aria-hidden="true"></i>  <span class="caret"></span>
+                        </span>
+                        <i class="mdi md-18" aria-hidden="true" style="margin-bottom: -4px">person</i>
+                        <span class="caret"></span>
                     </a>
 
                     <ul class="dropdown-menu" role="menu">

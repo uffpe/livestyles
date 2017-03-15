@@ -3,6 +3,7 @@
 @import "bootstrap-tabulex";  /* Custom bootstrap components importer */
 // @import "bootstrap/theme";
 @import "font-awesome";
+//@import "material-design-icons";
 
 @import url("https://fonts.googleapis.com/css?family=Oswald:400,300,700");
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,300,700");
@@ -344,6 +345,7 @@ $icon-size:             20px;
             height: 40px;
             width: 40px;
             margin-right: 6px;
+            padding: 8px;
 
             .fa-stack-1x  {
               font-size: 24px;
@@ -424,6 +426,53 @@ $icon-size:             20px;
     list-style: none;
   }
 }
+
+//
+// Material design icons
+// --------------------------------------------------
+.mdi {
+  font-family: 'Material Icons';
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "liga" 1;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &.md-18 {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+  }
+
+  &.md-24 {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+  }
+
+  &.md-36 {
+    font-size: 36px;
+    width: 36px;
+    height: 36px;
+  }
+
+  &.md-48 {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+  }
+
+}
+
+
 
 // login page
 @import 'components/login_employees';

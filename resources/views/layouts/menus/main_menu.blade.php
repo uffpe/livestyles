@@ -29,24 +29,34 @@
             @endforeach
         @else
         <li class="active"><a href="#menu1" class="list-group-item">
-               <span class="fa-stack fa-lg" aria-hidden="true"><i class="fa fa-dashboard fa-stack-1x"></i></span>
+               <span class="fa-stack fa-lg" aria-hidden="true">
+                   <i class="mdi md-24" aria-hidden="true">home</i>
+               </span>
                 Forside</a>
             </a></li>
         <li><a href="#menu2" class="list-group-item">
-                <span class="fa-stack fa-lg" aria-hidden="true"><i class="fa fa-dashboard fa-stack-1x "></i></span>
+                <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="mdi md-24" aria-hidden="true">access_time</i>
+                </span>
                 Her og nu
             </a></li>
         <li><a href="#menu3" class="list-group-item">
-                <span class="fa-stack fa-lg" aria-hidden="true"><i class="fa fa-dashboard fa-stack-1x "></i></span>
+                <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="mdi md-24" aria-hidden="true">accessibility</i>
+                </span>
                 Find b&oslash;rn
             </a></li>
         <li><a href="#menu4" class="list-group-item">
-                <span class="fa-stack fa-lg" aria-hidden="true"><i class="fa fa-dashboard fa-stack-1x "></i></span>
+                <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="mdi md-24" aria-hidden="true">map</i>
+                </span>
                 Hvem er hvor
             </a></li>
         <li class="collapse">
             <a href="#menu5" class="list-group-item" data-toggle="collapse" data-parent="#mainmenu" role="button">
-                <span class="fa-stack fa-lg" aria-hidden="true"><i class="fa fa-dashboard fa-stack-1x "></i></span>
+                <span class="fa-stack fa-lg" aria-hidden="true">
+                   <i class="mdi md-24" aria-hidden="true">chat</i>
+                </span>
                 Kommunikation <span class="caret"></span>
             </a>
             <ul class="collapse list-group-submenu" id="menu5">
@@ -57,7 +67,9 @@
         </li>
         <li class="collapse">
             <a href="#menu6" class="list-group-item" data-toggle="collapse" data-parent="#mainmenu" role="button">
-                <span class="fa-stack fa-lg" aria-hidden="true"><i class="fa fa-dashboard fa-stack-1x "></i></span>
+                <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="mdi md-24" aria-hidden="true">event</i>
+                </span>
                 Planl&aelig;ning <span class="caret"></span>
             </a>
             <ul class="collapse list-group-submenu" id="menu6">
@@ -67,12 +79,16 @@
             </ul>
         </li>
         <li><a href="#menu7" class="list-group-item">
-                <span class="fa-stack fa-lg" aria-hidden="true"><i class="fa fa-dashboard fa-stack-1x "></i></span>
+                <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="mdi md-24" aria-hidden="true">list</i>
+                </span>
                 Lister
             </a></li>
         <li class="collapse">
             <a href="#menu8" class="list-group-item" data-toggle="collapse" data-parent="#mainmenu" role="button">
-                <span class="fa-stack fa-lg" aria-hidden="true"><i class="fa fa-dashboard fa-stack-1x "></i></span>
+                <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="mdi md-24" aria-hidden="true">settings</i>
+                </span>
                 Administratorer <span class="caret"></span>
             </a>
             <ul class="collapse list-group-submenu" id="menu8">

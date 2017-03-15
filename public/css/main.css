@@ -7547,7 +7547,8 @@ body {
         color: white;
         height: 40px;
         width: 40px;
-        margin-right: 6px; }
+        margin-right: 6px;
+        padding: 8px; }
         .nav-mainmenu__list > li a > .fa-stack .fa-stack-1x {
           font-size: 24px;
           line-height: 40px; }
@@ -7600,6 +7601,38 @@ pre {
   padding: 0; }
   .department_selector li {
     list-style: none; }
+
+.mdi {
+  font-family: 'Material Icons';
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "liga" 1;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+  .mdi.md-18 {
+    font-size: 18px;
+    width: 18px;
+    height: 18px; }
+  .mdi.md-24 {
+    font-size: 24px;
+    width: 24px;
+    height: 24px; }
+  .mdi.md-36 {
+    font-size: 36px;
+    width: 36px;
+    height: 36px; }
+  .mdi.md-48 {
+    font-size: 48px;
+    width: 48px;
+    height: 48px; }
 
 html {
   position: relative;
