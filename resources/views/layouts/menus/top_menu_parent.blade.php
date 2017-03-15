@@ -1,15 +1,5 @@
 <nav id="header" class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
-
-        <div class="navbar-clock">
-            <a href="#clock">
-                <span class="hidden-xs">{{ date('H:i:s') }}</span>
-                <i class="mdi md-18" aria-hidden="true" style="margin-bottom: -4px">access_time</i>
-                <span>{{ date('d-m-Y') }}</span>
-                <i class="fa fa-calendar fa-md visible-xs-inline" aria-hidden="true"></i>
-            </a>
-        </div>
-
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
@@ -22,21 +12,37 @@
         <ul class="nav navbar-nav navbar-left">
             <li class="dropdown">
                 <a href="#" role="button" data-toggle="modal" data-target="#change_department">
-                    <i class="mdi md-18" aria-hidden="true" style="margin-bottom: -4px">home</i>
-                    <span class="hidden-xs">Afdeling B</span>
+                    <i class="mdi md-18" aria-hidden="true" style="margin-bottom: -4px">account_circle</i>
+                    <span class="hidden-xs">Peter Parker</span>
                 </a>
             </li>
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
             <li><a href="#link">
-                    <i class="mdi md-18" aria-hidden="true" style="margin-bottom: -4px">block</i>
-                </a></li>
+                    <i class="mdi md-18" aria-hidden="true" style="margin-bottom: -4px; font-weight: normal;">playlist_add</i>
+                    <span class="hidden-xs">Opret aftale</span>
+                </a>
+            </li>
             <li><a href="#link">
-                    <i class="mdi md-18" aria-hidden="true" style="margin-bottom: -4px">chat_bubble_outline</i>
+                    <i class="mdi md-18" aria-hidden="true" style="margin-bottom: -4px">hotel</i>
+                    <span class="hidden-xs">Meld syg</span>
+                </a>
+            </li>
+            <li><a href="#link">
+                    <i class="mdi md-18" aria-hidden="true" style="margin-bottom: -4px">event_busy</i>
+
+                    <span class="hidden-xs">Meld fridag</span>
                 </a>
             </li>
 
+            <li>
+                <a href="#link">
+                    <i class="mdi md-18" aria-hidden="true" style="margin-bottom: -4px">chat_bubble_outline</i>
+
+                    <span class="hidden-xs">Beskeder</span>
+                </a>
+            </li>
 
             @if (Auth::guest())
                 <li><a href="{{ route('login') }}">Login</a></li>
@@ -44,7 +50,7 @@
             @else
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                        <span class="hidden-xs">{{ Auth::user()->name }}
+                        <span class="hidden-xs">
                             <span class="hidden-xs hidden-sm txt_secondary"> </span>
                         </span>
                         <i class="mdi md-18" aria-hidden="true" style="margin-bottom: -4px">person</i>

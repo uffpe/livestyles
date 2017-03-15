@@ -93,7 +93,7 @@
 <div id="main-container">
     <div class="main-wrapper__overlay"></div>
 
-    @include('layouts.menus.top_menu')
+    @include('layouts.menus.top_menu_parent')
 
     <div class="main-wrapper__content container">
         @include('layouts.menus.main_menu')

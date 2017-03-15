@@ -7602,6 +7602,12 @@ pre {
   .department_selector li {
     list-style: none; }
 
+.alpha {
+  padding-left: 0; }
+
+.omega {
+  padding-right: 0; }
+
 .mdi {
   font-family: 'Material Icons';
   text-rendering: optimizeLegibility;
