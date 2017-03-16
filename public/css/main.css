@@ -7678,7 +7678,6 @@ html {
   color: white; }
   @media (min-width: 992px) {
     .login_footer {
-      position: absolute;
       bottom: 0; } }
   .login_footer a {
     color: white;
@@ -7834,3 +7833,12 @@ html {
   border-bottom: solid 4px #b0aa15; }
   .post-it.yellow {
     background-color: #EEE970; }
+
+ul.check_list {
+  margin: 0;
+  padding: 0; }
+  ul.check_list li {
+    list-style: none;
+    margin-bottom: 10px; }
+    ul.check_list li i {
+      margin-bottom: -4px; }

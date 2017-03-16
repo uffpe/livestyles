@@ -158,7 +158,7 @@
                                     <div class="media" style="background-color: #eee; padding-right: 10px">
                                         <div class="media-left">
                                             <a href="#">
-                                                <img class="media-object" width="50px" src="http://placekitten.com/120/120" alt="...">
+                                                <img class="media-object" width="50px" src="http://lorempixel.com/120/120/people" alt="...">
                                             </a>
                                         </div>
                                         <div class="media-body">

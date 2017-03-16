@@ -555,3 +555,17 @@ $icon-size:             20px;
     background-color: $yellow-submarine;
   }
 }
+
+ul.check_list {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+    margin-bottom: 10px;
+
+    i {
+      margin-bottom: -4px;
+    }
+  }
+}

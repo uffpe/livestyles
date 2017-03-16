@@ -9,8 +9,8 @@ class ParentDesktopController extends Controller
     public function index()
     {
         $main_menu = [
-            ['url' => 'menu1', 'label' => 'Opslagstavle', 'icon' => 'pin_drop', 'is_active' => false],
-            ['url' => 'menu2', 'label' => 'Stamkort', 'icon' => 'account_box', 'is_active' => true],
+            ['url' => 'menu1', 'label' => 'Opslagstavle', 'icon' => 'pin_drop', 'is_active' => true],
+            ['url' => 'menu2', 'label' => 'Stamkort', 'icon' => 'account_box', 'is_active' => false],
             ['url' => 'menu3', 'label' => 'Aftaler', 'icon' => 'event_note', 'is_active' => false],
             ['url' => 'menu4', 'label' => 'Beskeder', 'icon' => 'chat_bubble_outline', 'is_active' => false],
             ['url' => 'menu5', 'label' => 'Ferie / Fri', 'icon' => 'event_busy', 'is_active' => false],
