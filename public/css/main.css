@@ -7640,6 +7640,9 @@ pre {
     width: 48px;
     height: 48px; }
 
+.no-margin-top {
+  margin-top: 0; }
+
 html {
   position: relative;
   min-height: 100%; }
@@ -7684,7 +7687,7 @@ html {
   .panel-heading a.toggle_collapse {
     position: absolute;
     right: 10px;
-    top: 10px; }
+    top: 8px; }
     .panel-heading a.toggle_collapse i {
       color: #cdcdcd;
       font-size: 16px; }
@@ -7698,6 +7701,19 @@ html {
   .panel-default > .panel-heading {
     position: relative;
     background-color: transparent; }
+
+.panel-inverse {
+  border-color: #ccc;
+  border-radius: 2px; }
+  .panel-inverse > .panel-heading {
+    position: relative;
+    background-color: #7F9379; }
+  .panel-inverse h4.panel-title {
+    color: white; }
+    .panel-inverse h4.panel-title i {
+      color: white; }
+  .panel-inverse a.toggle_collapse i {
+    color: white; }
 
 .panel_selector {
   margin-bottom: 4px; }
@@ -7785,3 +7801,12 @@ html {
   border: solid 1px #333;
   margin-bottom: 10px;
   border-radius: 2px; }
+
+.post-it {
+  background-color: #E5E5E3;
+  padding: 15px;
+  margin-bottom: 20px;
+  min-height: 200px;
+  border-bottom: solid 4px #b0aa15; }
+  .post-it.yellow {
+    background-color: #EEE970; }

@@ -480,13 +480,28 @@ $icon-size:             20px;
 
 }
 
+.no-margin-top {
+  margin-top: 0;
+}
 
 
 // login page
 @import 'components/login_employees';
 
-// Collapsable panels
+// Collapsable panelsp
 @import 'components/collapsable_panels';
 
 @import 'components/child_grid';
 @import 'components/personal_data';
+
+.post-it {
+  background-color: $gandalf-the-grey;
+  padding: 15px;
+  margin-bottom: 20px;
+  min-height: 200px;
+  border-bottom: solid 4px darken($yellow-submarine, 30%);
+
+  &.yellow {
+    background-color: $yellow-submarine;
+  }
+}

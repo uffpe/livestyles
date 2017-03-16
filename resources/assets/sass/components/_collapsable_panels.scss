@@ -23,7 +23,7 @@
   a.toggle_collapse {
     position: absolute;
     right: 10px;
-    top: 10px;
+    top: 8px;
 
     i {
       color: #cdcdcd;
@@ -43,6 +43,30 @@
   > .panel-heading {
     position: relative;
     background-color: transparent;
+  }
+}
+
+.panel-inverse {
+  border-color: #ccc;
+  border-radius: 2px;
+
+  > .panel-heading {
+    position: relative;
+    background-color: $green-hornet;
+  }
+
+  h4.panel-title {
+    color: white;
+
+    i {
+      color: white;
+    }
+  }
+
+  a.toggle_collapse {
+    i {
+      color: white;
+    }
   }
 }
 
