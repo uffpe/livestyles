@@ -73,7 +73,7 @@ $icon-size:             20px;
       background-color: $gray-dark;
       opacity: 0;
       z-index: -1;
-      @include transition(opacity 0.5s ease);
+      @include transition(opacity 0.0s ease);
 
       &.is-open {
         opacity: 0.5;
@@ -257,7 +257,7 @@ $icon-size:             20px;
           color: white;
           display: block;
           padding: 12px 10px 8px;
-          margin: 0 10px;
+          margin: 0;
           //margin-bottom: 0;
 
           &:hover, &:active {
@@ -307,14 +307,14 @@ $icon-size:             20px;
     left:0;
     top: 0;
     position: fixed;
-    @include transition(all 0.5s ease);
+    @include transition(margin-left 0.5s ease 0s);
     z-index: $zindex-modal;
 
     @media (min-width: $screen-md){
       z-index: $zindex-sub-navbar-fixed;
       position: absolute;
       margin-left: 0;
-      //position: relative;
+
       &.list-group-header {
         display: none;
       }
@@ -366,7 +366,7 @@ $icon-size:             20px;
             display: inline-block;
             height: 40px;
             //margin-right: 6px;
-            padding: 8px;
+            padding: 8px 10px;
             position: relative;
             vertical-align: middle;
             width: 40px;
@@ -395,15 +395,18 @@ $icon-size:             20px;
 
         &.list-group-header {
           & > a {
-            background-color: $brand-primary;
-            color: white;
+            //background-color: $brand-primary;
+            background-color: white;
+            color: $black-sabbath;
             min-height: 50px;
             //padding: 14px 12px;
+            padding-top: 0;
+            border-bottom: 1px solid $gandalf-the-grey;
 
             > .fa-stack {
               height: 50px;
-              color: white;
-              padding: 11px 8px;
+              color: $black-sabbath;
+              padding: 12px 10px;
             }
           }
 
@@ -416,8 +419,15 @@ $icon-size:             20px;
           > a {
             background-color: $green-hornet;
             color: white;
+
+            background-color: white;
+            color: #484848;
+            font-weight: 600;
+            border-left: 5px solid #6B9CBA;
+
+
             > .fa-stack {
-              color: white;
+              //color: white;
             }
           }
         }
@@ -427,6 +437,7 @@ $icon-size:             20px;
 
     &.is-open {
       margin-left: 0;
+      @include transition(margin-left 0.4s ease-in 0.1s);
     }
 
   }

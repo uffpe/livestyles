@@ -29,12 +29,41 @@
             </li>
         </ul>
 
+
+        <style>
+
+            .has-badge {
+                position: relative;
+                margin-right: 10px;
+                background-clip: padding-box;
+                display: inline-block;
+                font-size: 10px;
+                -webkit-font-smoothing: subpixel-antialiased;
+                line-height: 1.3;
+                min-height: 13px;
+            }
+
+            .badge {
+                font-size: 10px;
+                background-color: #ff6a00;
+                position: absolute;
+                right: -10px;
+                bottom: -5px;
+                padding:3px 5px 3px 4px;
+            }
+
+        </style>
+
+
         <ul class="nav navbar-nav navbar-right">
             <li><a href="#link">
                     <i class="mdi md-18" aria-hidden="true" style="margin-bottom: -4px">block</i>
                 </a></li>
             <li><a href="#link">
-                    <i class="mdi md-18" aria-hidden="true" style="margin-bottom: -4px">chat_bubble_outline</i>
+                    <span class="has-badge">
+                        <i class="mdi md-24" aria-hidden="true" style="margin-bottom: -4px">chat_bubble_outline</i>
+                        <span class="badge">42</span>
+                    </span>
                 </a>
             </li>
 
