@@ -43,4 +43,13 @@ Route::group(['prefix' => 'demo'], function()
 
     Route::get('guide', 'GuidesController@index')
         ->name('guide');
+
+    // New foraeldre group
+    Route::group(['prefix' => 'foraeldre'], function()
+    {
+        Route::get('opslagstavle', 'ParentDesktopController@index')
+            ->name('parents-dekstop');
+    });
 });
+
+
