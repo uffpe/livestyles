@@ -155,7 +155,7 @@
                                 <div class="panel-body">
                                     <h5>F&oslash;dselsdag i dag:</h5>
 
-                                    <div class="media" style="background-color: #ddd; padding-right: 10px">
+                                    <div class="media" style="background-color: #eee; padding-right: 10px">
                                         <div class="media-left">
                                             <a href="#">
                                                 <img class="media-object" width="50px" src="http://placekitten.com/120/120" alt="...">
