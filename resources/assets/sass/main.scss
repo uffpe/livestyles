@@ -78,6 +78,12 @@ $icon-size:             20px;
       &.is-open {
         opacity: 0.5;
         z-index: $zindex-modal-background;
+
+        @media (min-width: $screen-md-min){
+          opacity: 0;
+          z-index: -1;
+        }
+
       }
 
     }
@@ -245,13 +251,14 @@ $icon-size:             20px;
         margin: 0;
 
         .navbar-toggle {
-          float: left;
+          //float: left;
           border: 0;
           border-radius: 0;
+          color: white;
           display: block;
-          padding: 18px 10px;
+          padding: 12px 10px 8px;
           margin: 0 10px;
-          margin-bottom: 0;
+          //margin-bottom: 0;
 
           &:hover, &:active {
             background-color: darken($navbar-inverse-bg, 5%);
@@ -262,7 +269,7 @@ $icon-size:             20px;
           }
 
           @media (min-width: $screen-sm-min) {
-              padding: 18px 10px;
+              //padding: 18px 10px;
           }
 
           @media (min-width: $screen-md) {
@@ -391,15 +398,12 @@ $icon-size:             20px;
             background-color: $brand-primary;
             color: white;
             min-height: 50px;
-            padding: 14px 12px;
+            //padding: 14px 12px;
 
             > .fa-stack {
               height: 50px;
               color: white;
-              padding-top: 12px;
-              position: absolute;
-              right: 0;
-              top: 0;
+              padding: 11px 8px;
             }
           }
 

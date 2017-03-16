@@ -4,9 +4,12 @@
 
         <li class="list-group-header"><a href="#close" class="list-group-item">
                 <span class="fa-stack" aria-hidden="true">
-                   <i class="mdi md-24" aria-hidden="true">close</i>
+                    <i class="mdi md-24">menu</i>
                 </span>
                 Menu
+                <span class="fa-stack pull-right" aria-hidden="true">
+                   <i class="mdi md-24">close</i>
+                </span>
             </a></li>
 
         @if(!empty($main_menu_items))

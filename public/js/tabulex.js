@@ -2,52 +2,39 @@
 $(document).ready(function () {
 
     // Main menu open/close variables
-    var trigger = '.navbar-toggle',
+    var menu_toggle = '.navbar-toggle',
         mainmenu = '.nav-mainmenu',
         mainmenu_header = '.nav-mainmenu .list-group-header a',
         overlay = '.main-wrapper__overlay',
         isOpen = false;
 
-    // Main menu open/close triggers
-    $(trigger).click(function (e) {
-        console.log("Click on trigger");
-        e.stopPropagation();
-        e.preventDefault();
-        console.log("Open menu");
-        if (isOpen == true) {
-            close_mainmenu(e);
-        } else {
-            open_mainmenu(e);
-            // Close menu if click outside menu
-            $(document).on('click',function(elm) {
-                console.log("Clicked on: " + elm.target.className + " | isOpen = " + isOpen );
-                if($(mainmenu).has(elm.target).length === 0) {
-                    close_mainmenu();
-                }
-            });
+    // Main menu button open/close
+    $(menu_toggle).click(function () {
+        if (isOpen == true){
+            close_mainmenu();
+        } else{
+            open_mainmenu();
         }
     });
 
-    /*
-    // Main menu open/close triggers
-    $(mainmenu_header).click(function (e) {
-        e.stopPropagation();
-        console.log("Close menu");
-        close_mainmenu(e);
-    });*/
+    // Main menu close triggers
+    $(mainmenu_header + "," + overlay).click(function () {
+        if (isOpen == true)
+            close_mainmenu();
+    });
 
     // Main menu open function
-    function open_mainmenu(e) {
+    function open_mainmenu() {
         isOpen = true;
-        $(mainmenu + ',' + trigger + ',' + overlay).removeClass('is-closed');
-        $(mainmenu + ',' + trigger + ',' + overlay).addClass('is-open');
+        $(mainmenu + ',' + menu_toggle + ',' + overlay).removeClass('is-closed');
+        $(mainmenu + ',' + menu_toggle + ',' + overlay).addClass('is-open');
     }
 
     // Main menu close function
-    function close_mainmenu(e) {
+    function close_mainmenu() {
         isOpen = false;
-        $(mainmenu + ',' + trigger + ',' + overlay).removeClass('is-open');
-        $(mainmenu + ',' + trigger + ',' + overlay).addClass('is-closed');
+        $(mainmenu + ',' + menu_toggle + ',' + overlay).removeClass('is-open');
+        $(mainmenu + ',' + menu_toggle + ',' + overlay).addClass('is-closed');
     }
 
     // Main menu - Multi-level function

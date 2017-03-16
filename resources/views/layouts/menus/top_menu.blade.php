@@ -13,9 +13,10 @@
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
+{{--                <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>--}}
+                <i class="mdi md-24" aria-hidden="true">menu</i>
             </button>
         </div>
 
