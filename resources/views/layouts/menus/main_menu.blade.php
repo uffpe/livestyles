@@ -44,7 +44,7 @@
                 @endif
             @endforeach
         @else
-            <li class="active"><a href="#menu1" class="list-group-item">
+            <li><a href="#menu1" class="list-group-item">
                    <span class="fa-stack" aria-hidden="true">
                        <i class="mdi md-24" aria-hidden="true">home</i>
                    </span>
@@ -56,7 +56,7 @@
                     </span>
                     Her og nu
                 </a></li>
-            <li><a href="#menu3" class="list-group-item">
+            <li class="active"><a href="#menu3" class="list-group-item">
                     <span class="fa-stack" aria-hidden="true">
                         <i class="mdi md-24" aria-hidden="true">accessibility</i>
                     </span>
