@@ -8,7 +8,7 @@
 
         <div class="row">
 
-            <div class="col-md-4 col-md-push-3">
+            <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title"><i class="fa fa-unlock-alt"></i> Log p&aring; Tabulex</h4>
@@ -30,7 +30,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-md-pull-4">
+            <div class="col-md-3">
 
                 <div class="panel panel-default">
                     <div class="panel-heading">
