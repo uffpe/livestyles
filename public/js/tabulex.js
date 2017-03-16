@@ -10,19 +10,20 @@ $(document).ready(function () {
 
     // Main menu open/close triggers
     $(trigger).click(function (e) {
+        console.log("Click on trigger");
         e.stopPropagation();
+        e.preventDefault();
         console.log("Open menu");
         if (isOpen == true) {
             close_mainmenu(e);
         } else {
             open_mainmenu(e);
             // Close menu if click outside menu
-            $(document).one('click',function(elm) {
-                // console.log(elm.target.className);
+            $(document).on('click',function(elm) {
+                console.log("Clicked on: " + elm.target.className + " | isOpen = " + isOpen );
                 if($(mainmenu).has(elm.target).length === 0) {
                     close_mainmenu();
                 }
-                // elm.stopPropagation();
             });
         }
     });
@@ -37,18 +38,16 @@ $(document).ready(function () {
 
     // Main menu open function
     function open_mainmenu(e) {
-        e.preventDefault();
+        isOpen = true;
         $(mainmenu + ',' + trigger + ',' + overlay).removeClass('is-closed');
         $(mainmenu + ',' + trigger + ',' + overlay).addClass('is-open');
-        isOpen = true;
     }
 
     // Main menu close function
     function close_mainmenu(e) {
-        e.preventDefault();
+        isOpen = false;
         $(mainmenu + ',' + trigger + ',' + overlay).removeClass('is-open');
         $(mainmenu + ',' + trigger + ',' + overlay).addClass('is-closed');
-        isOpen = false;
     }
 
     // Main menu - Multi-level function

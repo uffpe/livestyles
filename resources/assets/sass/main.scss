@@ -148,7 +148,7 @@ $icon-size:             20px;
         > li {
           float: left;
           > a {
-            padding: 15px 10px;
+            padding: 15px 10px 14px;
 
             &:hover, &:active {
               background-color: darken($navbar-inverse-bg, 5%);
@@ -225,7 +225,7 @@ $icon-size:             20px;
           color: white;
           display: inline-block;
           line-height: 20px;
-          padding: 15px 10px;
+          padding: 15px 10px 14px;
           position: relative;
 
           &:hover, &:active {
@@ -313,7 +313,7 @@ $icon-size:             20px;
       }
     }
 
-    &__list {
+    &__list, &__list.nav-stacked {
       // background-color: rgba(255,255,255,0.9);
       float: left;
       position: relative;
@@ -328,8 +328,12 @@ $icon-size:             20px;
 
       > li {
 
+        + li {
+          margin-top: 0;
+        }
+
         a {
-          background-color: white;
+          // background-color: white;
           border: 0;
           border-radius: 0;
           color: $grey-x-dark;
@@ -369,20 +373,16 @@ $icon-size:             20px;
         ul {
           padding-left: 0;
           margin-bottom: 4px;
-
           > li {
             border: 0;
-            //padding-left: 50px;
-
             a {
               display: block;
               font-weight: 400;
               line-height: 20px;
               margin-bottom: 0;
               padding: 10px;
-              padding-left: 50px;
+              padding-left: 44px;
             }
-
           }
         }
 
@@ -390,14 +390,31 @@ $icon-size:             20px;
           & > a {
             background-color: $brand-primary;
             color: white;
+            min-height: 50px;
+            padding: 14px 12px;
 
             > .fa-stack {
+              height: 50px;
               color: white;
+              padding-top: 12px;
+              position: absolute;
+              right: 0;
+              top: 0;
             }
           }
 
           @media (min-width: $screen-md){
             display: none;
+          }
+        }
+
+        &.active {
+          > a {
+            background-color: $green-hornet;
+            color: white;
+            > .fa-stack {
+              color: white;
+            }
           }
         }
 
