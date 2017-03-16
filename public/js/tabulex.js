@@ -4,6 +4,7 @@ $(document).ready(function () {
     // Main menu open/close variables
     var trigger = '.navbar-toggle',
         mainmenu = '.nav-mainmenu',
+        mainmenu_header = '.nav-mainmenu .list-group-header a',
         overlay = '.main-wrapper__overlay',
         isOpen = false;
 
@@ -12,9 +13,9 @@ $(document).ready(function () {
         e.stopPropagation();
         console.log("Open menu");
         if (isOpen == true) {
-            close_mainmenu();
+            close_mainmenu(e);
         } else {
-            open_mainmenu();
+            open_mainmenu(e);
             // Close menu if click outside menu
             $(document).one('click',function(elm) {
                 // console.log(elm.target.className);
@@ -26,15 +27,25 @@ $(document).ready(function () {
         }
     });
 
+    /*
+    // Main menu open/close triggers
+    $(mainmenu_header).click(function (e) {
+        e.stopPropagation();
+        console.log("Close menu");
+        close_mainmenu(e);
+    });*/
+
     // Main menu open function
-    function open_mainmenu() {
+    function open_mainmenu(e) {
+        e.preventDefault();
         $(mainmenu + ',' + trigger + ',' + overlay).removeClass('is-closed');
         $(mainmenu + ',' + trigger + ',' + overlay).addClass('is-open');
         isOpen = true;
     }
 
     // Main menu close function
-    function close_mainmenu() {
+    function close_mainmenu(e) {
+        e.preventDefault();
         $(mainmenu + ',' + trigger + ',' + overlay).removeClass('is-open');
         $(mainmenu + ',' + trigger + ',' + overlay).addClass('is-closed');
         isOpen = false;
