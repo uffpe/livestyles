@@ -34,7 +34,7 @@
                     </div>
                 </div>
                 <form class="form-horizontal">
-                    <div class="row no-gutter">
+                    <div class="row">
                         <div class="col-sm-12">
                             <div class="panel panel-default personal_data">
                                 <div class="panel-heading">

@@ -90,12 +90,12 @@
     </script>
 </head>
 <body{{ $has_submenu === true ? ' class=include-subbar' : '' }}>
-<div id="main-container">
-    <div class="main-wrapper__overlay"></div>
+<div class="main-container">
+    <div class="main-container__overlay"></div>
 
     @include('layouts.menus.top_menu_parent')
 
-    <div class="main-wrapper__content container">
+    <div class="main-container__content container">
         @include('layouts.menus.main_menu')
         @yield('content')
     </div>
@@ -235,6 +235,6 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
 
-    <script src="{{ asset('js/tabulex.js') }}"></script>
+    <script src="{{ asset('js/tabulex.js') }}?{{ time() }}"></script>
 </body>
 </html>
