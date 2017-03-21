@@ -19,31 +19,30 @@
                                 </div>
                                 <div class="panel-collapse collapse in">
                                     <div class="panel-body ">
-                                        <div class="col-sm-6 alpha"><img src="http://placekitten.com/350/280" class="media-object" style="max-width: 100%"></div>
-                                        <div class="col-sm-6 omega">
-                                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-                                            <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus [...]</p>
+                                        <div class="row single-gutter">
+                                            <div class="col-ms-6"><img src="http://placekitten.com/350/280" class="media-object" style="max-width: 100%"></div>
+                                            <div class="col-ms-6">
+                                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                                                <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus [...]</p>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="panel-footer">
-
-                                            <div class="text-right">
-                                                <a href="#">L&aelig;s mere</a>
-
-                                            </div>
-
+                                        <div class="text-right">
+                                            <a href="#">L&aelig;s mere</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             </div>
                         </div>
                         <div class="row single-gutter">
-                            <div class="col-sm-6">
+                            <div class="col-ms-6">
                                 <div class="post-it yellow">
                                     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-ms-6">
                                 <div class="post-it yellow">
                                     <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est</p>
                                     <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id.</p>
@@ -60,8 +59,8 @@
                                 </div>
                                 <div class="panel-collapse collapse in">
                                     <div class="panel-body ">
-                                        <div class="col-sm-6 alpha"><img src="http://placekitten.com/340/290" class="media-object" style="max-width: 100%"></div>
-                                        <div class="col-sm-6 omega">
+                                        <div class="col-ms-6"><img src="http://placekitten.com/340/290" class="media-object" style="max-width: 100%"></div>
+                                        <div class="col-ms-6 ">
                                             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
 
                                         </div>
