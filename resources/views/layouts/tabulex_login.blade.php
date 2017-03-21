@@ -10,9 +10,17 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+    <!-- Current old styles -->
+    <link href="https://www.sfoweb.dk/css/tmsfo/style.css?v=1488928677" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://www.sfoweb.dk/css/tmsfo/style_sfoweb.css">
+    <link rel="stylesheet" type="text/css" href="https://www.sfoweb.dk/lib/jquery-ui/css/smoothness/jquery-ui-1.10.3.min.css">
+    <link rel="stylesheet" type="text/css" href="https://www.sfoweb.dk/css/tmsfo/jScrollPane.css">
+    <link rel="stylesheet" type="text/css" href="https://www.sfoweb.dk/css/tmsfo/scrollbar.css?v=1488928677">
+    <link rel="stylesheet" type="text/css" href="https://www.sfoweb.dk/css/generic.css">
+    <link rel="stylesheet" type="text/css" href="https://www.sfoweb.dk/css/sfoweb.css">
+
     <!-- Styles -->
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Scripts -->
     <script>

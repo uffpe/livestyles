@@ -1,4 +1,4 @@
-<nav id="header" class="navbar navbar-inverse navbar-fixed-top">
+<nav id="top_header" class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
 
         <div class="navbar-clock">

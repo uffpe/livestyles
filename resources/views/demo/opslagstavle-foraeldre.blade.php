@@ -74,7 +74,7 @@
                         <div class="panel panel-inverse">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <i class="mdi md-24" aria-hidden="true">person_pin</i>
+                                <i class="fa fa-street-view" aria-hidden="true"></i>
                                 Status
                             </h4>
                             <a href="#" class="toggle_collapse"><i class="fa fa-chevron-down"></i></a>
@@ -89,18 +89,20 @@
 
                         <div class="panel panel-inverse">
                         <div class="panel-heading">
-                            <h4 class="panel-title">
+                            <h4 class="panel-title text-center">
+                                <a href="#" class="pull-left"><i class="fa fa-chevron-left"></i></a>
                                 Uge 10
+                                <a href="#" class="pull-right"><i class="fa fa-chevron-right"></i></a>
                             </h4>
-                            <a href="#" class="toggle_collapse"><i class="fa fa-chevron-down"></i></a>
-
                         </div>
                         <div class="panel-collapse collapse in">
 
                                 <table class="table">
 
                                     <tr>
-                                        <th colspan="2"><i class="mdi md-24" aria-hidden="true" style="margin-bottom: -8px;">event_note</i> Mandag 6. marts</th>
+                                        <th colspan="2">
+                                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                                            Mandag 6. marts</th>
                                     </tr>
                                     <tr>
                                         <td>14:00</td>
@@ -108,7 +110,7 @@
                                     </tr>
 
                                     <tr>
-                                        <th colspan="2"><i class="mdi md-24" aria-hidden="true" style="margin-bottom: -8px;">event_note</i> Tirsdag 7. marts</th>
+                                        <th colspan="2"><i class="fa fa-calendar" aria-hidden="true"></i> Tirsdag 7. marts</th>
                                     </tr>
 
                                     <tr>
@@ -117,7 +119,9 @@
                                     </tr>
 
                                     <tr>
-                                        <th colspan="2"><i class="mdi md-24" aria-hidden="true" style="margin-bottom: -8px;">event_note</i> Onsdag 8. marts</th>
+                                        <th colspan="2">
+                                            <i class="fa fa-calendar" aria-hidden="true"></i> Onsdag 8. marts
+                                        </th>
                                     </tr>
 
                                     <tr>
@@ -126,7 +130,9 @@
                                     </tr>
 
                                     <tr>
-                                        <th colspan="2"><i class="mdi md-24" aria-hidden="true" style="margin-bottom: -8px;">event_note</i> Torsdag 9. marts</th>
+                                        <th colspan="2">
+                                            <i class="fa fa-calendar" aria-hidden="true"></i> Torsdag 9. marts
+                                        </th>
                                     </tr>
 
                                     <tr>
@@ -135,7 +141,9 @@
                                     </tr>
 
                                     <tr>
-                                        <th colspan="2"><i class="mdi md-24" aria-hidden="true" style="margin-bottom: -8px;">event_note</i> Fredag 10. marts</th>
+                                        <th colspan="2">
+                                            <i class="fa fa-calendar" aria-hidden="true"></i> Fredag 10. marts
+                                        </th>
                                     </tr>
 
                                     <tr>
@@ -151,9 +159,11 @@
                         <div class="panel panel-inverse">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <i class="mdi md-24" aria-hidden="true">cake</i>
+                                <i class="fa fa-birthday-cake" aria-hidden="true"></i>
                                 F&oslash;dselsdage</h4>
-                            <a href="#" class="toggle_collapse"><i class="fa fa-chevron-down"></i></a>
+                            <a href="#" class="toggle_collapse">
+                                <i class="fa fa-chevron-down"></i>
+                            </a>
                         </div>
                         <div class="panel-collapse collapse in">
                             <div class="panel-body">
@@ -179,7 +189,8 @@
                         <div class="panel panel-inverse">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <i class="mdi md-24" aria-hidden="true">image</i>
+                            <h4 class="panel-title">
+                                <i class="fa fa-image" aria-hidden="true"></i>
                                 Billeder
                             </h4>
                             <a href="#" class="toggle_collapse"><i class="fa fa-chevron-down"></i></a>

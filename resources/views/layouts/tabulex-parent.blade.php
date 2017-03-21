@@ -10,77 +10,20 @@
 
     <title>{{ config('app.name', 'IST - Tabulex') }}</title>
 
-    <!-- Styles -->
+    <!-- Current old styles -->
+    <link href="https://www.sfoweb.dk/css/tmsfo/style.css?v=1488928677" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://www.sfoweb.dk/css/tmsfo/style_sfoweb.css">
+    <link rel="stylesheet" type="text/css" href="https://www.sfoweb.dk/lib/jquery-ui/css/smoothness/jquery-ui-1.10.3.min.css">
+    <link rel="stylesheet" type="text/css" href="https://www.sfoweb.dk/css/tmsfo/jScrollPane.css">
+    <link rel="stylesheet" type="text/css" href="https://www.sfoweb.dk/css/tmsfo/scrollbar.css?v=1488928677">
+    <link rel="stylesheet" type="text/css" href="https://www.sfoweb.dk/css/generic.css">
+    <link rel="stylesheet" type="text/css" href="https://www.sfoweb.dk/css/sfoweb.css">
+
+    <!-- new styles -->
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+
+    <!-- Used for syntax highlighting only -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/atom-one-light.min.css">
-
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    {{--<link href="//cdn.materialdesignicons.com/1.8.36/css/materialdesignicons.min.css" rel="stylesheet">--}}
-
-    <style>
-        .mdi::before {
-            font-size: 24px;
-            line-height: 14px;
-        }
-        .btn .mdi::before {
-            position: relative;
-            top: 4px;
-        }
-        .btn-xs .mdi::before {
-            font-size: 18px;
-            top: 3px;
-        }
-        .btn-sm .mdi::before {
-            font-size: 18px;
-            top: 3px;
-        }
-        .dropdown-menu .mdi {
-            width: 18px;
-        }
-        .dropdown-menu .mdi::before {
-            position: relative;
-            top: 4px;
-            left: -8px;
-        }
-        .nav .mdi::before {
-            position: relative;
-            top: 4px;
-        }
-        .navbar .navbar-toggle .mdi::before {
-            position: relative;
-            top: 4px;
-            color: #FFF;
-        }
-        .breadcrumb .mdi::before {
-            position: relative;
-            top: 4px;
-        }
-        .breadcrumb a:hover {
-            text-decoration: none;
-        }
-        .breadcrumb a:hover span {
-            text-decoration: underline;
-        }
-        .alert .mdi::before {
-            position: relative;
-            top: 4px;
-            margin-right: 2px;
-        }
-        .input-group-addon .mdi::before {
-            position: relative;
-            top: 3px;
-        }
-        .navbar-brand .mdi::before {
-            position: relative;
-            top: 2px;
-            margin-right: 2px;
-        }
-        .list-group-item .mdi::before {
-            position: relative;
-            top: 3px;
-            left: -3px
-        }
-    </style>
 
     <!-- Scripts -->
     <script>

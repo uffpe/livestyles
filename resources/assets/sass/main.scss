@@ -47,6 +47,7 @@ $gutter-small:          floor($grid-gutter-width / 4);
     padding: 0;
     padding-top: $navbar-height + $gutter-normal;
     overflow-y: scroll;
+    height: 100%;
 
     &.include-subbar {
       padding-top: ($navbar-height * 2) + $gutter-normal;
@@ -220,7 +221,7 @@ $gutter-small:          floor($grid-gutter-width / 4);
 // Navbar Header & subheader
 // --------------------------------------------------
 
-  #header, #sub-header {
+  #top_header, #sub-header {
     &.navbar.navbar-inverse {
       z-index: $zindex-navbar-fixed;
 
@@ -321,7 +322,8 @@ $gutter-small:          floor($grid-gutter-width / 4);
     }
   }
 
-  #header {
+  #top_header {
+
     &.navbar.navbar-inverse {
       margin-bottom: 0;
 
