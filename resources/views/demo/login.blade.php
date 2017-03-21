@@ -69,13 +69,13 @@
                                 <div class="panel-body">
                                     <h5 class="no-margin-top">Her kan du:</h5>
                                    <ul class="check_list">
-                                       <li><i class="mdi md-18" aria-hidden="true" style="margin-bottom: -4px;">check_circle</i> Oprette g&aring;-hjem aftaler</li>
-                                       <li><i class="mdi md-18" aria-hidden="true" style="margin-bottom: -4px;">check_circle</i> Oprette legeaftaler</li>
-                                       <li><i class="mdi md-18" aria-hidden="true" style="margin-bottom: -4px;">check_circle</i> L&aelig;se nyheder</li>
-                                       <li><i class="mdi md-18" aria-hidden="true" style="margin-bottom: -4px;">check_circle</i> Vedligeholdelse</li>
-                                       <li><i class="mdi md-18" aria-hidden="true" style="margin-bottom: -4px;">check_circle</i> Sygemelde dit barn</li>
-                                       <li><i class="mdi md-18" aria-hidden="true" style="margin-bottom: -4px;">check_circle</i> Sende beskeder til</li>
-                                       <li><i class="mdi md-18" aria-hidden="true" style="margin-bottom: -4px;">check_circle</i> Oprette</li>
+                                       <li><i class="fa fa-check" aria-hidden="true"></i> Oprette g&aring;-hjem aftaler</li>
+                                       <li><i class="fa fa-check" aria-hidden="true"></i> Oprette legeaftaler</li>
+                                       <li><i class="fa fa-check" aria-hidden="true"></i> L&aelig;se nyheder</li>
+                                       <li><i class="fa fa-check" aria-hidden="true"></i> Vedligeholdelse</li>
+                                       <li><i class="fa fa-check" aria-hidden="true"></i> Sygemelde dit barn</li>
+                                       <li><i class="fa fa-check" aria-hidden="true"></i> Sende beskeder til</li>
+                                       <li><i class="fa fa-check" aria-hidden="true"></i> Oprette</li>
                                    </ul>
 
                                 </div>

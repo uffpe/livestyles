@@ -159,10 +159,12 @@ $gutter-small:          floor($grid-gutter-width / 4);
     text-align: center;
   }
 
-  .fa {
-    font-size: $font-icon-size;
-    line-height: 0.75em;
-    vertical-align: -15%;
+  #header, .navbar-header, .nav-mainmenu {
+    .fa {
+      font-size: $font-icon-size;
+      line-height: 0.75em;
+      vertical-align: -15%;
+    }
   }
 
   .topmenu-icons {
