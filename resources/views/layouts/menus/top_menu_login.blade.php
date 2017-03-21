@@ -2,8 +2,10 @@
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <i class="mdi md-24" aria-hidden="true">menu</i>
+                <span class="sr-only">Log p&aring; Tabulex</span>
+                <span class="fa-stack" aria-hidden="true">
+                        <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                    </span>
             </button>
         </div>
 

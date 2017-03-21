@@ -2,17 +2,17 @@
 <nav class="nav-mainmenu" role="navigation" aria-label="Hovedmenu">
     <ul class="nav-mainmenu__list nav nav-stacked list-group">
 
-        <li class="list-group-header"><a href="#close" class="list-group-item">
+        <li class="list-group-header">
+            <a href="#close" class="list-group-item">
                 <span class="fa-stack" aria-hidden="true">
-                    {{--<i class="mdi md-24">menu</i>--}}
                     <i class="fa fa-bars" aria-hidden="true"></i>
                 </span>
                 Menu
                 <span class="fa-stack pull-right" aria-hidden="true">
-                   {{--<i class="mdi md-24">close</i>--}}
                    <i class="fa fa-close" aria-hidden="true"></i>
                 </span>
-            </a></li>
+            </a>
+        </li>
 
         @if(!empty($main_menu_items))
             @foreach($main_menu_items as $menu_item)

@@ -39,6 +39,8 @@ $nav-mainmenu-width:    270px;
 $font-icon-size:        20px;
 $gutter-normal:         floor($grid-gutter-width / 2);
 $gutter-small:          floor($grid-gutter-width / 4);
+
+
 //
 // Basic blocks
 // --------------------------------------------------
@@ -222,7 +224,7 @@ $gutter-small:          floor($grid-gutter-width / 4);
 // --------------------------------------------------
 
   #top_header, #sub-header {
-    &.navbar.navbar-inverse {
+    &.navbar {
       z-index: $zindex-navbar-fixed;
 
       > .container {
@@ -317,7 +319,7 @@ $gutter-small:          floor($grid-gutter-width / 4);
   }
 
   #sub-header {
-    &.navbar.navbar-inverse {
+    &.navbar {
       z-index: $zindex-sub-navbar-fixed;
     }
   }
@@ -350,11 +352,6 @@ $gutter-small:          floor($grid-gutter-width / 4);
             text-decoration: none;
           }
         }
-        //@media (max-width: $screen-xs-max) {
-        //  span {
-        //    display: block;
-        //  }
-        //}
       }
 
       .navbar-header {
@@ -403,9 +400,6 @@ $gutter-small:          floor($grid-gutter-width / 4);
       border-top: 1px solid $grey-x-light;
     }
   }
-
-
-
 
 
   //
@@ -552,6 +546,59 @@ $gutter-small:          floor($grid-gutter-width / 4);
     }
 
   }
+
+
+  .nav-mainmenu-login {
+
+    @media (min-width: $screen-md){
+      float: left;
+      margin-left: 0;
+      position: relative;
+      // top: 65.5px; // Push down under h1 title
+
+      .list-group-header {
+        display: none;
+      }
+    }
+
+    .nav-mainmenu__list,
+    .nav-mainmenu__list.nav-stacked {
+      .panel-default {
+        border-width: 0;
+        //.panel-heading {
+        //  display: none;
+        //}
+      }
+
+      @media (min-width: $screen-md){
+        position: relative;
+        background-color: transparent;
+        height: auto;
+
+        .panel-default {
+          border-width: 1px;
+          //.panel-heading {
+          //  display: block;
+          //}
+        }
+
+      }
+    }
+  }
+
+
+
+//
+// Panels
+// --------------------------------------------------
+
+  .panel {
+    h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+      margin-top: 0;
+    }
+  }
+
+
 
   /* CUSTOM styles */
   pre {
