@@ -22,12 +22,12 @@
     </script>
 </head>
 <body{{ $has_submenu === true ? ' class=include-subbar' : '' }}>
-<div id="main-container">
-    <div class="main-wrapper__overlay"></div>
+<div class="main-container">
+    <div class="main-container__overlay"></div>
 
     @include('layouts.menus.top_menu_login')
 
-    <div class="main-wrapper__content container">
+    <div class="main-container__content container">
         @yield('content')
     </div>
 </div><!-- /container -->
@@ -41,7 +41,11 @@
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="../js/lib/bootstrap.min.js"></script>
-<script src="../js/tabulex.js"></script>
+<script src="{{ asset('js/lib/bootstrap.min.js') }}"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
+
+<script src="{{ asset('js/tabulex.js') }}?{{ time() }}"></script>
 </body>
 </html>
