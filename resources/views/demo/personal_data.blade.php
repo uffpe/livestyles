@@ -18,7 +18,7 @@
                         </li>
                         <li>
                             <a href="#gem"><span class="hidden-xs">Gem alt</span>
-                                <i class="mdi md-18" aria-hidden="true" style="margin-bottom: -4px">save</i>
+                                <i class="fa fa fa-floppy-o" aria-hidden="true"></i>
                             </a>
                         </li>
                     </ul><!-- Navbar links - right -->
