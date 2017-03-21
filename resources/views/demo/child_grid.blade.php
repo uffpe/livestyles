@@ -11,7 +11,7 @@
 
                 </div>
 
-                <div class="row group_selector">
+                <div class="row single-gutter">
                     <div class="col-md-4 col-sm-6">
                         <button class="btn btn-block group_selector__button">
                             <div class="group_selector__button__icon"></div>

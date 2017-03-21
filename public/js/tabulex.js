@@ -1,11 +1,19 @@
 
 $(document).ready(function () {
+    var screen_md = 992;
+
+    $(window).resize(function(){
+        if($(window).width() >= screen_md) {
+            console.log('Width bigger than ' + screen_md);
+            close_mainmenu();
+        }
+    });
 
     // Main menu open/close variables
-    var menu_toggle = '.navbar-toggle',
-        mainmenu = '.nav-mainmenu',
-        mainmenu_header = '.nav-mainmenu .list-group-header a',
-        overlay = '.main-wrapper__overlay',
+    var menu = '.nav-mainmenu',
+        menu_header = '.nav-mainmenu .list-group-header a',
+        menu_toggle = '.navbar-toggle',
+        overlay = '.main-container__overlay',
         isOpen = false;
 
     // Main menu button open/close
@@ -18,7 +26,7 @@ $(document).ready(function () {
     });
 
     // Main menu close triggers
-    $(mainmenu_header + "," + overlay).click(function () {
+    $(menu_header + "," + overlay).click(function () {
         if (isOpen == true)
             close_mainmenu();
     });
@@ -26,15 +34,15 @@ $(document).ready(function () {
     // Main menu open function
     function open_mainmenu() {
         isOpen = true;
-        $(mainmenu + ',' + menu_toggle + ',' + overlay).removeClass('is-closed');
-        $(mainmenu + ',' + menu_toggle + ',' + overlay).addClass('is-open');
+        $(menu + ',' + menu_toggle + ',' + overlay).removeClass('is-closed');
+        $(menu + ',' + menu_toggle + ',' + overlay).addClass('is-open');
     }
 
     // Main menu close function
     function close_mainmenu() {
         isOpen = false;
-        $(mainmenu + ',' + menu_toggle + ',' + overlay).removeClass('is-open');
-        $(mainmenu + ',' + menu_toggle + ',' + overlay).addClass('is-closed');
+        $(menu + ',' + menu_toggle + ',' + overlay).removeClass('is-open');
+        $(menu + ',' + menu_toggle + ',' + overlay).addClass('is-closed');
     }
 
     // Main menu - Multi-level function
@@ -97,5 +105,6 @@ $(document).ready(function () {
             });
         }
     })();
+
 
 });

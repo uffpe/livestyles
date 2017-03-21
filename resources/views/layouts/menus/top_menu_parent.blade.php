@@ -3,16 +3,16 @@
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+                <span class="sr-only">Toggle navigation</span>
+                {{--<i class="mdi md-24" aria-hidden="true">menu</i>--}}
+                <i class="fa fa-bars" aria-hidden="true"></i>
             </button>
         </div>
 
         <ul class="nav navbar-nav navbar-left">
             <li class="dropdown">
                 <a href="#" role="button" data-toggle="modal" data-target="#change_department">
-                    <i class="mdi md-18" aria-hidden="true" style="margin-bottom: -4px">account_circle</i>
+                    <span class="navbar-list-image"><img src="{{ asset('images/male_icon_120x120.png') }}" alt="Peter Parker" /></span>
                     <span class="hidden-xs">Peter Parker</span>
                 </a>
             </li>
@@ -20,26 +20,35 @@
 
         <ul class="nav navbar-nav navbar-right">
             <li><a href="#link">
-                    <i class="mdi md-18" aria-hidden="true" style="margin-bottom: -4px; font-weight: normal;">playlist_add</i>
+                    <span class="has-badge-wrapper">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                        <span class="badge badge-add">+</span>
+                    </span>
                     <span class="hidden-xs">Opret aftale</span>
                 </a>
             </li>
             <li><a href="#link">
-                    <i class="mdi md-18" aria-hidden="true" style="margin-bottom: -4px">hotel</i>
+                    <span class="has-badge-wrapper">
+                        <i class="fa fa-medkit" aria-hidden="true"></i>
+                        <span class="badge badge-add">+</span>
+                    </span>
                     <span class="hidden-xs">Meld syg</span>
                 </a>
             </li>
             <li><a href="#link">
-                    <i class="mdi md-18" aria-hidden="true" style="margin-bottom: -4px">event_busy</i>
-
+                    <span class="has-badge-wrapper">
+                        <i class="fa fa-calendar-times-o" aria-hidden="true"></i>
+                        <span class="badge badge-add">+</span>
+                    </span>
                     <span class="hidden-xs">Meld fridag</span>
                 </a>
             </li>
 
-            <li>
-                <a href="#link">
-                    <i class="mdi md-18" aria-hidden="true" style="margin-bottom: -4px">chat_bubble_outline</i>
-
+            <li><a href="#link">
+                    <span class="has-badge-wrapper">
+                        <i class="fa fa-comment" aria-hidden="true"></i>
+                        <span class="badge notification">42</span>
+                    </span>
                     <span class="hidden-xs">Beskeder</span>
                 </a>
             </li>
@@ -53,7 +62,7 @@
                         <span class="hidden-xs">
                             <span class="hidden-xs hidden-sm txt_secondary"> </span>
                         </span>
-                        <i class="mdi md-18" aria-hidden="true" style="margin-bottom: -4px">person</i>
+                        <i class="fa fa-user" aria-hidden="true"></i>
                         <span class="caret"></span>
                     </a>
 

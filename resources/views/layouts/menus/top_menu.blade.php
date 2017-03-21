@@ -3,65 +3,38 @@
 
         <div class="navbar-clock">
             <a href="#clock">
-                <span class="hidden-xs">{{ date('H:i:s') }}</span>
-                <i class="mdi md-18" aria-hidden="true" style="margin-bottom: -4px">access_time</i>
-                <span>{{ date('d-m-Y') }}</span>
-                <i class="fa fa-calendar fa-md visible-xs-inline" aria-hidden="true"></i>
+                <span class="hidden-xs">{{ date('H:i:s') }} </span>
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                <span class="hidden-xs"> {{ date('d-m-Y') }}</span>
             </a>
         </div>
 
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
-{{--                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>--}}
-                <i class="mdi md-24" aria-hidden="true">menu</i>
+                <i class="fa fa-bars" aria-hidden="true"></i>
             </button>
         </div>
 
         <ul class="nav navbar-nav navbar-left">
             <li class="dropdown">
                 <a href="#" role="button" data-toggle="modal" data-target="#change_department">
-                    <i class="mdi md-18" aria-hidden="true" style="margin-bottom: -4px">home</i>
+                    <i class="fa fa-home" aria-hidden="true"></i>
                     <span class="hidden-xs">Afdeling B</span>
                 </a>
             </li>
         </ul>
 
 
-        <style>
-
-            .has-badge {
-                position: relative;
-                margin-right: 10px;
-                background-clip: padding-box;
-                display: inline-block;
-                font-size: 10px;
-                -webkit-font-smoothing: subpixel-antialiased;
-                line-height: 1.3;
-                min-height: 13px;
-            }
-
-            .badge {
-                font-size: 10px;
-                background-color: #ff6a00;
-                position: absolute;
-                right: -10px;
-                bottom: -5px;
-                padding:3px 5px 3px 4px;
-            }
-
-        </style>
-
-
         <ul class="nav navbar-nav navbar-right">
             <li><a href="#link">
-                    <i class="mdi md-18" aria-hidden="true" style="margin-bottom: -4px">block</i>
-                </a></li>
+                    <i class="fa fa-ban" aria-hidden="true"></i>
+                </a>
+            </li>
+
             <li><a href="#link">
-                    <span class="has-badge">
-                        <i class="mdi md-24" aria-hidden="true" style="margin-bottom: -4px">chat_bubble_outline</i>
+                    <span class="has-badge-wrapper">
+                        <i class="fa fa-comment" aria-hidden="true"></i>
                         <span class="badge">42</span>
                     </span>
                 </a>
@@ -77,7 +50,7 @@
                         <span class="hidden-xs">{{ Auth::user()->name }}
                             <span class="hidden-xs hidden-sm txt_secondary"> </span>
                         </span>
-                        <i class="mdi md-18" aria-hidden="true" style="margin-bottom: -4px">person</i>
+                        <i class="fa fa-user" aria-hidden="true"></i>
                         <span class="caret"></span>
                     </a>
 

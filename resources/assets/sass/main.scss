@@ -36,10 +36,9 @@ h4, .h4, h5, .h5, h6, .h6 {
 // --------------------------------------------------
 $navbar-height:         50px;
 $nav-mainmenu-width:    270px;
+$font-icon-size:        20px;
 $gutter-normal:         floor($grid-gutter-width / 2);
 $gutter-small:          floor($grid-gutter-width / 4);
-$icon-size:             20px;
-
 //
 // Basic blocks
 // --------------------------------------------------
@@ -54,12 +53,39 @@ $icon-size:             20px;
     }
   }
 
-  .main-wrapper  {
-    height: auto;
+  .container, .container-fluid {
+    @media (max-width: $screen-md-max){
+      padding-left: floor($grid-gutter-width / 3);
+      padding-right: floor($grid-gutter-width / 3);
+    }
+
+    @media (max-width: $screen-xs-max){
+      padding-left: $gutter-small;
+      padding-right: $gutter-small;
+    }
+    // border: 1px solid lightgrey;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    .single-gutter {
+      &.row {
+        margin:0;
+        margin-right: floor($grid-gutter-width / -1.5);
+      }
+
+      > *  {
+        padding-left: 0;
+        padding-right: floor($grid-gutter-width / 1.5);
+      }
+    }
+  }
+
+  .main-container  {
+/*    height: auto;
     min-height: 100%;
-    width: 100%;
+    //width: 100%;
     position: relative;
-    -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-font-smoothing: subpixel-antialiased;*/
 
     &__overlay {
       position: fixed;
@@ -85,11 +111,14 @@ $icon-size:             20px;
         }
 
       }
-
     }
 
     &__content {
       position: relative;
+
+      @media (min-width: $screen-md-min){
+        padding-right: 10px;
+      }
     }
   }
 
@@ -127,7 +156,63 @@ $icon-size:             20px;
     height: 30px;
     line-height: 30px;
     vertical-align: middle;
+    text-align: center;
   }
+
+  .fa {
+    font-size: $font-icon-size;
+    line-height: 0.75em;
+    vertical-align: -15%;
+  }
+
+  .topmenu-icons {
+    height: $navbar-height;
+    line-height: inherit;
+    padding: 15px 10px;
+    max-height: $navbar-height;
+  }
+
+  .mainmenu-icons {
+    height: $navbar-height;
+    line-height: inherit;
+    padding: 15px 10px;
+    max-height: $navbar-height;
+  }
+
+
+  .has-badge-wrapper {
+    position: relative;
+    margin-right: 2px;
+    display: inline-block;
+
+    .badge {
+      font-size: 10px;
+      background-color: #ff6a00;
+      position: absolute;
+      left: -6px;
+      top: -6px;
+      padding: 2px 5px 2px 3px;
+      min-width: 16px;
+
+      &.badge-add {
+        top: auto;
+        bottom: -4px;
+        //right: -8px;
+        font-weight: bolder;
+        color: $blue-steel-base;
+        background-color: white;
+        border: 2px solid $blue-steel-base;
+        height: 16px;
+        width: 1.2em;
+        font-size: 12px;
+        padding: 0;
+      }
+    }
+  }
+
+
+
+
 
 //
 // Navbar Header & subheader
@@ -138,8 +223,10 @@ $icon-size:             20px;
       z-index: $zindex-navbar-fixed;
 
       > .container {
-        padding-left: 0;
-        padding-right: 0;
+        @media (max-width: $screen-xs-max) {
+          padding-left: $gutter-small;
+          padding-right: $gutter-small;
+        }
       }
 
       .navbar-nav {
@@ -154,11 +241,31 @@ $icon-size:             20px;
         > li {
           float: left;
           > a {
-            padding: 15px 10px 14px;
+            padding: 15px 10px;
+            //padding: floor(($navbar-height - $font-icon-size) / 2) 12px;
+            max-height: $navbar-height;
 
             &:hover, &:active {
               background-color: darken($navbar-inverse-bg, 5%);
             }
+          }
+        }
+
+        .navbar-list-image {
+          background-color: white;
+          display: inline-block;
+          font-size: $font-icon-size * 1.5;
+          height: 1em;
+          margin-right: 2px;
+          margin-top: -0.15em;
+          overflow: hidden;
+          padding: 1px;
+          vertical-align: middle;
+          width: 1em;
+
+          > img {
+            height: auto;
+            width: 100%;
           }
         }
 
@@ -206,11 +313,11 @@ $icon-size:             20px;
     }
   }
 
-#sub-header {
-  &.navbar.navbar-inverse {
-    z-index: $zindex-sub-navbar-fixed;
+  #sub-header {
+    &.navbar.navbar-inverse {
+      z-index: $zindex-sub-navbar-fixed;
+    }
   }
-}
 
   #header {
     &.navbar.navbar-inverse {
@@ -228,14 +335,14 @@ $icon-size:             20px;
         width: 100%;
         //z-index: -1;
         > a {
+          @extend .topmenu-icons;
           color: white;
           display: inline-block;
           line-height: 20px;
-          padding: 15px 10px 14px;
           position: relative;
 
           &:hover, &:active {
-            //background-color: darken($navbar-inverse-bg, 5%);
+            background-color: darken($navbar-inverse-bg, 5%);
             text-decoration: none;
           }
         }
@@ -251,17 +358,16 @@ $icon-size:             20px;
         margin: 0;
 
         .navbar-toggle {
-          //float: left;
+          @extend .topmenu-icons;
           border: 0;
           border-radius: 0;
           color: white;
           display: block;
-          padding: 12px 10px 8px;
           margin: 0;
           //margin-bottom: 0;
 
           &:hover, &:active {
-            //background-color: darken($navbar-inverse-bg, 5%);
+            background-color: darken($navbar-inverse-bg, 5%);
           }
 
           .icon-bar {
@@ -278,6 +384,9 @@ $icon-size:             20px;
         }
 
       }
+
+
+
     }
   }
 
@@ -300,7 +409,6 @@ $icon-size:             20px;
   // --------------------------------------------------
 
   .nav-mainmenu {
-    background-color: white;
     margin-left: ( $nav-mainmenu-width + $gutter-normal ) * -1;
     width: $nav-mainmenu-width;
     height: 100%;
@@ -313,7 +421,7 @@ $icon-size:             20px;
     @media (min-width: $screen-md){
       z-index: $zindex-sub-navbar-fixed;
       position: absolute;
-      margin-left: 0;
+      margin-left: 5px;
 
       &.list-group-header {
         display: none;
@@ -322,8 +430,10 @@ $icon-size:             20px;
 
     &__list, &__list.nav-stacked {
       // background-color: rgba(255,255,255,0.9);
-      float: left;
-      position: relative;
+      background-color: white;
+      height: 100%;
+      //float: left;
+      position: fixed;
       width: $nav-mainmenu-width;
 
       li {
@@ -344,12 +454,9 @@ $icon-size:             20px;
           border: 0;
           border-radius: 0;
           color: $grey-x-dark;
-          //font-weight: 600;
-          //margin-bottom: 3px !important;
-          min-height: 40px;
+          //min-height: 40px;
           text-decoration: none;
           padding: 0;
-          padding-top: 2px;
 
           &:hover, &:focus, &:active {
             background-color: $blue-steel-xx-light;
@@ -357,19 +464,19 @@ $icon-size:             20px;
 
           .caret {
             float: right;
-            margin: 18px 18px 0 18px;
+            margin: 24px 18px 0;
           }
 
           > .fa-stack {
+
+            @extend .mainmenu-icons;
+
             background-color: transparent;
             color: $blue-steel-base;
             display: inline-block;
-            height: 40px;
-            //margin-right: 6px;
-            padding: 8px 10px;
+            margin: 0 8px 0 12px;
             position: relative;
             vertical-align: middle;
-            width: 40px;
 
             .fa-stack-1x  {
               font-size: 24px;
@@ -404,9 +511,8 @@ $icon-size:             20px;
             border-bottom: 1px solid $gandalf-the-grey;
 
             > .fa-stack {
-              height: 50px;
+              @extend .topmenu-icons;
               color: $black-sabbath;
-              padding: 12px 10px;
             }
           }
 
@@ -417,18 +523,18 @@ $icon-size:             20px;
 
         &.active {
           > a {
-            background-color: $green-hornet;
-            color: white;
-
-            background-color: transparent;
+            //background-color: $green-hornet;
+            //color: white;
+            //
+            //background-color: white;
             color: #484848;
             font-weight: 600;
             border-left: 5px solid #6B9CBA;
-            margin-left: -5px;
 
 
             > .fa-stack {
               //color: white;
+              padding-left: 0;
             }
           }
         }
