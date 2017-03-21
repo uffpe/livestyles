@@ -7437,7 +7437,7 @@ body {
   vertical-align: middle;
   text-align: center; }
 
-.fa {
+#header .fa, .navbar-header .fa, .nav-mainmenu .fa {
   font-size: 20px;
   line-height: 0.75em;
   vertical-align: -15%; }
