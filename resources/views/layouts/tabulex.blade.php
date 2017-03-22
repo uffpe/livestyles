@@ -23,6 +23,8 @@
     <link href="{{ asset('css/main.css') }}?{{ time() }}" rel="stylesheet">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/atom-one-light.min.css">
 
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css">
+
     <!-- Scripts -->
     <script>
         window.Laravel = {!! json_encode([
@@ -172,119 +174,9 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-home"></i> V&aelig;lg afdelign</h4>
             </div>
             <div class="modal-body">
-                <div class="panel panel-default panel_selector">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a href="#juniorklub">
-                                <i class="fa fa-home"></i> Juniorklub
-                                <span class="count pull-right">8 / 24</span>
-                            </a></h4>
-                        <a href="#" class="toggle_collapse"><i class="fa fa-chevron-up"></i></a>
-                    </div>
-                    <div class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-xs-6"><i class="fa fa-user"></i> 0B</div>
-                                <div class="col-xs-6 text-right">5</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-6"><i class="fa fa-user"></i> 1B</div>
-                                <div class="col-xs-6 text-right">10</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-6"><i class="fa fa-user"></i> 2B</div>
-                                <div class="col-xs-6 text-right">1</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="panel panel-default panel_selector">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a href="#maanehoejA">
-                                <i class="fa fa-home"></i> M&aring;neh&oslash;jen A
-                                <span class="count pull-right">0 / 18</span>
-                            </a></h4>
-                        <a href="#" class="toggle_collapse"><i class="fa fa-chevron-up"></i></a>
-                    </div>
-                    <div class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-xs-6"><i class="fa fa-user"></i> 0B</div>
-                                <div class="col-xs-6 text-right">5</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-6"><i class="fa fa-user"></i> 1B</div>
-                                <div class="col-xs-6 text-right">10</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-6"><i class="fa fa-user"></i> 2B</div>
-                                <div class="col-xs-6 text-right">1</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="panel panel-default panel_selector">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a href="#maanehoejB">
-                                <i class="fa fa-home"></i> M&aring;neh&oslash;jen B
-                                <span class="count pull-right">16 / 20</span>
-                            </a></h4>
-                        <a href="#" class="toggle_collapse"><i class="fa fa-chevron-up"></i></a>
-                    </div>
-                    <div class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-xs-6"><i class="fa fa-user"></i> 0B</div>
-                                <div class="col-xs-6 text-right">5</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-6"><i class="fa fa-user"></i> 1B</div>
-                                <div class="col-xs-6 text-right">10</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-6"><i class="fa fa-user"></i> 2B</div>
-                                <div class="col-xs-6 text-right">1</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="panel panel-default panel_selector">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a href="#solhojen">
-                                <i class="fa fa-home red"></i> Solh&oslash;jen B
-                                <span class="count pull-right">8 / 19</span>
-                            </a></h4>
-                        <a href="#" class="toggle_collapse"><i class="fa fa-chevron-up"></i></a>
-                    </div>
-                    <div class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-xs-6"><i class="fa fa-user"></i> 0B</div>
-                                <div class="col-xs-6 text-right">5</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-6"><i class="fa fa-user"></i> 1B</div>
-                                <div class="col-xs-6 text-right">10</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-6"><i class="fa fa-user"></i> 2B</div>
-                                <div class="col-xs-6 text-right">1</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Annuller</button>
+                <div id="calendar_wrapper" class="text-center"></div>
             </div>
         </div>
     </div>
@@ -299,5 +191,18 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
 
     <script src="{{ asset('js/tabulex.js') }}?{{ time() }}"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/locales/bootstrap-datepicker.da.min.js"></script>
+    <script>
+        $('#calendar_wrapper').datepicker({
+            weekStart: 1,
+            maxViewMode: 2,
+            todayBtn: "linked",
+            language: "da",
+            calendarWeeks: true,
+            todayHighlight: true
+        });
+    </script>
 </body>
 </html>
