@@ -2,7 +2,7 @@
     <div class="container">
 
         <div class="navbar-clock">
-            <a href="#clock">
+            <a href="#clock" role="button" data-toggle="modal" data-target="#calendar_view">
                 <span class="hidden-xs">{{ date('H:i:s') }} </span>
                 <i class="fa fa-clock-o" aria-hidden="true"></i>
                 <span class="hidden-xs"> {{ date('d-m-Y') }}</span>
