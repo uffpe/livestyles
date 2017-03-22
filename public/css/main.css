@@ -7455,7 +7455,7 @@ body :not(font) {
 body h1, body .h1, body h2, body .h2, body h3, body .h3 {
   font-family: "Oswald", Helvetica, Arial, sans-serif; }
 
-h4, .h4, h5, .h5, h6, .h6 {
+body h4, body .h4, body h5, body .h5, body h6, body .h6 {
   font-family: "Roboto", Helvetica, Arial, sans-serif; }
 
 body {

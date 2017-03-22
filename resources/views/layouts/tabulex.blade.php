@@ -20,7 +20,7 @@
     <link rel="stylesheet" type="text/css" href="https://www.sfoweb.dk/css/sfoweb.css">
 
     <!-- Styles -->
-    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/main.css') }}?{{ time() }}" rel="stylesheet">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/atom-one-light.min.css">
 
     <!-- Scripts -->
