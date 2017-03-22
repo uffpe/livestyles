@@ -20,7 +20,7 @@
     <link rel="stylesheet" type="text/css" href="https://www.sfoweb.dk/css/sfoweb.css">
 
     <!-- Styles -->
-    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/main.css') }}?{{ time() }}" rel="stylesheet">
 
     <!-- Scripts -->
     <script>
