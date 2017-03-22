@@ -16,7 +16,7 @@ $blue-steel-xx-light:     #CEDFE9; // Tabulex
 $green-hornet:            #7F9379; // Tabulex
 $yellow-submarine:        #EEE970; // Tabulex
 
-$black-sabbath:           #000; // Tabulex
+$black-sabbath:           #000000; // Tabulex
 $gandalf-the-grey:        #E5E5E3; // Tabulex
 $grey-x-dark:             #484848; // Tabulex
 $grey-x-light:            #F9F9F5; // Tabulex
@@ -58,8 +58,8 @@ $link-hover-decoration: underline !default;
 //## Font, line-height, and color for body text, headings, and more.
 
 //$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$font-family-sans-serif:  "Roboto", Helvetica, Arial, sans-serif !default;
-$font-family-header:  "Oswald", Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif:  "Roboto", Helvetica, Arial, sans-serif; // Tabulex
+$font-family-header:      "Oswald", Helvetica, Arial, sans-serif; // Tabulex
 $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
