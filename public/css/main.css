@@ -7458,6 +7458,13 @@ body h1, body .h1, body h2, body .h2, body h3, body .h3 {
 body h4, body .h4, body h5, body .h5, body h6, body .h6 {
   font-family: "Roboto", Helvetica, Arial, sans-serif; }
 
+#top_header.navbar {
+  padding-right: 20px; }
+
+#content-div .content-div_wrapper .row {
+  float: none;
+  width: auto; }
+
 body {
   padding: 0;
   padding-top: 65px;
@@ -7484,38 +7491,33 @@ body {
     padding-left: 0;
     padding-right: 20px; } }
 
-.main-container {
-  /*    height: auto;
-    min-height: 100%;
-    //width: 100%;
-    position: relative;
-    -webkit-font-smoothing: subpixel-antialiased;*/ }
-  .main-container__overlay {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #333333;
-    opacity: 0;
-    z-index: -1;
-    -webkit-transition: opacity 0s ease;
-    -o-transition: opacity 0s ease;
-    transition: opacity 0s ease; }
-    .main-container__overlay.is-open {
-      opacity: 0.5;
-      z-index: 1040; }
-      @media (min-width: 992px) {
-        .main-container__overlay.is-open {
-          opacity: 0;
-          z-index: -1; } }
-  .main-container__content {
-    position: relative; }
+.main-container__overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #333333;
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: opacity 0s ease;
+  -o-transition: opacity 0s ease;
+  transition: opacity 0s ease; }
+  .main-container__overlay.is-open {
+    opacity: 0.5;
+    z-index: 1040; }
     @media (min-width: 992px) {
-      .main-container__content {
-        padding-right: 10px; } }
+      .main-container__overlay.is-open {
+        opacity: 0;
+        z-index: -1; } }
+
+.main-container__content {
+  position: relative; }
+  @media (min-width: 992px) {
+    .main-container__content {
+      padding-right: 10px; } }
 
 #content-div {
   width: 100%;
@@ -7548,7 +7550,7 @@ body {
   vertical-align: middle;
   text-align: center; }
 
-#header .fa, .navbar-header .fa, .nav-mainmenu .fa {
+#top_header .fa, .navbar-header .fa, .nav-mainmenu .fa {
   font-size: 20px;
   line-height: 0.75em;
   vertical-align: -15%; }
@@ -7724,7 +7726,8 @@ body {
     .nav-mainmenu__list > li + li, .nav-mainmenu__list.nav-stacked > li + li {
       margin-top: 0; }
     .nav-mainmenu__list > li a, .nav-mainmenu__list.nav-stacked > li a {
-      border: 0;
+      border-color: transparent;
+      border-width: 0 0 0 5px;
       border-radius: 0;
       color: #484848;
       text-decoration: none;
@@ -7738,7 +7741,7 @@ body {
         background-color: transparent;
         color: #497B99;
         display: inline-block;
-        margin: 0 8px 0 12px;
+        margin: 0 8px;
         position: relative;
         vertical-align: middle; }
         .nav-mainmenu__list > li a > .fa-stack .fa-stack-1x, .nav-mainmenu__list.nav-stacked > li a > .fa-stack .fa-stack-1x {
@@ -7770,9 +7773,7 @@ body {
     .nav-mainmenu__list > li.active > a, .nav-mainmenu__list.nav-stacked > li.active > a {
       color: #484848;
       font-weight: 600;
-      border-left: 5px solid #6B9CBA; }
-      .nav-mainmenu__list > li.active > a > .fa-stack, .nav-mainmenu__list.nav-stacked > li.active > a > .fa-stack {
-        padding-left: 0; }
+      border-color: #6B9CBA; }
   .nav-mainmenu.is-open {
     margin-left: 0;
     -webkit-transition: margin-left 0.4s ease-in 0.1s;
@@ -7838,38 +7839,6 @@ pre {
   padding: 0; }
   .department_selector li {
     list-style: none; }
-
-.mdi {
-  font-family: 'Material Icons';
-  text-rendering: optimizeLegibility;
-  font-feature-settings: "liga" 1;
-  font-style: normal;
-  font-weight: normal;
-  text-transform: none;
-  line-height: 1;
-  font-size: 24px;
-  width: 24px;
-  height: 24px;
-  display: inline-block;
-  overflow: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-  .mdi.md-18 {
-    font-size: 18px;
-    width: 18px;
-    height: 18px; }
-  .mdi.md-24 {
-    font-size: 24px;
-    width: 24px;
-    height: 24px; }
-  .mdi.md-36 {
-    font-size: 36px;
-    width: 36px;
-    height: 36px; }
-  .mdi.md-48 {
-    font-size: 48px;
-    width: 48px;
-    height: 48px; }
 
 .no-margin-top {
   margin-top: 0; }

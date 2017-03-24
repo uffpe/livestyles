@@ -3,7 +3,6 @@
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
-                <span class="sr-only">Toggle navigation</span>
                 {{--<i class="mdi md-24" aria-hidden="true">menu</i>--}}
                 <i class="fa fa-bars" aria-hidden="true"></i>
             </button>
@@ -11,8 +10,9 @@
 
         <ul class="nav navbar-nav navbar-left">
             <li class="dropdown">
-                <a href="#" role="button" data-toggle="modal" data-target="#change_department">
-                    <span class="navbar-list-image"><img src="{{ asset('images/male_icon_120x120.png') }}" alt="Peter Parker" /></span>
+                <a href="#" role="button" data-toggle="modal" data-target="#change_department" aria-label="Skift til andet barn">
+                    <span class="navbar-list-image"><img src="{{ asset('images/male_icon_120x120.png') }}" alt="Aktivt barn er Peter Parker" /></span>
+                    {{--<span class="sr-only visible-xs-inline">Peter Parker</span>--}}
                     <span class="hidden-xs">Peter Parker</span>
                 </a>
             </li>
