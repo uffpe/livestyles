@@ -7465,6 +7465,37 @@ body h4, body .h4, body h5, body .h5, body h6, body .h6 {
   float: none;
   width: auto; }
 
+h1, .h1 {
+  font-size: 36px;
+  font-size: 2.57143em; }
+
+h2, .h2 {
+  font-size: 30px;
+  font-size: 2.14286em; }
+
+h3, .h3 {
+  font-size: 24px;
+  font-size: 1.71429em; }
+
+h4, .h4 {
+  font-size: 18px;
+  font-size: 1.28571em; }
+
+h5, .h5 {
+  font-size: 14px;
+  font-size: 1em; }
+
+h6, .h6 {
+  font-size: 12px;
+  font-size: 0.85714em; }
+
+.dropdown-menu {
+  font-size: 1em; }
+
+.underlined {
+  border-bottom: 1px solid #E5E5E3;
+  padding-bottom: 0.2em; }
+
 body {
   padding: 0;
   padding-top: 65px;
@@ -7541,6 +7572,9 @@ body {
   .container {
     width: 100%; } }
 
+hr {
+  border-color: #E5E5E3; }
+
 .fa-stack {
   position: relative;
   display: inline-block;
@@ -7557,13 +7591,13 @@ body {
 
 .topmenu-icons, #top_header.navbar.navbar-inverse .navbar-clock > a, #top_header.navbar.navbar-inverse .navbar-header .navbar-toggle, .nav-mainmenu__list > li.list-group-header > a > .fa-stack, .nav-mainmenu__list.nav-stacked > li.list-group-header > a > .fa-stack {
   height: 50px;
-  line-height: inherit;
+  line-height: 1em;
   padding: 15px 10px;
   max-height: 50px; }
 
 .mainmenu-icons, .nav-mainmenu__list > li a > .fa-stack, .nav-mainmenu__list.nav-stacked > li a > .fa-stack {
   height: 50px;
-  line-height: inherit;
+  line-height: 1em;
   padding: 15px 10px;
   max-height: 50px; }
 
@@ -7741,6 +7775,7 @@ body {
         background-color: transparent;
         color: #497B99;
         display: inline-block;
+        line-height: 1.4em;
         margin: 0 8px;
         position: relative;
         vertical-align: middle; }
@@ -7869,10 +7904,14 @@ html {
 /* PANEL */
 .panel-heading {
   border: none; }
+  .panel-heading .panel-title {
+    font-size: 16px;
+    font-size: 1.14286em; }
   .panel-heading h4.panel-title {
     font-weight: bold;
     color: #999;
     line-height: 18px;
+    line-height: 1.28571em;
     width: 96%;
     white-space: nowrap;
     overflow: hidden;
@@ -7882,6 +7921,7 @@ html {
       margin-right: 3px;
       margin-top: -2px;
       font-size: 20px;
+      font-size: 1.42857em;
       color: #fbae08; }
   .panel-heading a.toggle_collapse {
     position: absolute;
@@ -7889,12 +7929,14 @@ html {
     top: 8px; }
     .panel-heading a.toggle_collapse i {
       color: #cdcdcd;
-      font-size: 16px; }
+      font-size: 16px;
+      font-size: 1.14286em; }
 
 .panel {
   box-shadow: none; }
   .panel table i.fa {
     font-size: 20px;
+    font-size: 1.42857em;
     margin-right: 3px; }
 
 .panel-default {
@@ -7935,6 +7977,7 @@ html {
       text-decoration: none; }
       .panel_selector h4.panel-title a i {
         font-size: 25px;
+        font-size: 1.78571em;
         padding: 4px;
         margin: 0;
         background-color: #333;
@@ -7955,8 +7998,12 @@ html {
     margin-bottom: 6px; }
   .panel_selector .panel-body i {
     font-size: 20px;
+    font-size: 1.42857em;
     margin-right: 10px;
     margin-left: -3px; }
+
+.panel-no-header {
+  padding-top: 15px; }
 
 .group_selector .col-xs-1, .group_selector .col-xs-2, .group_selector .col-xs-3, .group_selector .col-xs-4, .group_selector .col-xs-5, .group_selector .col-xs-6, .group_selector .col-xs-7, .group_selector .col-xs-8, .group_selector .col-xs-9, .group_selector .col-xs-10, .group_selector .col-xs-11, .group_selector .col-xs-12, .group_selector .col-sm-1, .group_selector .col-sm-2, .group_selector .col-sm-3, .group_selector .col-sm-4, .group_selector .col-sm-5, .group_selector .col-sm-6, .group_selector .col-sm-7, .group_selector .col-sm-8, .group_selector .col-sm-9, .group_selector .col-sm-10, .group_selector .col-sm-11, .group_selector .col-sm-12, .group_selector .col-md-1, .group_selector .col-md-2, .group_selector .col-md-3, .group_selector .col-md-4, .group_selector .col-md-5, .group_selector .col-md-6, .group_selector .col-md-7, .group_selector .col-md-8, .group_selector .col-md-9, .group_selector .col-md-10, .group_selector .col-md-11, .group_selector .col-md-12, .group_selector .col-lg-1, .group_selector .col-lg-2, .group_selector .col-lg-3, .group_selector .col-lg-4, .group_selector .col-lg-5, .group_selector .col-lg-6, .group_selector .col-lg-7, .group_selector .col-lg-8, .group_selector .col-lg-9, .group_selector .col-lg-10, .group_selector .col-lg-11, .group_selector .col-lg-12 {
   padding-left: 5px;

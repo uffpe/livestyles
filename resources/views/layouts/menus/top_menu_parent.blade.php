@@ -3,16 +3,14 @@
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
-                {{--<i class="mdi md-24" aria-hidden="true">menu</i>--}}
                 <i class="fa fa-bars" aria-hidden="true"></i>
             </button>
         </div>
 
         <ul class="nav navbar-nav navbar-left">
             <li class="dropdown">
-                <a href="#" role="button" data-toggle="modal" data-target="#change_department" aria-label="Skift til andet barn">
-                    <span class="navbar-list-image"><img src="{{ asset('images/male_icon_120x120.png') }}" alt="Aktivt barn er Peter Parker" /></span>
-                    {{--<span class="sr-only visible-xs-inline">Peter Parker</span>--}}
+                <a href="#" role="button" data-toggle="modal" data-target="#change_department" aria-label="Skift barn">
+                    <span class="navbar-list-image"><img src="{{ asset('images/male_icon_120x120.png') }}" alt="" /></span>
                     <span class="hidden-xs">Peter Parker</span>
                 </a>
             </li>
@@ -58,10 +56,8 @@
                 <li><a href="{{ route('register') }}">Register</a></li>
             @else
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                        <span class="hidden-xs">
-                            <span class="hidden-xs hidden-sm txt_secondary"> </span>
-                        </span>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" >
+                        <span class="sr-only">Min profil menu</span>
                         <i class="fa fa-user" aria-hidden="true"></i>
                         <span class="caret"></span>
                     </a>

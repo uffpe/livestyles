@@ -18,7 +18,7 @@
 
         <ul class="nav navbar-nav navbar-left">
             <li class="dropdown">
-                <a href="#" role="button" data-toggle="modal" data-target="#change_department">
+                <a href="#" role="button" data-toggle="modal" data-target="#change_department" aria-label="Skift afdeling">
                     <i class="fa fa-home" aria-hidden="true"></i>
                     <span class="hidden-xs">Afdeling B</span>
                 </a>
@@ -46,10 +46,11 @@
                 <li><a href="{{ route('register') }}">Register</a></li>
             @else
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                         <span class="hidden-xs">{{ Auth::user()->name }}
                             <span class="hidden-xs hidden-sm txt_secondary"> </span>
                         </span>
+                        <span class="sr-only">Min profil menu</span>
                         <i class="fa fa-user" aria-hidden="true"></i>
                         <span class="caret"></span>
                     </a>

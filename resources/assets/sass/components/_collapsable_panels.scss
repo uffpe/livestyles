@@ -2,10 +2,16 @@
 .panel-heading {
   border: none;
 
+  .panel-title {
+    font-size: 16px;
+    @include relative-unit(font-size, 16px);
+  }
+
   h4.panel-title {
     font-weight: bold;
     color: #999;
     line-height: 18px;
+    @include relative-unit(line-height, 18px);
     width: 96%;
     white-space: nowrap;
     overflow: hidden;
@@ -16,6 +22,7 @@
       margin-right: 3px;
       margin-top: -2px;
       font-size: 20px;
+      @include relative-unit(font-size, 20px);
       color: #fbae08;
     }
   }
@@ -28,6 +35,7 @@
     i {
       color: #cdcdcd;
       font-size: 16px;
+      @include relative-unit(font-size, 16px);
     }
   }
 }
@@ -38,6 +46,7 @@
   table {
     i.fa {
       font-size: 20px;
+      @include relative-unit(font-size, 20px);
       margin-right: 3px;
     }
   }
@@ -104,6 +113,7 @@
 
         i {
           font-size: 25px;
+          @include relative-unit(font-size, 25px);
           padding: 4px;
           margin: 0;
           background-color: #333;
@@ -136,8 +146,13 @@
 
       i {
         font-size: 20px;
+        @include relative-unit(font-size, 20px);
         margin-right: 10px;
         margin-left: -3px;
       }
     }
+}
+
+.panel-no-header {
+  padding-top: 15px;
 }

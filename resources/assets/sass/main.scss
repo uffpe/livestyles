@@ -53,6 +53,9 @@ body {
   filter: $filter-type+unquote('(#{$filter-amount})');
 }
 
+@mixin relative-unit($property, $size) {
+  #{$property}: ($size / $font-size-base)#{em};
+}
 
 //
 // Tabulex only variables
@@ -62,6 +65,52 @@ $nav-mainmenu-width:    270px;
 $font-icon-size:        20px;
 $gutter-normal:         floor($grid-gutter-width / 2);
 $gutter-small:          floor($grid-gutter-width / 4);
+
+
+
+
+//
+// Font styles
+// --------------------------------------------------
+
+h1, .h1 {
+  font-size: 36px;
+  @include relative-unit(font-size,36px);
+}
+
+h2, .h2 {
+  font-size: 30px;
+  @include relative-unit(font-size,30px);
+}
+
+h3, .h3 {
+  font-size: 24px;
+  @include relative-unit(font-size,24px);
+}
+
+h4, .h4 {
+  font-size: 18px;
+  @include relative-unit(font-size,18px);
+}
+
+h5, .h5 {
+  font-size: 14px;
+  @include relative-unit(font-size,14px);
+}
+
+h6, .h6 {
+  font-size: 12px;
+  @include relative-unit(font-size,12px);
+}
+
+.dropdown-menu {
+  @include relative-unit(font-size,14px);
+}
+
+.underlined {
+  border-bottom: 1px solid $gandalf-the-grey;
+  padding-bottom: 0.2em;
+}
 
 
 //
@@ -164,6 +213,11 @@ $gutter-small:          floor($grid-gutter-width / 4);
     }
   }
 
+  hr {
+    border-color: $gandalf-the-grey;
+  }
+
+
 //
 // Iconography
 // --------------------------------------------------
@@ -188,14 +242,14 @@ $gutter-small:          floor($grid-gutter-width / 4);
 
   .topmenu-icons {
     height: $navbar-height;
-    line-height: inherit;
+    @include relative-unit(line-height, 14px);
     padding: 15px 10px;
     max-height: $navbar-height;
   }
 
   .mainmenu-icons {
     height: $navbar-height;
-    line-height: inherit;
+    @include relative-unit(line-height, 14px);
     padding: 15px 10px;
     max-height: $navbar-height;
   }
@@ -401,9 +455,6 @@ $gutter-small:          floor($grid-gutter-width / 4);
         }
 
       }
-
-
-
     }
   }
 
@@ -443,10 +494,8 @@ $gutter-small:          floor($grid-gutter-width / 4);
     }
 
     &__list, &__list.nav-stacked {
-      // background-color: rgba(255,255,255,0.9);
       background-color: white;
       height: 100%;
-      //float: left;
       position: fixed;
       width: $nav-mainmenu-width;
 
@@ -482,12 +531,12 @@ $gutter-small:          floor($grid-gutter-width / 4);
           }
 
           > .fa-stack {
-
             @extend .mainmenu-icons;
 
             background-color: transparent;
             color: $blue-steel-base;
             display: inline-block;
+            line-height: 1.4em;
             margin: 0 8px;
             position: relative;
             vertical-align: middle;
