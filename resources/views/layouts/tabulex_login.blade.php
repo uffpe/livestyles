@@ -23,8 +23,7 @@
     <link href="https://personale.devsfoweb.dk/css/main.css?{{ time() }}" rel="stylesheet">
 
     <style>
-        /* FONT PATH - Temporary fix when guide runs from local computer
-        * -------------------------- */
+        /* FONT PATH - Temporary fix when guide runs from local computer */
         @font-face {
             font-family: 'FontAwesome';
             src: url("{{ asset('fonts/fontawesome-webfont.eot?v=4.7.0') }}");
@@ -69,7 +68,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
 
-{{--<script src="{{ asset('js/tabulex.js') }}?{{ time() }}"></script>--}}
+{{--<script src="{{ asset('js/tabulex.ui.js') }}?{{ time() }}"></script>--}}
 
 <script src="https://personale.devsfoweb.dk/js/tabulex.ui.js?{{ time() }}"></script>
 

@@ -25,8 +25,7 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css">
 
     <style>
-        /* FONT PATH - Temporary fix when guide runs from local computer
-        * -------------------------- */
+        /* FONT PATH - Temporary fix when guide runs from local computer */
         @font-face {
             font-family: 'FontAwesome';
             src: url("{{ asset('fonts/fontawesome-webfont.eot?v=4.7.0') }}");
