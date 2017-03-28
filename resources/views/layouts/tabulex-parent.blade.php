@@ -20,10 +20,25 @@
     <link rel="stylesheet" type="text/css" href="https://www.sfoweb.dk/css/sfoweb.css">
 
     <!-- new styles -->
-    <link href="{{ asset('css/main.css') }}?{{ time() }}" rel="stylesheet">
+    <link href="https://personale.devsfoweb.dk/css/main.css?{{ time() }}" rel="stylesheet">
 
     <!-- Used for syntax highlighting only -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/atom-one-light.min.css">
+
+    <style>
+        /* FONT PATH - Temporary fix when guide runs from local computer
+        * -------------------------- */
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url("{{ asset('fonts/fontawesome-webfont.eot?v=4.7.0') }}");
+            src: url("{{ asset('fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') }}") format("embedded-opentype"),
+            url("{{ asset('fonts/fontawesome-webfont.woff2?v=4.7.0') }}") format("woff2"),
+            url("{{ asset('fonts/fontawesome-webfont.woff?v=4.7.0') }}") format("woff"),
+            url("{{ asset('fonts/fontawesome-webfont.ttf?v=4.7.0') }}") format("truetype"),
+            url("{{ asset('fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') }}") format("svg");
+            font-weight: normal;
+            font-style: normal; }
+    </style>
 
     <!-- Scripts -->
     <script>
@@ -178,6 +193,6 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
 
-    <script src="{{ asset('js/tabulex.js') }}?{{ time() }}"></script>
+    <script src="https://personale.devsfoweb.dk/js/tabulex.ui.js?{{ time() }}"></script>
 </body>
 </html>

@@ -11,7 +11,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link href="{{ asset('css/main.css') }}?{{ time() }}" rel="stylesheet">
+    <link href="https://personale.devsfoweb.dk/css/main.css?{{ time() }}" rel="stylesheet">
 
     <!-- Scripts -->
     <script>
