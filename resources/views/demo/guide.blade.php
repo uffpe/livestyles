@@ -1,24 +1,25 @@
 @extends('layouts.tabulex')
 @section('content')
-    <div id="content-div">
+    <div id="content-div" class="style-guide">
         <div class="content-div__wrapper">
-<?
-//        $category = 'basic';
-//        if( !empty($_POST["style"]) ) $category = $_POST["style"];
 
-?>
             @foreach($snippets as $snippet)
                 <div class="row">
                     <div class="col-sm-12">
                         <h3 class="underlined"><?= $snippet['title'] ?></h3>
-                        <?= $snippet['desc'] ?>
                         <div class="panel panel-default panel-no-header">
                             <div class="panel-body">
-                                <h5>Eksempel:</h5>
-                                <?= $snippet['code'] ?>
+                                <?= $snippet['desc'] ?>
+                                <h4 class="underlined">Eksempel:</h4>
+                                <div><?= str_replace(["{code}","{/code}"],"",$snippet['code']) ?></div>
                                 <div class="row">
                                     <div class="col-sm-12" style="margin-top:1em;">
-                                        <pre><code class="html"><?= htmlentities($snippet['code']) ?></code></pre>
+                                        <pre><code class="html"><?php
+                                            preg_match_all("'{code}(.*?){/code}'si", $snippet['code'], $match);
+                                            foreach($match[1] as $val){
+                                                echo htmlentities($val);
+                                            }
+                                        ?></code></pre>
                                     </div>
                                 </div>
                             </div>

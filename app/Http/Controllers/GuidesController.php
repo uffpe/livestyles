@@ -10,16 +10,20 @@ class guidesController extends Controller
     {
         $snippets = [
 [
-'title' => 'Modal - Popup vindue',
-'desc' => 'This is a dialog box/popup window that is displayed on top of the current page.<br/>
-The <code>data-target</code> attribute on the trigger has to be unique and match the ID of the dialog window.<br />
-- <a href="https://www.w3schools.com/bootstrap/bootstrap_modal.asp">Read more about bootstrap modal here</a>',
-'code' => '<!-- Button trigger modal -->
+                'title' =>  'Modal - Popup vindue',
+                'desc' =>   '
+<p>The Modal plugin is a dialog box/popup window that is displayed on top of the current page.<br/>
+- <a href="https://www.w3schools.com/bootstrap/bootstrap_modal.asp">Read more about bootstrap modal here</a></p>
+<p>The <code>data-target="#myModal"</code> on the trigger (button or link) has to be unique and points to the ID of the dialog window.</p>
+<p>[WCAG) Use the <code>aria-labelledby</code> on the modal to provide an accessible label to indicate what the modal dialog is about (ie. "Select department" or "Appointment").</p>
+',
+                'code' => '
+{code}<!-- Modal trigger -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
   Launch demo modal
 </button>
 
-<!-- Modal -->
+<!-- Modal dialog -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -37,21 +41,20 @@ The <code>data-target</code> attribute on the trigger has to be unique and match
     </div>
   </div>
 </div>
+{/code}' ],[
 
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal2">
-  Launch demo modal 2
-</button>' ],[
-
-'title' => 'Highlight',
-'desc' => 'Beskrivelse..',
-'code' => '<div class="starter-template">
+                'title' => 'Highlight',
+                'desc' => 'Beskrivelse..',
+                'code' => '
+{code}<div class="starter-template">
     <h3>Bootstrap starter template</h3>
     <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-</div>'],[
+</div>{/code}'],[
 
-'title' => 'grid_content',
-'desc' => 'Beskrivelse..',
-'code' => '<div class="show-grid">
+                'title' => 'grid_content',
+                'desc' => 'Beskrivelse..',
+                'code' => '
+{code}<div class="show-grid">
   <div class="col-xs-12 col-sm-6 col-md-8">.col-xs-12 .col-sm-6 .col-md-8</div>
   <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
 </div>
@@ -61,13 +64,43 @@ The <code>data-target</code> attribute on the trigger has to be unique and match
   <!-- Optional: clear the XS cols if their content doesn\'t match in height-->
   <div class="clearfix visible-xs-block"></div>
   <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+</div>{/code}'],[
+
+                'title' => 'Basic buttons',
+                'desc' => 'Beskrivelse..',
+                'code' => '
+<div class="side-by-side">
+
+  <button class="btn btn-default" type="button">
+    Button [class=btn-default] 
+  </button>
+  
+  <button class="btn btn-primary" type="button">
+    Button [class=btn-primary] 
+  </button>
+  
+  <button class="btn btn-secondary">
+    Button [class=btn-secondary] 
+  </button>
+  
+<br />
+
+{code}<!-- Button with icon -->
+  <button class="btn btn-default">
+    <i class="fa fa-check" aria-hidden="true"></i> 
+      Button width icon [default]
+  </button>
+{/code}
 </div>'],[
 
-'title' => 'Basis dropdown',
-'desc' => 'Beskrivelse..',
-'code' => '<div class="dropdown">
+                'title' => 'Dropdown buttons',
+                'desc' => 'Beskrivelse..',
+                'code' => '
+<div class="side-by-side">
+{code}<!-- Basic dropdown -->
+<div class="dropdown">
   <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Dropdown
+    Dropdown [btn-default] 
     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
@@ -77,14 +110,54 @@ The <code>data-target</code> attribute on the trigger has to be unique and match
     <li role="separator" class="divider"></li>
     <li><a href="#">Separated link</a></li>
   </ul>
-</div>'],
+</div>
+{/code}
+<div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    Dropdown [btn-primary] 
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    Dropdown [btn-secondary] 
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+</div>'],[
+
+                'title' => 'WCAG - aria-label (or aria-labelledBy)',
+                'desc' => '
+<p>This attribute is designed to help assistive technology (e.g. screen readers) attach an invisible label to an otherwise anonymous HTML element.</p>
+<p>In the example below is a typical "close" button with an X in the middle. A blind person using assistive technology might just hear "X" read aloud, which does not mean much without the visual clues. <code>aria-label</code> explicitly tells them what the button will do.</p>
+                            ',
+                'code' => '
+{code}<button type="button" class="btn btn-primary" aria-label="Close" onclick="myDialog.close()">X</button>{/code}'],
+
 ];
 //dd($snippets);
+
+
+
+
         $main_menu = [
             ['url' => '?style=basic', 'label' => 'Basis elementer', 'icon' => 'fa-bars', 'is_active' => true],
             ['url' => '?style=wcag', 'label' => 'WCAG 2', 'icon' => 'fa-blind', 'is_active' => false],
         ];
-//        $main_menu = [];
 
         return view('demo.guide', ['snippets' => $snippets, 'has_submenu' => false, 'main_menu_items' => $main_menu]);
     }
