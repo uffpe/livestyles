@@ -1,16 +1,16 @@
 @extends('layouts.tabulex')
 @section('content')
-    <div id="content-div" class="style-guide">
+    <div id="content-div">
         <div class="content-div__wrapper">
 
             @foreach($snippets as $snippet)
                 <div class="row">
                     <div class="col-sm-12">
                         <h3 class="underlined"><?= $snippet['title'] ?></h3>
-                        <div class="panel panel-default panel-no-header">
+                        <div class="panel panel-default panel-no-header panel-guide">
                             <div class="panel-body">
                                 <?= $snippet['desc'] ?>
-                                <h4 class="underlined">Eksempel:</h4>
+                                <h5>Eksempel:</h5>
                                 <div><?= str_replace(["{code}","{/code}"],"",$snippet['code']) ?></div>
                                 <div class="row">
                                     <div class="col-sm-12" style="margin-top:1em;">

@@ -42,7 +42,7 @@ class guidesController extends Controller
   </div>
 </div>
 {/code}' ],[
-
+/*
                 'title' => 'Highlight',
                 'desc' => 'Beskrivelse..',
                 'code' => '
@@ -50,6 +50,7 @@ class guidesController extends Controller
     <h3>Bootstrap starter template</h3>
     <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
 </div>{/code}'],[
+*/
 
                 'title' => 'grid_content',
                 'desc' => 'Beskrivelse..',
@@ -65,6 +66,70 @@ class guidesController extends Controller
   <div class="clearfix visible-xs-block"></div>
   <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
 </div>{/code}'],[
+
+
+                'title' => 'Panels',
+                'desc' => 'Beskrivelse..',
+                'code' => '
+{code}<div class="panel panel-default panel_selector">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a href="#juniorklub">
+                <i class="fa fa-home"></i> Juniorklub
+                <span class="count pull-right">8 / 24</span>
+            </a></h4>
+        <a href="#" class="toggle_collapse"><i class="fa fa-chevron-up"></i></a>
+    </div>
+    <div class="panel-collapse collapse">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-xs-6"><i class="fa fa-user"></i> 0B</div>
+                <div class="col-xs-6 text-right">5</div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6"><i class="fa fa-user"></i> 1B</div>
+                <div class="col-xs-6 text-right">10</div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6"><i class="fa fa-user"></i> 2B</div>
+                <div class="col-xs-6 text-right">1</div>
+            </div>
+        </div>
+    </div>
+</div>{/code}
+    '],[
+
+                'title' => 'Panel med sub-panel',
+                'desc' => 'Beskrivelse..',
+                'code' => '
+{code}<div class="panel panel-default panel_selector">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a href="#juniorklub">
+                <i class="fa fa-home"></i> Juniorklub
+                <span class="count pull-right">8 / 24</span>
+            </a></h4>
+        <a href="#" class="toggle_collapse"><i class="fa fa-chevron-up"></i></a>
+    </div>
+    <div class="panel-collapse collapse">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-xs-6"><i class="fa fa-user"></i> 0B</div>
+                <div class="col-xs-6 text-right">5</div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6"><i class="fa fa-user"></i> 1B</div>
+                <div class="col-xs-6 text-right">10</div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6"><i class="fa fa-user"></i> 2B</div>
+                <div class="col-xs-6 text-right">1</div>
+            </div>
+        </div>
+    </div>
+</div>{/code}
+    '],[
+
 
                 'title' => 'Basic buttons',
                 'desc' => 'Beskrivelse..',
@@ -88,22 +153,24 @@ class guidesController extends Controller
 {code}<!-- Button with icon -->
   <button class="btn btn-default">
     <i class="fa fa-check" aria-hidden="true"></i> 
-      Button width icon [default]
+      Button width icon [class=default]
   </button>
 {/code}
 </div>'],[
 
-                'title' => 'Dropdown buttons',
-                'desc' => 'Beskrivelse..',
+                'title' => 'Button dropdowns',
+                'desc' => ' <p>Turn a standard button into a dropdown toggle. Place it in a <code>div class="btn-group"</code> with a menu-list, and add some basic markup.</p>
+                            <p>[WCAG) Use the <code>aria-label</code> on the dropdown-menu to provide an accessible label to indicate what the modal dialog is about (ie. "Admin menu").</p>',
                 'code' => '
 <div class="side-by-side">
-{code}<!-- Basic dropdown -->
-<div class="dropdown">
+{code}<!-- Button toggle -->
+<div class="btn-group">
   <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Dropdown [btn-default] 
+    Dropdown [class=btn-default] 
     <span class="caret"></span>
   </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+  <!-- Dropdown list menu-->
+  <ul class="dropdown-menu" aria-label="dropdownLabel">
     <li><a href="#">Action</a></li>
     <li><a href="#">Another action</a></li>
     <li><a href="#">Something else here</a></li>
@@ -112,25 +179,23 @@ class guidesController extends Controller
   </ul>
 </div>
 {/code}
-<div class="dropdown">
+<div class="btn-group">
   <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
     Dropdown [btn-primary] 
     <span class="caret"></span>
   </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+  <ul class="dropdown-menu" aria-label="dropdownLabel">
     <li><a href="#">Action</a></li>
     <li><a href="#">Another action</a></li>
     <li><a href="#">Something else here</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
   </ul>
 </div>
-<div class="dropdown">
+<div class="btn-group">
   <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
     Dropdown [btn-secondary] 
     <span class="caret"></span>
   </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+  <ul class="dropdown-menu" aria-label="dropdownLabel">
     <li><a href="#">Action</a></li>
     <li><a href="#">Another action</a></li>
     <li><a href="#">Something else here</a></li>
