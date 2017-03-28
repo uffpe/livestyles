@@ -8053,6 +8053,11 @@ html {
   margin-bottom: 10px;
   border-radius: 2px; }
 
+.style-guide .panel-body .side-by-side > * {
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-right: 10px; }
+
 .post-it {
   background-color: #E5E5E3;
   padding: 15px;
