@@ -18,7 +18,7 @@
             @foreach($main_menu_items as $menu_item)
                 @if(!empty($menu_item['sub_items']))
                     <li class="collapse{!! $menu_item['is_active'] === true ? ' active' : '' !!}">
-                        <a href="{{ $menu_item['url'] }}" class="list-group-item collapsed" data-toggle="collapse" data-parent="#mainmenu" role="button" aria-expanded="false">
+                        <a href="#{{ $menu_item['url'] }}" class="list-group-item collapsed" data-toggle="collapse" data-parent="#mainmenu" role="button" aria-expanded="false">
                             <span class="fa-stack" aria-hidden="true">
                                 {{--<i class="mdi md-24" aria-hidden="true">{{ $menu_item['icon'] }}</i>--}}
                                  <i class="fa {{ $menu_item['icon'] }}" aria-hidden="true"></i>
@@ -29,7 +29,7 @@
                         @if(!empty($menu_item['sub_items']))
                             <ul class="list-group-submenu collapse" id="{{ $menu_item['url'] }}" aria-expanded="true">
                             @foreach($menu_item['sub_items'] as $sub_item)
-                                <li class="list-group-item" data-parent="#{{ $menu_item['url'] }}"><a href="#">{{ $sub_item }}</a></li>
+                                <li class="list-group-item" data-parent="#{{ $menu_item['url'] }}"><a href="{{ $sub_item['url'] }}">{{ $sub_item['label'] }}</a></li>
                             @endforeach
                             </ul>
                         @endif

@@ -8,9 +8,10 @@ class guidesController extends Controller
 {
     function index()
     {
-        $snippets = [
-[
+        $guide_overview = [
+            [
                 'title' =>  'Modal - Popup vindue',
+                'is_anchor' => true,
                 'desc' =>   '
 <p>The Modal plugin is a dialog box/popup window that is displayed on top of the current page.<br/>
 - <a href="https://www.w3schools.com/bootstrap/bootstrap_modal.asp">Read more about bootstrap modal here</a></p>
@@ -53,6 +54,7 @@ class guidesController extends Controller
 */
 
                 'title' => 'grid_content',
+                'is_anchor' => true,
                 'desc' => 'Beskrivelse..',
                 'code' => '
 {code}<div class="show-grid">
@@ -65,36 +67,27 @@ class guidesController extends Controller
   <!-- Optional: clear the XS cols if their content doesn\'t match in height-->
   <div class="clearfix visible-xs-block"></div>
   <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
-</div>{/code}'],[
+</div>{/code}']
+            ];
 
-
+        $guide_containers = [
+            [
                 'title' => 'Panels',
+                'is_anchor' => true,
                 'desc' => 'Beskrivelse..',
                 'code' => '
-{code}<div class="panel panel-default panel_selector">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-            <a href="#juniorklub">
-                <i class="fa fa-home"></i> Juniorklub
-                <span class="count pull-right">8 / 24</span>
-            </a></h4>
-        <a href="#" class="toggle_collapse"><i class="fa fa-chevron-up"></i></a>
+{code}<!-- Panel --><div class="panel panel-default">
+    <div class="panel-body">
+        Panel content... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     </div>
-    <div class="panel-collapse collapse">
-        <div class="panel-body">
-            <div class="row">
-                <div class="col-xs-6"><i class="fa fa-user"></i> 0B</div>
-                <div class="col-xs-6 text-right">5</div>
-            </div>
-            <div class="row">
-                <div class="col-xs-6"><i class="fa fa-user"></i> 1B</div>
-                <div class="col-xs-6 text-right">10</div>
-            </div>
-            <div class="row">
-                <div class="col-xs-6"><i class="fa fa-user"></i> 2B</div>
-                <div class="col-xs-6 text-right">1</div>
-            </div>
-        </div>
+</div>
+<!-- Panel with header -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+         Panel header
+    </div>
+    <div class="panel-body">
+        Panel content... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     </div>
 </div>{/code}
     '],[
@@ -127,11 +120,13 @@ class guidesController extends Controller
             </div>
         </div>
     </div>
-</div>{/code}
-    '],[
+</div>{/code}']
+        ];
 
-
+        $guide_buttons = [
+            [
                 'title' => 'Basic buttons',
+                'is_anchor' => true,
                 'desc' => 'Beskrivelse..',
                 'code' => '
 <div class="side-by-side">
@@ -163,13 +158,13 @@ class guidesController extends Controller
                             <p>[WCAG) Use the <code>aria-label</code> on the dropdown-menu to provide an accessible label to indicate what the modal dialog is about (ie. "Admin menu").</p>',
                 'code' => '
 <div class="side-by-side">
-{code}<!-- Button toggle -->
+{code}<!-- Button (Dropdown toggle) -->
 <div class="btn-group">
   <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
     Dropdown [class=btn-default] 
     <span class="caret"></span>
   </button>
-  <!-- Dropdown list menu-->
+  <!-- Dropdown menu (List of links) -->
   <ul class="dropdown-menu" aria-label="dropdownLabel">
     <li><a href="#">Action</a></li>
     <li><a href="#">Another action</a></li>
@@ -203,7 +198,18 @@ class guidesController extends Controller
     <li><a href="#">Separated link</a></li>
   </ul>
 </div>
-</div>'],[
+</div>']
+            ];
+
+        $guide_wcag = [
+            [
+                'title' => 'WCAG - visual impairments',
+                'is_anchor' => true,
+                'desc' => '
+<p>Zoom level</p>
+<p>More info: <a href="https://www.nngroup.com/articles/touchscreen-screen-readers/" target="_blank">Screen readers and Touchscreen Devices</a></p>',
+                'code' => ''],[
+
 
                 'title' => 'WCAG - aria-label (or aria-labelledBy)',
                 'desc' => '
@@ -211,19 +217,37 @@ class guidesController extends Controller
 <p>In the example below is a typical "close" button with an X in the middle. A blind person using assistive technology might just hear "X" read aloud, which does not mean much without the visual clues. <code>aria-label</code> explicitly tells them what the button will do.</p>
                             ',
                 'code' => '
-{code}<button type="button" class="btn btn-primary" aria-label="Close" onclick="myDialog.close()">X</button>{/code}'],
-
-];
-//dd($snippets);
-
-
-
-
-        $main_menu = [
-            ['url' => '?style=basic', 'label' => 'Basis elementer', 'icon' => 'fa-bars', 'is_active' => true],
-            ['url' => '?style=wcag', 'label' => 'WCAG 2', 'icon' => 'fa-blind', 'is_active' => false],
+{code}<button type="button" class="btn btn-primary" aria-label="Close" onclick="myDialog.close()">X</button>{/code}']
         ];
 
-        return view('demo.guide', ['snippets' => $snippets, 'has_submenu' => false, 'main_menu_items' => $main_menu]);
+
+
+        $guide_styles = [
+            'overview' => $guide_overview,
+            'containers' => $guide_containers,
+            'buttons' => $guide_buttons,
+            'wcag' => $guide_wcag
+        ];
+
+
+        // Make sure 'url' are the same as $guide_styles array names
+        $main_menu = [
+            ['url' => 'overview', 'label' => 'Overview', 'icon' => 'fa-bars', 'is_active' => false, 'sub_items' => [] ],
+            ['url' => 'containers', 'label' => 'Containers', 'icon' => 'fa-bars', 'is_active' => true, 'sub_items' => [] ],
+            ['url' => 'buttons', 'label' => 'Buttons', 'icon' => 'fa-bars', 'is_active' => true, 'sub_items' => [] ],
+            ['url' => 'wcag', 'label' => 'WCAG 2', 'icon' => 'fa-blind', 'is_active' => false, 'sub_items' => [] ]
+        ];
+
+        foreach($main_menu as $key => $menu_item){
+            foreach($guide_styles[$menu_item['url']] as $style_item) {
+                if(!empty($style_item['is_anchor'])){
+                    $elm = array('url' => '#'.urldecode($style_item['title']), 'label' => $style_item['title']);
+                    array_push( $main_menu[$key]['sub_items'], $elm );
+                }
+            }
+        }
+
+
+        return view('demo.guide', ['snippets' => $guide_styles, 'has_submenu' => false, 'main_menu_items' => $main_menu]);
     }
 }
