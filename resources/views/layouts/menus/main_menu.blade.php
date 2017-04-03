@@ -16,9 +16,13 @@
 
         @if(!empty($main_menu_items))
             @foreach($main_menu_items as $menu_item)
-                @if(!empty($menu_item['sub_items']))
-                    <li id="{!! '¨menu_'.$menu_item['url'] !!}" class="collapse{!! $menu_item['is_active'] === true || $_GET['p'] === $menu_item['url'] ? ' active' : '' !!}">
-                        <a href="#{{ $menu_item['url'] }}" class="list-group-item {!! $_GET['p'] === $menu_item['url'] ? '' : 'collapsed' !!}" data-toggle="collapse" data-parent="#mainmenu" role="button" aria-expanded="{!! $_GET['p'] === $menu_item['url'] ? 'true' : 'false' !!}">
+                <?php
+                    $this_page = '';
+                    if(isset($_GET['p'])) $this_page = $_GET['p'];
+                ?>
+            @if(!empty($menu_item['sub_items']))
+                    <li id="{!! '¨menu_'.$menu_item['url'] !!}" class="collapse{!! $menu_item['is_active'] === true || $this_page === $menu_item['url'] ? ' active' : '' !!}">
+                        <a href="#{{ $menu_item['url'] }}" class="list-group-item {!! $this_page === $menu_item['url'] ? '' : 'collapsed' !!}" data-toggle="collapse" data-parent="#mainmenu" role="button" aria-expanded="{!! $this_page === $menu_item['url'] ? 'true' : 'false' !!}">
                             <span class="fa-stack" aria-hidden="true">
                                  <i class="fa {{ $menu_item['icon'] }}" aria-hidden="true"></i>
                             </span>
@@ -26,7 +30,7 @@
                             <span class="caret"></span>
                         </a>
                         @if(!empty($menu_item['sub_items']))
-                            <ul class="list-group-submenu collapse {!! $_GET['p'] === $menu_item['url'] ? 'in' : '' !!}" id="{{ $menu_item['url'] }}" aria-expanded="{!! $_GET['p'] === $menu_item['url'] ? 'true' : 'false' !!}">
+                            <ul class="list-group-submenu collapse {!! $this_page === $menu_item['url'] ? 'in' : '' !!}" id="{{ $menu_item['url'] }}" aria-expanded="{!! $this_page === $menu_item['url'] ? 'true' : 'false' !!}">
                             @foreach($menu_item['sub_items'] as $sub_item)
                                 <li class="list-group-item" data-parent="#{{ $menu_item['url'] }}"><a href="{{ $sub_item['url'] }}">{{ $sub_item['label'] }}</a></li>
                             @endforeach

@@ -79,7 +79,7 @@ class guidesController extends Controller
                 'title' => 'Panel',
                 'is_anchor' => true,
                 'desc' => '<p>Panels are used to put HTML content in a box.</p>
-                            <p>Besides the <code>.panel</code> class a style variant must be added. The base style variant is <code>.panel-default</code> as used in this example.</p>',
+                            <p>Besides the <code>.panel</code> class a style variant must be added. Default variant is <code>.panel-default</code> (As used in the example).</p>',
                 'code' => '
 {code}<div class="panel panel-default">
     <div class="panel-body">
@@ -87,10 +87,11 @@ class guidesController extends Controller
     </div>
 </div>{/code}
             '],[
+
                 'title' => 'Panel header and footer',
                 'is_anchor' => true,
-                'desc' => '<p>Panel header: A heading container can be added to the panel with <code>.panel-heading</code>. Although any h1- h5 can be used to make the text stand out use a h4 with a .panel-title class <code>&#60;h4 class="panel-title"&#62;Title&#60;/h4&#62;</code>.</p>
-                           <p>Panel footer: This is generally used to add buttons or links to the panel.</p>',
+                'desc' => '<p><label>Panel header:</label> A heading container can be added to the panel with <code>.panel-heading</code>. Although any h1- h5 can be used to make the text stand out use a h4 with a .panel-title class <code>&#60;h4 class="panel-title"&#62;Title&#60;/h4&#62;</code>.</p>
+                           <p><label>Panel footer:</label> Added through the <code>.panel-footer</code> and is generally used to add buttons or links to the panel.</p>',
                 'code' => '
 {code}<!-- Panel with Header and a Footer-->
 <div class="panel panel-default">
@@ -98,17 +99,20 @@ class guidesController extends Controller
          <h4 class="panel-title">Panel header (h4)</h4>
     </div>
     
-    <div class="panel-body">Panel content...</div>
+    <div class="panel-body">
+        Panel content...
+    </div>
     
     <div class="panel-footer">
         <button class="btn btn-default" type="button">Button in panel footer</button>
     </div>
 </div>{/code}
         '],[
-                'title' => 'Panel with icon',
+
+                'title' => 'Panel with header icon',
                 'is_anchor' => true,
                 'desc' => '<p>When adding an icon to the header, make sure to keep a space before the title text</p>
-                            <p>Since the icon itself is not relevant to screen-readers, the aria attribute <code>aria-hidden="true"</code> should be added (See more about this under WCAG.)</p>',
+                            <p>Since the icon itself is not relevant to screen-readers, the attribute <code>aria-hidden="true"</code> should be added (See more about this under WCAG.)</p>',
                 'code' => '
 {code}<!-- Panel with a header icon -->
 <div class="panel panel-default">
@@ -117,15 +121,16 @@ class guidesController extends Controller
             <i class="fa fa-check" aria-hidden="true"></i> Panel with icon
          </h4>
     </div>
+    
     <div class="panel-body">
         Panel content - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     </div>
 </div>
 {/code}
         '],[
-                'title' => 'Panel variation',
+                'title' => 'Panel variations',
                 'is_anchor' => true,
-                'desc' => '<p>Possible variation for the panels. When adding an icon to the header, make sure to keep a space before the title text and add the <code>aria-hidden="true"</code> attibute since the icon itself is not relevant for screen-readers. See more about this under WCAG.</p>',
+                'desc' => '<p>Possible variation for the panels.</p>',
                 'code' => '
 {code}<!-- Panel with a header icon -->
 <div class="panel panel-default">
