@@ -216,6 +216,23 @@
             calendarWeeks: true,
             todayHighlight: true
         });
+
+        // STYLE-GUIDE ONLY function
+        (function(){
+            @if(isset($_GET["p"]))
+                $(".guide-parts#<?= $_GET['p'] ?>").show();
+                // $("#menu_<?= $_GET['p'] ?> > a").dropdown('toggle');
+
+            @else
+                $(".guide-parts:first-child").show();
+            @endif
+
+//            var hashValue = location.hash;
+//            hashValue = hashValue.replace(/^#/, '');
+
+
+        })();
+
     </script>
 </body>
 </html>

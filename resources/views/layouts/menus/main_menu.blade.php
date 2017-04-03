@@ -17,17 +17,16 @@
         @if(!empty($main_menu_items))
             @foreach($main_menu_items as $menu_item)
                 @if(!empty($menu_item['sub_items']))
-                    <li class="collapse{!! $menu_item['is_active'] === true ? ' active' : '' !!}">
-                        <a href="#{{ $menu_item['url'] }}" class="list-group-item collapsed" data-toggle="collapse" data-parent="#mainmenu" role="button" aria-expanded="false">
+                    <li id="{!! '¨menu_'.$menu_item['url'] !!}" class="collapse{!! $menu_item['is_active'] === true || $_GET['p'] === $menu_item['url'] ? ' active' : '' !!}">
+                        <a href="#{{ $menu_item['url'] }}" class="list-group-item {!! $_GET['p'] === $menu_item['url'] ? '' : 'collapsed' !!}" data-toggle="collapse" data-parent="#mainmenu" role="button" aria-expanded="{!! $_GET['p'] === $menu_item['url'] ? 'true' : 'false' !!}">
                             <span class="fa-stack" aria-hidden="true">
-                                {{--<i class="mdi md-24" aria-hidden="true">{{ $menu_item['icon'] }}</i>--}}
                                  <i class="fa {{ $menu_item['icon'] }}" aria-hidden="true"></i>
                             </span>
                             {{$menu_item['label']}}
                             <span class="caret"></span>
                         </a>
                         @if(!empty($menu_item['sub_items']))
-                            <ul class="list-group-submenu collapse" id="{{ $menu_item['url'] }}" aria-expanded="true">
+                            <ul class="list-group-submenu collapse {!! $_GET['p'] === $menu_item['url'] ? 'in' : '' !!}" id="{{ $menu_item['url'] }}" aria-expanded="{!! $_GET['p'] === $menu_item['url'] ? 'true' : 'false' !!}">
                             @foreach($menu_item['sub_items'] as $sub_item)
                                 <li class="list-group-item" data-parent="#{{ $menu_item['url'] }}"><a href="{{ $sub_item['url'] }}">{{ $sub_item['label'] }}</a></li>
                             @endforeach
@@ -39,7 +38,6 @@
                         <a href="{{ $menu_item['url'] }}" class="list-group-item">
 
                             <span class="fa-stack" aria-hidden="true">
-                                {{--<i class="mdi md-24" aria-hidden="true">{{ $menu_item['icon'] }}</i>--}}
                                  <i class="fa {{ $menu_item['icon'] }}" aria-hidden="true"></i>
                             </span>
                             {{$menu_item['label']}}
@@ -50,7 +48,6 @@
         @else
             <li><a href="#menu1" class="list-group-item">
                    <span class="fa-stack" aria-hidden="true">
-                        {{--<i class="mdi md-24" aria-hidden="true">home</i>--}}
                         <i class="fa fa-check-square-o" aria-hidden="true"></i>
                    </span>
                     Check-in</a>
