@@ -100,7 +100,7 @@ class guidesController extends Controller
     </div>
     
     <div class="panel-body">
-        Panel content...
+        ...
     </div>
     
     <div class="panel-footer">
@@ -123,7 +123,7 @@ class guidesController extends Controller
     </div>
     
     <div class="panel-body">
-        Panel content...
+        ...
     </div>
 </div>
 {/code}
@@ -137,7 +137,7 @@ class guidesController extends Controller
     <div class="panel-heading">
          <h4 class="panel-title"><i class="fa fa-check" aria-hidden="true"></i> Panel (no variation class)</h4>
     </div>
-    <div class="panel-body"><p>This is the content part...</p></div>
+    <div class="panel-body"><p>...</p></div>
 </div>
 
 <!-- Panel-default -->
@@ -145,7 +145,7 @@ class guidesController extends Controller
     <div class="panel-heading">
          <h4 class="panel-title"><i class="fa fa-check" aria-hidden="true"></i> Panel .panel-default</h4>
     </div>
-    <div class="panel-body"><p>This is the content part...</p></div>
+    <div class="panel-body"><p>...</p></div>
 </div>
 
 <!-- Panel-inverse -->
@@ -153,7 +153,7 @@ class guidesController extends Controller
     <div class="panel-heading">
          <h4 class="panel-title"><i class="fa fa-check" aria-hidden="true"></i> Panel .panel-inverse</h4>
     </div>
-    <div class="panel-body"><p>This is the content part...</p></div>
+    <div class="panel-body"><p>...</p></div>
 </div>
 
 {code}<!-- Panel-primary -->
@@ -161,7 +161,7 @@ class guidesController extends Controller
     <div class="panel-heading">
          <h4 class="panel-title"><i class="fa fa-check" aria-hidden="true"></i> Panel .panel-primary</h4>
     </div>
-    <div class="panel-body"><p>This is the content part...</p></div>
+    <div class="panel-body"><p>...</p></div>
 </div>
 {/code}
 
@@ -170,7 +170,7 @@ class guidesController extends Controller
     <div class="panel-heading">
          <h4 class="panel-title"><i class="fa fa-check" aria-hidden="true"></i> Panel .panel-secondary</h4>
     </div>
-    <div class="panel-body"><p>This is the content part...</p></div>
+    <div class="panel-body"><p>...</p></div>
 </div>
 
 <!-- Panel-selector -->
@@ -178,7 +178,7 @@ class guidesController extends Controller
     <div class="panel-heading">
          <h4 class="panel-title"><i class="fa fa-check" aria-hidden="true"></i> Panel .panel-selector</h4>
     </div>
-    <div class="panel-body"><p>This is the content part...</p></div>
+    <div class="panel-body"><p>...</p></div>
 </div>
         '],[
 
@@ -196,40 +196,86 @@ class guidesController extends Controller
         </h4>
         <a href="#" class="toggle_collapse" aria-haspopup="true"><span class="sr-only">Open this collapsible panel</span><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
     </div>
-    <div class="panel-collapse collapse" aria-label="panelContent">
-        <div class="panel-body"><p>This is the content part...</p></div>
+    <div class="panel-collapse collapse" aria-label="Some Info Panel">
+        <div class="panel-body"><p>...</p></div>
     </div>
 </div>{/code}'],[
 
-                'title' => 'Panel with sub-panel',
-                'desc' => '',
+                'title' => 'Selection panel Example',
+                'is_anchor' => true,
+                'desc' => '<p>This is an example of the type of selection panels used in some modal dialogs, such as Department selection.</p>
+                            <p>It is designed to have a normal link on the title and a collapsible panel with more information.</p>',
                 'code' => '
-{code}<div class="panel panel-default panel_selector">
+{code}<div class="panel panel-selector panel_selector">
     <div class="panel-heading">
         <h4 class="panel-title">
             <a href="#juniorklub">
                 <i class="fa fa-home" aria-hidden="true"></i> Juniorklub
                 <span class="count pull-right">8 / 24</span>
-            </a></h4>
-        <a href="#" class="toggle_collapse"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+            </a>
+        </h4>
+        <a href="#" class="toggle_collapse" aria-haspopup="true"><span class="sr-only">Open this collapsible panel</span><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
     </div>
-    <div class="panel-collapse collapse">
+    <div class="panel-collapse collapse" aria-label="Some Info Panel">
         <div class="panel-body">
-            <div class="row">
-                <div class="col-xs-6"><i class="fa fa-user"></i> 0B</div>
-                <div class="col-xs-6 text-right">5</div>
-            </div>
-            <div class="row">
-                <div class="col-xs-6"><i class="fa fa-user"></i> 1B</div>
-                <div class="col-xs-6 text-right">10</div>
-            </div>
-            <div class="row">
-                <div class="col-xs-6"><i class="fa fa-user"></i> 2B</div>
-                <div class="col-xs-6 text-right">1</div>
-            </div>
+        ...        
         </div>
     </div>
-</div>{/code}']
+</div>{/code}'],[
+
+                'title' => 'Panel with nested panels',
+                'is_anchor' => true,
+                'desc' => '<p>It is posible to have panels inside panels. In the shown example the outer panel and nested Panel 1 are set to be open from start and nested panel 2 is closed.</p>',
+                'code' => '
+{code}<!-- Outer panel -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title"><i class="fa fa-list" aria-hidden="true"></i> Outer Panel</h4>
+        <a href="#" class="toggle_collapse" aria-haspopup="true">
+            <span class="sr-only">Open panel with panels</span><i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </a>
+    </div>
+    <div class="panel-collapse collapse in" aria-expanded="true" aria-label="Info Panel with panels">
+        <div class="panel-body">
+            <!-- Panel-group container -->
+            <div class="panel-group">
+                                               
+                <!-- Nested panel 1 -->             
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <p class="panel-title">
+                            <input class="form_check" type="hidden" name="inputName" value="checked">Inner panel 1
+                            <a data-toggle="collapse" href="#nestedPanel1" aria-haspopup="" aria-label="Info panel 1" aria-expanded="true">
+                                <i class="fa fa-comment pull-right" aria-hidden="true"></i>
+                            </a>
+                        </p>
+                    </div>
+                    <div id="nestedPanel1" class="panel-collapse collapse in" aria-expanded="true" aria-label="Info Panel 1">
+                        <div class="panel-body">...</div>
+                    </div>
+                </div>
+                                     
+                <!-- Nested panel 2 -->                 
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <p class="panel-title">
+                            <input class="form_check" type="hidden" name="inputName" value="checked">Inner panel 2
+                            <a data-toggle="collapse" href="#nestedPanel2" aria-haspopup="" aria-label="Info panel 2" aria-expanded="false">
+                                <i class="fa fa-comment pull-right" aria-hidden="true"></i>
+                            </a>
+                        </p>
+                    </div>
+                    <div id="nestedPanel2" class="panel-collapse collapse" aria-expanded="false" aria-label="Info Panel 1">
+                        <div class="panel-body">...</div>
+                    </div>
+                </div>
+                
+            </div>  
+        </div>
+    </div>
+</div>
+
+{/code}']
         ];
 
         $guide_dialogs = [
@@ -372,12 +418,29 @@ class guidesController extends Controller
 
 
             'title' => 'WCAG - aria-label (or aria-labelledBy)',
-            'desc' => '
-<p>This attribute is designed to help assistive technology (e.g. screen readers) attach an invisible label to an otherwise anonymous HTML element.</p>
-<p>In the example below is a typical "close" button with an X in the middle. A blind person using assistive technology might just hear "X" read aloud, which does not mean much without the visual clues. <code>aria-label</code> explicitly tells them what the button will do.</p>
+            'is_anchor' => true,
+            'desc' => '<p>This attribute is designed to help assistive technology (e.g. screen readers) attach an invisible label to an otherwise anonymous HTML element.</p>
+                        <p>In the example below is a typical "close" button with an X in the middle. A blind person using assistive technology might just hear "X" read aloud, which does not mean much without the visual clues. <code>aria-label</code> explicitly tells them what the button will do.</p>
                             ',
             'code' => '
 {code}<button type="button" class="btn btn-primary" aria-label="Close" onclick="myDialog.close()">X</button>{/code}'
+            ],[
+
+
+                'title' => 'WCAG - aria-haspopup',
+                'is_anchor' => true,
+                'desc' => ' <p>The <code>aria-haspopup="true"</code> should be applied to the link or trigger for modal dialogs, dropdown-menus and collapsible panels. Is used to indicate that an element has a popup context menu or sub-level menu.</p>
+                            ',
+                'code' => '
+{code}<div class="btn-group">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    Dropdown button example<span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-label="dropdownLabel">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+  </ul>
+</div>{/code}'
             ]
         ];
 
