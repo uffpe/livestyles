@@ -78,8 +78,8 @@ class guidesController extends Controller
             [
                 'title' => 'Panel',
                 'is_anchor' => true,
-                'desc' => '<p>Panels are used to put HTML content in a box.</p>
-                            <p>Besides the <code>.panel</code> class a style variant must be added. Default variant is <code>.panel-default</code> (As used in the example).</p>',
+                'desc' => '<p>We use panels to put HTML content in a box.</p>
+                            <p>Besides the <code>.panel</code> class a style variant should be added. Default variant is <code>.panel-default</code> (As used in the example).</p>',
                 'code' => '
 {code}<div class="panel panel-default">
     <div class="panel-body">
@@ -88,10 +88,10 @@ class guidesController extends Controller
 </div>{/code}
             '],[
 
-                'title' => 'Panel header and footer',
+                'title' => 'Panel - Header and Footer',
                 'is_anchor' => true,
-                'desc' => '<p><label>Panel header:</label> A heading container can be added to the panel with <code>.panel-heading</code>. Although any h1- h5 can be used to make the text stand out use a h4 with a .panel-title class <code>&#60;h4 class="panel-title"&#62;Title&#60;/h4&#62;</code>.</p>
-                           <p><label>Panel footer:</label> Added through the <code>.panel-footer</code> and is generally used to add buttons or links to the panel.</p>',
+                'desc' => '<p><label>Panel header:</label> A heading container can be added to the panel with <code>.panel-heading</code>. To make the text stand out a h4 with a .panel-title class can be applied (See example below).</p>
+                           <p><label>Panel footer:</label> If needed this can be added through the <code>.panel-footer</code>. It is generally used to add buttons or links to the panel.</p>',
                 'code' => '
 {code}<!-- Panel with Header and a Footer-->
 <div class="panel panel-default">
@@ -123,57 +123,81 @@ class guidesController extends Controller
     </div>
     
     <div class="panel-body">
-        Panel content - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Panel content...
     </div>
 </div>
 {/code}
         '],[
                 'title' => 'Panel variations',
                 'is_anchor' => true,
-                'desc' => '<p>Possible variation for the panels.</p>',
+                'desc' => '<p>Possible style variation for the panels.</p>',
                 'code' => '
-{code}<!-- Panel with a header icon -->
+<!-- Panel - No variant -->
+<div class="panel">
+    <div class="panel-heading">
+         <h4 class="panel-title"><i class="fa fa-check" aria-hidden="true"></i> Panel (no variation class)</h4>
+    </div>
+    <div class="panel-body"><p>This is the content part...</p></div>
+</div>
+
+<!-- Panel-default -->
 <div class="panel panel-default">
     <div class="panel-heading">
-         <h4 class="panel-title">
-            <i class="fa fa-check" aria-hidden="true"></i> Panel with icon
-         </h4>
+         <h4 class="panel-title"><i class="fa fa-check" aria-hidden="true"></i> Panel .panel-default</h4>
     </div>
-    <div class="panel-body">
-        <p>Panel content - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
+    <div class="panel-body"><p>This is the content part...</p></div>
 </div>
-{/code}
-{code}
+
 <!-- Panel-inverse -->
 <div class="panel panel-inverse">
     <div class="panel-heading">
-         <h4 class="panel-title">
-            <i class="fa fa-check" aria-hidden="true"></i> Panel .panel-inverse
-         </h4>
+         <h4 class="panel-title"><i class="fa fa-check" aria-hidden="true"></i> Panel .panel-inverse</h4>
     </div>
-    <div class="panel-body">
-        <p>Panel content - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <div class="panel-body"><p>This is the content part...</p></div>
+</div>
+
+{code}<!-- Panel-primary -->
+<div class="panel panel-primary">
+    <div class="panel-heading">
+         <h4 class="panel-title"><i class="fa fa-check" aria-hidden="true"></i> Panel .panel-primary</h4>
     </div>
+    <div class="panel-body"><p>This is the content part...</p></div>
 </div>
 {/code}
+
+<!-- Panel-secondary -->
+<div class="panel panel-secondary">
+    <div class="panel-heading">
+         <h4 class="panel-title"><i class="fa fa-check" aria-hidden="true"></i> Panel .panel-secondary</h4>
+    </div>
+    <div class="panel-body"><p>This is the content part...</p></div>
+</div>
+
+<!-- Panel-selector -->
+<div class="panel panel-selector">
+    <div class="panel-heading">
+         <h4 class="panel-title"><i class="fa fa-check" aria-hidden="true"></i> Panel .panel-selector</h4>
+    </div>
+    <div class="panel-body"><p>This is the content part...</p></div>
+</div>
         '],[
 
-                'title' => 'Panel with dropdown content',
+                'title' => 'Collapsible panel',
                 'is_anchor' => true,
-                'desc' => 'It is possible to add an accordian hide/show functinality to a panel.',
+                'desc' => '<p>One of the basic elements is the callapsible panel. This type of panel has a <code>.toggle_collapse</code> button (an arrow at the right side) and the panel-body is placed within a div with <code>.panel-collapse</code>.</p>
+                            <p><b>Toggle-button:</b> Include a <code>aria-label</code> or a <code>.sr-only</code> element to indicate what this does - ie. "Open stamkort info". This is important to apply since the toggle-button is only an icon and by this does not have any descriptive text.<br />
+                            The <code>aria-haspopup</code> on the button indicates that a popup i available. This is important to include because the panel-body is hidden from screen-readers when it is collapsed.</p>
+                            <p><b>Panel-collapse:</b> Use the <code>aria-label</code> on the panel-collapse to provide an accessible label to indicate what the dropdown panel is about (ie. "Stamkort info").</p>',
                 'code' => '
 {code}<div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
             <i class="fa fa-check" aria-hidden="true"></i> Header on collapsible panel
         </h4>
-        <a href="#" class="toggle_collapse"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+        <a href="#" class="toggle_collapse" aria-haspopup="true"><span class="sr-only">Open this collapsible panel</span><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
     </div>
-    <div class="panel-collapse collapse">
-        <div class="panel-body">
-            Panel content - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </div>
+    <div class="panel-collapse collapse" aria-label="panelContent">
+        <div class="panel-body"><p>This is the content part...</p></div>
     </div>
 </div>{/code}'],[
 
@@ -216,7 +240,7 @@ class guidesController extends Controller
 <p>The Modal plugin is a dialog box/popup window that is displayed on top of the current page.<br/>
 - <a href="https://www.w3schools.com/bootstrap/bootstrap_modal.asp">Read more about bootstrap modal here</a></p>
 <p>The <code>data-target="#myModal"</code> on the trigger (button or link) has to be unique and points to the ID of the dialog window.</p>
-<p>[WCAG) Use the <code>aria-labelledby</code> on the modal to provide an accessible label to indicate what the modal dialog is about (ie. "Select department" or "Appointment").</p>
+<p>[WCAG] Use the <code>aria-labelledby</code> on the modal to provide an accessible label to indicate what the modal dialog is about (ie. "Select department" or "Appointment").</p>
 ',
                 'code' => '
 {code}<!-- Modal trigger -->
@@ -276,8 +300,9 @@ class guidesController extends Controller
 </div>'],[
 
                 'title' => 'Button dropdowns',
+                'is_anchor' => true,
                 'desc' => ' <p>Turn a standard button into a dropdown toggle. Place it in a <code>div class="btn-group"</code> with a menu-list, and add some basic markup.</p>
-                            <p>[WCAG) Use the <code>aria-label</code> on the dropdown-menu to provide an accessible label to indicate what the modal dialog is about (ie. "Admin menu").</p>',
+                            <p>[WCAG] Use the <code>aria-label</code> on the dropdown-menu to provide an accessible label to indicate what the dropdown menu is about (ie. "Admin menu").</p>',
                 'code' => '
 <div class="side-by-side">
 {code}<!-- Button (Dropdown toggle) -->

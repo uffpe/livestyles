@@ -68,7 +68,7 @@
                 <h4 class="modal-title" id="myModalLabel"><i class="fa fa-home"></i> V&aelig;lg afdelign</h4>
             </div>
             <div class="modal-body">
-                <div class="panel panel-default panel_selector">
+                <div class="panel panel-selector panel_selector">
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a href="#juniorklub">
@@ -95,7 +95,7 @@
                     </div>
                 </div>
 
-                <div class="panel panel-default panel_selector">
+                <div class="panel panel-selector panel_selector">
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a href="#maanehoejA">
@@ -122,7 +122,7 @@
                     </div>
                 </div>
 
-                <div class="panel panel-default panel_selector">
+                <div class="panel panel-selector panel_selector">
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a href="#maanehoejB">
@@ -149,7 +149,7 @@
                     </div>
                 </div>
 
-                <div class="panel panel-default panel_selector">
+                <div class="panel panel-selector panel_selector">
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a href="#solhojen">
@@ -203,6 +203,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
 
+    <script src="{{ asset('js/tabulex.guide.js') }}?{{ time() }}"></script>
     <script src="https://personale.devsfoweb.dk/js/tabulex.ui.js?{{ time() }}"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
@@ -221,16 +222,9 @@
         (function(){
             @if(isset($_GET["p"]))
                 $(".guide-parts#<?= $_GET['p'] ?>").show();
-                // $("#menu_<?= $_GET['p'] ?> > a").dropdown('toggle');
-
             @else
                 $(".guide-parts:first-child").show();
             @endif
-
-//            var hashValue = location.hash;
-//            hashValue = hashValue.replace(/^#/, '');
-
-
         })();
 
     </script>
