@@ -18,6 +18,53 @@
 
         <ul class="nav navbar-nav navbar-right">
             <li><a href="#link">
+                    <!--<i class="fa fa-calendar" aria-hidden="true"></i>-->
+                    <span class="has-badge-wrapper">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                        <span class="badge badge-icon"><i class="fa fa-clock-o"></i></span>
+                    </span>
+                    <span class="hidden-xs">Opret aftale</span>
+                </a>
+            </li>
+            <!--
+            <li><a href="#link">
+                    <span class="has-badge-wrapper">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <span class="badge badge-icon"><i class="fa fa-exclamation-circle"></i></span>
+                    </span>
+                    <span class="hidden-xs">Fravær</span>
+                </a>
+            </li>
+            -->
+            <li><a href="#link">
+                    <span class="has-badge-wrapper">
+                        <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                        <span class="badge badge-icon"><i class="fa fa-ban"></i></span>
+                    </span>
+                    <span class="hidden-xs">Meld fravær</span>
+                </a>
+            </li>
+            <!--
+            <li><a href="#link">
+                    <span class="has-badge-wrapper">
+                        <i class="fa fa-calendar-times-o" aria-hidden="true"></i>
+                    </span>
+                    <span class="hidden-xs">Meld fravær</span>
+                </a>
+            </li>-->
+            <li><a href="#link">
+                    <span class="has-badge-wrapper">
+                        <i class="fa fa-calendar-minus-o" aria-hidden="true"></i>
+                        <span class="badge badge-icon"><i class="fa fa-pause-circle"></i></span>
+                    </span>
+                    <span class="hidden-xs">Meld fridag</span>
+                </a>
+            </li>
+
+<!--
+            <li><a href="#link">||</a></li>
+
+            <li><a href="#link">
                     <span class="has-badge-wrapper">
                         <i class="fa fa-calendar" aria-hidden="true"></i>
                         <span class="badge badge-add">+</span>
@@ -41,7 +88,7 @@
                     <span class="hidden-xs">Meld fridag</span>
                 </a>
             </li>
-
+-->
             <li><a href="#link">
                     <span class="has-badge-wrapper">
                         <i class="fa fa-comment" aria-hidden="true"></i>

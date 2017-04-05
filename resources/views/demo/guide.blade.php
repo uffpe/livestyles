@@ -1,6 +1,6 @@
 @extends('layouts.tabulex')
 @section('content')
-    <div id="content-div">
+    <div id="content-div" class="style-guide">
         <div class="content-div__wrapper">
 
             @if(!empty($main_menu_items))
@@ -14,14 +14,14 @@
                             <div class="col-sm-12">
                                 <h3 class="underlined"><?= $snippet['title'] ?><a name="<?= urlencode($snippet['title']) ?>" class="style_anchor"></a></h3>
                             </div>
-                            <div class="col-md-12 col-lg-10">
+                            <div class="col-md-12">
                                 @if($snippet['desc'])
                                     <?= $snippet['desc'] ?>
                                 @else
                                     <div class="alert alert-danger">This element is not done!</div>
                                 @endif
-                            </div>
-                            <div class="col-sm-12">
+                            <!--</div>
+                            <div class="col-sm-12">-->
                                 <div class="panel panel-default panel-no-header panel-guide">
                                     <div class="panel-heading">
                                         <h5 class="panel-title">

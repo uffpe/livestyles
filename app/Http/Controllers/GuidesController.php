@@ -244,8 +244,8 @@ class guidesController extends Controller
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <p class="panel-title">
-                            <input class="form_check" type="hidden" name="inputName" value="checked">Inner panel 1
-                            <a data-toggle="collapse" href="#nestedPanel1" aria-haspopup="" aria-label="Info panel 1" aria-expanded="true">
+                            <input class="form_check" type="hidden" name="inputName" value="checked">Inner panel 1 (Open from start)
+                            <a data-toggle="collapse" href="#nestedPanel1" aria-haspopup="true" aria-label="Info panel 1" aria-expanded="true">
                                 <i class="fa fa-comment pull-right" aria-hidden="true"></i>
                             </a>
                         </p>
@@ -260,7 +260,7 @@ class guidesController extends Controller
                     <div class="panel-heading">
                         <p class="panel-title">
                             <input class="form_check" type="hidden" name="inputName" value="checked">Inner panel 2
-                            <a data-toggle="collapse" href="#nestedPanel2" aria-haspopup="" aria-label="Info panel 2" aria-expanded="false">
+                            <a data-toggle="collapse" href="#nestedPanel2" aria-haspopup="true" aria-label="Info panel 2" aria-expanded="false">
                                 <i class="fa fa-comment pull-right" aria-hidden="true"></i>
                             </a>
                         </p>
@@ -278,6 +278,128 @@ class guidesController extends Controller
 {/code}']
         ];
 
+        $guide_menus = [
+            [
+                'title' => 'Basic nav Menu',
+                'is_anchor' => true,
+                'desc' => '<p>The base navigational menu is a <b>ul</b> list <code>.list-group .nav</code> containing one or more list-elements with links <code>.list-group-item</code> and related icons.</p>',
+                'code' => '
+{code}<!-- Menu list -->
+<ul class="list-group nav nav-stacked">
+    <li>
+        <a href="menu1" class="list-group-item">        
+            <span class="fa-stack" aria-hidden="true">
+                 <i class="fa fa-check" aria-hidden="true"></i>
+            </span>
+            Menu element 1
+        </a>
+    </li>
+    <li>
+        <a href="menu2" class="list-group-item">        
+            <span class="fa-stack" aria-hidden="true">
+                 <i class="fa fa-check" aria-hidden="true"></i>
+            </span>
+            Menu element 2
+        </a>
+    </li>
+</ul>
+{/code}'],[
+                'title' => 'Nav Menu with submenu',
+                'is_anchor' => true,
+                'desc' => '<p>The base navigational menu is a <b>ul</b> list <code>.list-group .nav</code> containing one or more list-elements with links <code>.list-group-item</code> and related icons.</p>',
+                'code' => '
+{code}<!-- Menu list -->
+<ul class="list-group nav nav-stacked">
+    <li>
+        <a href="#menu1" class="list-group-item" data-toggle="collapse" data-parent="#mainmenu" role="button" aria-expanded="false">
+            <span class="fa-stack" aria-hidden="true">
+                 <i class="fa fa-th-list"></i>
+            </span>
+            Menu element 1
+            <span class="caret"></span>
+        </a>
+        <ul class="list-group-submenu collapse" id="menu1">
+            <li class="list-group-item" data-parent="#menu1">
+                <a href="#">Submenu 1</a>
+            </li>
+            <li class="list-group-item" data-parent="#menu1">
+                <a href="#">Submenu 2</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="menu2" class="list-group-item">        
+            <span class="fa-stack" aria-hidden="true">
+                 <i class="fa fa-check" aria-hidden="true"></i>
+            </span>
+            Menu element 2
+        </a>
+    </li>
+</ul>
+{/code}'],[
+                'title' => 'Nav Menu - Active state',
+                'is_anchor' => false,
+                'desc' => '<p>The currently chosen menu element should be attached with an <code>.active</code> class on the li-tag.</p>',
+                'code' => '
+{code}<!-- Menu list -->
+<ul class="list-group nav nav-stacked">
+    <li class="active">
+        <a href="menu3" class="list-group-item">        
+            <span class="fa-stack" aria-hidden="true">
+                 <i class="fa fa-check" aria-hidden="true"></i>
+            </span>
+            Menu element 1
+        </a>
+    </li>
+    <li>
+        <a href="menu3" class="list-group-item">        
+            <span class="fa-stack" aria-hidden="true">
+                 <i class="fa fa-check" aria-hidden="true"></i>
+            </span>
+            Menu element 2
+        </a>
+    </li>
+</ul>
+{/code}']
+        ];
+
+        $guide_images = [
+        [
+            'title' => 'Icon with badge',
+            'is_anchor' => true,
+            'desc' => '',
+            'code' => '
+{code}<!-- Menu icon -->
+ <a href="#link">
+    <span class="has-badge-wrapper" aria-hidden="true">
+        <i class="fa fa-comment"></i>
+        <span class="badge badge-info">12</span>
+    </span>
+    Messages
+</a>
+{/code}'],[
+                'title' => 'Icon with badge icon',
+                'is_anchor' => true,
+                'desc' => '',
+                'code' => '
+ <a class="btn btn-default" href="#" role="button">
+    <span class="has-badge-wrapper" aria-hidden="true">
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <span class="badge badge-icon"><i class="fa fa-times-circle"></i></span>
+    </span>
+    New appointment
+</a>
+
+{code}<!-- Menu icon -->
+ <a class="btn btn-default" href="#" role="button">
+    <span class="has-badge-wrapper" aria-hidden="true">
+        <i class="fa fa-calendar" aria-hidden="true"></i>
+        <span class="badge badge-icon"><i class="fa fa-plus-circle"></i></span>
+    </span>
+    New appointment
+</a>
+{/code}']
+    ];
         $guide_dialogs = [
             [
                 'title' =>  'Modal - Popup vindue',
@@ -451,6 +573,8 @@ class guidesController extends Controller
             'fonts' => $guide_fonts,
             'grids' => $guide_grids,
             'containers' => $guide_containers,
+            'menus' => $guide_menus,
+            'images' => $guide_images,
             'dialogs' => $guide_dialogs,
             'buttons' => $guide_buttons,
             'wcag' => $guide_wcag
@@ -459,10 +583,12 @@ class guidesController extends Controller
 
         // Make sure 'url' are the same as $guide_styles array names
         $main_menu = [
-            ['url' => 'overview', 'label' => 'Overview', 'icon' => 'fa-bars', 'is_active' => false, 'sub_items' => [] ],
-            ['url' => 'fonts', 'label' => 'Fonts', 'icon' => 'fa-font', 'is_active' => false, 'sub_items' => [] ],
+            ['url' => 'overview', 'label' => 'Overview', 'icon' => 'fa-file-text-o', 'is_active' => false, 'sub_items' => [] ],
+            ['url' => 'fonts', 'label' => 'Text & fonts', 'icon' => 'fa-font', 'is_active' => false, 'sub_items' => [] ],
             ['url' => 'grids', 'label' => 'Grids', 'icon' => 'fa-columns', 'is_active' => false, 'sub_items' => [] ],
             ['url' => 'containers', 'label' => 'Containers', 'icon' => 'fa-id-card-o', 'is_active' => false, 'sub_items' => [] ],
+            ['url' => 'menus', 'label' => 'Menus', 'icon' => 'fa-th-list', 'is_active' => false, 'sub_items' => [] ],
+            ['url' => 'images', 'label' => 'Images and Icons', 'icon' => 'fa-photo', 'is_active' => false, 'sub_items' => [] ],
             ['url' => 'dialogs', 'label' => 'Dialogs', 'icon' => 'fa-window-maximize', 'is_active' => false, 'sub_items' => [] ],
             ['url' => 'buttons', 'label' => 'Buttons', 'icon' => 'fa-link', 'is_active' => false, 'sub_items' => [] ],
             ['url' => 'wcag', 'label' => 'WCAG 2', 'icon' => 'fa-blind', 'is_active' => false, 'sub_items' => [] ]
