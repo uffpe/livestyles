@@ -27,18 +27,18 @@
                                  <i class="fa {{ $menu_item['icon'] }}" aria-hidden="true"></i>
                             </span>
                             {{$menu_item['label']}}
-                            <span class="caret"></span>
+                            <span class="caret" aria-hidden="true"></span>
                         </a>
                         @if(!empty($menu_item['sub_items']))
                             <ul class="list-group-submenu collapse {!! $this_page === $menu_item['url'] ? 'in' : '' !!}" id="{{ $menu_item['url'] }}" aria-expanded="{!! $this_page === $menu_item['url'] ? 'true' : 'false' !!}">
                             @foreach($menu_item['sub_items'] as $sub_item)
-                                <li class="list-group-item" data-parent="#{{ $menu_item['url'] }}"><a href="{{ $sub_item['url'] }}">{{ $sub_item['label'] }}</a></li>
+                                <li class="list-group-item {{ $sub_item['subclass'] }}" data-parent="#{{ $menu_item['url'] }}"><a href="{{ $sub_item['url'] }}#{{ $sub_item['subclass'] }}" onclick="activeSubmenu('{{ $sub_item['subclass'] }}')">{{ $sub_item['label'] }}</a></li>
                             @endforeach
                             </ul>
                         @endif
                     </li>
                 @else
-                    <li{!! $menu_item['is_active'] === true ? ' class="active"' : '' !!}{!! !empty($menu_item['sub_items']) ? ' class="collapse"' : '' !!}>
+                    <li class="{!! $menu_item['is_active'] === true || $this_page === $menu_item['url'] ? ' active' : '' !!}{!! !empty($menu_item['sub_items']) ? ' collapse' : '' !!}">
                         <a href="{{ $menu_item['url'] }}" class="list-group-item">
 
                             <span class="fa-stack" aria-hidden="true">

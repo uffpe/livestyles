@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 class guidesController extends Controller
 {
+
     function index()
     {
         $guide_overview = [
@@ -289,7 +290,7 @@ class guidesController extends Controller
     <li>
         <a href="menu1" class="list-group-item">        
             <span class="fa-stack" aria-hidden="true">
-                 <i class="fa fa-check" aria-hidden="true"></i>
+                 <i class="fa fa-check"></i>
             </span>
             Menu element 1
         </a>
@@ -297,7 +298,7 @@ class guidesController extends Controller
     <li>
         <a href="menu2" class="list-group-item">        
             <span class="fa-stack" aria-hidden="true">
-                 <i class="fa fa-check" aria-hidden="true"></i>
+                 <i class="fa fa-check"></i>
             </span>
             Menu element 2
         </a>
@@ -316,7 +317,7 @@ class guidesController extends Controller
                  <i class="fa fa-th-list"></i>
             </span>
             Menu element 1
-            <span class="caret"></span>
+            <span class="caret" aria-hidden="true"></span>
         </a>
         <ul class="list-group-submenu collapse" id="menu1">
             <li class="list-group-item" data-parent="#menu1">
@@ -330,7 +331,7 @@ class guidesController extends Controller
     <li>
         <a href="menu2" class="list-group-item">        
             <span class="fa-stack" aria-hidden="true">
-                 <i class="fa fa-check" aria-hidden="true"></i>
+                 <i class="fa fa-check"></i>
             </span>
             Menu element 2
         </a>
@@ -594,10 +595,15 @@ class guidesController extends Controller
             ['url' => 'wcag', 'label' => 'WCAG 2', 'icon' => 'fa-blind', 'is_active' => false, 'sub_items' => [] ]
         ];
 
+
+        function safeForClass($str){
+            return preg_replace('/\W+/','',$str);
+        }
+
         foreach($main_menu as $key => $menu_item){
             foreach($guide_styles[$menu_item['url']] as $style_item) {
                 if(!empty($style_item['is_anchor'])){
-                    $elm = array('url' => '?p='.$menu_item['url'].'#'.urlencode($style_item['title']), 'label' => $style_item['title']);
+                    $elm = array('url' => '?p='.$menu_item['url'], 'subclass' => safeForClass($style_item['title']), 'label' => $style_item['title']);
                     array_push( $main_menu[$key]['sub_items'], $elm );
                 }
             }

@@ -12,7 +12,7 @@
 
                     @foreach($snippets[$menu_items['url']] as $snippet)
                             <div class="col-sm-12">
-                                <h3 class="underlined"><?= $snippet['title'] ?><a name="<?= urlencode($snippet['title']) ?>" class="style_anchor"></a></h3>
+                                <h3 class="underlined"><?= $snippet['title'] ?><a name="<?= preg_replace('/\W+/','',$snippet['title']) ?>" class="style_anchor"></a></h3>
                             </div>
                             <div class="col-md-12">
                                 @if($snippet['desc'])
@@ -56,7 +56,7 @@
 
             @else
 
-                Hvorfor virker dette ikke?
+                Error: No style elements found!
 
             @endif
        </div>

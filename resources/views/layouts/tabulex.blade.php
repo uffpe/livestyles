@@ -227,6 +227,28 @@
             @endif
         })();
 
+        if(window.location.hash){
+            activeSubmenu(window.location.hash.substr(1));
+        } else {
+            $("ul.nav-mainmenu__list li:first-child li:first-child").addClass("active");
+        }
+
+        function activeSubmenu(submenu){
+            $("ul.list-group-submenu li").removeClass("active");
+            $("li." + submenu).addClass("active");
+            console.log("li." + submenu);
+        }
+        /*
+        if ("onhashchange" in window) {
+            activeSubmenu(location.hash.substr(1));
+        }
+
+        function locationHashChanged(currentHash) {
+            $("li." + currentHash).addClass("active");
+        }
+
+        window.onhashchange = activeSubmenu(location.hash.substr(1));*/
+
     </script>
 </body>
 </html>
