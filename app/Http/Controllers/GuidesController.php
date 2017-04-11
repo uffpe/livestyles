@@ -72,7 +72,19 @@ class guidesController extends Controller
   <!-- Optional: clear the XS cols if their content doesn\'t match in height-->
   <div class="clearfix visible-xs-block"></div>
   <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
-</div>{/code}']
+</div>{/code}'],[
+
+                'title' => 'No padding between elements',
+                'is_anchor' => true,
+                'desc' => 'no-gutter',
+                'code' => '
+{code}{/code}'],[
+
+                'title' => 'Padding right only',
+                'is_anchor' => true,
+                'desc' => 'single-gutter',
+                'code' => '
+{code}{/code}']
         ];
 
         $guide_containers = [
@@ -283,23 +295,19 @@ class guidesController extends Controller
             [
                 'title' => 'Basic nav Menu',
                 'is_anchor' => true,
-                'desc' => '<p>The base navigational menu is a <b>ul</b> list <code>.list-group .nav</code> containing one or more list-elements with links <code>.list-group-item</code> and related icons.</p>',
+                'desc' => '<p>The base navigational menu is a stacked list-group (<code>.list-group .nav .nav-stacked</code>) containing one or more elements (<code>.list-group-item</code>) with links and related icons.</p>',
                 'code' => '
 {code}<!-- Menu list -->
-<ul class="list-group nav nav-stacked">
+<ul class="nav nav-stacked">
     <li>
         <a href="menu1" class="list-group-item">        
-            <span class="fa-stack" aria-hidden="true">
-                 <i class="fa fa-check"></i>
-            </span>
+            <span class="fa-stack" aria-hidden="true"><i class="fa fa-check"></i></span>
             Menu element 1
         </a>
     </li>
     <li>
         <a href="menu2" class="list-group-item">        
-            <span class="fa-stack" aria-hidden="true">
-                 <i class="fa fa-check"></i>
-            </span>
+            <span class="fa-stack" aria-hidden="true"><i class="fa fa-check"></i></span>
             Menu element 2
         </a>
     </li>
@@ -312,14 +320,12 @@ class guidesController extends Controller
 {code}<!-- Menu list -->
 <ul class="list-group nav nav-stacked">
     <li>
-        <a href="#menu1" class="list-group-item" data-toggle="collapse" data-parent="#mainmenu" role="button" aria-expanded="false">
-            <span class="fa-stack" aria-hidden="true">
-                 <i class="fa fa-th-list"></i>
-            </span>
+        <a href="#menu1" class="list-group-item" data-toggle="collapse" role="button" aria-expanded="false" aria-haspopup="true">
+            <span class="fa-stack" aria-hidden="true"><i class="fa fa-th-list"></i></span>
             Menu element 1
             <span class="caret" aria-hidden="true"></span>
         </a>
-        <ul class="list-group-submenu collapse" id="menu1">
+        <ul class="list-group-submenu collapse" id="menu1" aria-label="submenu">
             <li class="list-group-item" data-parent="#menu1">
                 <a href="#">Submenu 1</a>
             </li>
@@ -328,35 +334,23 @@ class guidesController extends Controller
             </li>
         </ul>
     </li>
-    <li>
-        <a href="menu2" class="list-group-item">        
-            <span class="fa-stack" aria-hidden="true">
-                 <i class="fa fa-check"></i>
-            </span>
-            Menu element 2
-        </a>
-    </li>
 </ul>
 {/code}'],[
                 'title' => 'Nav Menu - Active state',
-                'is_anchor' => false,
+                'is_anchor' => true,
                 'desc' => '<p>The currently chosen menu element should be attached with an <code>.active</code> class on the li-tag.</p>',
                 'code' => '
 {code}<!-- Menu list -->
 <ul class="list-group nav nav-stacked">
     <li class="active">
         <a href="menu3" class="list-group-item">        
-            <span class="fa-stack" aria-hidden="true">
-                 <i class="fa fa-check" aria-hidden="true"></i>
-            </span>
+            <span class="fa-stack" aria-hidden="true"><i class="fa fa-check" aria-hidden="true"></i></span>
             Menu element 1
         </a>
     </li>
     <li>
         <a href="menu3" class="list-group-item">        
-            <span class="fa-stack" aria-hidden="true">
-                 <i class="fa fa-check" aria-hidden="true"></i>
-            </span>
+            <span class="fa-stack" aria-hidden="true"> <i class="fa fa-check" aria-hidden="true"></i></span>
             Menu element 2
         </a>
     </li>
@@ -401,6 +395,7 @@ class guidesController extends Controller
 </a>
 {/code}']
     ];
+
         $guide_dialogs = [
             [
                 'title' =>  'Modal - Popup vindue',
@@ -409,16 +404,23 @@ class guidesController extends Controller
 <p>The Modal plugin is a dialog box/popup window that is displayed on top of the current page.<br/>
 - <a href="https://www.w3schools.com/bootstrap/bootstrap_modal.asp">Read more about bootstrap modal here</a></p>
 <p>The <code>data-target="#myModal"</code> on the trigger (button or link) has to be unique and points to the ID of the dialog window.</p>
-<p>[WCAG] Use the <code>aria-labelledby</code> on the modal to provide an accessible label to indicate what the modal dialog is about (ie. "Select department" or "Appointment").</p>
+<h5>WCAG:</h5>
+<ul>
+<li>The <code>aria-haspopup="true"</code> should be applied to the trigger to indicate that it refers to a popup dialog.</li>
+<li>Use the <code>aria-label</code> on the dialog to provide an accessible label that indicates what the modal dialog is about (ie. "Select department").</li>
+<li>The dialog container must have a <code>role=dialog</code> to specify this element contains the dialog content.</li>
+<li>By giving the dialog a <code>tabindex=-1</code> value removes it from the default navigation flow (i.e., a user cannot tab to it).</li>
+<li>When opened it is vital to programmatically move the <code>focus</code> to the displayed dialog and once it is closed back to the trigger. If it only contains a list of links the focus should be on the first link in the dialog. The <code>aria-hidden</code> attribute should furthermore be set to true once the dialog is displayed, to false when it is closed again</li>
+</ul>
 ',
                 'code' => '
 {code}<!-- Modal trigger -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" aria-haspopup="true">
   Launch demo modal
 </button>
 
 <!-- Modal dialog -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="dialogLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -519,14 +521,14 @@ class guidesController extends Controller
 
         $guide_wcag = [
             [
-                'title' => 'WCAG - visual impairments',
+                'title' => 'Zoom-level and visual impairments',
                 'is_anchor' => true,
                 'desc' => '
 <p>Zoom level</p>
 <p>More info: <a href="https://www.nngroup.com/articles/touchscreen-screen-readers/" target="_blank">Screen readers and Touchscreen Devices</a></p>',
                 'code' => ''
             ],[
-            'title' => 'WCAG - aria-hidden',
+            'title' => 'Aria-hidden',
             'is_anchor' => true,
             'desc' => ' <p>The aria-hidden is used to hide visibly rendered content from assistive technologies to improve the experience for users of assistive technologies by removing redundant or extraneous content.</p>
                         <p>Usually icons on buttons and links are reduntant eye-candy and should be attached with the <code>aria-hidden="true"</code> attibute. 
@@ -540,7 +542,7 @@ class guidesController extends Controller
             ],[
 
 
-            'title' => 'WCAG - aria-label (or aria-labelledBy)',
+            'title' => 'Aria-label (or aria-labelledBy)',
             'is_anchor' => true,
             'desc' => '<p>This attribute is designed to help assistive technology (e.g. screen readers) attach an invisible label to an otherwise anonymous HTML element.</p>
                         <p>In the example below is a typical "close" button with an X in the middle. A blind person using assistive technology might just hear "X" read aloud, which does not mean much without the visual clues. <code>aria-label</code> explicitly tells them what the button will do.</p>
@@ -550,20 +552,33 @@ class guidesController extends Controller
             ],[
 
 
-                'title' => 'WCAG - aria-haspopup',
+                'title' => 'Aria-haspopup',
                 'is_anchor' => true,
                 'desc' => ' <p>The <code>aria-haspopup="true"</code> should be applied to the link or trigger for modal dialogs, dropdown-menus and collapsible panels. Is used to indicate that an element has a popup context menu or sub-level menu.</p>
                             ',
                 'code' => '
 {code}<div class="btn-group">
   <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Dropdown button example<span class="caret"></span>
+    Dropdown button example <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" aria-label="dropdownLabel">
     <li><a href="#">Action</a></li>
     <li><a href="#">Another action</a></li>
   </ul>
 </div>{/code}'
+            ],[
+
+
+                'title' => 'Focus management - dialog popups',
+                'is_anchor' => true,
+                'desc' => '<p>When using custom dialogs, it is vital to move the focus to the displayed dialog (and back to the trigger once it is closed). This is especially important as most dialogs are inserted far from the point in the source code that triggers them. Without proper focus management through scripting, keyboard users may find it hard or impossible to identify and interact with the custom dialog.</p>
+                            <h5>Scripted focus management should:</h5>
+                            <ul>        
+                                <li>move the keyboard focus from the triggering element (link or button) to the custom dialog (or one of the focussable elements within it)</li>
+                                <li>keep it within the custom dialog until the dialog is closed (this makes the dialog effectively modal)</li>
+                                <li>move it back to the triggering element when the user closes the dialog by activating one of the choices offered.</li>
+                            </ul>',
+                'code' => 'This is fortunately managed by BootStrap js, but it need to be tested to validate it works for all dialogs. In case a dialog has custom functionality or is not handled by bootstrap modal, this specification needs to be applied.'
             ]
         ];
 

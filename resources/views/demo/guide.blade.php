@@ -20,8 +20,8 @@
                                 @else
                                     <div class="alert alert-danger">This element is not done!</div>
                                 @endif
-                            <!--</div>
-                            <div class="col-sm-12">-->
+
+                                @if($snippet['code'])
                                 <div class="panel panel-default panel-no-header panel-guide">
                                     <div class="panel-heading">
                                         <h5 class="panel-title">
@@ -47,6 +47,7 @@
                                         @endif
                                     </div>
                                 </div>
+                                    @endif
                             </div>
                     @endforeach
                 </div>
