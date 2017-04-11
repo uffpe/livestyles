@@ -99,10 +99,11 @@ class guidesController extends Controller
         A default panel container with content - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     </div>
 </div>{/code}
-            '],[
+            '],
+            [
 
                 'title' => 'Panel - Header and Footer',
-                'is_anchor' => true,
+                'is_anchor' => false,
                 'desc' => '<p><label>Panel header:</label> A heading container can be added to the panel with <code>.panel-heading</code>. To make the text stand out a h4 with a .panel-title class can be applied (See example below).</p>
                            <p><label>Panel footer:</label> If needed this can be added through the <code>.panel-footer</code>. It is generally used to add buttons or links to the panel.</p>',
                 'code' => '
@@ -120,10 +121,11 @@ class guidesController extends Controller
         <button class="btn btn-default" type="button">Button in panel footer</button>
     </div>
 </div>{/code}
-        '],[
+        '],
+            [
 
                 'title' => 'Panel with header icon',
-                'is_anchor' => true,
+                'is_anchor' => false,
                 'desc' => '<p>When adding an icon to the header, make sure to keep a space before the title text</p>
                             <p>Since the icon itself is not relevant to screen-readers, the attribute <code>aria-hidden="true"</code> should be added (See more about this under WCAG.)</p>',
                 'code' => '
@@ -140,7 +142,8 @@ class guidesController extends Controller
     </div>
 </div>
 {/code}
-        '],[
+        '],
+            [
                 'title' => 'Panel variations',
                 'is_anchor' => true,
                 'desc' => '<p>Possible style variation for the panels.</p>',
@@ -186,14 +189,15 @@ class guidesController extends Controller
     <div class="panel-body"><p>...</p></div>
 </div>
 
-<!-- Panel-selector -->
-<div class="panel panel-selector">
+<!-- Panel-grey -->
+<div class="panel panel-grey">
     <div class="panel-heading">
-         <h4 class="panel-title"><i class="fa fa-check" aria-hidden="true"></i> Panel .panel-selector</h4>
+         <h4 class="panel-title"><i class="fa fa-check" aria-hidden="true"></i> Panel .panel-grey</h4>
     </div>
     <div class="panel-body"><p>...</p></div>
 </div>
-        '],[
+        '],
+            [
 
                 'title' => 'Collapsible panel',
                 'is_anchor' => true,
@@ -212,29 +216,8 @@ class guidesController extends Controller
     <div class="panel-collapse collapse" aria-label="Some Info Panel">
         <div class="panel-body"><p>...</p></div>
     </div>
-</div>{/code}'],[
-
-                'title' => 'Selection panel Example',
-                'is_anchor' => true,
-                'desc' => '<p>This is an example of the type of selection panels used in some modal dialogs, such as Department selection.</p>
-                            <p>It is designed to have a normal link on the title and a collapsible panel with more information.</p>',
-                'code' => '
-{code}<div class="panel panel-selector panel_selector">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-            <a href="#juniorklub">
-                <i class="fa fa-home" aria-hidden="true"></i> Juniorklub
-                <span class="count pull-right">8 / 24</span>
-            </a>
-        </h4>
-        <a href="#" class="toggle_collapse" aria-haspopup="true"><span class="sr-only">Open this collapsible panel</span><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
-    </div>
-    <div class="panel-collapse collapse" aria-label="Some Info Panel">
-        <div class="panel-body">
-        ...        
-        </div>
-    </div>
-</div>{/code}'],[
+</div>{/code}'],
+            [
 
                 'title' => 'Panel with nested panels',
                 'is_anchor' => true,
@@ -288,6 +271,114 @@ class guidesController extends Controller
     </div>
 </div>
 
+{/code}'],
+            [
+
+                'title' => 'Selection panel Example',
+                'is_anchor' => true,
+                'desc' => '<p>This is an example of the type of selection panels used in some modal dialogs, such as Department selection.</p>
+                            <p>It is designed to have a normal link on the title and a collapsible panel with more information.</p>',
+                'code' => '
+<div class="panel panel-grey panel_selector">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a href="#juniorklub">
+                <i class="fa fa-home" aria-hidden="true"></i>
+                Juniorklub
+                <span class="count pull-right">8 / 24</span>
+            </a>
+        </h4>
+        <a href="#" class="toggle_collapse" aria-haspopup="true"><span class="sr-only">Open this collapsible panel</span><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+    </div>
+    <div class="panel-collapse collapse" aria-label="Some Info Panel">
+        <div class="panel-body">
+        ...        
+        </div>
+    </div>
+</div>
+
+{code}<!-- Selection: .panel-grey with subtext -->
+<div class="panel panel-grey panel_selector">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a href="#juniorklub">
+                <i class="fa fa-home" aria-hidden="true"></i>
+                Juniorklub
+                <br /><span class="subtext">This is subtext in small</span>
+                <span class="count">8 / 24</span>
+            </a>
+        </h4>
+        <a href="#" class="toggle_collapse" aria-haspopup="true"><span class="sr-only">Open this collapsible panel</span><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+    </div>
+    <div class="panel-collapse collapse" aria-label="Some Info Panel">
+        <div class="panel-body">
+        ...        
+        </div>
+    </div>
+</div>
+{/code}'],
+            [
+
+                'title' => 'Selection panel variations',
+                'is_anchor' => false,
+                'desc' => '',
+                'code' => '
+<!-- Panel-grey -->
+<div class="panel panel-grey panel_selector">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a href="#juniorklub">
+                <i class="fa fa-home" aria-hidden="true"></i>
+                Panel-grey (Department)
+                <span class="count pull-right">8 / 24</span>
+            </a>
+        </h4>
+        <a href="#" class="toggle_collapse" aria-haspopup="true"><span class="sr-only">Open this collapsible panel</span><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+    </div>
+    <div class="panel-collapse collapse" aria-label="Some Info Panel">
+        <div class="panel-body">
+        ...        
+        </div>
+    </div>
+</div>
+
+<!-- Panel-default -->
+<div class="panel panel-default panel_selector">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a href="#juniorklub">
+                <i class="fa fa-home" aria-hidden="true"></i>
+                Panel-default (Joint departments)
+                <span class="count pull-right">8 / 24</span>
+            </a>
+        </h4>
+        <a href="#" class="toggle_collapse" aria-haspopup="true"><span class="sr-only">Open this collapsible panel</span><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+    </div>
+    <div class="panel-collapse collapse" aria-label="Some Info Panel">
+        <div class="panel-body">
+        ...        
+        </div>
+    </div>
+</div>
+
+{code}<!-- Panel-inverse -->
+<div class="panel panel-inverse panel_selector">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a href="#juniorklub">
+                <i class="fa fa-home" aria-hidden="true"></i>
+                Panel-inverse (Whole institution)
+                <span class="count pull-right">8 / 24</span>
+            </a>
+        </h4>
+        <a href="#" class="toggle_collapse" aria-haspopup="true"><span class="sr-only">Open this collapsible panel</span><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+    </div>
+    <div class="panel-collapse collapse" aria-label="Some Info Panel">
+        <div class="panel-body">
+        ...        
+        </div>
+    </div>
+</div>
 {/code}']
         ];
 

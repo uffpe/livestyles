@@ -68,7 +68,7 @@
                 <h4 class="modal-title" id="myModalLabel"><i class="fa fa-home"></i> V&aelig;lg afdelign</h4>
             </div>
             <div class="modal-body">
-                <div class="panel panel-selector panel_selector">
+                <div class="panel panel-grey panel_selector">
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a href="#juniorklub">
@@ -95,7 +95,7 @@
                     </div>
                 </div>
 
-                <div class="panel panel-selector panel_selector">
+                <div class="panel panel-grey panel_selector">
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a href="#maanehoejA">
@@ -122,7 +122,7 @@
                     </div>
                 </div>
 
-                <div class="panel panel-selector panel_selector">
+                <div class="panel panel-grey panel_selector">
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a href="#maanehoejB">
@@ -149,7 +149,7 @@
                     </div>
                 </div>
 
-                <div class="panel panel-selector panel_selector">
+                <div class="panel panel-grey panel_selector">
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a href="#solhojen">
