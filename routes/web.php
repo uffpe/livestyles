@@ -19,7 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::group(['prefix' => 'demo'], function()
+Route::group(['prefix' => 'demo', 'middleware' => 'auth'], function()
 {
     Route::get('/', function() {
         return redirect('/demo/guide');
@@ -48,7 +48,7 @@ Route::group(['prefix' => 'demo'], function()
     Route::group(['prefix' => 'foraeldre'], function()
     {
         Route::get('opslagstavle', 'ParentDesktopController@index')
-            ->name('parents-dekstop');
+            ->name('parents-desktop');
     });
 });
 
