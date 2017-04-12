@@ -72,7 +72,7 @@
                         </div>
                     </div>
                     <div class="col-sm-4">
-                        <div class="panel panel-primary">
+                        <div class="panel panel-secondary">
                         <div class="panel-heading">
                             <h4 class="panel-title">
                                 <i class="fa fa-street-view" aria-hidden="true"></i>
@@ -88,7 +88,7 @@
                         </div>
                     </div>
 
-                        <div class="panel panel-primary">
+                        <div class="panel panel-secondary">
                         <div class="panel-heading">
                             <h4 class="panel-title text-center">
                                 <a href="#" class="pull-left"><i class="fa fa-chevron-left"></i></a>
@@ -157,7 +157,7 @@
                         </div>
                     </div>
 
-                        <div class="panel panel-primary">
+                        <div class="panel panel-secondary">
                         <div class="panel-heading">
                             <h4 class="panel-title">
                                 <i class="fa fa-birthday-cake" aria-hidden="true"></i>
