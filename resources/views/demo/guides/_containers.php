@@ -115,75 +115,107 @@ $guide_containers = [
 
         'title' => 'Collapsible panel',
         'is_anchor' => true,
-        'desc' => '<p>One of the basic elements is the callapsible panel. This type of panel has a <code>.toggle_collapse</code> button (an arrow at the right side) and the panel-body is placed within a div with <code>.panel-collapse</code>.</p>
-                            <p><b>Toggle-button:</b>
-                            <ul>
-                                <li>Include a <code>aria-label</code> or a <code>.sr-only</code> element to indicate what this does (ie. "Open stamkort info"). This is important to apply since the toggle-button is only an icon and by this does not have any descriptive text.</li>
-                                <li>The <code>aria-haspopup</code> on the button indicates that a popup i available. This is important to include because the panel-body is hidden from screen-readers when it is collapsed.</li>
-                            </ul>
-                            </p>
-                            <p><b>Panel-collapse:</b>
-                            <ul>
-                                <li>Use the <code>aria-label</code> on the panel-collapse to provide an accessible label to indicate what the dropdown panel is about (ie. "Stamkort info").</li>
-                            </ul>
-                            </p>',
+        'desc' => '<p>One of the often used elements is the collapsible panel. This type of panel has a <code>.toggle_collapse</code> button (an arrow at the right side) and the panel-body is placed within a div with <code>.panel-collapse</code>.</p>
+                    <p><b>Toggle-button:</b>
+                    <ul>
+                        <li>Include a <code>aria-label</code> or a <code>.sr-only</code> element to indicate what this does (ie. "Open stamkort info"). This is important to apply since the toggle-button is only an icon and by this does not have any descriptive text.</li>
+                        <li>The <code>aria-haspopup</code> on the button indicates that a popup i available. This is important to include because the panel-body is hidden from screen-readers when it is collapsed.</li>
+                    </ul>
+                    </p>
+                    <p><b>Panel-collapse:</b>
+                    <ul>
+                        <li>Use the <code>aria-label</code> on the panel-collapse to provide an accessible label to indicate what the dropdown panel is about (ie. "Stamkort info").</li>
+                    </ul>
+                    </p>
+                    <p><b>Collapse variations:</b>
+                    <ul>
+                        <li>To set the panel body to be <b>open from start</b>. This is done by using <code>aria-expanded=true</code> on toggle and insert the class <b>in</b> on the <code>panel-collapse</code></li>
+                        <li>The basic collapsible panel is with an arrow as the toggle button - The <code>.fa-chevron-up</code> icon. This icon has the up/down arrow function on toggle. In case the panel body is open from start, this should be set to <code>.fa-chevron-down</code>.</li>
+                        <li>It is possible to apply another icon if needed (See example below).</li>
+                        <li>The basic collapsible panel is with an arrow as the toggle button - The <code>.fa-chevron-up</code> icon. In case the panel body is open from start, this chould be set to <code>.fa-chevron-down</code>.</li>
+                    </ul>
+                    </p>',
         'code' => '
-{code}<div class="panel panel-default">
+{code}<!-- Collapse panel example 1 -->
+<div class="panel panel-default">
     <div class="panel-heading">
-        <h4 class="panel-title">
-            <i class="fa fa-check" aria-hidden="true"></i> Header on collapsible panel
+        <h4 class="panel-title"><i class="fa fa-check" aria-hidden="true"></i> 
+            Header title
         </h4>
-        <a href="#" class="toggle_collapse" aria-haspopup="true"><span class="sr-only">Open this collapsible panel</span><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+        <a href="#" class="toggle_collapse" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Open collapsible panel</span>
+            <i class="fa fa-chevron-up" aria-hidden="true"></i>
+        </a>
     </div>
     <div class="panel-collapse collapse" aria-label="Some Info Panel">
         <div class="panel-body"><p>...</p></div>
     </div>
-</div>{/code}'],
+</div>
+
+<!-- Collapse panel example 2 -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title"><i class="fa fa-comment" aria-hidden="true"></i>
+            Header title - Alternate icon toggle
+        </h4>
+        <a href="#" class="toggle_collapse" aria-haspopup="true" aria-label="Open collapsible panel" aria-expanded="false">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+        </a>
+    </div>
+    <div class="panel-collapse collapse" aria-label="Some Info Panel">
+        <div class="panel-body"><p>...</p></div>
+    </div>
+</div>
+{/code}'],
     [
 
         'title' => 'Panel with nested panels',
         'is_anchor' => true,
-        'desc' => '<p>It is posible to have panels inside panels. In the shown example the outer panel and nested Panel 1 are set to be open from start and nested panel 2 is closed.</p>',
+        'desc' => '<p>It is posible to have panels inside panels.
+                    <ul>
+                        <li>In the shown example the nested panel 2 is set to be open from start. This is done by using <code>aria-expanded=true</code> on toggle and insert the class <b>in</b> on the <code>panel-collapse</code></li>
+                        <li>To differentiate the inner panels these should use paragraph for the <code>panel-title</code> instead og the normal <b>H4</b> header.</li>
+                    </ul>
+                    </p>',
         'code' => '
 {code}<!-- Outer panel -->
 <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title"><i class="fa fa-list" aria-hidden="true"></i> Outer Panel</h4>
-        <a href="#" class="toggle_collapse" aria-haspopup="true">
-            <span class="sr-only">Open panel with panels</span><i class="fa fa-chevron-down" aria-hidden="true"></i>
+        <a href="#" class="toggle_collapse" aria-haspopup="true" aria-expanded="false" aria-label="Open panel">
+            <i class="fa fa-chevron-down" aria-hidden="true"></i>
         </a>
     </div>
-    <div class="panel-collapse collapse in" aria-expanded="true" aria-label="Info Panel with panels">
+    <div class="panel-collapse collapse" aria-label="Info Panel with panels">
         <div class="panel-body">
             <!-- Panel-group container -->
             <div class="panel-group">
                                                
-                <!-- Nested panel 1 -->             
+                <!-- Nested panel -->             
                 <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <p class="panel-title">
-                            <input class="form_check" type="hidden" name="inputName" value="checked">Inner panel 1 (Open from start)
-                            <a data-toggle="collapse" href="#nestedPanel1" aria-haspopup="true" aria-label="Info panel 1" aria-expanded="true">
-                                <i class="fa fa-comment pull-right" aria-hidden="true"></i>
-                            </a>
-                        </p>
+                    <div class="panel-heading">                        
+                        <p class="panel-title"><i class="fa fa-check" aria-hidden="true"></i>Inner panel 1</p>
+                        
+                        <a href="#" data-toggle="collapse" class="toggle_collapse" aria-label="Open inner panel 1" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        </a>
                     </div>
-                    <div id="nestedPanel1" class="panel-collapse collapse in" aria-expanded="true" aria-label="Info Panel 1">
+                    <div class="panel-collapse collapse" aria-label="Info Panel">
                         <div class="panel-body">...</div>
                     </div>
                 </div>
-                                     
-                <!-- Nested panel 2 -->                 
+                          
+                                
+                <!-- Nested panel -->             
                 <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <p class="panel-title">
-                            <input class="form_check" type="hidden" name="inputName" value="checked">Inner panel 2
-                            <a data-toggle="collapse" href="#nestedPanel2" aria-haspopup="true" aria-label="Info panel 2" aria-expanded="false">
-                                <i class="fa fa-comment pull-right" aria-hidden="true"></i>
-                            </a>
-                        </p>
+                    <div class="panel-heading">                        
+                        <p class="panel-title"><i class="fa fa-check" aria-hidden="true"></i>Inner panel 2 (Open from start)</p>
+                        
+                        <a href="#" data-toggle="collapse" class="toggle_collapse" aria-label="Open inner panel 2" aria-haspopup="true" aria-expanded="true">
+                            <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                        </a>
                     </div>
-                    <div id="nestedPanel2" class="panel-collapse collapse" aria-expanded="false" aria-label="Info Panel 1">
+                    <div class="panel-collapse collapse in" aria-label="Info Panel">
                         <div class="panel-body">...</div>
                     </div>
                 </div>
@@ -196,7 +228,7 @@ $guide_containers = [
 {/code}'],
     [
 
-        'title' => 'Selection panel Example',
+        'title' => 'Selection panels',
         'is_anchor' => true,
         'desc' => '<p>This is an example of the type of selection panels used in some modal dialogs such as Department selection.</p>
                             <p>
@@ -218,7 +250,10 @@ $guide_containers = [
                 <span class="count">8 / 24</span>
             </a>
         </h4>
-        <a href="#" class="toggle_collapse" aria-haspopup="true"><span class="sr-only">Open this collapsible panel</span><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+        <a href="#" class="toggle_collapse" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Open this collapsible panel</span>
+            <i class="fa fa-chevron-up" aria-hidden="true"></i>
+        </a>
     </div>
     <div class="panel-collapse collapse" aria-label="Some Info Panel">
         <div class="panel-body">
@@ -230,7 +265,7 @@ $guide_containers = [
     [
 
         'title' => 'Selection panel variations',
-        'is_anchor' => false,
+        'is_anchor' => true,
         'desc' => 'All the Panel variants can be used for selection panels (See under <b>Panel variations</b>). The following 3 is though mainly used with the <code>panel_selector</code>.',
         'code' => '
 <!-- Panel-grey -->
@@ -243,7 +278,10 @@ $guide_containers = [
                 <span class="count pull-right">8 / 24</span>
             </a>
         </h4>
-        <a href="#" class="toggle_collapse" aria-haspopup="true"><span class="sr-only">Open this collapsible panel</span><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+        <a href="#" class="toggle_collapse" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Open this collapsible panel</span>
+            <i class="fa fa-chevron-up" aria-hidden="true"></i>
+        </a>
     </div>
     <div class="panel-collapse collapse" aria-label="Some Info Panel">
         <div class="panel-body">
@@ -262,7 +300,10 @@ $guide_containers = [
                 <span class="count pull-right">8 / 24</span>
             </a>
         </h4>
-        <a href="#" class="toggle_collapse" aria-haspopup="true"><span class="sr-only">Open this collapsible panel</span><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+        <a href="#" class="toggle_collapse" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Open this collapsible panel</span>
+            <i class="fa fa-chevron-up" aria-hidden="true"></i>
+        </a>
     </div>
     <div class="panel-collapse collapse" aria-label="Some Info Panel">
         <div class="panel-body">
@@ -281,7 +322,10 @@ $guide_containers = [
                 <span class="count pull-right">8 / 24</span>
             </a>
         </h4>
-        <a href="#" class="toggle_collapse" aria-haspopup="true"><span class="sr-only">Open this collapsible panel</span><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+        <a href="#" class="toggle_collapse" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Open this collapsible panel</span>
+            <i class="fa fa-chevron-up" aria-hidden="true"></i>
+        </a>
     </div>
     <div class="panel-collapse collapse" aria-label="Some Info Panel">
         <div class="panel-body">

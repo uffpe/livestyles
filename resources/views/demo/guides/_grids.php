@@ -21,13 +21,13 @@ $guide_grids = [
 
         'title' => 'No padding between elements',
         'is_anchor' => true,
-        'desc' => 'no-gutter',
+        'desc' => '',
         'code' => '
-{code}{/code}'],[
+{code}no-gutter{/code}'],[
 
         'title' => 'Padding right only',
         'is_anchor' => true,
-        'desc' => 'single-gutter',
+        'desc' => '',
         'code' => '
-{code}{/code}']
+{code}single-gutter{/code}']
 ];
