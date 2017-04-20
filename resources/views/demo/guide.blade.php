@@ -1,11 +1,11 @@
-@extends('layouts.tabulex')
+@extends('layouts.tabulex-guide')
 @section('content')
     <div id="content-div" class="style-guide">
         <div class="content-div__wrapper">
 
             @if(!empty($main_menu_items))
                 @foreach($main_menu_items as $menu_items)
-                    <div class="row guide-parts" id="<?= urlencode($menu_items['url']) ?>" style="display: none;">
+                    <div class="row guide-parts no-gutter" id="<?= urlencode($menu_items['url']) ?>" style="display: none;">
                         <div class="col-sm-12">
                             <h1><?= $menu_items['label'] ?></h1>
                         </div>

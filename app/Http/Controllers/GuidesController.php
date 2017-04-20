@@ -37,7 +37,7 @@ class guidesController extends Controller
             ['url' => 'overview', 'label' => 'Overview', 'icon' => 'fa-file-text-o', 'is_active' => false, 'sub_items' => [] ],
             ['url' => 'fonts', 'label' => 'Text & fonts', 'icon' => 'fa-font', 'is_active' => false, 'sub_items' => [] ],
             ['url' => 'grids', 'label' => 'Grids', 'icon' => 'fa-columns', 'is_active' => false, 'sub_items' => [] ],
-            ['url' => 'containers', 'label' => 'Containers', 'icon' => 'fa-id-card-o', 'is_active' => false, 'sub_items' => [] ],
+            ['url' => 'containers', 'label' => 'Containers / Panels', 'icon' => 'fa-id-card-o', 'is_active' => false, 'sub_items' => [] ],
             ['url' => 'menus', 'label' => 'Menus', 'icon' => 'fa-th-list', 'is_active' => false, 'sub_items' => [] ],
             ['url' => 'images', 'label' => 'Images and Icons', 'icon' => 'fa-photo', 'is_active' => false, 'sub_items' => [] ],
             ['url' => 'dialogs', 'label' => 'Dialogs', 'icon' => 'fa-window-maximize', 'is_active' => false, 'sub_items' => [] ],

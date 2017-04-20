@@ -58,29 +58,25 @@
                 </a></li>
             <li><a href="#menu2" class="list-group-item">
                     <span class="fa-stack" aria-hidden="true">
-                        {{--<i class="mdi md-24" aria-hidden="true">access_time</i>--}}
                         <i class="fa fa-clock-o" aria-hidden="true"></i>
                     </span>
                     Her og nu
                 </a></li>
             <li class="active"><a href="#menu3" class="list-group-item">
                     <span class="fa-stack" aria-hidden="true">
-                        {{--<i class="mdi md-24" aria-hidden="true">accessibility</i>--}}
                         <i class="fa fa-child" aria-hidden="true"></i>
                     </span>
                     Find b&oslash;rn
                 </a></li>
             <li><a href="#menu4" class="list-group-item">
                     <span class="fa-stack" aria-hidden="true">
-                        {{--<i class="mdi md-24" aria-hidden="true">map</i>--}}
                         <i class="fa fa-map-marker" aria-hidden="true"></i>
                     </span>
                     Hvem er hvor
                 </a></li>
             <li class="collapse">
-                <a href="#menu5" class="list-group-item" data-toggle="collapse" data-parent="#mainmenu" role="button">
+                <a href="#menu5" class="list-group-item collapsed" data-toggle="collapse" data-parent="#mainmenu" role="button" aria-expanded="false" aria-haspopup="true">
                     <span class="fa-stack" aria-hidden="true">
-                       {{--<i class="mdi md-24" aria-hidden="true">chat</i>--}}
                         <i class="fa fa-comments-o" aria-hidden="true"></i>
                     </span>
                     Kommunikation <span class="caret"></span>
@@ -92,9 +88,8 @@
                 </ul>
             </li>
             <li class="collapse">
-                <a href="#menu6" class="list-group-item" data-toggle="collapse" data-parent="#mainmenu" role="button">
+                <a href="#menu6" class="list-group-item collapsed" data-toggle="collapse" data-parent="#mainmenu" role="button" aria-expanded="false" aria-haspopup="true">
                     <span class="fa-stack" aria-hidden="true">
-                        {{--<i class="mdi md-24" aria-hidden="true">event</i>--}}
                         <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
                     </span>
                     Planl&aelig;ning <span class="caret"></span>
@@ -107,15 +102,13 @@
             </li>
             <li><a href="#menu7" class="list-group-item">
                     <span class="fa-stack" aria-hidden="true">
-                        {{--<i class="mdi md-24" aria-hidden="true">list</i>--}}
                         <i class="fa fa-file-text-o" aria-hidden="true"></i>
                     </span>
                     Lister
                 </a></li>
             <li class="collapse">
-                <a href="#menu8" class="list-group-item" data-toggle="collapse" data-parent="#mainmenu" role="button">
+                <a href="#menu8" class="list-group-item collapsed" data-toggle="collapse" data-parent="#mainmenu" role="button" aria-expanded="false" aria-haspopup="true">
                     <span class="fa-stack" aria-hidden="true">
-                        {{--<i class="mdi md-24" aria-hidden="true">settings</i>--}}
                         <i class="fa fa-drivers-license-o" aria-hidden="true"></i>
                     </span>
                     Administratorer <span class="caret"></span>

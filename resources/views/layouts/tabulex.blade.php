@@ -217,28 +217,6 @@
             calendarWeeks: true,
             todayHighlight: true
         });
-
-        // STYLE-GUIDE ONLY function
-        (function(){
-            @if(isset($_GET["p"]))
-                $(".guide-parts#<?= $_GET['p'] ?>").show();
-            @else
-                $(".guide-parts:first-child").show();
-            @endif
-        })();
-
-        if(window.location.hash){
-            activeSubmenu(window.location.hash.substr(1));
-        } else {
-            $("ul.nav-mainmenu__list li:first-child li:first-child").addClass("active");
-        }
-
-        function activeSubmenu(submenu){
-            $("ul.list-group-submenu li").removeClass("active");
-            $("li." + submenu).addClass("active");
-            console.log("li." + submenu);
-        }
-
     </script>
 </body>
 </html>

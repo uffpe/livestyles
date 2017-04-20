@@ -53,9 +53,9 @@ $guide_buttons = [
         'code' => '
 <div class="side-by-side">
 {code}
-  <button class="btn btn-default" type="button">Cancel (btn-default)</button>
+  <button class="btn btn-default" type="button"><i class="fa fa-check" aria-hidden="true"></i> Cancel (btn-default)</button>
   
-  <button class="btn btn-primary" type="button">Save (btn-primary)</button>
+  <button class="btn btn-primary" type="button"><i class="fa fa-check" aria-hidden="true"></i> Save (btn-primary)</button>
 {/code}
   <br />
 {code}

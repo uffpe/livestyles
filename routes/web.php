@@ -44,6 +44,10 @@ Route::group(['prefix' => 'demo', 'middleware' => 'auth'], function()
     Route::get('guide', 'GuidesController@index')
         ->name('guide');
 
+//    Route::get('guide', 'GuidesController@index', function() {
+//        return view('demo/guide', ['has_submenu' => true]);
+//    })->name('guide');
+
     // New foraeldre group
     Route::group(['prefix' => 'foraeldre'], function()
     {
