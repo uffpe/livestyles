@@ -27,9 +27,10 @@ $guide_menus = [
         'desc' => '<p>The base navigational menu is a <b>ul</b> list <code>.list-group .nav</code> containing one or more list-elements with links <code>.list-group-item</code> and related icons.</p>
                     <p><b>Collapse button:</b>
                     <ul>
-                        <li>Include a <code>data-toggle=collapsed</code> and a <code>aria-haspopup</code> on the button indicates that a popup i available. This is important to include because the submenu is hidden from screen-readers when it is collapsed.</li>
+                        <li>Include a <code>data-toggle=collapsed</code> and a <code>aria-haspopup</code> on the parent button indicates that a popup i available. This is important to include because the submenu is hidden from screen-readers when it is collapsed.</li>
                         <li>The <code>aria-expanded</code> tells screen readers if the submenu is collapsed or not.</li>
                         <li>When the list has a submenu the <code>caret</code> is included. This has the <code>aria-hidden=true</code> applied to it to hide it from screen readers (Only a visual helper element).</li>
+                        <li>If it is closed/collapsed the class <code>collapsed</code> must be added to the parent button.</li>
                     </ul>
                     </p>
                     <p><b>Submenu:</b>

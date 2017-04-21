@@ -37,6 +37,10 @@ Route::group(['prefix' => 'demo', 'middleware' => 'auth'], function()
         return view('demo/child_grid', ['has_submenu' => false]);
     })->name('child-grid');
 
+    Route::get('messages', function() {
+        return view('demo/messages', ['has_submenu' => false]);
+    })->name('messages');
+
     Route::get('tabulex-basic-grid', function() {
         return view('demo/tabulex_basic_grid', ['has_submenu' => true]);
     })->name('basic-grid');

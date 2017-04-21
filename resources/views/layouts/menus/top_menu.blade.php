@@ -74,6 +74,7 @@
                         <li><a href="{{ route('login-demo') }}">Login demo</a></li>
                         <li><a href="{{ route('personal-data') }}">Stamkort</a></li>
                         <li><a href="{{ route('child-grid') }}">Children grid</a></li>
+                        <li><a href="{{ route('messages') }}">Kommunikation</a></li>
                         <li><a href="{{ route('parents-desktop') }}">Opslagstavle - for&aelig;ldre</a></li>
                         <li role="separator" class="divider"></li>
                         <li>
