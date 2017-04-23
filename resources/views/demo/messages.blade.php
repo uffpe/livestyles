@@ -69,12 +69,100 @@
                 </div><!-- /.page_header -->
 
 
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title"><i class="fa fa-check" aria-hidden="true"></i> Content</h4>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">Content</h4>
+                            </div>
+                            <div class="panel-body"><p>Here comes content</p></div>
+                        </div>
                     </div>
-                    <div class="panel-body"><p>Here comes content</p></div>
                 </div>
+
+
+
+
+                <div class="row page_header">
+                    <div class="col-md-12">
+                        <h3>Simpel filter topbar</h3>
+
+                        <div class="panel panel-filter-bar">
+
+                            <div class="panel-body">
+
+                                <form id="" action="" class="form-inline row single-gutter">
+                                    <div class="col-sm-8 col-xs-12">
+                                        <span class="h5 center-vertically" style="display: inline-block;"><i class="fa fa-check-square-o" aria-hidden="true"></i> Marker barn som: <b> Kommet</b></span>
+
+                                        <div class="form-group" style="display: none;">
+                                            <div class="input-group">
+                                                <label class="input-group-addon">Sæt status: </label>
+                                                <input type="text" class="form-control" id="search-text" value="Kommet" aria-label="thisLabel">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-sm-4 col-xs-12">
+                                        <button type="submit" class="btn btn-primary pull-right">
+                                            Skift markering
+                                        </button>
+                                    </div>
+                                </form>
+
+                            </div>
+
+                        </div><!-- /.panel-filter-bar -->
+
+
+                        <div class="panel panel-filter-bar">
+
+                            <div class="panel-body">
+
+                                <div class="btn-group pull-right" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-primary">
+                                        <i class="fa fa-check-square-o" aria-hidden="true"></i> Kommet
+                                    </button>
+                                    <button type="button" class="btn btn-primary"><span class="caret"></span></button>
+                                </div>
+
+                            </div>
+
+                        </div><!-- /.panel-filter-bar -->
+
+
+                        <div class="panel panel-filter-bar">
+
+                            <div class="panel-body">
+
+                                <form id="" action="" class="form-inline row single-gutter">
+                                    <div class="col-sm-8 col-xs-12">
+
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <label class="input-group-addon">Sæt status: </label>
+                                                <input type="text" class="form-control" id="search-text" value="Kommet" aria-label="thisLabel" readonly="readonly">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-sm-4 col-xs-12">
+                                        <button type="submit" class="btn btn-primary pull-right">
+                                            Skift status
+                                        </button>
+                                    </div>
+                                </form>
+
+                            </div>
+
+                        </div><!-- /.panel-filter-bar -->
+
+
+                    </div>
+                </div>
+
 
 
             </div>
