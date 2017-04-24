@@ -46,8 +46,8 @@ $guide_buttons = [
         'is_anchor' => true,
         'desc' => '<p>There are 2 basic button variations used on the website. Both of these does furthermore have a specific styling if being set as disabled.
                     <ul>
-                        <li>The <code>btn-primary</code> is used for the primary and "active" interaction in the relevant page or panel (ie. Save, Login, Ok).</li>
-                        <li>Other secondary or supporting interactions use the <code>btn-default</code> (ie. Cancel, Back, Close).</li>
+                        <li>The <code>btn-primary</code> is used for the primary action of a function, dialog or interaction. For example Save, Send, Apply, Open, etc. There should preferably only be one primary action button per interaction.</li>
+                        <li>Secondary buttons uses <code>btn-default</code> ans is for all the intermittent actions that exist within an interaction-layout. The are less prominent and as many as needed can be used(ie. Cancel, Back, Close).</li>
                     </ul>
                     </p>',
         'code' => '

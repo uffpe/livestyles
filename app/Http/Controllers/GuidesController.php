@@ -17,6 +17,7 @@ class guidesController extends Controller
         include resource_path('views/demo/guides/_images.php');
         include resource_path('views/demo/guides/_dialogs.php');
         include resource_path('views/demo/guides/_buttons.php');
+        include resource_path('views/demo/guides/_forms.php');
         include resource_path('views/demo/guides/_wcag.php');
 
         $guide_styles = [
@@ -28,6 +29,7 @@ class guidesController extends Controller
             'images' => $guide_images,
             'dialogs' => $guide_dialogs,
             'buttons' => $guide_buttons,
+            'forms' => $guide_forms,
             'wcag' => $guide_wcag
         ];
 
@@ -41,7 +43,8 @@ class guidesController extends Controller
             ['url' => 'menus', 'label' => 'Menus', 'icon' => 'fa-th-list', 'is_active' => false, 'sub_items' => [] ],
             ['url' => 'images', 'label' => 'Images and Icons', 'icon' => 'fa-photo', 'is_active' => false, 'sub_items' => [] ],
             ['url' => 'dialogs', 'label' => 'Dialogs', 'icon' => 'fa-window-maximize', 'is_active' => false, 'sub_items' => [] ],
-            ['url' => 'buttons', 'label' => 'Buttons', 'icon' => 'fa-link', 'is_active' => false, 'sub_items' => [] ],
+            ['url' => 'buttons', 'label' => 'Button & links', 'icon' => 'fa-link', 'is_active' => false, 'sub_items' => [] ],
+            ['url' => 'forms', 'label' => 'Forms & input elements', 'icon' => 'fa-check-square-o', 'is_active' => false, 'sub_items' => [] ],
             ['url' => 'wcag', 'label' => 'WCAG 2', 'icon' => 'fa-blind', 'is_active' => false, 'sub_items' => [] ]
         ];
 

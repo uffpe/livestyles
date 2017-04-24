@@ -5,7 +5,7 @@
             <div class="container-fluid">
                 <div class="row page_header">
                     <div class="col-md-12">
-                        <h3>Beskeder</h3>
+                        <h3>Topbar - Beskeder</h3>
 
                         <div class="panel panel-filter-bar">
 
@@ -37,7 +37,9 @@
                                                 <div class="input-group">
                                                     <label class="input-group-addon">Fra</label>
                                                     <input type="text" class="form-control" id="search-startdate" aria-label="Specify a start date">
-                                                    <span class="input-group-addon btn-primary" aria-hidden="true"><i class="fa fa-calendar"></i></span>
+                                                    <span class="input-group-btn">
+                                                        <button class="btn btn-primary" type="button"><i class="fa fa-calendar"></i></button>
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
@@ -48,7 +50,9 @@
 
                                                     <label class="input-group-addon">Til</label>
                                                     <input type="text" class="form-control" id="search-enddate" aria-label="Specify an end date">
-                                                    <span class="input-group-addon btn-primary" aria-hidden="true"><i class="fa fa-calendar"></i></span>
+                                                    <span class="input-group-btn">
+                                                        <button class="btn btn-primary" type="button"><i class="fa fa-calendar"></i></button>
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
@@ -85,7 +89,7 @@
 
                 <div class="row page_header">
                     <div class="col-md-12">
-                        <h3>Simpel filter topbar</h3>
+                        <h3>Topbar - Checkin v1</h3>
 
                         <div class="panel panel-filter-bar">
 
@@ -115,6 +119,15 @@
 
                         </div><!-- /.panel-filter-bar -->
 
+                    </div>
+                </div><!-- /.page_header -->
+
+
+
+
+                <div class="row page_header">
+                    <div class="col-md-12">
+                        <h3>Topbar - Checkin v2</h3>
 
                         <div class="panel panel-filter-bar">
 
@@ -130,6 +143,16 @@
                             </div>
 
                         </div><!-- /.panel-filter-bar -->
+
+                    </div>
+                </div><!-- /.page_header -->
+
+
+
+
+                <div class="row page_header">
+                    <div class="col-md-12">
+                        <h3>Topbar - Checkin v3</h3>
 
 
                         <div class="panel panel-filter-bar">

@@ -75,7 +75,7 @@
                     Hvem er hvor
                 </a></li>
             <li class="collapse">
-                <a href="#menu5" class="list-group-item collapsed" data-toggle="collapse" data-parent="#mainmenu" role="button" aria-expanded="false" aria-haspopup="true">
+                <a href="#menu5" class="list-group-item collapsed" data-toggle="collapse" data-parent="#mainmenu" role="button">
                     <span class="fa-stack" aria-hidden="true">
                         <i class="fa fa-comments-o" aria-hidden="true"></i>
                     </span>
@@ -88,7 +88,7 @@
                 </ul>
             </li>
             <li class="collapse">
-                <a href="#menu6" class="list-group-item collapsed" data-toggle="collapse" data-parent="#mainmenu" role="button" aria-expanded="false" aria-haspopup="true">
+                <a href="#menu6" class="list-group-item collapsed" data-toggle="collapse" data-parent="#mainmenu" role="button">
                     <span class="fa-stack" aria-hidden="true">
                         <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
                     </span>
@@ -107,7 +107,7 @@
                     Lister
                 </a></li>
             <li class="collapse">
-                <a href="#menu8" class="list-group-item collapsed" data-toggle="collapse" data-parent="#mainmenu" role="button" aria-expanded="false" aria-haspopup="true">
+                <a href="#menu8" class="list-group-item collapsed" data-toggle="collapse" data-parent="#mainmenu" role="button">
                     <span class="fa-stack" aria-hidden="true">
                         <i class="fa fa-drivers-license-o" aria-hidden="true"></i>
                     </span>
