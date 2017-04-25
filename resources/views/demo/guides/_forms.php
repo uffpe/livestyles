@@ -30,5 +30,26 @@ $guide_forms = [
     <label for="thisEmail" class="control-label"><i class="fa fa-envelope" aria-hidden="true"></i> Email</label>
     <input type="email" class="form-control" id="thisEmail" name="">
 </div>
-{/code}']
+{/code}'],
+    [
+        'title' => 'Inline form',
+        'is_anchor' => true,
+        'desc' => '',
+        'code' => '
+{code}
+<form class="form-inline">
+    <div class="form-group">
+        <label for="yourName" class="control-label"> Your name</label>
+        <input type="text" class="form-control" id="yourName" name="yourName">
+    </div>
+    
+    <div class="form-group">
+        <label for="thisEmail" class="control-label"><i class="fa fa-envelope" aria-hidden="true"></i> Email</label>
+        <input type="email" class="form-control" id="thisEmail" name="">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{/code}'
+    ]
 ];

@@ -3,6 +3,7 @@
     <div id="content-div" class="style-guide">
         <div class="content-div__wrapper">
 
+            <div class="container-fluid">
             @if(!empty($main_menu_items))
                 @foreach($main_menu_items as $menu_items)
                     <div class="row guide-parts no-gutter" id="<?= urlencode($menu_items['url']) ?>" style="display: none;">
@@ -24,9 +25,11 @@
                                 @if($snippet['code'])
                                 <div class="panel panel-default panel-no-header panel-guide">
                                     <div class="panel-heading">
+                                        @if( strpos( $snippet['code'], "{code}" ) !== false )
                                         <h5 class="panel-title">
                                             Example:
                                         </h5>
+                                        @endif
                                     </div>
                                     <div class="panel-body">
                                         <!--<h5>Example:</h5>-->
@@ -60,6 +63,8 @@
                 Error: No style elements found!
 
             @endif
+
+            </div><!-- /.container-fluid -->
        </div>
     </div>
 @endsection
