@@ -36,7 +36,7 @@ class guidesController extends Controller
 
         // Make sure 'url' are the same as $guide_styles array names
         $main_menu = [
-            ['url' => 'overview', 'label' => 'Overview', 'icon' => 'fa-file-text-o', 'is_active' => false, 'sub_items' => [] ],
+            ['url' => 'overview', 'label' => 'Guide introduction', 'icon' => 'fa-file-text-o', 'is_active' => false, 'sub_items' => [] ],
             ['url' => 'fonts', 'label' => 'Text & fonts', 'icon' => 'fa-font', 'is_active' => false, 'sub_items' => [] ],
             ['url' => 'grids', 'label' => 'Grids', 'icon' => 'fa-columns', 'is_active' => false, 'sub_items' => [] ],
             ['url' => 'containers', 'label' => 'Containers / Panels', 'icon' => 'fa-id-card-o', 'is_active' => false, 'sub_items' => [] ],

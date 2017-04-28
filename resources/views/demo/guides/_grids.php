@@ -19,12 +19,12 @@ $guide_grids = [
                     <p>For a more thorough description of the grid system go to <a href="http://getbootstrap.com" target="_blank">Getbootstrap.com</a>.</p>',
         'code' => '
 <div class="show-grid">
-{code}<div class="container-fluid">
+{code}
   <div class="row">    
       <div class="col-md-8">.col-md-8</div>
       <div class="col-md-4">.col-md-4</div>
   </div>
-</div>{/code}
+{/code}
 </div>'],
     [
 
@@ -87,7 +87,7 @@ $guide_grids = [
 </div>
 -->
 
-{code}<div class="container-fluid">
+{code}
     <div class="row">
           <div class="col-xs-12 col-sm-6 col-md-3">
                 <img src="http://placekitten.com/250/160" class="img-responsive" alt="..." >
@@ -102,14 +102,14 @@ $guide_grids = [
                 <img src="http://placekitten.com/250/160" class="img-responsive" alt="..." >
           </div>
     </div>
-</div>{/code}'],
+{/code}'],
     [
 
         'title' => 'Example: No padding',
         'is_anchor' => true,
         'desc' => '',
         'code' => '
-{code}<div class="container-fluid">
+{code}
     <div class="row no-gutter">
           <div class="col-xs-12 col-sm-6 col-md-3">
                 <img src="http://placekitten.com/250/160" class="img-responsive" alt="..." >
@@ -124,14 +124,14 @@ $guide_grids = [
                 <img src="http://placekitten.com/250/160" class="img-responsive" alt="..." >
           </div>
     </div>
-</div>{/code}'],
+{/code}'],
     [
 
         'title' => 'Example: Padding right only',
         'is_anchor' => true,
         'desc' => '',
         'code' => '
-{code}<div class="container-fluid">
+{code}
     <div class="row single-gutter">
           <div class="col-xs-12 col-sm-6 col-md-3">
                 <img src="http://placekitten.com/250/160" class="img-responsive" alt="..." >
@@ -146,5 +146,5 @@ $guide_grids = [
                 <img src="http://placekitten.com/250/160" class="img-responsive" alt="..." >
           </div>
     </div>
-</div>{/code}']
+{/code}']
 ];

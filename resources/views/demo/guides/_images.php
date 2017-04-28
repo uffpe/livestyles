@@ -21,6 +21,20 @@ $guide_images = [
 <img src="http://placekitten.com/140/140" class="img-thumbnail" alt="Gallery image 1" >{/code}'
     ],
     [
+        'title' => 'Image left - text wrap',
+        'is_anchor' => true,
+        'desc' => '',
+        'code' => '
+<div class="row">
+{code}
+<div class="col-lg-8">
+    <!-- Image left - floating text -->
+    <img src="http://placekitten.com/220/180" class="img-responsive img-pull-left" alt="A relevant image title" >
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis lectus quis sem lacinia nonummy. Proin mollis lorem non dolor. In hac habitasse platea dictumst. Nulla ultrices odio. Donec augue. Phasellus dui. Maecenas facilisis nisl vitae nibh. Proin vel seo est vitae eros pretium dignissim. Aliquam aliquam sodales orci. Suspendisse potenti. Nunc adipiscing euismod arcu. Quisque facilisis mattis lacus. Fusce bibendum, velit in venenatis viverra, tellus ligula dignissim felis, quis euismod mauris tellus ut urna. Proin scelerisque. Nulla in mi. Integer ac leo. Nunc urna ligula, gravida a, pretium vitae, bibendum nec, ante. Aliquam ullamcorper iaculis lectus.
+</div>
+ {/code}
+</div>'],
+    [
         'title' => 'Icon set - FontAwesome',
         'is_anchor' => true,
         'desc' => '<p>In the new responsive version of Tabulex we use Font Awesome icons.</p>
