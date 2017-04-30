@@ -42,12 +42,11 @@ $guide_dialogs = [
 </div>
 {/code}' ],
     [
-        'title' =>  'Modal - Javascript open',
+        'title' =>  'Modal - Custom open/close',
         'is_anchor' => true,
         'desc' =>   '',
         'code' => '
-{code}
-<div class="form-group">
+{code}<div class="form-group">
     <label for="yourName" class="control-label"> Fill out your name:</label>
     <input type="text" class="form-control" id="yourName" name="yourName">
 </div>
@@ -78,6 +77,5 @@ $guide_dialogs = [
       </div>
     </div>
   </div>
-</div>
-{/code}' ]
+</div>{/code}' ]
 ];

@@ -12,7 +12,7 @@ $(document).ready(function () {
         var pre = document.getElementsByTagName('pre');
         for (var i = 0; i < pre.length; i++) {
             var button = document.createElement('button');
-            button.className = 'btn btn-default btn-xs btn-clipboard';
+            button.className = 'btn btn-primary btn-xs btn-clipboard';
             button.textContent = 'Copy';
 
             pre[i].appendChild(button);

@@ -38,7 +38,7 @@
                                         preg_match_all("'{code}(.*?){/code}'si", $snippet['code'], $match);
                                         ?>
                                         @if($match[1])
-                                        <div class="row">
+                                        <div class="row no-gutter">
                                             <div class="col-sm-12">
                                                 <pre><code class="html"><?php
                                                     foreach($match[1] as $val){

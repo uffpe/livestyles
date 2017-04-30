@@ -70,6 +70,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
 
     <script src="https://personale.devsfoweb.dk/js/tabulex.ui.js?{{ time() }}"></script>
+    <script src="{{ asset('js/tabulex.guide.js') }}?{{ time() }}"></script>
 
     <script>
         // STYLE-GUIDE ONLY function
