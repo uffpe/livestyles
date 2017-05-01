@@ -194,68 +194,99 @@
                 </div>
 
                 <style>
-                    .gallery-article {
+                    .panel-gallery-element {
                         display: inline-block;
-                        padding-right: 15px;
+                        float: left;
+                        margin-left: 12px;
+                        margin-right: 12px;
                     }
-                    .gallery-article .panel > .panel-body {
-                        padding: 0px;
+                    .panel-gallery-element > .panel-body {
+                        padding: 0;
+                        position: relative;
+                        /*background-color: #f5f5f5;*/
+                        display: table;
                     }
-                    .gallery-article .gallery-title {
-                        padding: 8px 12px;
+
+                    .panel-gallery-element a.gallery-link {
+                        display: table-cell;
+                        height: 154px;
+                        vertical-align: middle;
+                        width: 170px;
+                        transition: all 0.2s;
                     }
-                    .gallery-article .btn-default {
+                    .panel-gallery-element a.gallery-link:hover{
+                        background-color: #CEDFE9;
+                    }
+
+                    .panel-gallery-element a.gallery-link img {
+                        margin: 0 auto;
+                        transition: all 0.1s;
+                    }
+                    .panel-gallery-element a.gallery-link:hover img {
+                        border-color: #6B9CBA;
+                    }
+
+                    .panel-gallery-element > .panel-footer {
+                        background-color: #f5f5f5;
+                        padding: 5px 15px;
+                    }
+                    .panel-gallery-element .gallery-title {
+                        display: block;
+                        font-weight: 600;
                         width: 100%;
+                    }
+                    .panel-gallery-element .btn-default {
+                        width: 100%;
+                        position: absolute;
+                        bottom: 0;
                     }
                 </style>
 
                 <div class="row">
                     <div class="col-md-12">
 
-                        <div class="panel panel-primary">
+                        <div class="panel panel-primary panel-gallery">
                             <div class="panel-body">
 
-                                @for ($x = 0; $x <= 10; $x++)
-                                    <article class="gallery-article">
-                                        {{--<article class="col-xs-12 col-sm-4 col-md-4 col-lg-3">--}}
-                                        <div class="panel panel-primary">
-            {{--                                <div class="panel-heading">
-                                                <b class="panel-title">Gallery title {{ $x }}</b>
-                                            </div>--}}
-                                            <div class="panel-body">
-                                                <a href="http://lorempixel.com/350/350/nature/4" title="Nature Portfolio" class="zoom" data-title="Amazing Nature" data-footer="The beauty of nature" data-type="image" data-toggle="lightbox">
-                                                    <img src="http://lorempixel.com/90/160/nature/4" class="img-responsive" alt="Nature Portfolio">
-                                                    <span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
-                                                </a>
-                                                {{--<h5 class="gallery-title">Gallery title {{ $x }}</h5>--}}
-                                                <a class="btn btn-default" href="#" role="button">Gallery title {{ $x }}</a>
-                                            </div>
-            {{--                                <div class="panel-footer">
-                                                <strong>Gallery title</strong>
-                                            </div>--}}
+                                @for ($x = 1; $x <= 6; $x++)
+                                    {{--<article class="col-xs-12 col-sm-4 col-md-4 col-lg-3">--}}
+                                    <div class="panel panel-primary panel-gallery-element">
+        {{--                                <div class="panel-heading">
+                                            <b class="panel-title">Gallery title {{ $x }}</b>
+                                        </div>--}}
+                                        <div class="panel-body">
+                                            <a href="http://lorempixel.com/350/350/nature/4" title="Nature Portfolio" class="gallery-link" data-title="Amazing Nature" data-footer="The beauty of nature" data-type="image" data-toggle="lightbox">
+                                                <img src="http://lorempixel.com/90/130/nature/4" class="img-responsive" alt="Nature Portfolio">
+                                                <span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+                                            </a>
+                                            {{--<h5 class="gallery-title">Gallery title {{ $x }}</h5>--}}
+                                            {{--<a class="btn btn-default" href="#" role="button">Gallery title {{ $x }}</a>--}}
                                         </div>
-                                    </article>
+                                        <div class="panel-footer">
+                                            <div class="gallery-title">Gallery title {{ $x }}</div>
+                                            <div class="small">12 billeder</div>
+                                        </div>
+                                    </div>
 
 
-                                    <article class="gallery-article">
-                                        {{--<article class="col-xs-12 col-sm-4 col-md-4 col-lg-3">--}}
-                                        <div class="panel panel-primary">
-                                            {{--                                <div class="panel-heading">
-                                                                                <b class="panel-title">Gallery title {{ $x }}</b>
-                                                                            </div>--}}
-                                            <div class="panel-body">
-                                                <a href="http://lorempixel.com/350/350/nature/4" title="Nature Portfolio" class="zoom" data-title="Amazing Nature" data-footer="The beauty of nature" data-type="image" data-toggle="lightbox">
-                                                    <img src="http://lorempixel.com/160/90/nature/4" class="img-responsive" alt="Nature Portfolio">
-                                                    <span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
-                                                </a>
-                                                {{--<h5 class="gallery-title">Gallery title {{ $x }}</h5>--}}
-                                                <a class="btn btn-default" href="#" role="button">Gallery title {{ $x }}</a>
-                                            </div>
-                                            {{--                                <div class="panel-footer">
-                                                                                <strong>Gallery title</strong>
-                                                                            </div>--}}
+                                    {{--<article class="col-xs-12 col-sm-4 col-md-4 col-lg-3">--}}
+                                    <div class="panel panel-primary panel-gallery-element">
+                                        {{--                                <div class="panel-heading">
+                                                                            <b class="panel-title">Gallery title {{ $x }}</b>
+                                                                        </div>--}}
+                                        <div class="panel-body">
+                                            <a href="http://lorempixel.com/350/350/nature/4" title="Nature Portfolio" class="gallery-link" data-title="Amazing Nature" data-footer="The beauty of nature" data-type="image" data-toggle="lightbox">
+                                                <img src="http://lorempixel.com/130/90/nature/4" class="img-responsive" alt="Nature Portfolio">
+                                                <span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+                                            </a>
+                                            {{--<h5 class="gallery-title">Gallery title {{ $x }}</h5>--}}
+                                            {{--<a class="btn btn-default" href="#" role="button">Gallery title {{ $x }}</a>--}}
                                         </div>
-                                    </article>
+                                        <div class="panel-footer">
+                                            <div class="gallery-title">Gallery title {{ $x }}</div>
+                                            <div class="small">12 billeder</div>
+                                        </div>
+                                    </div>
 
                                 @endfor
 
