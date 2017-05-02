@@ -110,6 +110,14 @@ $guide_containers = [
     </div>
     <div class="panel-body"><p>...</p></div>
 </div>
+
+<!-- Panel-danger -->
+<div class="panel panel-danger">
+    <div class="panel-heading">
+         <h4 class="panel-title"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> panel panel-danger</h4>
+    </div>
+    <div class="panel-body"><p>...</p></div>
+</div>
         '],
     [
 

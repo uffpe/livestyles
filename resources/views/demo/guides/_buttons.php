@@ -53,15 +53,15 @@ $guide_buttons = [
         'code' => '
 <div class="side-by-side">
 {code}
-  <button class="btn btn-default" type="button"><i class="fa fa-check" aria-hidden="true"></i> Cancel (btn-default)</button>
+  <button class="btn btn-default" type="button">Cancel (btn-default)</button>
   
-  <button class="btn btn-primary" type="button"><i class="fa fa-check" aria-hidden="true"></i> Save (btn-primary)</button>
+  <button class="btn btn-primary" type="button">Save (btn-primary)</button>
 {/code}
   <br />
 {code}
-  <button type="button" class="btn btn-default" disabled="disabled">Cancel disabled (btn-default)</button>
+  <button class="btn btn-default" disabled="disabled" type="button">Cancel disabled (btn-default)</button>
   
-  <button type="button" class="btn btn-primary" disabled="disabled">Save disabled (btn-primary)</button>
+  <button class="btn btn-primary" disabled="disabled" type="button">Save disabled (btn-primary)</button>
 {/code}
 </div>'],
     [
@@ -106,5 +106,28 @@ $guide_buttons = [
     <li><a href="#">Something else here</a></li>
   </ul>
 </div>
+</div>'],
+    [
+        'title' => 'Button Block style',
+        'is_anchor' => true,
+        'desc' => '<p>Besides the standard buttons it is possible to use a button as a clickable content element.
+                    <ul>
+                        <li>The <code>btn-block</code> is a full-width element and should therefore be used inside a grid column element (i.e. col-md-6).</li>
+                        <li>It is mainly used the page is used to select between multiple elements (Child, institution etc.).</li>
+                        <li>Wher the standard buttons should only have a short, the <code>btn-block</code> can have multiple lines and content types.</li>
+                    </ul>
+                    </p>',
+        'code' => '
+<div class="row">
+{code}<div class="col-sm-6 col-md-6">
+  <button class="btn btn-block" type="button">Block title (btn-block)</button>
+  
+  <button class="btn btn-block" disabled="disabled" type="button">Block title (btn-block)</button> 
+</div>
+<div class="col-sm-6 col-md-6">   
+  <button class="btn btn-block" type="button"><h4>Block title (btn-block)</h4><p>Possible to have multiple lines.</p></button>
+  
+  <button class="btn btn-block" disabled="disabled" type="button"><h4>Block title (btn-block)</h4><p>Possible to have multiple lines.</p></button>
+</div>{/code}
 </div>']
 ];
