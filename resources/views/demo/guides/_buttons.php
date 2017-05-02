@@ -110,24 +110,52 @@ $guide_buttons = [
     [
         'title' => 'Button Block style',
         'is_anchor' => true,
-        'desc' => '<p>Besides the standard buttons it is possible to use a button as a clickable content element.
-                    <ul>
-                        <li>The <code>btn-block</code> is a full-width element and should therefore be used inside a grid column element (i.e. col-md-6).</li>
-                        <li>It is mainly used the page is used to select between multiple elements (Child, institution etc.).</li>
-                        <li>Wher the standard buttons should only have a short, the <code>btn-block</code> can have multiple lines and content types.</li>
-                    </ul>
+        'desc' => '<p>Adding <code>btn-block</code> to the buttons will make it full-width. This styling can also be used alone as a clickable content element.</p>
+                    <p>
+                        <b>Multiple clickable elements:</b>
+                        <ul>
+                            <li>The <code>btn-block</code> is full-width element and should therefore be used inside a grid column element (i.e. col-md-6).</li>
+                            <li>Used alone is is mainly used on pages with multiple clickable elements (Child, institution etc.).</li>
+                            <li>Text will wrap inside this button variation.</li>
+                            <li>Where the standard buttons should only have a short, the <code>btn-block</code> used alone can have multiple lines and content in it.</li>
+                        </ul>
+                        <b>Even height buttons:</b> <small> (Shown in the example below)</small>
+                        <ul>
+                            <li>The height can be preset with these classes:<br />
+                                <code>height-small</code>: 50px, <code>height-medium</code>: 90px, <code>height-big</code>: 140px.<br/> 
+                                When using a preset height the class  <code>.valign</code> can be used to center the content vertically.</li>
+                        </ul>
                     </p>',
         'code' => '
-<div class="row">
-{code}<div class="col-sm-6 col-md-6">
-  <button class="btn btn-block" type="button">Block title (btn-block)</button>
-  
-  <button class="btn btn-block" disabled="disabled" type="button">Block title (btn-block)</button> 
+<div class="row">  
+    <div class="col-md-12"> 
+        <button class="btn btn-primary btn-block" type="button">Block title (btn-primary btn-block)</button>
+    </div>
+<br /><br />
+    <div class="col-sm-4 col-md-4">   
+      <a class="btn btn-block" href="#" role="button">
+        <b>Block title (btn-block)</b><p>Possible to have multiple lines of text.</p>
+      </a>
+    </div>
+    
+    <div class="col-sm-4 col-md-4">   
+      <a class="btn btn-block" href="#" role="button">
+        <b>Block title (btn-block)</b><p>Possible to have multiple lines of text.</p>
+      </a>
+    </div>
+    
+    <div class="col-sm-4 col-md-4">   
+      <a class="btn btn-block" href="#" role="button">
+        <b>Block title (btn-block)</b><p>Possible to have multiple lines of text.</p>
+      </a>
+    </div>
+    
+{code}<div class="col-sm-4 col-md-4">   
+    <a class="btn btn-block height-big valign" href="#" role="button">
+        <b>Block title</b>
+        <p>(btn-block height-big valign)</p>
+    </a>
 </div>
-<div class="col-sm-6 col-md-6">   
-  <button class="btn btn-block" type="button"><h4>Block title (btn-block)</h4><p>Possible to have multiple lines.</p></button>
-  
-  <button class="btn btn-block" disabled="disabled" type="button"><h4>Block title (btn-block)</h4><p>Possible to have multiple lines.</p></button>
-</div>{/code}
+{/code}
 </div>']
 ];
