@@ -18,6 +18,7 @@ class guidesController extends Controller
         include resource_path('views/demo/guides/_dialogs.php');
         include resource_path('views/demo/guides/_buttons.php');
         include resource_path('views/demo/guides/_forms.php');
+        include resource_path('views/demo/guides/_tables.php');
         include resource_path('views/demo/guides/_wcag.php');
 
         $guide_styles = [
@@ -30,6 +31,7 @@ class guidesController extends Controller
             'dialogs' => $guide_dialogs,
             'buttons' => $guide_buttons,
             'forms' => $guide_forms,
+            'tables' => $guide_tables,
             'wcag' => $guide_wcag
         ];
 
@@ -45,6 +47,7 @@ class guidesController extends Controller
             ['url' => 'dialogs', 'label' => 'Dialogs', 'icon' => 'fa-window-maximize', 'is_active' => false, 'sub_items' => [] ],
             ['url' => 'buttons', 'label' => 'Button & links', 'icon' => 'fa-link', 'is_active' => false, 'sub_items' => [] ],
             ['url' => 'forms', 'label' => 'Forms & input elements', 'icon' => 'fa-check-square-o', 'is_active' => false, 'sub_items' => [] ],
+            ['url' => 'tables', 'label' => 'Table layout', 'icon' => 'fa-table', 'is_active' => false, 'sub_items' => [] ],
             ['url' => 'wcag', 'label' => 'WCAG 2', 'icon' => 'fa-blind', 'is_active' => false, 'sub_items' => [] ]
         ];
 

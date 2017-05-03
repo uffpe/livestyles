@@ -1,55 +1,63 @@
 <?php
 
-$guide_forms = [
+$guide_tables = [
     [
-        'title' => 'Label and input',
+        'title' => 'Table markup',
         'is_anchor' => true,
-        'desc' => '<p>The label should be used whenever possible together with the form control to explicitly describe the purpose of the element.</p>
+        'desc' => '<p></p>
                     <p>
-                    <b>Form controlS:</b>
                     <ul>
-                        <li>These includes any type of text fields, selects, checkboxes, radio buttons, and drop-down menus.</li>
-                        <li>Add the class <code>form-control</code> to the these form control elements.</li>
-                        <li>Wrap labels and controls in a <code>form-group</code> div for optimum spacing.</li>
-                    </ul>
-                    <b>Label element:</b>
-                    <ul>
-                        <li>Make sure to include a <code>for</code> attribute on the label and match it to the id of the form control.</li>
-                        <li>An icon can easily be added to the label if needed. Simply add the <b>i</b> tag with the wanted <code>fa fa-iconName</code> class inside the label.</li>
-                        <li>NOTE: In case a <b>label</b> is not wanted for some reason, add the class <code>sr-only</code> to the <b>label</b> OR include an <code>aria-label=someLabel</code> attribute on the form-control to describe its purpose to assistive technologies.</li>
+                        <li>All tables should have the class <code>table</code> applied to it.</li>
+                        <li>The class <code>table-striped</code> is optional. It will enhance every second row.</li>
                     </ul></p>',
         'code' => '
-{code}<!-- Basic label and input -->
-<div class="form-group">
-    <label for="yourName" class="control-label"> Your name</label>
-    <input type="text" class="form-control" id="yourName" name="yourName">
-</div>
-
-<!-- Input and label with icon -->
-<div class="form-group">
-    <label for="thisEmail" class="control-label"><i class="fa fa-envelope" aria-hidden="true"></i> Email</label>
-    <input type="email" class="form-control" id="thisEmail" name="">
-</div>
-{/code}'],
+{code}<!-- Basic table with striped rows -->
+<table class="table table-striped"> 
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+        </tr>
+        <tr>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+        </tr>        
+    </tbody>
+</table>{/code}'],
     [
-        'title' => 'Inline form',
+        'title' => 'Table - responsive styling',
         'is_anchor' => true,
         'desc' => '',
         'code' => '
-{code}
-<form class="form-inline">
-    <div class="form-group">
-        <label for="yourName" class="control-label"> Your name</label>
-        <input type="text" class="form-control" id="yourName" name="yourName">
-    </div>
-    
-    <div class="form-group">
-        <label for="thisEmail" class="control-label"><i class="fa fa-envelope" aria-hidden="true"></i> Email</label>
-        <input type="email" class="form-control" id="thisEmail" name="">
-    </div>
-    
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-{/code}'
-    ]
+{code}<!-- Responsive table -->
+<table class="table table-striped rwd-table-xs"> 
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-label="First Name">Mark</td>
+            <td data-label="Last Name">Otto</td>
+            <td data-label="Username">@mdo</td>
+        </tr>
+        <tr>
+            <td data-label="First Name">Jacob</td>
+            <td data-label="Last Name">Thornton</td>
+            <td data-label="Username">@fat</td>
+        </tr>        
+    </tbody>
+</table>{/code}']
 ];

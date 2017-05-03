@@ -187,54 +187,6 @@
                 </div>
 
 
-                <div class="row page_header">
-                    <div class="col-md-12">
-                        <h3>Billeder</h3>
-                    </div>
-                </div>
-
-
-                <div class="row">
-                    <div class="col-md-12">
-
-                        <div class="panel panel-default panel-gallery">
-                            <div class="panel-body">
-
-                                @for ($x = 1; $x <= 6; $x++)
-                                    <div class="panel panel-primary panel-gallery-element">
-                                        <div class="panel-body">
-                                            <a href="http://lorempixel.com/350/350/nature/4" title="Nature Portfolio" class="gallery-link" data-title="Amazing Nature" data-footer="The beauty of nature" data-type="image" data-toggle="lightbox">
-                                                <img src="http://lorempixel.com/90/130/nature/4" class="img-responsive" alt="Nature Portfolio">
-                                                <span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
-                                            </a>
-                                        </div>
-                                        <div class="panel-footer">
-                                            <div class="gallery-title">Gallery title - tall image {{ $x }}</div>
-                                            <div class="small">12 billeder</div>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="panel panel-primary panel-gallery-element">
-                                        <div class="panel-body">
-                                            <a href="http://lorempixel.com/350/350/nature/4" title="Nature Portfolio" class="gallery-link" data-title="Amazing Nature" data-footer="The beauty of nature" data-type="image" data-toggle="lightbox">
-                                                <img src="http://lorempixel.com/130/90/nature/4" class="img-responsive" alt="Nature Portfolio">
-                                                <span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
-                                            </a>
-                                        </div>
-                                        <div class="panel-footer">
-                                            <div class="gallery-title">Gallery title - wide image {{ $x }}</div>
-                                            <div class="small">12 billeder</div>
-                                        </div>
-                                    </div>
-                                @endfor
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
 
             </div>
         </div>

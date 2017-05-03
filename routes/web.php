@@ -45,6 +45,10 @@ Route::group(['prefix' => 'demo', 'middleware' => 'auth'], function()
         return view('demo/tabulex_basic_grid', ['has_submenu' => true]);
     })->name('basic-grid');
 
+    Route::get('gallery', function() {
+        return view('demo/gallery', ['has_submenu' => false]);
+    })->name('gallery');
+
     Route::get('guide', 'GuidesController@index')
         ->name('guide');
 
