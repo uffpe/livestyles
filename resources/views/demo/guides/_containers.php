@@ -140,7 +140,7 @@ $guide_containers = [
                         <li>To set the panel body to be <b>open from start</b>. This is done by using <code>aria-expanded=true</code> on toggle and insert the class <b>in</b> on the <code>panel-collapse</code></li>
                         <li>The basic collapsible panel is with an arrow as the toggle button - The <code>.fa-chevron-up</code> icon. This icon has the up/down arrow function on toggle. In case the panel body is open from start, this should be set to <code>.fa-chevron-down</code>.</li>
                         <li>It is possible to apply another icon if needed (See example below).</li>
-                        <li>The basic collapsible panel is with an arrow as the toggle button - The <code>.fa-chevron-up</code> icon. In case the panel body is open from start, this chould be set to <code>.fa-chevron-down</code>.</li>
+                        <li>The basic collapsible panel has an arrow as the toggle button - The <code>.fa-chevron-up</code> icon. In case the panel body is open from start, remember to set <code>aria-expanded=true</code>. This will change the arrow to be facing downwards (rotated 180&deg)</li>
                     </ul>
                     </p>',
         'code' => '
