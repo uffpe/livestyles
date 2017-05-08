@@ -50,6 +50,19 @@ $guide_forms = [
     
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
-{/code}'
-    ]
+{/code}'],
+    [
+        'title' => 'Edit ',
+        'is_anchor' => true,
+        'desc' => '',
+        'code' => '
+{code}<!-- Test of editor  -->
+	<div id="editor" style="display:block;">
+		<textarea name="textareaName" id="editor"></textarea>
+	</div>
+{/code}
+<script type="text/javascript" src="https://personale.devsfoweb.dk/lib/ckeditor/ckeditor.js"></script>
+<script type="text/javascript">
+    CKEDITOR.replace("editor");
+</script>']
 ];

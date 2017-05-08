@@ -14,32 +14,32 @@
                 <div class="row">
                     <div class="col-md-12">
 
-                        <div class="panel panel-default panel-gallery">
+                        <div class="panel panel-primary">
                             <div class="panel-body">
 
                                 @for ($x = 1; $x <= 5; $x++)
                                     <div class="panel panel-primary panel-gallery-element">
                                         <div class="panel-body">
-                                            <a href="#" title="Nature Portfolio" class="gallery-link" >
+                                            <a href="#" title="Nature Portfolio" class="gallery-image" >
                                                 <img src="http://lorempixel.com/90/130/nature/4" class="img-responsive" alt="Nature Portfolio">
                                             </a>
                                         </div>
                                         <div class="panel-footer">
                                             <div class="gallery-title">Gallery title - tall image {{ $x }}</div>
-                                            <div class="small">12 billeder</div>
+                                            <div class="gallery-subtitle">12 images</div>
                                         </div>
                                     </div>
 
 
                                     <div class="panel panel-primary panel-gallery-element">
                                         <div class="panel-body">
-                                            <a href="#" title="Nature Portfolio" class="gallery-link">
+                                            <a href="#" title="Nature Portfolio" class="gallery-image">
                                                 <img src="http://lorempixel.com/130/90/nature/4" class="img-responsive" alt="Nature Portfolio">
                                             </a>
                                         </div>
                                         <div class="panel-footer">
                                             <div class="gallery-title">Gallery title - wide image {{ $x }}</div>
-                                            <div class="small">12 billeder</div>
+                                            <div class="gallery-subtitle">12 images</div>
                                         </div>
                                     </div>
                                 @endfor
@@ -68,7 +68,7 @@
                                 @for ($x = 1; $x <= 5; $x++)
                                     <div class="panel panel-primary panel-gallery-element">
                                         <div class="panel-body">
-                                            <a href="http://lorempixel.com/350/350/nature/4" title="Nature Portfolio" class="gallery-link lightbox">
+                                            <a href="http://lorempixel.com/350/350/nature/4" title="Nature Portfolio" class="gallery-image lightbox">
                                                 <img src="http://lorempixel.com/90/130/nature/4" class="img-responsive" alt="Nature Portfolio">
                                             </a>
                                         </div>
@@ -77,7 +77,7 @@
 
                                     <div class="panel panel-primary panel-gallery-element">
                                         <div class="panel-body">
-                                            <a href="http://lorempixel.com/350/350/nature/4" title="Nature Portfolio" class="gallery-link" data-title="Amazing Nature" data-footer="The beauty of nature" data-type="image" data-toggle="lightbox">
+                                            <a href="http://lorempixel.com/350/350/nature/4" title="Nature Portfolio" class="gallery-image" data-title="Amazing Nature" data-footer="The beauty of nature" data-type="image" data-toggle="lightbox">
                                                 <img src="http://lorempixel.com/130/90/nature/4" class="img-responsive" alt="Nature Portfolio">
                                             </a>
                                         </div>
