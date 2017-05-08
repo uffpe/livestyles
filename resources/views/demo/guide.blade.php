@@ -6,9 +6,11 @@
             <div class="container-fluid">
             @if(!empty($main_menu_items))
                 @foreach($main_menu_items as $menu_items)
+
+
                     <div class="row guide-parts no-gutter" id="<?= urlencode($menu_items['url']) ?>" style="display: none;">
-                        <div class="col-sm-12">
-                            <h1><?= $menu_items['label'] ?></h1>
+                        <div class="page-header">
+                            <h2><?= $menu_items['label'] ?></h2>
                         </div>
 
                     @foreach($snippets[$menu_items['url']] as $snippet)

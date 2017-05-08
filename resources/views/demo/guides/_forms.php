@@ -52,17 +52,17 @@ $guide_forms = [
 </form>
 {/code}'],
     [
-        'title' => 'Edit ',
+        'title' => 'Editor markup',
         'is_anchor' => true,
-        'desc' => '',
+        'desc' => '<p>For text input where a formating is needed we use CKEditor - a lightweight WYSIWYG text editor.</p>
+                    <p>In the example the editor can be initialized by the javascript function <code>CKEDITOR.replace("this-editor")</code>, where <b>this-editor</b> is the ID of the textarea.</p>',
         'code' => '
-{code}<!-- Test of editor  -->
-	<div id="editor" style="display:block;">
-		<textarea name="textareaName" id="editor"></textarea>
-	</div>
-{/code}
+{code}<!-- Textarea with editor  -->
+<div id="editor" style="display:block;">
+    <textarea name="textareaName" id="this-editor"></textarea>
+</div>{/code}
 <script type="text/javascript" src="https://personale.devsfoweb.dk/lib/ckeditor/ckeditor.js"></script>
 <script type="text/javascript">
-    CKEDITOR.replace("editor");
+    CKEDITOR.replace("this-editor");
 </script>']
 ];

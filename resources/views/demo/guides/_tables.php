@@ -83,6 +83,7 @@ $guide_tables = [
             <th>First Name</th>
             <th>Last Name</th>
             <th>Username</th>
+            <th style="width: 50%">Comment</th>
         </tr>
     </thead>
     <tbody>
@@ -90,12 +91,14 @@ $guide_tables = [
             <td data-label="First Name">Mark</td>
             <td data-label="Last Name">Otto</td>
             <td data-label="Username">@mdo</td>
+            <td data-label="Comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis lectus quis sem lacinia nonummy. Proin mollis lorem non dolor. In hac habitasse platea dictumst. Nulla ultrices odio. Donec augue.</td>
         </tr>
         <tr>
             <td data-label="First Name">Jacob</td>
             <td data-label="Last Name">Thornton</td>
             <td data-label="Username">@fat</td>
-        </tr>        
+            <td data-label="Comment">Proin mollis lorem non dolor. In hac habitasse platea dictumst. Nulla ultrices odio. Donec augue.</td>
+        </tr>
     </tbody>
 </table>{/code}']
 ];
