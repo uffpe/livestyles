@@ -39,6 +39,18 @@
             font-style: normal; }
     </style>
 
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{{ asset('js/lib/bootstrap.min.js') }}"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
+
+    <script src="https://personale.devsfoweb.dk/js/tabulex.ui.js?{{ time() }}"></script>
+    <script src="{{ asset('js/tabulex.guide.js') }}?{{ time() }}"></script>
+
     <!-- Scripts -->
     <script>
         window.Laravel = {!! json_encode([
@@ -59,18 +71,6 @@
 </div><!-- /container -->
 
 </div><!-- /#main_container -->
-
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="{{ asset('js/lib/bootstrap.min.js') }}"></script>
-
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
-
-    <script src="https://personale.devsfoweb.dk/js/tabulex.ui.js?{{ time() }}"></script>
-    <script src="{{ asset('js/tabulex.guide.js') }}?{{ time() }}"></script>
 
     <script>
         // STYLE-GUIDE ONLY function

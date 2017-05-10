@@ -37,57 +37,7 @@ $guide_images = [
  {/code}
 </div>'],
     [
-        'title' => 'Icon set - FontAwesome',
-        'is_anchor' => true,
-        'desc' => '<p>The icon set used in this website Font Awesome. These are included in inline elements such as the <b>i</b> or <b>span</b>, and uses the css class <code>fa fa-iconname</code>, where iconname is the name of the icon. 
-                    To see all posibilities go to the official Font Awesome website <a href="http://fontawesome.io/icons/" target="_blank" title="Go to Font Awesome website">fontawesome.io</a>.</p>
-                    <p>The icon has the <code>aria-hidden=true</code> applied to it to hide it from screen readers (Only a visual helper element)</p>',
-        'code' => '
-{code}<i class="fa fa-user" aria-hidden="true"></i> Your profile{/code}'],
-    [
-        'title' => 'Icon with badge',
-        'is_anchor' => true,
-        'desc' => '<p>To indicate new or unread items a badge can be added to a button icon.</p>
-                    <p>
-                    <ul>
-                        <li>Add a <code>has-badge-wrapper</code> around the icon and add the badge element inside this.</li>
-                        <li>When the label adds relevant information to to icon/button the <code>aria-label</code> should be applied describing the purpose of the element to visual impaired people.</li>
-                    </ul>
-                    </p>',
-        'code' => '
-{code}<!-- Menu icon -->
- <a href="#link">
-    <span class="has-badge-wrapper">
-        <i class="fa fa-comment" aria-hidden="true"></i>
-        <span class="badge" aria-label="You have new messages">12</span>
-    </span>
-    Messages
-</a>
-{/code}'],
-    /*    [
-            'title' => 'Icon with badge icon',
-            'is_anchor' => true,
-            'desc' => '',
-            'code' => '
-     <a class="btn btn-default" href="#" role="button">
-        <span class="has-badge-wrapper" aria-hidden="true">
-            <i class="fa fa-user" aria-hidden="true"></i>
-            <span class="badge badge-icon"><i class="fa fa-times-circle"></i></span>
-        </span>
-        New appointment
-    </a>
-
-    {code}<!-- Menu icon -->
-     <a class="btn btn-default" href="#" role="button">
-        <span class="has-badge-wrapper" aria-hidden="true">
-            <i class="fa fa-calendar" aria-hidden="true"></i>
-            <span class="badge badge-icon"><i class="fa fa-plus-circle"></i></span>
-        </span>
-        New appointment
-    </a>
-    {/code}'],*/
-    [
-        'title' => 'Thumbnail gallery',
+        'title' => 'Image gallery',
         'is_anchor' => true,
         'desc' => '<p>Image galleries use the custom panel <code>.panel-gallery-element</code> on a <code>.panel-primary</code> panel. The panel-footer is optional but is used for image title and other relevant description.</p>
                     <p>
@@ -105,7 +55,7 @@ $guide_images = [
                     </ul>                
                     </p>',
         'code' => '
-{code}<!-- Thumbnail gallery -->
+{code}<!-- Image gallery -->
 <div class="panel panel-primary panel-gallery-element">
     <div class="panel-body">
         <a href="#" title="Gallery title" class="gallery-image" >
@@ -164,5 +114,98 @@ $guide_images = [
         <div class="gallery-title">Gallery title</div>
         <div class="gallery-subtitle">12 images</div>
     </div>
-</div>']
+</div>'],
+    [
+        'title' => 'Image gallery viewer',
+        'is_anchor' => true,
+        'desc' => '<p>The <code>gallery_viewer</code> adds functionality to view big versions of the gallery images. It creates a <code>modal</code> dialog and makes use of the Bootstrap carousel to slide between the images in the gallery when opened in the modal dialog window.</p>
+                    <p>In terms of markup and design the basic layout is like the <b>Image gallery</b>, but wrapped in a gallery-viewer container.</p>
+                    <p>
+                    <b>Gallery viewer:</b>
+                    <ul>
+                        <li>Wrap the images in a container with the class <code>gallery-viewer</code> and a unique ID (This outer wrapper could be the <b>panel-body</b> of an outer panel).</li>
+                        <li><b>Initialize</b> the image viewer by including the function <code>galleryViewer(thisGalleryId)</code>, where the thisGalleryId is the ID of the wrapper.</li>
+                    </ul>
+                    <b>The gallery images:</b>
+                    <ul>
+                        <li>Since the viewer open in a modal dialog, the <code>data-target="#galleryViewer"</code> and <code>aria-haspopup="true"</code> must be included on the link of the images.</li>
+                        <li>The <b>href</b> of the link must point to the placement of the big image version.</li>
+                        <li>Include an <code>aria-label</code> with a description for the image. This will be included in the footer of the modal viewer. In the shown example a simple label of "Image 1 of 2" has been used as the label.</li>
+                        <li>As part of the Bootstrap carousel the <code>data-slide-to</code> is needed to indicate which of the gallery images should be shown when the gallery viewer opens.</li>
+                    </ul>                
+                    </p>',
+        'code' => '
+{code}<div class="gallery_viewer" id="thisGalleryId">
+
+    <div class="panel panel-primary panel-gallery-element">
+        <div class="panel-body">
+            <a class="gallery-image" href="http://placekitten.com/640/480" aria-label="Image 1 of 2" data-slide-to="1" data-target="#galleryViewer" aria-haspopup="true">
+                <img src="http://placekitten.com/160/120" class="img-responsive" alt="Image 1 title">
+            </a>
+        </div>
+    </div>
+    
+    <div class="panel panel-primary panel-gallery-element">
+        <div class="panel-body">
+            <a class="gallery-image" href="http://placekitten.com/320/480" aria-label="Image 2 of 2" data-slide-to="2" data-target="#galleryViewer" aria-haspopup="true"">
+                <img src="http://placekitten.com/90/130" class="img-responsive" alt="Image 2 title">
+            </a>
+        </div>
+    </div>
+    
+</div>
+<!-- Initialize the gallery -->
+<script>
+    galleryViewer("thisGalleryId");
+</script>{/code}'],
+    [
+    'title' => 'Icon set - FontAwesome',
+    'is_anchor' => true,
+    'desc' => '<p>The icon set used in this website Font Awesome. These are included in inline elements such as the <b>i</b> or <b>span</b>, and uses the css class <code>fa fa-iconname</code>, where iconname is the name of the icon. 
+                    To see all posibilities go to the official Font Awesome website <a href="http://fontawesome.io/icons/" target="_blank" title="Go to Font Awesome website">fontawesome.io</a>.</p>
+                    <p>The icon has the <code>aria-hidden=true</code> applied to it to hide it from screen readers (Only a visual helper element)</p>',
+    'code' => '
+{code}<i class="fa fa-user" aria-hidden="true"></i> Your profile{/code}'],
+    [
+        'title' => 'Icon with badge',
+        'is_anchor' => true,
+        'desc' => '<p>To indicate new or unread items a badge can be added to a button icon.</p>
+                    <p>
+                    <ul>
+                        <li>Add a <code>has-badge-wrapper</code> around the icon and add the badge element inside this.</li>
+                        <li>When the label adds relevant information to to icon/button the <code>aria-label</code> should be applied describing the purpose of the element to visual impaired people.</li>
+                    </ul>
+                    </p>',
+        'code' => '
+{code}<!-- Menu icon -->
+ <a href="#link">
+    <span class="has-badge-wrapper">
+        <i class="fa fa-comment" aria-hidden="true"></i>
+        <span class="badge" aria-label="You have new messages">12</span>
+    </span>
+    Messages
+</a>
+{/code}']
+    /* ,   [
+            'title' => 'Icon with badge icon',
+            'is_anchor' => true,
+            'desc' => '',
+            'code' => '
+     <a class="btn btn-default" href="#" role="button">
+        <span class="has-badge-wrapper" aria-hidden="true">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <span class="badge badge-icon"><i class="fa fa-times-circle"></i></span>
+        </span>
+        New appointment
+    </a>
+
+    {code}<!-- Menu icon -->
+     <a class="btn btn-default" href="#" role="button">
+        <span class="has-badge-wrapper" aria-hidden="true">
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+            <span class="badge badge-icon"><i class="fa fa-plus-circle"></i></span>
+        </span>
+        New appointment
+    </a>
+    {/code}'],*/
 ];
