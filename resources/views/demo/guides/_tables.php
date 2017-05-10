@@ -71,8 +71,9 @@ $guide_tables = [
                     <p>
                         <ul>
                             <li>Apply the class <code>table-rwd</code> to the table to make it responsive.</li>
-                            <li><b>Header labels: </b> Since the header gets hidden the header column labels needs to be included in the table-cells. This is done by adding the respective label as a <code>data-label</code> attribute to each <b>td</b>.</li>
+                            <li><b>Data-labels: </b> Add the respective label as a <code>data-label</code> attribute to each table-cell (<b>td</b>). Since the header gets hidden the header labels needs to be included in the cells. </li>
                             <li><b>Custom breakpoint: </b> If the standard preset breakpoint does not suit a certain table, this can be changed by adding the attribute <code>data-breakpoint</code> to the table. The value of this attribute indicates the table width in pixel for when it should break to mobile layout.</li>
+                            <li><b>Buttons/icons: </b> For these elements the <code>data-label</code> can be excluded, making the table-cell right aligned and full width.</li>
                         </ul>
                     </p>',
         'code' => '
@@ -83,7 +84,8 @@ $guide_tables = [
             <th>First Name</th>
             <th>Last Name</th>
             <th>Username</th>
-            <th style="width: 50%">Comment</th>
+            <th style="width: 40%">Comment</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -92,12 +94,22 @@ $guide_tables = [
             <td data-label="Last Name">Otto</td>
             <td data-label="Username">@mdo</td>
             <td data-label="Comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis lectus quis sem lacinia nonummy. Proin mollis lorem non dolor. In hac habitasse platea dictumst. Nulla ultrices odio. Donec augue.</td>
+            <td>
+                <button class="btn btn-primary">
+                    <i class="fa fa-pencil" aria-hidden="true"></i>Edit
+                </button>
+            </td>
         </tr>
         <tr>
             <td data-label="First Name">Jacob</td>
             <td data-label="Last Name">Thornton</td>
-            <td data-label="Username">@fat</td>
+            <td data-label="Username"></td>
             <td data-label="Comment">Proin mollis lorem non dolor. In hac habitasse platea dictumst. Nulla ultrices odio. Donec augue.</td>
+            <td>
+                <button class="btn btn-primary">
+                    <i class="fa fa-pencil" aria-hidden="true"></i>Edit
+                </button>
+            </td>
         </tr>
     </tbody>
 </table>{/code}']
