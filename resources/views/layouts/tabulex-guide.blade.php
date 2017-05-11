@@ -58,19 +58,17 @@
         ]) !!};
     </script>
 </head>
-<body{{ $has_submenu === true ? ' class=include-subbar' : '' }}>
-<div class="main-container">
-    <div class="main-container__overlay"></div>
+<body>
+    <div class="main-container">
+        <div class="main-container__overlay"></div>
 
-    @include('layouts.menus.top_menu_guide')
+        @include('layouts.menus.top_menu_guide')
 
-    <div class="main-container__content container">
-        @include('layouts.menus.main_menu')
-        @yield('content')
-    </div>
-</div><!-- /container -->
-
-</div><!-- /#main_container -->
+        <div class="main-container__content container">
+            @include('layouts.menus.main_menu')
+            @yield('content')
+        </div>
+    </div><!-- /#main_container -->
 
     <script>
         // STYLE-GUIDE ONLY function

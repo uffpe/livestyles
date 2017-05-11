@@ -53,7 +53,7 @@ Route::group(['prefix' => 'demo', 'middleware' => 'auth'], function()
         ->name('guide');
 
 //    Route::get('guide', 'GuidesController@index', function() {
-//        return view('demo/guide', ['has_submenu' => true]);
+//        return view('demo/guide', ['has_submenu' => false]);
 //    })->name('guide');
 
     // New foraeldre group

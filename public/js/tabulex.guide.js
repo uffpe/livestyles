@@ -35,6 +35,7 @@ $(document).ready(function () {
         }
     })();
 
+/*
 
 
     function galleryViewer(galleryID, galleryTitle) {
@@ -96,6 +97,7 @@ $(document).ready(function () {
 
     };
 
+*/
 
 
 });

@@ -6,7 +6,7 @@
                 <span class="sr-only">Toggle navigation</span>
                 <i class="fa fa-bars" aria-hidden="true"></i>
             </button>
-            <a class="navbar-brand" href="#">Living Style Guide</a>
+            <a class="navbar-brand" href="{{ route('guide') }}">Living Style Guide</a>
         </div>
 
 

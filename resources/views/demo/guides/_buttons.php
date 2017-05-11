@@ -10,11 +10,11 @@ $guide_buttons = [
 {code}
   <a class="btn btn-default" href="#" role="button">Link</a>
   
-  <button class="btn btn-default" type="button">Button</button>
+  <button class="btn btn-default" type="submit">Submit</button>
   
   <input class="btn btn-default" type="button" value="Input">
   
-  <input class="btn btn-default" type="button" value="Submit">
+  <input class="btn btn-default" type="button" value="Button">
 {/code}
 </div>'],
     [

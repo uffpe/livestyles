@@ -58,7 +58,8 @@ $guide_menus = [
         </ul>
     </li>
 </ul>
-{/code}'],[
+{/code}'],
+    [
         'title' => 'Nav Menu - Active state',
         'is_anchor' => true,
         'desc' => '<p>The currently chosen menu element should be attached with an <code>.active</code> class on the li-tag.</p>',
@@ -87,5 +88,49 @@ $guide_menus = [
         </a>
     </li>
 </ul>
+{/code}'],
+    [
+        'title' => 'Sub-header navbar',
+        'is_anchor' => true,
+        'desc' => '<p>The <b>sub-header</b> is an optional element placed directly under the top-header. It should be used for generel page functions such as "Create new", "Save (Page)", Back (to previous page)" or "Sort by" dropdowns.</p>
+                    <p>When needed it should be included in top of the view content and widthin the <code>.main-container__content</code> container (Usually in top of the main twig view).</p>
+                    <p>
+                    <b>Buttons & dropdowns</b>
+                    <ul>
+                        <li>Since the sub-header in terms of HTML markup is a navbar, the </li>
+                    </ul>
+                    </p>',
+        'code' => '
+{code}<!-- Sub-header Navbar -->
+<nav id="sub-header" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">    
+        <ul class="nav navbar-nav navbar-right">
+        
+            <!-- Simple link with icon -->
+            <li>
+                <a href="#" title="Save page">
+                    <i class="fa fa-save" aria-hidden="true"></i>
+                    <span class="hidden-xs">Save page</span>
+                </a>
+            </li>
+            
+            <!-- Dropdown toggle with icon -->
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    Vælg element 
+                    <span class="caret" aria-hidden="true"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                </ul>
+            </li>  
+                      
+        </ul><!-- /.navbar_right -->        
+    </div><!-- /.container -->
+</nav>
 {/code}']
+
 ];

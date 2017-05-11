@@ -124,22 +124,22 @@ $guide_images = [
                     <b>Gallery viewer:</b>
                     <ul>
                         <li>Wrap the images in a container with the class <code>gallery-viewer</code> and a unique ID (This outer wrapper could be the <b>panel-body</b> of an outer panel).</li>
-                        <li><b>Initialize</b> the image viewer by including the function <code>galleryViewer(thisGalleryId)</code>, where the thisGalleryId is the ID of the wrapper.</li>
+                        <li><b>Initialize</b> the image viewer by including the function <code>galleryViewer("galleryId", "Download", "Close")</code>, where the <b>galleryId</b> is the ID of the wrapper, <b>Download</b> is the text on the download button and <b>Close</b> is the text on the modal close button.</li>
                     </ul>
                     <b>The gallery images:</b>
                     <ul>
                         <li>Since the viewer open in a modal dialog, the <code>data-target="#galleryViewer"</code> and <code>aria-haspopup="true"</code> must be included on the link of the images.</li>
-                        <li>The <b>href</b> of the link must point to the placement of the big image version.</li>
-                        <li>Include an <code>aria-label</code> with a description for the image. This will be included in the footer of the modal viewer. In the shown example a simple label of "Image 1 of 2" has been used as the label.</li>
+                        <li>Where the <code>href</code> of the link points to the placement of the big image version, the <code>data-download</code> is the link to download the image. These would logically be similar, but for the use in the Tabulex galleries it includes a specific file to download the image directly (ie. "/download.php?f=gallery&m=$id&i=$image")</li>
+                        <li>Include an <code>aria-label</code> with a description for the image (Optional). This will be included in the footer of the modal viewer. In the shown example a simple label of "Image 1 of 2" has been used as the label.</li>
                         <li>As part of the Bootstrap carousel the <code>data-slide-to</code> is needed to indicate which of the gallery images should be shown when the gallery viewer opens.</li>
                     </ul>                
                     </p>',
         'code' => '
-{code}<div class="gallery_viewer" id="thisGalleryId">
+{code}<div class="gallery_viewer" id="galleryId">
 
     <div class="panel panel-primary panel-gallery-element">
         <div class="panel-body">
-            <a class="gallery-image" href="http://placekitten.com/640/480" aria-label="Image 1 of 2" data-slide-to="1" data-target="#galleryViewer" aria-haspopup="true">
+            <a href="http://placekitten.com/640/480" class="gallery-image" data-download="http://placekitten.com/640/480" data-slide-to="1" data-target="#galleryViewer" aria-haspopup="true" aria-label="Image 1 of 2">
                 <img src="http://placekitten.com/160/120" class="img-responsive" alt="Image 1 title">
             </a>
         </div>
@@ -147,7 +147,7 @@ $guide_images = [
     
     <div class="panel panel-primary panel-gallery-element">
         <div class="panel-body">
-            <a class="gallery-image" href="http://placekitten.com/320/480" aria-label="Image 2 of 2" data-slide-to="2" data-target="#galleryViewer" aria-haspopup="true"">
+            <a href="http://placekitten.com/320/480" class="gallery-image" data-download="http://placekitten.com/320/480" data-slide-to="2" data-target="#galleryViewer" aria-haspopup="true" aria-label="Image 2 of 2">
                 <img src="http://placekitten.com/90/130" class="img-responsive" alt="Image 2 title">
             </a>
         </div>
@@ -156,7 +156,7 @@ $guide_images = [
 </div>
 <!-- Initialize the gallery -->
 <script>
-    galleryViewer("thisGalleryId");
+    galleryViewer("galleryId", "Download", "Close");
 </script>{/code}'],
     [
     'title' => 'Icon set - FontAwesome',

@@ -6,29 +6,37 @@ $guide_tables = [
         'is_anchor' => true,
         'desc' => '<p>All basic tables should include the class <code>table</code>. This will apply the intended table design to normal content tables without styling tables in other plugins like calendars and date pickers.</p>
                     <p>
+                    <b>The table markup:</b>
                     <ul>
                         <li>All tables should have the class <code>table</code> applied to it.</li>
-                        <li>The class <code>table-striped</code> is optional and will add zebra-stribes to the table rows.</li>
-                        <li>If table rows needs to be selectable add the optional class <code>table-hover</code> to enable a hover state on table rows within a <code>tbody</code>.</li>
+                        <li>The class <code>table-striped</code> is optional and will add zebra-stribes to the table rows.</li>                      
+                        <li>A <code>table-hover</code> added to the to table enable a hover state on all rows within the <code>tbody</code> (No Cursor change on mouse-over!).</li>  
+                    </ul>
+                    <b>Row styling:</b>
+                    <ul>                    
+                        <li>If specific rows needs to be selectable add the class <code>tr-select</code> can be added to the <b>tr</b> to enable a hover state and a pointer for the cursor.</li>
                     </ul>
                     </p>',
         'code' => '
 {code}<!-- Table with striped rows and hover state -->
-<table class="table table-striped table-hover"> 
+<table class="table table-striped"> 
     <thead>
         <tr>
+            <th></th>
             <th>First Name</th>
             <th>Last Name</th>
             <th>Username</th>
         </tr>
     </thead>
     <tbody>
-        <tr>
+        <tr class="tr-select">
+            <td><i class="fa fa-user" aria-hidden="true"></i></td>
             <td>Mark</td>
             <td>Otto</td>
             <td>@mdo</td>
         </tr>
         <tr>
+            <td><i class="fa fa-user" aria-hidden="true"></i></td>
             <td>Jacob</td>
             <td>Thornton</td>
             <td>@fat</td>
