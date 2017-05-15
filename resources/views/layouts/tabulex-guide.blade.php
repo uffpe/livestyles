@@ -80,18 +80,66 @@
             @endif
         })();
 
-        if(window.location.hash){
-            activeSubmenu(window.location.hash.substr(1));
-        } else {
-            $("ul.nav-mainmenu__list li:first-child li:first-child").addClass("active");
+        $(document).ready(function() {
+            if (getHash() != null) {
+                activeSubmenu(window.location.hash.replace('#', ''));
+                scrollToAnchor();
+            } else {
+                $("ul.nav-mainmenu__list li:first-child li:first-child").addClass("active");
+            }
+        });
+
+        // listen for hash change event here
+/*        window.onhashchange = function() {
+            scrollToAnchor();
+        };*/
+
+        // return hash if so or null if hash is empty
+        function getHash() {
+            var hash = window.location.hash.replace('#', '');
+            if (hash != '') {
+                return hash;
+            } else {
+                return null;
+            }
         }
+/*        $('ul.nav-mainmenu__list .list-group-submenu a').on('click', function(e) {
+            e.preventDefault();
+
+            // store hash
+            var hash = this.hash;
+            console.log("This hash: " + hash);
+            // animate
+            $('html, body').animate({
+                scrollTop: $('a[name="' + hash.replace('#', '') + '"]').offset().top
+            }, 300, function() {
+
+                // when done, add hash to url
+                // (default click behaviour)
+
+                window.location.hash = hash;
+            });
+        });*/
 
         function activeSubmenu(submenu){
             $("ul.list-group-submenu li").removeClass("active");
             $("li." + submenu).addClass("active");
-            console.log("li." + submenu);
         }
 
+        function scrollToAnchor() {
+            var elem = $('a[name='+ getHash() +']');
+
+            if (elem.length > 0) {
+                var topOffset = 0;
+                if( elem.parents(".col-md-12").is(':first') ){
+                    var topOffset = -100;
+                }
+                $('html, body').stop().animate({
+                    scrollTop: Math.floor(elem.offset().top + topOffset)
+                }, 500);
+                console.log("Scroll-offset = " + Math.floor(elem.offset().top) );
+            }
+        }
     </script>
 </body>
 </html>

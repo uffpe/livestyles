@@ -35,69 +35,32 @@ $(document).ready(function () {
         }
     })();
 
-/*
+    // $('.smooth-scroll ul li a[href^="#"]').on('click', function(event) {
+    //     var $anchor = $(this);
+    //     $('html, body').stop().animate({
+    //         scrollTop: $($anchor.attr('href')).offset().top + 20
+    //     }, 1500, 'easeInOutExpo');
+    //     event.preventDefault();
+    // });
 
 
-    function galleryViewer(galleryID, galleryTitle) {
-        console.log('Gallery ID: ' + galleryID + ' (Title: '+ galleryTitle +')');
-
-        // Insert modal #galleryViewer in page
-        if($('#modalViewer').length == 0){
-            var modalFooter     = '<span class="pull-left" id="modalCounter"></span>'
-                + '<button class="btn btn-primary">Download</button>'
-                + '<button class="btn btn-default" data-dismiss="modal">Close</button></div>';
-
-            var modalCarousel   = '<div id="modalCarousel" class="carousel"><div class="carousel-inner"></div>'
-                + '     <a class="carousel-control left" href="#modalCarousel" data-slide="prev"><span><i class="fa fa-chevron-left" aria-hidden="true"></i></span></a>'
-                + '     <a class="carousel-control right" href="#modalCarousel" data-slide="next"><span><i class="fa fa-chevron-right" aria-hidden="true"></i></span></a>'
-                + '</div>';
-
-            var modalHTML       = '<div class="modal fade" id="modalViewer" role="dialog" tabindex="-1" aria-labelledby="" aria-hidden="true">'
-                + '   <div class="modal-dialog"><div class="modal-content">'
-                + '     <div class="modal-body">' + modalCarousel + '</div>'
-                + '     <div class="modal-footer">' + modalFooter + '</div>'
-                + '   </div></div>'
-                + '</div>';
-
-            $('body').append(modalHTML);
-        }
-
-
-        // Copy images into carousel
-        $('#'+ galleryID + ' a').each(function(j) {
-            var image = $(this).attr("href");
-            var title = $(this).attr("title");
-            var key = $(this).attr("data-slide-to");
-            var label = $(this).attr("data-label");
-            var item = $('<div class="item" title="'+title+'"><img src="'+image+'" class="img-responsive" alt="'+title+'" data-label="'+ label +'" data-slide-to="'+ key +'"></div>');
-            item.appendTo('#modalCarousel .carousel-inner');
-            if (j==0){ // set first item active
-                item.addClass('active');
+/*    $('.smooth-scroll ul li a[href^="#"]').each(function() {
+        console.log("For each hash");
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+            && location.hostname == this.hostname
+            && this.hash.replace(/#/,'') ) {
+            var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+            var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+            if ($target) {
+                var targetOffset = $target.offset().top;
+                $(this).click(function() {
+                    console.log("On click scroll");
+                    $('html, body').animate({scrollTop: targetOffset}, 400);
+                    return false;
+                });
             }
-        });
-
-        // Activate the carousel
-        $('#modalCarousel').carousel({interval:false});
-
-        // Change modal info when slide changes
-        $('.carousel').on('slid.bs.carousel', function () {
-            var key = $(this).find('.active').attr('data-slide-to');
-            var label = $(this).find('.active').attr('data-label');
-            $('#modalLabel').html(label);
-        })
-
-        // Clicking the thumbnail image
-        $('#'+ galleryID + ' a').click(function(e){
-            e.preventDefault();
-            var key = $(this).attr('data-slide-to');
-
-            $('#modalViewer').modal('show'); // show the modal
-            $('#modalCarousel').carousel(parseInt(key)); // slide carousel to selected
-        });
-
-    };
-
-*/
+        }
+    });*/
 
 
 });

@@ -14,7 +14,7 @@
                         </div>
 
                     @foreach($snippets[$menu_items['url']] as $snippet)
-                            <div class="col-sm-12">
+                            <div class="col-md-12">
                                 <h3 class="underlined"><?= $snippet['title'] ?><a name="<?= preg_replace('/\W+/','',$snippet['title']) ?>" class="style_anchor"></a></h3>
                             </div>
                             <div class="col-md-12">

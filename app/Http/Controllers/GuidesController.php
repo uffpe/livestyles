@@ -13,6 +13,7 @@ class guidesController extends Controller
         include resource_path('views/demo/guides/_fonts.php');
         include resource_path('views/demo/guides/_grids.php');
         include resource_path('views/demo/guides/_containers.php');
+        include resource_path('views/demo/guides/_lists.php');
         include resource_path('views/demo/guides/_menus.php');
         include resource_path('views/demo/guides/_images.php');
         include resource_path('views/demo/guides/_dialogs.php');
@@ -26,6 +27,7 @@ class guidesController extends Controller
             'fonts' => $guide_fonts,
             'grids' => $guide_grids,
             'containers' => $guide_containers,
+            'lists' => $guide_lists,
             'menus' => $guide_menus,
             'images' => $guide_images,
             'dialogs' => $guide_dialogs,
@@ -42,7 +44,8 @@ class guidesController extends Controller
             ['url' => 'fonts', 'label' => 'Text & fonts', 'icon' => 'fa-font', 'is_active' => false, 'sub_items' => [] ],
             ['url' => 'grids', 'label' => 'Grids', 'icon' => 'fa-columns', 'is_active' => false, 'sub_items' => [] ],
             ['url' => 'containers', 'label' => 'Containers / Panels', 'icon' => 'fa-id-card-o', 'is_active' => false, 'sub_items' => [] ],
-            ['url' => 'menus', 'label' => 'Menus & Navbars', 'icon' => 'fa-th-list', 'is_active' => false, 'sub_items' => [] ],
+            ['url' => 'lists', 'label' => 'Lists', 'icon' => 'fa-list-ul', 'is_active' => false, 'sub_items' => [] ],
+            ['url' => 'menus', 'label' => 'Navbars & subheader', 'icon' => 'fa-th-list', 'is_active' => false, 'sub_items' => [] ],
             ['url' => 'images', 'label' => 'Images and Icons', 'icon' => 'fa-photo', 'is_active' => false, 'sub_items' => [] ],
             ['url' => 'dialogs', 'label' => 'Dialogs', 'icon' => 'fa-window-maximize', 'is_active' => false, 'sub_items' => [] ],
             ['url' => 'buttons', 'label' => 'Button & links', 'icon' => 'fa-link', 'is_active' => false, 'sub_items' => [] ],

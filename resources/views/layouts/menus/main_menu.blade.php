@@ -1,5 +1,5 @@
 <!-- Main menu -->
-<nav class="nav-mainmenu" role="navigation" aria-label="Hovedmenu">
+<nav class="nav-mainmenu smooth-scroll" role="navigation" aria-label="Hovedmenu">
     <ul class="nav-mainmenu__list nav nav-stacked list-group">
 
         <li class="list-group-header">
