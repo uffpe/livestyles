@@ -11,8 +11,7 @@ $guide_containers = [
     <div class="panel-body">
         A default panel container with content - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     </div>
-</div>{/code}
-            '],
+</div>{/code}'],
     [
 
         'title' => 'Panel - Header and Footer',
@@ -33,8 +32,7 @@ $guide_containers = [
     <div class="panel-footer">
         <button class="btn btn-default" type="button">Button in panel footer</button>
     </div>
-</div>{/code}
-        '],
+</div>{/code}'],
     [
 
         'title' => 'Panel with header icon',
@@ -54,8 +52,7 @@ $guide_containers = [
         ...
     </div>
 </div>
-{/code}
-        '],
+{/code}'],
     [
         'title' => 'Panel variations',
         'is_anchor' => true,
@@ -117,8 +114,7 @@ $guide_containers = [
          <h4 class="panel-title"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> panel panel-danger</h4>
     </div>
     <div class="panel-body"><p>...</p></div>
-</div>
-        '],
+</div>'],
     [
 
         'title' => 'Collapsible panel',
@@ -189,7 +185,7 @@ $guide_containers = [
 {code}<!-- Outer panel -->
 <div class="panel panel-default">
     <div class="panel-heading">
-        <h4 class="panel-title"><i class="fa fa-list" aria-hidden="true"></i> Outer Panel</h4>
+        <h4 class="panel-title"><i class="fa fa-list" aria-hidden="true"></i> Outer Panel - LongPanelTitleforRWDtesting</h4>
         <a href="#" class="toggle_collapse" aria-haspopup="true" aria-expanded="false" aria-label="Open panel">
             <i class="fa fa-chevron-down" aria-hidden="true"></i>
         </a>
@@ -341,5 +337,47 @@ $guide_containers = [
         </div>
     </div>
 </div>
-{/code}']
+{/code}'],
+    [
+        'title' => 'Panel - Messages',
+        'is_anchor' => true,
+        'desc' => '<p><label>Panel header:</label> A heading container can be added to the panel with <code>.panel-heading</code>. To make the text stand out a h4 with a .panel-title class can be applied (See example below).</p>
+                           <p><label>Panel footer:</label> If needed this can be added through the <code>.panel-footer</code>. It is generally used to add buttons or links to the panel.</p>',
+        'code' => '
+{code}<!-- Message panel -->
+<div class="panel panel-default panel-message-right">
+    <div class="panel-heading">
+         <h4 class="panel-title">Message panel right<span class="panel-date">16/05-2017 kl. 14:40</span></h4>
+    </div>
+    
+    <div class="panel-body">
+        ...
+    </div>
+    
+    <div class="panel-footer">
+        <div class="file-list">
+            <a href="#" data-id="" title="Download this file">
+                <i class="fa fa-download" aria-hidden="true"></i>
+                <span class="file-title">File-title-A.pdf</span>
+                <span class="file-info">0.750 mb</span>
+            </a>
+            <a href="#" data-id="" title="Download this file">
+                <i class="fa fa-download" aria-hidden="true"></i>
+                <span class="file-title">The title on file B.pdf</span>
+                <span class="file-info">3.422 mb</span>
+            </a>
+        </div>
+    </div>
+</div>{/code}
+<!-- Message panel -->
+<div class="panel panel-default panel-message-left">
+    <div class="panel-heading">
+         <h4 class="panel-title">Message panel left (No attachments)<span class="panel-date">16/05-2017 kl. 14:40</span></h4>
+    </div>
+    
+    <div class="panel-body">
+        ...
+    </div>
+    
+</div>']
 ];

@@ -185,9 +185,8 @@ $guide_images = [
     </span>
     Messages
 </a>
-{/code}']
-    /* ,   [
-            'title' => 'Icon with badge icon',
+{/code}'],   [
+            'title' => 'Icon with icon as badge',
             'is_anchor' => true,
             'desc' => '',
             'code' => '
@@ -207,5 +206,5 @@ $guide_images = [
         </span>
         New appointment
     </a>
-    {/code}'],*/
+    {/code}'],
 ];
