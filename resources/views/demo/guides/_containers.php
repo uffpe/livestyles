@@ -341,8 +341,7 @@ $guide_containers = [
     [
         'title' => 'Panel - Messages',
         'is_anchor' => true,
-        'desc' => '<p><label>Panel header:</label> A heading container can be added to the panel with <code>.panel-heading</code>. To make the text stand out a h4 with a .panel-title class can be applied (See example below).</p>
-                           <p><label>Panel footer:</label> If needed this can be added through the <code>.panel-footer</code>. It is generally used to add buttons or links to the panel.</p>',
+        'desc' => '',
         'code' => '
 {code}<!-- Message panel -->
 <div class="panel panel-default panel-message-right">
@@ -359,12 +358,12 @@ $guide_containers = [
             <a href="#" data-id="" title="Download this file">
                 <i class="fa fa-download" aria-hidden="true"></i>
                 <span class="file-title">File-title-A.pdf</span>
-                <span class="file-info">0.750 mb</span>
+                <span class="file-info">(0.750 mb)</span>
             </a>
             <a href="#" data-id="" title="Download this file">
                 <i class="fa fa-download" aria-hidden="true"></i>
                 <span class="file-title">The title on file B.pdf</span>
-                <span class="file-info">3.422 mb</span>
+                <span class="file-info">(3.422 mb)</span>
             </a>
         </div>
     </div>

@@ -3,10 +3,12 @@
     <div id="content-div">
         <div class="content-div_wrapper">
             <div class="container-fluid">
-                <div class="row page_header">
-                    <div class="col-md-12">
-                        <h3>Topbar - Beskeder</h3>
+                <div class="page-header">
+                    <h2>Topbar - Beskeder</h2>
+                </div>
 
+                <div class="row">
+                    <div class="col-md-12">
                         <div class="panel panel-filter-bar">
 
                             <div class="panel-heading">
@@ -70,7 +72,7 @@
 
 
                     </div>
-                </div><!-- /.page_header -->
+                </div><!-- /.page-header -->
 
 
                 <div class="row">
@@ -87,9 +89,12 @@
 
 
 
-                <div class="row page_header">
+                <div class="page-header">
+                    <h2>Topbar - Checkin v1</h2>
+                </div>
+
+                <div class="row">
                     <div class="col-md-12">
-                        <h3>Topbar - Checkin v1</h3>
 
                         <div class="panel panel-filter-bar">
 
@@ -120,15 +125,17 @@
                         </div><!-- /.panel-filter-bar -->
 
                     </div>
-                </div><!-- /.page_header -->
+                </div><!-- /.page-header -->
 
 
 
 
-                <div class="row page_header">
+                <div class="page-header">
+                    <h2>Topbar - Checkin v2</h2>
+                </div>
+
+                <div class="row">
                     <div class="col-md-12">
-                        <h3>Topbar - Checkin v2</h3>
-
                         <div class="panel panel-filter-bar">
 
                             <div class="panel-body">
@@ -145,16 +152,17 @@
                         </div><!-- /.panel-filter-bar -->
 
                     </div>
-                </div><!-- /.page_header -->
+                </div><!-- /.page-header -->
 
 
 
 
-                <div class="row page_header">
+                <div class="page-header">
+                    <h2>Topbar - Checkin v3</h2>
+                </div>
+
+                <div class="row">
                     <div class="col-md-12">
-                        <h3>Topbar - Checkin v3</h3>
-
-
                         <div class="panel panel-filter-bar">
 
                             <div class="panel-body">

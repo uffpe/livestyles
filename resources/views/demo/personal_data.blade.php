@@ -27,11 +27,9 @@
             </nav>
 
             <div class="container-fluid">
-                <div class="row page_header">
-                    <div class="col-md-12">
-                        Stamkort: Bruce Wayne (0A)
-                        <div class="pull-right hidden-xs">* Vis p&aring; legeliste <input type="checkbox"></div>
-                    </div>
+                <div class="page-header">
+                    <h2>Stamkort: Bruce Wayne (0A)
+                        <div class="pull-right hidden-xs">* Vis p&aring; legeliste <input type="checkbox"></div></h2>
                 </div>
                 <form class="form-horizontal">
                     <div class="row">

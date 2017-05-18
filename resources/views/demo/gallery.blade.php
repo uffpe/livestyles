@@ -4,10 +4,8 @@
         <div class="content-div_wrapper">
             <div class="container-fluid">
 
-                <div class="row page_header">
-                    <div class="col-md-12">
-                        <h3>Billeder - Galleri visning:</h3>
-                    </div>
+                <div class="page-header">
+                    <h2>Billeder - Galleri visning:</h2>
                 </div>
 
 
@@ -52,10 +50,8 @@
 
 
 
-                <div class="row page_header">
-                    <div class="col-md-12">
-                        <h3>Billede visning:</h3>
-                    </div>
+                <div class="page-header">
+                    <h2>Billede visning:</h2>
                 </div>
 
 

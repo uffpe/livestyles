@@ -41,6 +41,10 @@ Route::group(['prefix' => 'demo', 'middleware' => 'auth'], function()
         return view('demo/messages', ['has_submenu' => false]);
     })->name('messages');
 
+    Route::get('readmessage', function() {
+        return view('demo/readmessages', ['has_submenu' => false]);
+    })->name('readmessages');
+
     Route::get('tabulex-basic-grid', function() {
         return view('demo/tabulex_basic_grid', ['has_submenu' => true]);
     })->name('basic-grid');

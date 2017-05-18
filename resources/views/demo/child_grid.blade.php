@@ -3,12 +3,8 @@
     <div id="content-div">
         <div class="content-div_wrapper">
             <div class="container-fluid">
-                <div class="row page_header">
-                    <div class="col-md-12">
-                        Find b&oslash;rn
-                        <div class="pull-right hidden-xs">V&aelig;lg klasse</div>
-                    </div>
-
+                <div class="page-header">
+                    <h2>Find b&oslash;rn<div class="pull-right hidden-xs">V&aelig;lg klasse</div></h2>
                 </div>
 
                 <div class="row single-gutter">

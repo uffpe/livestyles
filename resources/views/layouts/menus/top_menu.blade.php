@@ -76,6 +76,7 @@
                         <li><a href="{{ route('child-grid') }}">Children grid</a></li>
                         <li><a href="{{ route('parents-desktop') }}">Opslagstavle - for&aelig;ldre</a></li>
                         <li><a href="{{ route('messages') }}">Kommunikation</a></li>
+                        <li><a href="{{ route('readmessages') }}">Læs/svar beskeder</a></li>
                         <li><a href="{{ route('gallery') }}">Gallerier</a></li>
                         <li role="separator" class="divider"></li>
                         <li>
