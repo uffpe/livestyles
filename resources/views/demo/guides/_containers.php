@@ -344,7 +344,7 @@ $guide_containers = [
         'desc' => '',
         'code' => '
 {code}<!-- Message panel -->
-<div class="panel panel-default panel-message-right">
+<div class="panel panel-default panel-message-right" aria-label="Message from Peter Parker">
     <div class="panel-heading">
          <h4 class="panel-title">Message panel right<span class="panel-date">16/05-2017 kl. 14:40</span></h4>
     </div>
@@ -369,7 +369,7 @@ $guide_containers = [
     </div>
 </div>{/code}
 <!-- Message panel -->
-<div class="panel panel-default panel-message-left">
+<div class="panel panel-default panel-message-left" aria-label="Message from Clark Kent">
     <div class="panel-heading">
          <h4 class="panel-title">Message panel left (No attachments)<span class="panel-date">16/05-2017 kl. 14:40</span></h4>
     </div>
