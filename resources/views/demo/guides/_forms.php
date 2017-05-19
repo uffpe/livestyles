@@ -61,7 +61,7 @@ $guide_forms = [
 <div id="editor" style="display:block;">
     <textarea name="textareaName" id="this-editor"></textarea>
 </div>{/code}
-<script type="text/javascript" src="https://personale.devsfoweb.dk/lib/ckeditor/ckeditor.js"></script>
+<script type="text/javascript" src="https://www.devsfoweb.dk/lib/ckeditor/ckeditor.js"></script>
 <script type="text/javascript">
     CKEDITOR.replace("this-editor");
 </script>']

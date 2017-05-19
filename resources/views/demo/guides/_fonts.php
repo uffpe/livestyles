@@ -2,7 +2,23 @@
 
 $guide_fonts = [
     [
-        'title' =>  'Body and button text',
+        'title' => 'Page header markup',
+        'is_anchor' => true,
+        'desc' => '<p>All pages should start with a header stating the overall title for the page.</p>
+                    <p>
+                    <ul>
+                        <li>The header must be wrapped in <code>.page-header</code> element.</li>
+                        <li>For all normal pages this must be a <code>h2</code> header.</li>
+                        <li>On a few special pages a <code>h1</code> header is used to distinguish these from the other normal content pages. An example is the the login page</li>
+                    </ul>
+                    </p>',
+        'code' => '
+{code}<!-- Page header -->
+<div class="page-header">
+    <h2>The page title</h2>
+</div>{/code}'],
+    [
+        'title' =>  'Font styling - Body and buttons',
         'is_anchor' => true,
         'desc' =>   '<p><b>Roboto</b> is used general body and button text. It is a departure from the IST brand but is chosen for its high level of readability in small sizes.</p>
                             <p><code>font-family: "Roboto", Helvetica, Arial, sans-serif</code></p>',
@@ -19,7 +35,7 @@ $guide_fonts = [
 <button class="btn btn-primary" type="button">Text on buttons</button>
             '],
     [
-        'title' =>  'Headers',
+        'title' =>  'Font styling - Headers',
         'is_anchor' => true,
         'desc' =>   '<p><b>Oswald</b> is the main ”IST-font” and is used for all headings.</p>
                             <p><code>font-family: "Oswald", Helvetica, Arial, sans-serif</code></p>',

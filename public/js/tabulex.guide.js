@@ -35,6 +35,7 @@ $(document).ready(function () {
         }
     })();
 
+
     // $('.smooth-scroll ul li a[href^="#"]').on('click', function(event) {
     //     var $anchor = $(this);
     //     $('html, body').stop().animate({

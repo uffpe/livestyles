@@ -92,12 +92,20 @@ $guide_menus = [
     [
         'title' => 'Sub-header navbar',
         'is_anchor' => true,
-        'desc' => '<p>The <b>sub-header</b> is an optional element placed directly under the top-header. It should be used for generel page functions such as "Create new", "Save (Page)", Back (to previous page)" or "Sort by" dropdowns.</p>
-                    <p>When needed it should be included in top of the view content and widthin the <code>.main-container__content</code> container (Usually in top of the main twig view).</p>
+        'desc' => '<p>The <b>sub-header</b> is an optional element placed directly under the top-header. should be used for generel page functions such as "Create new", "Save (Page)", Back (to previous page)" or "Sort by" dropdowns.</p>
+                    <p><b>Sub-header navbar:</b>
+                    <ul>
+                        <li>The sub-header is basically a horizontal navbar element with class <code>navbar navbar-inverse navbar-fixed-top</code> and the ID <code>sub-header</code>.</li>
+                        <li>When needed it should be included in top of the view content and widthin the <code>.main-container__content</code> container (Usually in top of the main twig view).</li>
+                        
+                    </ul></p>
                     <p>
                     <b>Buttons & dropdowns</b>
                     <ul>
-                        <li>Since the sub-header in terms of HTML markup is a navbar, the </li>
+                        <li>All links should be placed as list element in a <code>ul</code> list with class <code>navbar-right</code>.</li>
+                        <li>As a rule of thump all links should have a text and an icon placed to the left of the text.</li>
+                        <li>For back buttons use the icon <code>fa-chevron-left</code> and add <code>.navbar-back</code> to the <b>li</b> element.</li>
+                        <li>To hide the text part on smaller screens, wrap the link text in a span with either class <code>hidden-xs</code> or <code>hidden-xxs</code> (NB: <b>hidden-xs</b> breaks on a width of 768px and <b>hidden-xxs</b> on a width of 480px).</li>
                     </ul>
                     </p>',
         'code' => '
@@ -105,6 +113,14 @@ $guide_menus = [
 <nav id="sub-header" class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">    
         <ul class="nav navbar-nav navbar-right">
+                
+            <!-- Navbar back button -->
+            <li class="navbar-back">
+                <a href="#" title="Back to previous">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                    <span class="hidden-xs">Back to previous</span>
+                </a>
+            </li>
         
             <!-- Simple link with icon -->
             <li>
@@ -118,7 +134,7 @@ $guide_menus = [
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
                     <i class="fa fa-calendar" aria-hidden="true"></i>
-                    Vælg element 
+                    <span class="hidden-xxs">Vælg element</span> 
                     <span class="caret" aria-hidden="true"></span>
                 </a>
                 <ul class="dropdown-menu">

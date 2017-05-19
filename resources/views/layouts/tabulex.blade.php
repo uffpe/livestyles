@@ -11,13 +11,13 @@
     <title>{{ config('app.name', 'IST - Tabulex') }}</title>
 
     <!-- Current old styles -->
-    <link href="https://www.sfoweb.dk/css/tmsfo/style.css?v=1488928677" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://www.sfoweb.dk/css/tmsfo/style_sfoweb.css">
-    <link rel="stylesheet" type="text/css" href="https://www.sfoweb.dk/lib/jquery-ui/css/smoothness/jquery-ui-1.10.3.min.css">
-    <link rel="stylesheet" type="text/css" href="https://www.sfoweb.dk/css/tmsfo/jScrollPane.css">
-    <link rel="stylesheet" type="text/css" href="https://www.sfoweb.dk/css/tmsfo/scrollbar.css?v=1488928677">
-    {{--<link rel="stylesheet" type="text/css" href="https://www.sfoweb.dk/css/generic.css">--}}
-    <link rel="stylesheet" type="text/css" href="https://www.sfoweb.dk/css/sfoweb.css">
+    <link href="https://personale.devsfoweb.dk/css/tmsfo/style.css?v=1488928677" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://personale.devsfoweb.dk/css/tmsfo/style_sfoweb.css">
+    <link rel="stylesheet" type="text/css" href="https://personale.devsfoweb.dk/lib/jquery-ui/css/smoothness/jquery-ui-1.10.3.min.css">
+    <link rel="stylesheet" type="text/css" href="https://personale.devsfoweb.dk/css/tmsfo/jScrollPane.css">
+    <link rel="stylesheet" type="text/css" href="https://personale.devsfoweb.dk/css/tmsfo/scrollbar.css?v=1488928677">
+    {{--<link rel="stylesheet" type="text/css" href="https://personale.devsfoweb.dk/css/generic.css">--}}
+    <link rel="stylesheet" type="text/css" href="https://personale.devsfoweb.dk/css/sfoweb.css">
 
     <!-- Styles -->
     <link href="https://personale.devsfoweb.dk/css/main.css?{{ time() }}" rel="stylesheet">
