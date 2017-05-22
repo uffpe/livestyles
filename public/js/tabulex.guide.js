@@ -35,33 +35,51 @@ $(document).ready(function () {
         }
     })();
 
-
-    // $('.smooth-scroll ul li a[href^="#"]').on('click', function(event) {
-    //     var $anchor = $(this);
-    //     $('html, body').stop().animate({
-    //         scrollTop: $($anchor.attr('href')).offset().top + 20
-    //     }, 1500, 'easeInOutExpo');
-    //     event.preventDefault();
-    // });
-
-
-/*    $('.smooth-scroll ul li a[href^="#"]').each(function() {
-        console.log("For each hash");
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-            && location.hostname == this.hostname
-            && this.hash.replace(/#/,'') ) {
-            var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
-            var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
-            if ($target) {
-                var targetOffset = $target.offset().top;
-                $(this).click(function() {
-                    console.log("On click scroll");
-                    $('html, body').animate({scrollTop: targetOffset}, 400);
-                    return false;
-                });
-            }
-        }
-    });*/
-
-
+    if (getHash() != null) {
+        activeSubmenu(window.location.hash.replace('#', ''));
+        scrollToAnchor(getHash());
+    } else {
+        $("ul.nav-mainmenu__list li:first-child li:first-child").addClass("active");
+    }
 });
+
+// listen for hash change event here
+/*        window.onhashchange = function() {
+ scrollToAnchor();
+ };*/
+// return hash if so or null if hash is empty
+function getHash() {
+    var hash = window.location.hash.replace('#', '');
+    if (hash != '') {
+        return hash;
+    } else {
+        return null;
+    }
+}
+
+function activeSubmenu(submenu){
+    $("ul.list-group-submenu li").removeClass("active");
+    $("li." + submenu).addClass("active");
+    scrollToAnchor(submenu);
+}
+
+function scrollToAnchor(thisName) {
+    var elem = $('a[name='+ thisName +']');
+
+    if (elem.length > 0) {
+
+        // Offset from top to position under Top-headers
+        var topOffset = 70;
+        if($('body.include-subbar')) topOffset = topOffset + 50;
+
+        if( elem.closest(".col-md-12").is('div:first-child') ){
+            topOffset = topOffset + 100;
+            console.log("Is first");
+        }
+
+        $('html, body').stop().animate({
+            scrollTop: Math.floor(elem.offset().top - topOffset)
+        }, 500);
+        console.log("Scroll-offset = " + Math.floor(elem.offset().top) );
+    }
+}
