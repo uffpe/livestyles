@@ -19,7 +19,7 @@ $guide_buttons = [
 </div>'],
     [
         'title' => 'Button sizes',
-        'is_anchor' => true,
+        'is_anchor' => false,
         'desc' => '<p>Generally the standard button should be used, but if needed additional sizes are available through the classes <code>btn-lg</code>, <code>btn-sm</code> and <code>btn-sx</code>.</p>
                     ',
         'code' => '
@@ -53,50 +53,53 @@ $guide_buttons = [
   </button>
 </div>'],
     [
-        'title' => 'Button Block style',
+        'title' => 'Full width Button',
         'is_anchor' => true,
-        'desc' => '<p>Adding <code>btn-block</code> to the buttons will make it full-width. This styling can also be used alone as a clickable content element.</p>
+        'desc' => '<p>Adding <code>btn-block</code> to the buttons will make it full-width.</p>',
+        'code' => '
+{code}<button class="btn btn-primary btn-block" type="button">Block title (btn-primary btn-block)</button>{/code}'],
+    [
+        'title' => 'Button block element',
+        'is_anchor' => true,
+        'desc' => '<p>The class <code>btn-block</code> can be used alone for multiple clickable content element (No other btn-default or btn-primary class should be added)</p>
+                    <p>This style variation is mainly used on pages with multiple clickable elements (Child, institution etc.).</p>
                     <p>
-                        <b>Multiple clickable elements:</b>
                         <ul>
-                            <li>The <code>btn-block</code> is full-width element and should therefore be used inside a grid column element (i.e. col-md-6).</li>
-                            <li>Used alone is is mainly used on pages with multiple clickable elements (Child, institution etc.).</li>
-                            <li>Text will wrap inside this button variation.</li>
-                            <li>Where the standard buttons should only have a short, the <code>btn-block</code> used alone can have multiple lines and content in it.</li>
-                        </ul>
-                        <b>Even height buttons:</b> <small> (Shown in the example below)</small>
-                        <ul>
-                            <li>The height can be preset with these classes:<br />
-                                <code>height-small</code>: 50px, <code>height-medium</code>: 90px, <code>height-big</code>: 140px.<br/> 
-                                When using a preset height the class  <code>.valign</code> can be used to center the content vertically.</li>
+                            <li>It is possible to have multiple text lines inside these <code>btn-block</code> elements. Text will automatically wrap inside this button variation.</li>
+                            <li>Simple text styling can be used (For instance bold, strong, paragraph or if a header styled text is needed, use wanted header type as a class > <code>.h4</code>)</li>
+                            <li>To create multiple side-by-side elements wrap them inside grid column elements (i.e. col-md-6).</li>
+                            <li>Add a height class to ensure an even height on the buttons:<br />
+                                <ul>
+                                    <li><code>height-small</code>: 50px</li>
+                                    <li><code>height-medium</code>: 90px</li>
+                                    <li><code>height-big</code>: 140px.</li>
+                                </ul>
+                                (The class <code>.valign</code> can be applied to center the content vertically.)
+                            </li>
                         </ul>
                     </p>',
         'code' => '
-<div class="row">  
-    <div class="col-md-12"> 
-        <button class="btn btn-primary btn-block" type="button">Block title (btn-primary btn-block)</button>
-    </div>
-<br /><br />
+<div class="row">
     <div class="col-sm-4 col-md-4">   
-      <a class="btn btn-block" href="#" role="button">
+      <a class="btn btn-block height-medium" href="#" role="button">
         <b>Block title (btn-block)</b><p>Possible to have multiple lines of text.</p>
       </a>
     </div>
     
     <div class="col-sm-4 col-md-4">   
-      <a class="btn btn-block" href="#" role="button">
+      <a class="btn btn-block height-medium" href="#" role="button">
         <b>Block title (btn-block)</b><p>Possible to have multiple lines of text.</p>
       </a>
     </div>
     
     <div class="col-sm-4 col-md-4">   
-      <a class="btn btn-block" href="#" role="button">
+      <a class="btn btn-block height-medium" href="#" role="button">
         <b>Block title (btn-block)</b><p>Possible to have multiple lines of text.</p>
       </a>
     </div>
     
 {code}<div class="col-sm-4 col-md-4">   
-    <a class="btn btn-block height-big valign" href="#" role="button">
+    <a class="btn btn-block height-medium valign" href="#" role="button">
         <b>Block title</b>
         <p>(btn-block height-big valign)</p>
     </a>

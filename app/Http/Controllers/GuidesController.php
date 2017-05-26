@@ -42,7 +42,7 @@ class guidesController extends Controller
         $main_menu = [
             ['url' => 'overview', 'label' => 'Guide introduction', 'icon' => 'fa-file-text-o', 'is_active' => false, 'sub_items' => [] ],
             ['url' => 'fonts', 'label' => 'Text & fonts', 'icon' => 'fa-font', 'is_active' => false, 'sub_items' => [] ],
-            ['url' => 'grids', 'label' => 'Grids', 'icon' => 'fa-columns', 'is_active' => false, 'sub_items' => [] ],
+            ['url' => 'grids', 'label' => 'Grids and columns', 'icon' => 'fa-columns', 'is_active' => false, 'sub_items' => [] ],
             ['url' => 'containers', 'label' => 'Containers / Panels', 'icon' => 'fa-id-card-o', 'is_active' => false, 'sub_items' => [] ],
             ['url' => 'lists', 'label' => 'Lists', 'icon' => 'fa-list-ul', 'is_active' => false, 'sub_items' => [] ],
             ['url' => 'menus', 'label' => 'Navbars & subheader', 'icon' => 'fa-th-list', 'is_active' => false, 'sub_items' => [] ],

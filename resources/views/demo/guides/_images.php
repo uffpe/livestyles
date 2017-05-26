@@ -37,7 +37,7 @@ $guide_images = [
  {/code}
 </div>'],
     [
-        'title' => 'Image gallery',
+        'title' => 'Thumbnail gallery',
         'is_anchor' => true,
         'desc' => '<p>Image galleries use the custom panel <code>.panel-gallery-element</code> on a <code>.panel-primary</code> panel. The panel-footer is optional but is used for image title and other relevant description.</p>
                     <p>
@@ -116,7 +116,7 @@ $guide_images = [
     </div>
 </div>'],
     [
-        'title' => 'Image gallery viewer',
+        'title' => 'Image viewer',
         'is_anchor' => true,
         'desc' => '<p>The <code>gallery_viewer</code> adds functionality to view big versions of the gallery images. It creates a <code>modal</code> dialog and makes use of the Bootstrap carousel to slide between the images in the gallery when opened in the modal dialog window.</p>
                     <p>In terms of markup and design the basic layout is like the <b>Image gallery</b>, but wrapped in a gallery-viewer container.</p>
@@ -165,7 +165,48 @@ $guide_images = [
                     To see all posibilities go to the official Font Awesome website <a href="http://fontawesome.io/icons/" target="_blank" title="Go to Font Awesome website">fontawesome.io</a>.</p>
                     <p>The icon has the <code>aria-hidden=true</code> applied to it to hide it from screen readers (Only a visual helper element)</p>',
     'code' => '
-{code}<i class="fa fa-user" aria-hidden="true"></i> Your profile{/code}'],
+{code}<!-- Button with icon -->
+  <button class="btn btn-default">
+    <i class="fa fa-check" aria-hidden="true"></i> 
+      Button width icon
+  </button>
+{/code}'],
+    [
+        'title' => 'Icon sizes',
+        'is_anchor' => false,
+        'desc' => '<p>Generally the default icon with no size class should be used, but if needed additional sizes are available through a <code>fa-</code> size class.</p>
+                    <p>The example shows the icon sizes alone and within a button tag.</p>
+                    <ul>
+                        <li><code>fa-sm</code>
+                         - <code>fa-lg</code>
+                         - <code>fa-2x</code>
+                         - <code>fa-3x</code>
+                         - <code>fa-4x</code>
+                         - <code>fa-5x</code>
+                         </li>
+                    </ul>
+                    </p>
+                    ',
+        'code' => '
+<div class="col-md-6 col-xs-6">
+    <p><i class="fa fa-photo fa-sm" aria-hidden="true"></i> fa-sm</p>
+    <p><i class="fa fa-photo" aria-hidden="true"></i> fa <small>(default)</small></p>
+    <p>{code}<i class="fa fa-photo fa-lg" aria-hidden="true"></i> fa-lg{/code}</p>
+    <p><i class="fa fa-photo fa-2x" aria-hidden="true"></i> fa-2x</p>
+    <p><i class="fa fa-photo fa-3x" aria-hidden="true"></i> fa-3x</p>
+    <p><i class="fa fa-photo fa-4x" aria-hidden="true"></i> fa-4x</p>
+    <p><i class="fa fa-photo fa-5x" aria-hidden="true"></i> fa-5x</p>
+</div>
+<div class="col-md-6 col-xs-6">
+    <p><button class="btn btn-primary"><i class="fa fa-photo fa-sm" aria-hidden="true"></i> fa-sm</button></p>
+    <p><button class="btn btn-primary"><i class="fa fa-photo" aria-hidden="true"></i> fa <small>(default)</small></button></p>
+    <p><button class="btn btn-primary"><i class="fa fa-photo fa-lg" aria-hidden="true"></i> fa-lg</button></p>
+    <p><button class="btn btn-primary"><i class="fa fa-photo fa-2x" aria-hidden="true"></i> fa-2x</button></p>
+    <p><button class="btn btn-primary"><i class="fa fa-photo fa-3x" aria-hidden="true"></i> fa-3x</button></p>
+    <p><button class="btn btn-primary"><i class="fa fa-photo fa-4x" aria-hidden="true"></i> fa-4x</button></p>
+    <p><button class="btn btn-primary"><i class="fa fa-photo fa-5x" aria-hidden="true"></i> fa-5x</button></p>
+</div>
+'],
     [
         'title' => 'Icon with badge',
         'is_anchor' => true,

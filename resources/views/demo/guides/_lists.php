@@ -2,7 +2,7 @@
 
 $guide_lists = [
     [
-        'title' => 'A simple list of links',
+        'title' => 'Simple list-group of links',
         'is_anchor' => true,
         'desc' => '<p>To create A simple group of links, wrap your links in a container with the class (<code>list-group</code>). Apply the (<code>.list-group-item</code>) to each link in the <b>.list-group</b>.</p>',
         'code' => '
@@ -13,7 +13,7 @@ $guide_lists = [
   <a href="#" class="list-group-item">List element 3</a>
 </div>{/code}'],
     [
-        'title' => 'List badge and icon',
+        'title' => 'List with badge and icon',
         'is_anchor' => true,
         'desc' => '<p>It is possible to add an icon or a badge to the (<code>.list-group-item</code>) links.</p>
                     <ul>
@@ -30,7 +30,7 @@ $guide_lists = [
   </a>
 </div>{/code}'],
     [
-        'title' => 'Overview list group',
+        'title' => 'List-group overview style',
         'is_anchor' => true,
         'desc' => '<p>Applying a <code>.h4</code> class to the links in the list-group will make a list of header-like elements.</p>
                     <p>This list-group variation is used on views that contains an overview of link to other views or subcategories (i.e. the Message overview).</p>
@@ -59,6 +59,52 @@ $guide_lists = [
     <i class="fa fa-newspaper-o" aria-hidden="true"></i>
     External news
   </a>
+</div>{/code}'],
+    [
+        'title' => 'List-group icon sizes',
+        'is_anchor' => true,
+        'desc' => '<p>Allthough the standard icon size should be used in list groups, additional icon sizes are available through <code>fa-</code> size classes.</p>                    
+                    <ul>
+                        <li><code>fa-sm</code>
+                         - <code>fa-lg</code>
+                         - <code>fa-2x</code>
+                         - <code>fa-3x</code>
+                         - <code>fa-4x</code>
+                         - <code>fa-5x</code>
+                         </li>
+                    </ul>
+                    </p>',
+        'code' => '
+{code}<!-- List group -->
+<div class="list-group">{/code}
+  <a href="#" class="list-group-item">
+    <i class="fa fa-photo fa-sm" aria-hidden="true"></i>
+    Link with fa-sm icon
+  </a>
+  <a href="#" class="list-group-item">
+    <i class="fa fa-photo" aria-hidden="true"></i>
+    Link with default icon
+  </a>
+  <a href="#" class="list-group-item">
+    <i class="fa fa-photo fa-lg" aria-hidden="true"></i>
+    Link with fa-lg icon
+  </a>{code}
+  <a href="#" class="list-group-item">
+    <i class="fa fa-photo fa-2x" aria-hidden="true"></i>
+    Link with fa-2x icon
+  </a>{/code}
+  <a href="#" class="list-group-item">
+    <i class="fa fa-photo fa-3x" aria-hidden="true"></i>
+    Link with fa-3x icon
+  </a>
+  <a href="#" class="list-group-item">
+    <i class="fa fa-photo fa-4x" aria-hidden="true"></i>
+    Link with fa-4x icon
+  </a>
+  <a href="#" class="list-group-item">
+    <i class="fa fa-photo fa-5x" aria-hidden="true"></i>
+    Link with fa-5x icon
+  </a>{code}
 </div>{/code}']
 
 ];
