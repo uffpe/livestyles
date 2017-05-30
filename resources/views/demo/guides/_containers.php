@@ -272,28 +272,6 @@ $guide_containers = [
         'is_anchor' => true,
         'desc' => 'All the Panel variants can be used for selection panels (See under <b>Panel variations</b>). The following 3 is though mainly used with the <code>panel_selector</code>.',
         'code' => '
-<!-- Panel-grey -->
-<div class="panel panel-grey panel_selector">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-            <a href="#juniorklub">
-                <i class="fa fa-home" aria-hidden="true"></i>
-                Panel-grey (Department)
-                <span class="count pull-right">8 / 24</span>
-            </a>
-        </h4>
-        <a href="#" class="toggle_collapse" aria-haspopup="true" aria-expanded="false">
-            <span class="sr-only">Open this collapsible panel</span>
-            <i class="fa fa-chevron-up" aria-hidden="true"></i>
-        </a>
-    </div>
-    <div class="panel-collapse collapse" aria-label="Some Info Panel">
-        <div class="panel-body">
-        ...        
-        </div>
-    </div>
-</div>
-
 <!-- Panel-default -->
 <div class="panel panel-default panel_selector">
     <div class="panel-heading">
@@ -316,13 +294,13 @@ $guide_containers = [
     </div>
 </div>
 
-{code}<!-- Panel-inverse -->
-<div class="panel panel-primary panel_selector">
+<!-- Panel-grey -->
+<div class="panel panel-grey panel_selector">
     <div class="panel-heading">
         <h4 class="panel-title">
             <a href="#juniorklub">
                 <i class="fa fa-home" aria-hidden="true"></i>
-                Panel-inverse (Whole institution)
+                Panel-grey (Department)
                 <span class="count pull-right">8 / 24</span>
             </a>
         </h4>
@@ -337,7 +315,51 @@ $guide_containers = [
         </div>
     </div>
 </div>
-{/code}'],
+
+{code}<!-- Panel-primary -->
+<div class="panel panel-primary panel_selector">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a href="#juniorklub">
+                <i class="fa fa-home" aria-hidden="true"></i>
+                Panel-primary (Whole institution)
+                <span class="count pull-right">8 / 24</span>
+            </a>
+        </h4>
+        <a href="#" class="toggle_collapse" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Open this collapsible panel</span>
+            <i class="fa fa-chevron-up" aria-hidden="true"></i>
+        </a>
+    </div>
+    <div class="panel-collapse collapse" aria-label="Some Info Panel">
+        <div class="panel-body">
+        ...        
+        </div>
+    </div>
+</div>
+{/code}
+
+<!-- Panel-secondary --
+<div class="panel panel-secondary panel_selector">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a href="#juniorklub">
+                <i class="fa fa-home" aria-hidden="true"></i>
+                Panel-secondary
+            </a>
+        </h4>
+        <a href="#" class="toggle_collapse" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Open this collapsible panel</span>
+            <i class="fa fa-chevron-up" aria-hidden="true"></i>
+        </a>
+    </div>
+    <div class="panel-collapse collapse" aria-label="Some Info Panel">
+        <div class="panel-body">
+        ...        
+        </div>
+    </div>
+</div>
+-->'],
     [
         'title' => 'Panel - Messages',
         'is_anchor' => true,

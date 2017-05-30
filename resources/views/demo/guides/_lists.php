@@ -79,31 +79,31 @@ $guide_lists = [
 <div class="list-group">{/code}
   <a href="#" class="list-group-item">
     <i class="fa fa-photo fa-sm" aria-hidden="true"></i>
-    Link with fa-sm icon
+    fa-sm icon
   </a>
   <a href="#" class="list-group-item">
     <i class="fa fa-photo" aria-hidden="true"></i>
-    Link with default icon
+    <b>default icon</b>
   </a>
   <a href="#" class="list-group-item">
     <i class="fa fa-photo fa-lg" aria-hidden="true"></i>
-    Link with fa-lg icon
+    fa-lg icon
   </a>{code}
   <a href="#" class="list-group-item">
     <i class="fa fa-photo fa-2x" aria-hidden="true"></i>
-    Link with fa-2x icon
+    fa-2x icon
   </a>{/code}
   <a href="#" class="list-group-item">
     <i class="fa fa-photo fa-3x" aria-hidden="true"></i>
-    Link with fa-3x icon
+    fa-3x icon
   </a>
   <a href="#" class="list-group-item">
     <i class="fa fa-photo fa-4x" aria-hidden="true"></i>
-    Link with fa-4x icon
+    fa-4x icon
   </a>
   <a href="#" class="list-group-item">
     <i class="fa fa-photo fa-5x" aria-hidden="true"></i>
-    Link with fa-5x icon
+    fa-5x icon
   </a>{code}
 </div>{/code}']
 
