@@ -19,7 +19,7 @@ $guide_buttons = [
 </div>'],
     [
         'title' => 'Button sizes',
-        'is_anchor' => false,
+        'is_anchor' => true,
         'desc' => '<p>Generally the standard button should be used, but if needed additional sizes are available through the classes <code>btn-lg</code>, <code>btn-sm</code> and <code>btn-sx</code>.</p>
                     ',
         'code' => '
@@ -195,5 +195,21 @@ $guide_buttons = [
     <li><a href="#">Something else here</a></li>
   </ul>
 </div>
+</div>'],
+    [
+        'title' => 'Button groups',
+        'is_anchor' => true,
+        'desc' => '<p>Buttons can be grouped together on a single line by wrapping them in a <code>.btn-group</code> container</p>
+                    <p>To ensure that assistive technologies understands the purpose of the grouped buttons, the correct <code>role</code> and an appropriate <code>aria-label</code> attributes needs to be provided.</p>',
+        'code' => '
+{code}<div class="btn-group" role="group" aria-label="...">
+  <button type="button" class="btn btn-default">btn-default 1</button>
+  <button type="button" class="btn btn-default">btn-default 2</button>
+  <button type="button" class="btn btn-default">btn-default 3</button>
+</div>{/code}
+<br /><br /><div class="btn-group" role="group" aria-label="...">
+  <button type="button" class="btn btn-primary">btn-primary 1</button>
+  <button type="button" class="btn btn-primary">btn-primary 2</button>
+  <button type="button" class="btn btn-primary">btn-primary 3</button>
 </div>']
 ];

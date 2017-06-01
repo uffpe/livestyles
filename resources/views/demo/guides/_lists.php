@@ -61,6 +61,31 @@ $guide_lists = [
   </a>
 </div>{/code}'],
     [
+        'title' => 'List of files (List group)',
+        'is_anchor' => true,
+        'desc' => '<p>For a list of downloadable files this <code>list-group list-files</code> variant should be used.</p>
+                    <p>
+                    <ul>
+                        <li>Include a <code>title</code> or <code>aria-label</code> attribute on the <b>list-group-item</b> stating the purpose of the link or onclick function.</li>
+                        <li>Basically the <b>fa icon</b> should be the <code>fa-download</code>, but if relevant it can be changed to support the file-type (i.e. an image could have the "fa-picture-o" icon).</li>
+                        <li>The file name is wrapped in a <code>file-title</code> span.</li>
+                        <li>An optional <code>file-info</code> span can be included with relevant extra info about the file (i.e file-size).</li>
+                    </ul>
+                    </p>',
+        'code' => '
+{code}<div class="list-group list-files">
+    <a href="#" class="list-group-item" data-id="" title="Download this file" onclick="...">
+        <i class="fa fa-download" aria-hidden="true"></i>
+        <span class="file-title">File-title-A.pdf</span>
+        <span class="file-info">(0.750 mb)</span>
+    </a>
+    <a href="#" class="list-group-item" data-id="" title="Download this file" onclick="...">
+        <i class="fa fa-download" aria-hidden="true"></i>
+        <span class="file-title">The title on file B.pdf</span>
+        <span class="file-info">(3.422 mb)</span>
+    </a>
+</div>{/code}'],
+    [
         'title' => 'List-group icon sizes',
         'is_anchor' => true,
         'desc' => '<p>Allthough the standard icon size should be used in list groups, additional icon sizes are available through <code>fa-</code> size classes.</p>                    
