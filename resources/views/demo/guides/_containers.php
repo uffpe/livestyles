@@ -234,7 +234,7 @@ $guide_containers = [
 
         'title' => 'Selection panels',
         'is_anchor' => true,
-        'desc' => '<p>This is an example of the type of selection panels used in some modal dialogs such as Department selection.</p>
+        'desc' => '<p>This is a specific type of panel mainly used in modal dialogs such as Department selection. The panel has a link on the <code>panel-title</code> and a toggle collapse button to open the <code>panel-collapse</code> with ekstra information.</p>
                             <p>
                             <ul>
                                 <li>It is designed to have a link on the icon/title part and a toggle button for the collapsible panel-body. </li>
@@ -272,28 +272,6 @@ $guide_containers = [
         'is_anchor' => true,
         'desc' => 'All the Panel variants can be used for selection panels (See under <b>Panel variations</b>). The following 3 is though mainly used with the <code>panel_selector</code>.',
         'code' => '
-<!-- Panel-grey -->
-<div class="panel panel-grey panel_selector">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-            <a href="#juniorklub">
-                <i class="fa fa-home" aria-hidden="true"></i>
-                Panel-grey (Department)
-                <span class="count pull-right">8 / 24</span>
-            </a>
-        </h4>
-        <a href="#" class="toggle_collapse" aria-haspopup="true" aria-expanded="false">
-            <span class="sr-only">Open this collapsible panel</span>
-            <i class="fa fa-chevron-up" aria-hidden="true"></i>
-        </a>
-    </div>
-    <div class="panel-collapse collapse" aria-label="Some Info Panel">
-        <div class="panel-body">
-        ...        
-        </div>
-    </div>
-</div>
-
 <!-- Panel-default -->
 <div class="panel panel-default panel_selector">
     <div class="panel-heading">
@@ -316,13 +294,13 @@ $guide_containers = [
     </div>
 </div>
 
-{code}<!-- Panel-inverse -->
-<div class="panel panel-primary panel_selector">
+<!-- Panel-grey -->
+<div class="panel panel-grey panel_selector">
     <div class="panel-heading">
         <h4 class="panel-title">
             <a href="#juniorklub">
                 <i class="fa fa-home" aria-hidden="true"></i>
-                Panel-inverse (Whole institution)
+                Panel-grey (Department)
                 <span class="count pull-right">8 / 24</span>
             </a>
         </h4>
@@ -337,11 +315,63 @@ $guide_containers = [
         </div>
     </div>
 </div>
-{/code}'],
+
+{code}<!-- Panel-primary -->
+<div class="panel panel-primary panel_selector">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a href="#juniorklub">
+                <i class="fa fa-home" aria-hidden="true"></i>
+                Panel-primary (Whole institution)
+                <span class="count pull-right">8 / 24</span>
+            </a>
+        </h4>
+        <a href="#" class="toggle_collapse" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Open this collapsible panel</span>
+            <i class="fa fa-chevron-up" aria-hidden="true"></i>
+        </a>
+    </div>
+    <div class="panel-collapse collapse" aria-label="Some Info Panel">
+        <div class="panel-body">
+        ...        
+        </div>
+    </div>
+</div>
+{/code}
+
+<!-- Panel-secondary --
+<div class="panel panel-secondary panel_selector">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a href="#juniorklub">
+                <i class="fa fa-home" aria-hidden="true"></i>
+                Panel-secondary
+            </a>
+        </h4>
+        <a href="#" class="toggle_collapse" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Open this collapsible panel</span>
+            <i class="fa fa-chevron-up" aria-hidden="true"></i>
+        </a>
+    </div>
+    <div class="panel-collapse collapse" aria-label="Some Info Panel">
+        <div class="panel-body">
+        ...        
+        </div>
+    </div>
+</div>
+-->'],
     [
         'title' => 'Panel - Messages',
         'is_anchor' => true,
-        'desc' => '',
+        'desc' => '<p>This specific type of panels with is designed to be used on messages. It is intended to be used for conversational types of messages with either a <code>.panel-message-right</code> or a <code>.panel-message-left</code> variation.</p>
+                    <p>
+                    <ul>
+                        <li>Use the base class <code>panel-default</code> together with the left/right variation class</li>
+                        <li>To ensure that assistive technologies understands the purpose of the panels an <code>aria-label</code> with a short label for the specific message panel should be included.</li>
+                        <li><b>Date and time</b> can be included in the <code>panel-title</code> using a span with the class <code>panel-date</code>.</li>
+                        <li>A panel-footer with<b>list of attached files</b> can be included if files are present. See markup details for list-files under Guide menu item "Lists".</li>
+                    </ul>
+                    </p>',
         'code' => '
 {code}<!-- Message panel -->
 <div class="panel panel-default panel-message-right" aria-label="Message from Peter Parker">
@@ -353,19 +383,19 @@ $guide_containers = [
         ...
     </div>
     
-    <div class="panel-footer">
-        <div class="file-list">
-            <a href="#" data-id="" title="Download this file">
+    <div class="panel-footer">        
+        <div class="list-group list-files">
+            <a href="#" class="list-group-item" data-id="" title="Download this file" onclick="...">
                 <i class="fa fa-download" aria-hidden="true"></i>
                 <span class="file-title">File-title-A.pdf</span>
                 <span class="file-info">(0.750 mb)</span>
             </a>
-            <a href="#" data-id="" title="Download this file">
+            <a href="#" class="list-group-item" data-id="" title="Download this file" onclick="...">
                 <i class="fa fa-download" aria-hidden="true"></i>
                 <span class="file-title">The title on file B.pdf</span>
                 <span class="file-info">(3.422 mb)</span>
             </a>
-        </div>
+        </div>        
     </div>
 </div>{/code}
 <!-- Message panel -->
