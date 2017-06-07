@@ -159,7 +159,7 @@ $guide_images = [
     galleryViewer("galleryId", "Download", "Close");
 </script>{/code}'],
     [
-    'title' => 'Icon set - FontAwesome',
+    'title' => 'Icon set',
     'is_anchor' => true,
     'desc' => '<p>The icon set used in this website Font Awesome. These are included in inline elements such as the <b>i</b> or <b>span</b>, and uses the css class <code>fa fa-iconname</code>, where iconname is the name of the icon. 
                     To see all posibilities go to the official Font Awesome website <a href="http://fontawesome.io/icons/" target="_blank" title="Go to Font Awesome website">fontawesome.io</a>.</p>
@@ -172,10 +172,28 @@ $guide_images = [
   </button>
 {/code}'],
     [
+        'title' => 'Icon variations',
+        'is_anchor' => true,
+        'desc' => '<p>Possible modifier classes to change the color of the icons. Should not be used with icons in buttons.</p>
+                    <p>
+                    <ul>
+                        <li><code>icon-success</code>
+                         - <code>icon-info</code>
+                         - <code>icon-warning</code>
+                         - <code>icon-danger</code>
+                         </li>
+                    </ul>
+                    </p>',
+        'code' => '<p><i class="fa fa-check icon-success" aria-hidden="true"></i> icon-success</p>
+<p><i class="fa fa-info-circle icon-info" aria-hidden="true"></i> icon-info</p>
+<p>{code}<i class="fa fa-exclamation-circle icon-warning" aria-hidden="true"></i> icon-warning{/code}</p>
+<p><i class="fa fa-ban icon-danger" aria-hidden="true"></i> icon-danger</p>'],
+    [
         'title' => 'Icon sizes',
         'is_anchor' => false,
         'desc' => '<p>Generally the default icon with no size class should be used, but if needed additional sizes are available through a <code>fa-</code> size class.</p>
                     <p>The example shows the icon sizes alone and within a button tag.</p>
+                    <p>
                     <ul>
                         <li><code>fa-sm</code>
                          - <code>fa-lg</code>

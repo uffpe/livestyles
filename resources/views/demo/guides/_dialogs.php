@@ -7,14 +7,19 @@ $guide_dialogs = [
         'desc' =>   '<p>The Modal plugin is a dialog box/popup window that is displayed on top of the current page.<br/>
                     - <a href="https://www.w3schools.com/bootstrap/bootstrap_modal.asp">Read more about bootstrap modal here</a></p>
                     <p>The <code>data-target="#myModal"</code> on the trigger (button or link) has to be unique and points to the ID of the dialog window.</p>
-                    <h5>WCAG:</h5>
+                    <p><b>WCAG Trigger:</b>
                     <ul>
                     <li>The <code>aria-haspopup="true"</code> should be applied to the trigger to indicate that it refers to a popup dialog.</li>
-                    <li>Use the <code>aria-label</code> on the dialog to provide an accessible label that indicates what the modal dialog is about (ie. "Select department").</li>
+                    </ul>
+                    </p>
+                    <p><b>WCAG Dialog:</b>
+                    <ul>
+                    <li>Use the <code>aria-labelledby</code> on the dialog. The value of this refers to the ID of the <code>h4.modal-title</code> element that then provides the accessible label indicating what the modal dialog is about (ie. "Select department").</li>
                     <li>The dialog container must have a <code>role=dialog</code> to specify this element contains the dialog content.</li>
                     <li>By giving the dialog a <code>tabindex=-1</code> value removes it from the default navigation flow (i.e., a user cannot tab to it).</li>
-                    <li>When opened it is vital to programmatically move the <code>focus</code> to the displayed dialog and once it is closed back to the trigger. If it only contains a list of links the focus should be on the first link in the dialog. The <code>aria-hidden</code> attribute should furthermore be set to true once the dialog is displayed, to false when it is closed again</li>
                     </ul>
+                    </p>
+                    <p>When opened it is vital to programmatically move the <code>focus</code> to the displayed dialog and once it is closed back to the trigger. If it only contains a list of links the focus should be on the first link in the dialog. The <code>aria-hidden</code> attribute should furthermore be set to true once the dialog is displayed, to false when it is closed again</p>
                     ',
         'code' => '
 {code}<!-- Modal trigger -->
@@ -23,7 +28,7 @@ $guide_dialogs = [
 </button>
 
 <!-- Modal dialog -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="dialogLabel" aria-hidden="true">
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-label="Modal title" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
