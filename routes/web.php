@@ -53,6 +53,10 @@ Route::group(['prefix' => 'demo', 'middleware' => 'auth'], function()
         return view('demo/childrenGrid', ['has_submenu' => true]);
     })->name('children-grid');
 
+    Route::get('checkin', function() {
+        return view('demo/checkIn', ['has_submenu' => true]);
+    })->name('checkin');
+
     Route::get('gallery', function() {
         return view('demo/gallery', ['has_submenu' => false]);
     })->name('gallery');

@@ -3,10 +3,8 @@
     <div id="content-div" class="style-guide">
         <div class="content-div__wrapper">
 
-            <div class="container-fluid">
             @if(!empty($main_menu_items))
                 @foreach($main_menu_items as $menu_items)
-
 
                     <div class="row guide-parts no-gutter" id="<?= urlencode($menu_items['url']) ?>" style="display: none;">
                         <div class="page-header">
@@ -58,15 +56,12 @@
                 </div>
 
                 @endforeach
-
-
             @else
 
                 Error: No style elements found!
 
             @endif
 
-            </div><!-- /.container-fluid -->
-       </div>
+       </div><!-- /.content-div__wrapper -->
     </div>
 @endsection

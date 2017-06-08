@@ -30,6 +30,44 @@ $guide_lists = [
   </a>
 </div>{/code}'],
     [
+        'title' => 'List-group condensed',
+        'is_anchor' => true,
+        'desc' => '<p>Applying a <code>.h4</code> class to the links in the list-group will make a list of header-like elements.</p>
+                    <p>This list-group variation is used on views that contains an overview of link to other views or subcategories (i.e. the Message overview).</p>
+                    <p>(<b>Icons</b> and <b>Badges</b> can be applied is needed.)</p>',
+        'code' => '
+<div class="col-xs-12 col-sm-6 col-md-6">
+{code}<!-- Overview list group-->
+<div class="list-group list-condensed">
+    <a class="list-group-item">
+        <i class="fa fa-times icon-danger" aria-hidden="true"></i>
+        0B
+        <b class="txt">Bruce B</b>
+        <div class="pull-right" style="margin: -3px;">
+            <button class="btn btn-default btn-sm" type="button" title="Meld syg">
+                <i class="fa fa-medkit" aria-hidden="true"></i>
+            </button>
+            <button class="btn btn-default btn-sm" type="button" title="Opret en aftale">
+                <i class="fa fa-calendar" aria-hidden="true"></i>
+            </button>
+        </div>    
+    </a>
+    <a class="list-group-item">
+        <i class="fa fa-times icon-danger" aria-hidden="true"></i>
+        0B
+        <b class="txt">Bruce B</b>
+        <div class="pull-right" style="margin: -3px;">
+            <button class="btn btn-default btn-sm" type="button" title="Meld syg">
+                <i class="fa fa-medkit" aria-hidden="true"></i>
+            </button>
+            <button class="btn btn-default btn-sm" type="button" title="Opret en aftale">
+                <i class="fa fa-calendar" aria-hidden="true"></i>
+            </button>
+        </div>    
+    </a>
+</div>{/code}
+</div>'],
+    [
         'title' => 'List-group overview style',
         'is_anchor' => true,
         'desc' => '<p>Applying a <code>.h4</code> class to the links in the list-group will make a list of header-like elements.</p>

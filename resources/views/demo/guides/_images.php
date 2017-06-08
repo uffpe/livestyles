@@ -184,9 +184,9 @@ $guide_images = [
                          </li>
                     </ul>
                     </p>',
-        'code' => '<p><i class="fa fa-check icon-success" aria-hidden="true"></i> icon-success</p>
+        'code' => '<p>{code}<i class="fa fa-check icon-success" aria-hidden="true"></i> icon-success{/code}</p>
 <p><i class="fa fa-info-circle icon-info" aria-hidden="true"></i> icon-info</p>
-<p>{code}<i class="fa fa-exclamation-circle icon-warning" aria-hidden="true"></i> icon-warning{/code}</p>
+<p><i class="fa fa-exclamation-circle icon-warning" aria-hidden="true"></i> icon-warning</p>
 <p><i class="fa fa-ban icon-danger" aria-hidden="true"></i> icon-danger</p>'],
     [
         'title' => 'Icon sizes',
