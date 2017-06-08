@@ -33,7 +33,7 @@
                         <li><a href="{{ route('basic-grid') }}">Basic grid</a></li>
                         <li><a href="{{ route('login-demo') }}">Login demo</a></li>
                         <li><a href="{{ route('personal-data') }}">Stamkort</a></li>
-                        <li><a href="{{ route('child-grid') }}">Children grid</a></li>
+                        <li><a href="{{ route('find-boern') }}">Find børn</a></li>
                         <li><a href="{{ route('messages') }}">Kommunikation</a></li>
                         <li><a href="{{ route('readmessages') }}">Læs/svar beskeder</a></li>
                         <li><a href="{{ route('gallery') }}">Gallerier</a></li>

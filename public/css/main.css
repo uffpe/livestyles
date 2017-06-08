@@ -8075,3 +8075,6 @@ ul.check_list {
     margin-bottom: 10px; }
     ul.check_list li i {
       margin-bottom: -4px; }
+
+.children-grid .list-group-item {
+  padding: 0; }

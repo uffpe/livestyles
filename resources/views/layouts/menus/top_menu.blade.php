@@ -23,18 +23,18 @@
                     <span class="hidden-xs">Afdeling B</span>
                 </a>
             </li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
-                    Left menu
-                    <span class="caret"></span>
-                </a>
+            {{--<li class="dropdown">--}}
+                {{--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">--}}
+                    {{--Left menu--}}
+                    {{--<span class="caret"></span>--}}
+                {{--</a>--}}
 
-                <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Submenu 1</a></li>
-                    <li><a href="#">Submenu 2</a></li>
-                    <li><a href="#">Submenu 3</a></li>
-                </ul>
-            </li>
+                {{--<ul class="dropdown-menu" role="menu">--}}
+                    {{--<li><a href="#">Submenu 1</a></li>--}}
+                    {{--<li><a href="#">Submenu 2</a></li>--}}
+                    {{--<li><a href="#">Submenu 3</a></li>--}}
+                {{--</ul>--}}
+            {{--</li>--}}
         </ul>
 
 
@@ -73,7 +73,8 @@
                         <li><a href="{{ route('basic-grid') }}">Basic grid</a></li>
                         <li><a href="{{ route('login-demo') }}">Login demo</a></li>
                         <li><a href="{{ route('personal-data') }}">Stamkort</a></li>
-                        <li><a href="{{ route('child-grid') }}">Children grid</a></li>
+                        <li><a href="{{ route('find-boern') }}">Find børn</a></li>
+                        <li><a href="{{ route('children-grid') }}">Children Grid</a></li>
                         <li><a href="{{ route('parents-desktop') }}">Opslagstavle - for&aelig;ldre</a></li>
                         <li><a href="{{ route('messages') }}">Kommunikation</a></li>
                         <li><a href="{{ route('readmessages') }}">Læs/svar beskeder</a></li>

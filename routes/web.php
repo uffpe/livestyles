@@ -33,9 +33,9 @@ Route::group(['prefix' => 'demo', 'middleware' => 'auth'], function()
         return view('demo/personal_data', ['has_submenu' => true]);
     })->name('personal-data');
 
-    Route::get('child-grid', function() {
-        return view('demo/child_grid', ['has_submenu' => false]);
-    })->name('child-grid');
+    Route::get('find-boern', function() {
+        return view('demo/findBoern', ['has_submenu' => false]);
+    })->name('find-boern');
 
     Route::get('messages', function() {
         return view('demo/messages', ['has_submenu' => false]);
@@ -48,6 +48,10 @@ Route::group(['prefix' => 'demo', 'middleware' => 'auth'], function()
     Route::get('tabulex-basic-grid', function() {
         return view('demo/tabulex_basic_grid', ['has_submenu' => true]);
     })->name('basic-grid');
+
+    Route::get('children-grid', function() {
+        return view('demo/childrenGrid', ['has_submenu' => true]);
+    })->name('children-grid');
 
     Route::get('gallery', function() {
         return view('demo/gallery', ['has_submenu' => false]);
