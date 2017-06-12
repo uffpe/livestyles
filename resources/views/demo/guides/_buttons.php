@@ -200,16 +200,31 @@ $guide_buttons = [
         'title' => 'Button groups',
         'is_anchor' => true,
         'desc' => '<p>Buttons can be grouped together on a single line by wrapping them in a <code>.btn-group</code> container</p>
-                    <p>To ensure that assistive technologies understands the purpose of the grouped buttons, the correct <code>role</code> and an appropriate <code>aria-label</code> attributes needs to be provided.</p>',
+                    <p>To ensure that assistive technologies understands the purpose of the grouped buttons, the correct <code>role</code> and an appropriate <code>aria-label</code> attributes needs to be provided.</p>
+                    <p>
+                    <ul>
+                        <li><b>Role:</b> The standard role on the button container is <code>role=group</code>. In certain cases where the buttons should be combined in sets of buttons, the <code>role=toolbar</code> can be used.</i>
+                        <li><b>Aria-label: </b> Groups and toolbars should be given an explicit label, as most assistive technologies will otherwise not announce them. This should be a short text describing the purpose of the button set.</li>
+                    </ul>
+                    </p>',
         'code' => '
-{code}<div class="btn-group" role="group" aria-label="...">
-  <button type="button" class="btn btn-default">btn-default 1</button>
-  <button type="button" class="btn btn-default">btn-default 2</button>
-  <button type="button" class="btn btn-default">btn-default 3</button>
+<p>Button group: <b>role=group</b></p>
+{code}<div class="btn-group" role="group" aria-label="Administrate this element">
+  <button type="button" class="btn btn-primary">Edit</button>
+  <button type="button" class="btn btn-primary">Save</button>
+  <button type="button" class="btn btn-primary">Delete</button>
 </div>{/code}
-<br /><br /><div class="btn-group" role="group" aria-label="...">
-  <button type="button" class="btn btn-primary">btn-primary 1</button>
-  <button type="button" class="btn btn-primary">btn-primary 2</button>
-  <button type="button" class="btn btn-primary">btn-primary 3</button>
+<br /><br />
+<p>Button group: <b>role=toolbar</b></p>
+<div class="btn-group" role="toolbar" aria-label="First group">
+  <button type="button" class="btn btn-default">1</button>
+  <button type="button" class="btn btn-default">2</button>
+  <button type="button" class="btn btn-default">3</button>
+  <button type="button" class="btn btn-default">4</button>
+</div>
+<div class="btn-group" role="toolbar" aria-label="Second group">
+  <button type="button" class="btn btn-default">5</button>
+  <button type="button" class="btn btn-default">6</button>
+  <button type="button" class="btn btn-default">7</button>
 </div>']
 ];
