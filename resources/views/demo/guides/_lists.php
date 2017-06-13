@@ -37,7 +37,7 @@ $guide_lists = [
     [
         'title' => 'Condensed list-group',
         'is_anchor' => true,
-        'desc' => '<p>With a lot of content in the list items a <code>list-condensed</code> class can be added to the list-group. This will make the list items more compact by reducing the left and right padding.</p>',
+        'desc' => '<p>Add the class <code>list-condensed</code> to the list-group to make the list items more compact. This will reduce the left and right padding and is usefull if the content in the list item is very cramped.</p>',
         'code' => '
 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
 {code}<!-- Overview list group-->

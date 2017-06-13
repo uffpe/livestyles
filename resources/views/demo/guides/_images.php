@@ -41,78 +41,139 @@ $guide_images = [
         'is_anchor' => true,
         'desc' => '<p>Image galleries use the custom panel <code>.panel-gallery-element</code> on a <code>.panel-primary</code> panel. The panel-footer is optional but is used for image title and other relevant description.</p>
                     <p>
+                    <b>Gallery header:</b>
+                    <ul>
+                        <li>Gallery title can be included with the class <code>gallery-title</code>.</li>
+                        <li>The <code>gallery-subtitle</code> can be used for added info.</li>
+                        <li>Title and subtitle is styled to have no wrapping, meaning the text does not wrap but gets dots added (..) in case it breaks the with of the container.</li>                    
+                    </ul>  
                     <b>Gallery body:</b>
                     <ul>
                         <li>Wrap the image inside an element with the class <code>.gallery-image</code>. This can either be a <b>link</b> or a <b>div</b> (In case no link is needed).</li>
                         <li>Remember to add an <code>alt</code> attribute on the image with the title or other descriptive text.</li>
                         <li>Add the class <code>img-responsive</code> on the image.</li>                    
                     </ul>         
-                    <b>Gallery footer:</b>
+                    <b>Gallery admin buttons (Optional):</b>
                     <ul>
-                        <li>Gallery title can be included with the class <code>gallery-title</code>.</li>
-                        <li>The <code>gallery-subtitle</code> can be used for added info.</li>
-                        <li>Both title and subtitle is styled to be in one line, meaning the text does not wrap but gets dots added (..) in case it breaks the with of the container.</li>                    
+                        <li>This can be inserted as a <code>btn-group</code> element with the <code>btn-block</code> applied to make it full width.</li>
+                        <li>The role attribute could be set to <code>toolbar</code> if multiple buttons are present, as the </li>
+                        <li>If multiple button it is advised to only use <b>icons</b> due to the limited space. Include a <code>title=""</code> attribute for labeling the buttons.</li>                  
                     </ul>                
                     </p>',
         'code' => '
 {code}<!-- Image gallery -->
-<div class="panel panel-primary panel-gallery-element">
+<div class="panel panel-grey panel-gallery-element">
+    <div class="panel-heading">
+        <div class="gallery-title">Gallery title</div>
+        <div class="gallery-subtitle">12 images</div>
+    </div>
     <div class="panel-body">
         <a href="#" title="Gallery title" class="gallery-image" >
             <img src="http://placekitten.com/160/120" class="img-responsive" alt="Gallery title">
         </a>
     </div>
-    <div class="panel-footer">
-        <div class="gallery-title">Gallery title</div>
-        <div class="gallery-subtitle">12 images</div>
+    <div class="btn-group btn-block" role="toolbar" aria-label="Toolbar for gallery">
+        <button class="btn btn-primary" type="button" title="Show gallery">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </button>
+        <button class="btn btn-primary" type="button" title="Edit gallery">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+        </button>
+        <button class="btn btn-primary" type="button" title="Delete gallery">
+            <i class="fa fa-trash" aria-hidden="true"></i>
+        </button>
     </div>
 </div>{/code}
 
-<div class="panel panel-primary panel-gallery-element">
+<div class="panel panel-grey panel-gallery-element">
+    <div class="panel-heading">
+        <div class="gallery-title">Gallery title</div>
+        <div class="gallery-subtitle">12 images</div>
+    </div>
     <div class="panel-body">
         <a href="#" title="Gallery title" class="gallery-image" >
             <img src="http://placekitten.com/90/130" class="img-responsive" alt="Gallery title">
         </a>
     </div>
-    <div class="panel-footer">
-        <div class="gallery-title">Gallery title</div>
-        <div class="gallery-subtitle">12 images</div>
+    <div class="btn-group btn-block" role="toolbar" aria-label="Toolbar for gallery">
+        <button class="btn btn-primary" type="button" title="Show gallery">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </button>
+        <button class="btn btn-primary" type="button" title="Edit gallery">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+        </button>
+        <button class="btn btn-primary" type="button" title="Delete gallery">
+            <i class="fa fa-trash" aria-hidden="true"></i>
+        </button>
     </div>
 </div>
 
-<div class="panel panel-primary panel-gallery-element">
+<div class="panel panel-grey panel-gallery-element">
+    <div class="panel-heading">
+        <div class="gallery-title">Gallery title</div>
+        <div class="gallery-subtitle">12 images</div>
+    </div>
     <div class="panel-body">
         <a href="#" title="Gallery title" class="gallery-image" >
             <img src="http://placekitten.com/160/120" class="img-responsive" alt="Gallery title">
         </a>
     </div>
-    <div class="panel-footer">
-        <div class="gallery-title">Gallery title</div>
-        <div class="gallery-subtitle">12 images</div>
+    <div class="btn-group btn-block" role="toolbar" aria-label="Toolbar for gallery">
+        <button class="btn btn-primary" type="button" title="Show gallery">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </button>
+        <button class="btn btn-primary" type="button" title="Edit gallery">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+        </button>
+        <button class="btn btn-primary" type="button" title="Delete gallery">
+            <i class="fa fa-trash" aria-hidden="true"></i>
+        </button>
     </div>
 </div>
 
-<div class="panel panel-primary panel-gallery-element">
+<div class="panel panel-grey panel-gallery-element">
+    <div class="panel-heading">
+        <div class="gallery-title">Gallery title</div>
+        <div class="gallery-subtitle">12 images</div>
+    </div>
     <div class="panel-body">
         <a href="#" title="Gallery title" class="gallery-image" >
             <img src="http://placekitten.com/90/130" class="img-responsive" alt="Gallery title">
         </a>
     </div>
-    <div class="panel-footer">
-        <div class="gallery-title">Gallery title</div>
-        <div class="gallery-subtitle">12 images</div>
+    <div class="btn-group btn-block" role="toolbar" aria-label="Toolbar for gallery">
+        <button class="btn btn-primary" type="button" title="Show gallery">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </button>
+        <button class="btn btn-primary" type="button" title="Edit gallery">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+        </button>
+        <button class="btn btn-primary" type="button" title="Delete gallery">
+            <i class="fa fa-trash" aria-hidden="true"></i>
+        </button>
     </div>
 </div>
 
-<div class="panel panel-primary panel-gallery-element">
+<div class="panel panel-grey panel-gallery-element">
+    <div class="panel-heading">
+        <div class="gallery-title">Gallery title</div>
+        <div class="gallery-subtitle">12 images</div>
+    </div>
     <div class="panel-body">
         <a href="#" title="Gallery title" class="gallery-image" >
             <img src="http://placekitten.com/160/120" class="img-responsive" alt="Gallery title">
         </a>
     </div>
-    <div class="panel-footer">
-        <div class="gallery-title">Gallery title</div>
-        <div class="gallery-subtitle">12 images</div>
+    <div class="btn-group btn-block" role="toolbar" aria-label="Toolbar for gallery">
+        <button class="btn btn-primary" type="button" title="Show gallery">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </button>
+        <button class="btn btn-primary" type="button" title="Edit gallery">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+        </button>
+        <button class="btn btn-primary" type="button" title="Delete gallery">
+            <i class="fa fa-trash" aria-hidden="true"></i>
+        </button>
     </div>
 </div>'],
     [
