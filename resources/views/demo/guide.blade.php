@@ -33,12 +33,14 @@
                                     </div>
                                     <div class="panel-body">
                                         <!--<h5>Example:</h5>-->
-                                        <div><?= str_replace(["{code}","{/code}"],"",$snippet['code']) ?></div>
+                                        <div class="row guide-row">
+                                            <div class="col-sm-12"><?= str_replace(["{code}","{/code}"],"",$snippet['code']) ?></div>
+                                        </div>
                                         <?php
                                         preg_match_all("'{code}(.*?){/code}'si", $snippet['code'], $match);
                                         ?>
                                         @if($match[1])
-                                        <div class="row no-gutter">
+                                        <div class="row guide-row">
                                             <div class="col-sm-12">
                                                 <pre><code class="html"><?php
                                                     foreach($match[1] as $val){

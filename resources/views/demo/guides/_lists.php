@@ -14,7 +14,7 @@ $guide_lists = [
   <a href="#" class="list-group-item">List link 3</a>
 </div>{/code}
 </div>'],[
-        'title' => 'List-group inline links',
+        'title' => 'List-group - inline buttons',
         'is_anchor' => true,
         'desc' => '<p>In case the list elements should not be links or the content inside should contain buttons or multiple links, the <b>list-group-items</b> must be of the type <code>div</code>.</p>
                     <p>In the example the </p>',

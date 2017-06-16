@@ -4,7 +4,13 @@ $guide_buttons = [
     [
         'title' => 'Basic buttons',
         'is_anchor' => true,
-        'desc' => '<p>The button classes can be used on <code>a</code>, <code>button</code>, or <code>input</code> elements.</p>',
+        'desc' => '<p>The button classes can be used on <code>a</code>, <code>button</code>, or <code>input</code> elements.</p>
+                    <p>
+                    <ul>
+                        <li><b>Buttons: </b>The type should be set to either <code>button</code>, <code>submit</code> or <code>reset</code>. If a button inside a form should not <b>submit</b> the form, it is important to specify type as <code>button</code>.</li>
+                        <li><b>Links: </b>If the <code>&lt;a&gt;</code> acts as a button, rather than navigation to another document or section, they should be given the attribute <code>role="button"</code>.</li>
+                    </ul>
+                    </p>',
         'code' => '
 <div class="side-by-side">
 {code}
@@ -18,8 +24,31 @@ $guide_buttons = [
 {/code}
 </div>'],
     [
-        'title' => 'Button sizes',
+        'title' => 'Button variations',
         'is_anchor' => true,
+        'desc' => '<p>There are 2 basic button variations used on the website. Both of these does furthermore have a specific styling if being set as disabled.
+                    <ul>
+                        <li>The <code>btn-primary</code> is used for the primary action of a function, dialog or interaction. For example Save, Send, Apply, Open, etc. There should preferably only be one primary action button per interaction.</li>
+                        <li>Secondary buttons uses <code>btn-default</code> ans is for all the intermittent actions that exist within an interaction-layout. The are less prominent and as many as needed can be used(ie. Cancel, Back, Close).</li>
+                    </ul>
+                    </p>',
+        'code' => '
+<div class="side-by-side">
+{code}
+  <button class="btn btn-default" type="button">Cancel (btn-default)</button>
+  
+  <button class="btn btn-primary" type="button">Save (btn-primary)</button>
+{/code}
+  <br />
+{code}
+  <button class="btn btn-default" disabled="disabled" type="button">Cancel disabled (btn-default)</button>
+  
+  <button class="btn btn-primary" disabled="disabled" type="button">Save disabled (btn-primary)</button>
+{/code}
+</div>'],
+    [
+        'title' => 'Button sizes',
+        'is_anchor' => false,
         'desc' => '<p>Generally the standard button should be used, but if needed additional sizes are available through the classes <code>btn-lg</code>, <code>btn-sm</code> and <code>btn-sx</code>.</p>
                     ',
         'code' => '
@@ -51,6 +80,30 @@ $guide_buttons = [
   <button class="btn btn-default btn-xs" type="button">
     <i class="fa fa-check" aria-hidden="true"></i> Extra small button
   </button>
+</div>'],
+    [
+        'title' => 'Button with icon',
+        'is_anchor' => true,
+        'desc' => '<p>An icon can be included on buttons and <code>a</code> links. This is used in many places on the website to support the funcionality of the button with an easily recognizable visual cue.</p>
+                    <p><ul>
+                        <li>Since the icon is only relevant for normal sighted people, make sure to add the <code>aria-hidden=true</code> on the icon to hide it from assistive technology (e.g. screen readers).</li>
+                        <li>In case the button only contains an icon or if the text is hidden on small screens, add a <code>aria-label</code> or a <code>sr-only</code> element to inform screen readers of the purpose of the button.</li>
+                    </ul></p>
+                    ',
+        'code' => '
+<div class="side-by-side">
+{code}<!-- Button with icon -->
+  <button class="btn btn-default">
+    <i class="fa fa-check" aria-hidden="true"></i> 
+      Button width icon
+  </button>
+  
+  <!-- Button with no text -->
+  <button class="btn btn-default">
+    <i class="fa fa-save" aria-hidden="true"></i> 
+    <span class="sr-only">Save formular</span>
+  </button>
+{/code}
 </div>'],
     [
         'title' => 'Full width Button',
@@ -104,53 +157,6 @@ $guide_buttons = [
         <p>(btn-block height-big valign)</p>
     </a>
 </div>
-{/code}
-</div>'],
-    [
-        'title' => 'Button with icon',
-        'is_anchor' => true,
-        'desc' => '<p>An icon can be included on buttons and <code>a</code> links. This is used in many places on the website to support the funcionality of the button with an easily recognizable visual cue.</p>
-                    <p><ul>
-                        <li>Since the icon is only relevant for normal sighted people, make sure to add the <code>aria-hidden=true</code> on the icon to hide it from assistive technology (e.g. screen readers).</li>
-                        <li>In case the button only contains an icon or if the text is hidden on small screens, add a <code>aria-label</code> or a <code>sr-only</code> element to inform screen readers of the purpose of the button.</li>
-                    </ul></p>
-                    ',
-        'code' => '
-<div class="side-by-side">
-{code}<!-- Button with icon -->
-  <button class="btn btn-default">
-    <i class="fa fa-check" aria-hidden="true"></i> 
-      Button width icon
-  </button>
-  
-  <!-- Button with no text -->
-  <button class="btn btn-default">
-    <i class="fa fa-save" aria-hidden="true"></i> 
-    <span class="sr-only">Save formular</span>
-  </button>
-{/code}
-</div>'],
-    [
-        'title' => 'Button variations',
-        'is_anchor' => true,
-        'desc' => '<p>There are 2 basic button variations used on the website. Both of these does furthermore have a specific styling if being set as disabled.
-                    <ul>
-                        <li>The <code>btn-primary</code> is used for the primary action of a function, dialog or interaction. For example Save, Send, Apply, Open, etc. There should preferably only be one primary action button per interaction.</li>
-                        <li>Secondary buttons uses <code>btn-default</code> ans is for all the intermittent actions that exist within an interaction-layout. The are less prominent and as many as needed can be used(ie. Cancel, Back, Close).</li>
-                    </ul>
-                    </p>',
-        'code' => '
-<div class="side-by-side">
-{code}
-  <button class="btn btn-default" type="button">Cancel (btn-default)</button>
-  
-  <button class="btn btn-primary" type="button">Save (btn-primary)</button>
-{/code}
-  <br />
-{code}
-  <button class="btn btn-default" disabled="disabled" type="button">Cancel disabled (btn-default)</button>
-  
-  <button class="btn btn-primary" disabled="disabled" type="button">Save disabled (btn-primary)</button>
 {/code}
 </div>'],
     [
@@ -226,5 +232,39 @@ $guide_buttons = [
   <button type="button" class="btn btn-default">5</button>
   <button type="button" class="btn btn-default">6</button>
   <button type="button" class="btn btn-default">7</button>
-</div>']
+</div>'],
+    [
+        'title' => 'Button group vertical',
+        'is_anchor' => true,
+        'desc' => '<p>Stacking the btn-group vertically is possible by using the class <code>.btn-group-vertical</code>.</p>',
+        'code' => '
+{code}<div class="btn-group-vertical" role="group" aria-label="Administrate this element">
+  <button type="button" class="btn btn-primary">Edit</button>
+  <button type="button" class="btn btn-primary">Save</button>
+  <button type="button" class="btn btn-primary">Delete</button>
+</div>{/code}'],
+    [
+        'title' => 'Full width Button group',
+        'is_anchor' => true,
+        'desc' => '<p>To have a button group that stretches the full with, add the class <code>btn-group-justified</code> to the btn-group container</p>
+                    <p>NB: The buttons needs to be an <code>&#60;a&#62;</code> tag.</p>
+                    <p>In the example the btn-group is inserted in a panel replacing the normal <b>anel-footer</b></p>
+                    ',
+        'code' => '
+<div class="row"><div class="col-sm-8 col-md-6">
+{code}<div class="panel panel-grey">
+    <div class="panel-heading">
+         <h4 class="panel-title">Panel with full-width toolbar</h4>
+    </div>
+    <div class="panel-body"><p>...</p></div>
+    
+    <div class="btn-group btn-group-justified" role="toolbar" aria-label="Administrate this element">
+      <a href="#" type="button" class="btn btn-primary">Edit</a>
+      <a href="#" type="button" class="btn btn-primary">Save</a>
+      <a href="#" type="button" class="btn btn-primary">Delete</a>
+    </div>
+    
+</div>{/code}
+</div></div>
+']
 ];

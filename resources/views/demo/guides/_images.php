@@ -44,7 +44,7 @@ $guide_images = [
                     <b>Gallery header:</b>
                     <ul>
                         <li>Gallery title can be included with the class <code>gallery-title</code>.</li>
-                        <li>The <code>gallery-subtitle</code> can be used for added info.</li>
+                        <li>The <code>gallery-subtitle</code> is optional and can be used for added info about the gallery.</li>
                         <li>Title and subtitle is styled to have no wrapping, meaning the text does not wrap but gets dots added (..) in case it breaks the with of the container.</li>                    
                     </ul>  
                     <b>Gallery body:</b>

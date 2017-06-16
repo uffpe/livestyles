@@ -86,62 +86,72 @@ $guide_grids = [
 </div>
 -->
 
+<div class="show-grid">
 {code}<div class="row">
       <div class="col-xs-12 col-sm-6 col-md-3">
-            <img src="http://placekitten.com/250/160" class="img-responsive" alt="..." >
+        <div class="well">.col-xs-12 .col-sm-6 .col-md-3</div>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-3">
-            <img src="http://placekitten.com/250/160" class="img-responsive" alt="..." >
+        <div class="well">.col-xs-12 .col-sm-6 .col-md-3</div>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-3">
-            <img src="http://placekitten.com/250/160" class="img-responsive" alt="..." >
+        <div class="well">.col-xs-12 .col-sm-6 .col-md-3</div>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-3">
-            <img src="http://placekitten.com/250/160" class="img-responsive" alt="..." >
+        <div class="well">.col-xs-12 .col-sm-6 .col-md-3</div>
       </div>
 </div>
-{/code}'],
+{/code}
+</div>'],
     [
 
-        'title' => 'Example: No padding',
+        'title' => 'Row padding variations',
         'is_anchor' => true,
-        'desc' => '',
+        'desc' => '<p>The grid columns has 15px padding on each side, giving a 30px gutter inbetween the column content (15px + 15px). </p>
+                    <p>
+                    <ul>
+                        <li><b>Row</b>: Groups a set of columns horizontally in a <code>.row</code> negates the 15px padding on the left and right of the whole column "group".</li>
+                        <li><b>Row no-gutter</b>: Adding a <code>.no-gutter</code> negates all side padding on the columns inside the <b>.row</b> group.</li>
+                        <li><b>Row single-gutter</b>: Groups a set of columns horizontally and negates the 15px padding on the left and right of the whole column "group".</li>
+</ul>
+                    </p>',
         'code' => '
-{code}<div class="row no-gutter">
+<p><b>No padding on columns:</b></p>
+<div class="show-grid">
+{code}<!-- Row width no side padding -->
+<div class="row no-gutter">
       <div class="col-xs-12 col-sm-6 col-md-3">
-            <img src="http://placekitten.com/250/160" class="img-responsive" alt="..." >
+        <div class="well">.col-xs-12 .col-sm-6 .col-md-3</div>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-3">
-            <img src="http://placekitten.com/250/160" class="img-responsive" alt="..." >
+        <div class="well">.col-xs-12 .col-sm-6 .col-md-3</div>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-3">
-            <img src="http://placekitten.com/250/160" class="img-responsive" alt="..." >
+        <div class="well">.col-xs-12 .col-sm-6 .col-md-3</div>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-3">
-            <img src="http://placekitten.com/250/160" class="img-responsive" alt="..." >
+        <div class="well">.col-xs-12 .col-sm-6 .col-md-3</div>
       </div>
 </div>
-{/code}'],
-    [
-
-        'title' => 'Example: Padding right only',
-        'is_anchor' => true,
-        'desc' => '',
-        'code' => '
-{code}
-    <div class="row single-gutter">
-          <div class="col-xs-12 col-sm-6 col-md-3">
-                <img src="http://placekitten.com/250/160" class="img-responsive" alt="..." >
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-3">
-                <img src="http://placekitten.com/250/160" class="img-responsive" alt="..." >
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-3">
-                <img src="http://placekitten.com/250/160" class="img-responsive" alt="..." >
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-3">
-                <img src="http://placekitten.com/250/160" class="img-responsive" alt="..." >
-          </div>
+{/code}
+</div>
+<br />
+<p><b>Single side padding on columns:</b></p>
+<div class="show-grid">
+<!-- Row width only right side padding -->
+<div class="row single-gutter">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="well">.col-xs-12 .col-sm-6 .col-md-3</div>
     </div>
-{/code}']
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="well">.col-xs-12 .col-sm-6 .col-md-3</div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="well">.col-xs-12 .col-sm-6 .col-md-3</div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="well">.col-xs-12 .col-sm-6 .col-md-3</div>
+    </div>
+</div>
+</div>']
 ];
