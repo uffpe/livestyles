@@ -2,18 +2,60 @@
 
 $guide_lists = [
     [
-        'title' => 'Simple list-group of links',
+        'title' => 'List-group of links',
         'is_anchor' => true,
         'desc' => '<p>To create A simple group of links, wrap your links in a container with the class (<code>list-group</code>). Apply the (<code>.list-group-item</code>) to each link in the <b>.list-group</b>.</p>',
         'code' => '
+<div class="col-lg-8">
+{code}<!-- List group of links -->
+<div class="list-group">
+  <a href="#" class="list-group-item">List link 1</a>
+  <a href="#" class="list-group-item">List link 2</a>
+  <a href="#" class="list-group-item">List link 3</a>
+</div>{/code}
+</div>'],[
+        'title' => 'List-group - inline buttons',
+        'is_anchor' => true,
+        'desc' => '<p>In case the list elements should not be links or the content inside should contain buttons or multiple links, the <b>list-group-items</b> must be of the type <code>div</code>.</p>
+                    <p>In the example the </p>',
+        'code' => '
+<div class="col-lg-8">
 {code}<!-- List group -->
 <div class="list-group">
-  <a href="#" class="list-group-item">List element 1</a>
-  <a href="#" class="list-group-item">List element 2</a>
-  <a href="#" class="list-group-item">List element 3</a>
-</div>{/code}'],
+    <div class="list-group-item">List element 1 
+        <span class="pull-right">
+            <button class="btn btn-primary btn-sm" type="button" title="Edit this element">Edit</button>
+        </span>
+    </div>
+    <div class="list-group-item">List element 2 
+        <span class="pull-right">
+            <button class="btn btn-primary btn-sm" type="button" title="Edit this element">Edit</button>
+        </span>
+    </div>
+</div>{/code}
+</div>'],
     [
-        'title' => 'List with badge and icon',
+        'title' => 'Condensed list-group',
+        'is_anchor' => true,
+        'desc' => '<p>Add the class <code>list-condensed</code> to the list-group to make the list items more compact. This will reduce the left and right padding and is usefull if the content in the list item is very cramped.</p>',
+        'code' => '
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+{code}<!-- Overview list group-->
+<div class="list-group list-condensed">
+    <div class="list-group-item">Condensed element 1 
+        <span class="pull-right">
+            <button class="btn btn-primary btn-sm" type="button" title="Edit this element">Edit</button>
+        </span>
+    </div>
+    <div class="list-group-item">Condensed element 2 
+        <span class="pull-right">
+            <button class="btn btn-primary btn-sm" type="button" title="Edit this element">Edit</button>
+        </span>
+    </div>
+</div>{/code}
+</div>'],
+    [
+        'title' => 'Badge & icon in list-group',
         'is_anchor' => true,
         'desc' => '<p>It is possible to add an icon or a badge to the (<code>.list-group-item</code>) links.</p>
                     <ul>
@@ -30,45 +72,7 @@ $guide_lists = [
   </a>
 </div>{/code}'],
     [
-        'title' => 'List-group condensed',
-        'is_anchor' => true,
-        'desc' => '<p>Applying a <code>.h4</code> class to the links in the list-group will make a list of header-like elements.</p>
-                    <p>This list-group variation is used on views that contains an overview of link to other views or subcategories (i.e. the Message overview).</p>
-                    <p>(<b>Icons</b> and <b>Badges</b> can be applied is needed.)</p>',
-        'code' => '
-<div class="col-xs-12 col-sm-6 col-md-6">
-{code}<!-- Overview list group-->
-<div class="list-group list-condensed">
-    <a class="list-group-item">
-        <i class="fa fa-times icon-danger" aria-hidden="true"></i>
-        0B
-        <b class="txt">Bruce B</b>
-        <div class="pull-right" style="margin: -3px;">
-            <button class="btn btn-default btn-sm" type="button" title="Meld syg">
-                <i class="fa fa-medkit" aria-hidden="true"></i>
-            </button>
-            <button class="btn btn-default btn-sm" type="button" title="Opret en aftale">
-                <i class="fa fa-calendar" aria-hidden="true"></i>
-            </button>
-        </div>    
-    </a>
-    <a class="list-group-item">
-        <i class="fa fa-times icon-danger" aria-hidden="true"></i>
-        0B
-        <b class="txt">Bruce B</b>
-        <div class="pull-right" style="margin: -3px;">
-            <button class="btn btn-default btn-sm" type="button" title="Meld syg">
-                <i class="fa fa-medkit" aria-hidden="true"></i>
-            </button>
-            <button class="btn btn-default btn-sm" type="button" title="Opret en aftale">
-                <i class="fa fa-calendar" aria-hidden="true"></i>
-            </button>
-        </div>    
-    </a>
-</div>{/code}
-</div>'],
-    [
-        'title' => 'List-group overview style',
+        'title' => 'Overview List-group',
         'is_anchor' => true,
         'desc' => '<p>Applying a <code>.h4</code> class to the links in the list-group will make a list of header-like elements.</p>
                     <p>This list-group variation is used on views that contains an overview of link to other views or subcategories (i.e. the Message overview).</p>
@@ -99,7 +103,7 @@ $guide_lists = [
   </a>
 </div>{/code}'],
     [
-        'title' => 'List of files (List group)',
+        'title' => 'List of files',
         'is_anchor' => true,
         'desc' => '<p>For a list of downloadable files this <code>list-group list-files</code> variant should be used.</p>
                     <p>
@@ -124,7 +128,7 @@ $guide_lists = [
     </a>
 </div>{/code}'],
     [
-        'title' => 'List-group icon sizes',
+        'title' => 'List-group & icon sizes',
         'is_anchor' => true,
         'desc' => '<p>Allthough the standard icon size should be used in list groups, additional icon sizes are available through <code>fa-</code> size classes.</p>                    
                     <ul>

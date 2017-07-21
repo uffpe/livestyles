@@ -4,7 +4,7 @@ $guide_containers = [
     [
         'title' => 'Panel',
         'is_anchor' => true,
-        'desc' => '<p>We use panels to put HTML content in a box.</p>
+        'desc' => '<p>We use panels as the most generally layout element to put HTML content in a box.</p>
                             <p>Besides the <code>.panel</code> class a style variant should be added. Default variant is <code>.panel-default</code> (As used in the example).</p>',
         'code' => '
 {code}<div class="panel panel-default">
@@ -408,5 +408,14 @@ $guide_containers = [
         ...
     </div>
     
-</div>']
+</div>'],
+    [
+        'title' => 'Wells',
+        'is_anchor' => true,
+        'desc' => '<p>Wells are another simple container to insert HTML content in a box.</p>
+                   <p>Because light grey backgroud color it can be usefull for framing content. For instance as a visual frame enhancing content or visually grouping specific content inside the white panel-body of a panel.</p>',
+        'code' => '
+{code}<div class="well">
+        A well container with content...
+</div>{/code}']
 ];
