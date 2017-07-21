@@ -7,7 +7,7 @@
 1. Clone and run the server
 
   ``` bash
-  git clone https://github.com/uffpe/livestyles.git styleguide
+  git clone -b feature/DocPad https://github.com/uffpe/livestyles.git styleguide
   cd styleguide
   npm install
   docpad run
