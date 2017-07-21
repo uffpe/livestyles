@@ -1,20 +1,32 @@
 {
-  "private": true,
+  "name": "IST-Styleguide",
+  "version": "0.2.1",
+  "description": "CSS styleguide of web component",
+  "homepage": "https://www.ist.com",
+  "author": "IST Danmark (http://www.ist.com)",
+  "maintainers": [
+    "Uffe Petersen <uffe.petersen@ist.com> (http://www.ist.com)"
+  ],
+  "contributors": [
+    "Uffe Petersen <uffe.petersen@ist.com> (http://www.ist.com)"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "docpad": "~6.79.4",
+    "docpad-plugin-cleanurls": "~2.10.0",
+    "docpad-plugin-downloader": "~2.2.0",
+    "docpad-plugin-eco": "~2.2.1",
+    "docpad-plugin-highlightjs": "~2.5.0",
+    "docpad-plugin-nodesass": "~2.8.2",
+    "docpad-plugin-partials": "~2.11.0",
+    "font-awesome": "^4.7.0"
+  },
+  "main": "node_modules/.bin/docpad-server",
   "scripts": {
-    "dev": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch-poll": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --watch-poll --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "hot": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "production": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    "start": "node_modules/.bin/docpad-server",
+    "build": "docpad generate --env static"
   },
   "devDependencies": {
-    "bootstrap-sass": "^3.3.7",
-    "browser-sync": "^2.18.8",
-    "gulp": "^3.9.1",
-    "gulp-sass": "^3.1.0",
-    "jquery": "^3.1.1"
-  },
-  "dependencies": {
-    "font-awesome": "^4.7.0"
+    "docpad-plugin-livereload": "~2.6.1"
   }
 }

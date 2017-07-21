@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="iso-8859-1">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <title><%= @document.title %> | <%= @site.name %></title>
+
+      <%- @getBlock("meta").toHTML() %>
+      <%- @getBlock("styles").toHTML() %>
+      <%- @getBlock("styles").add(["/styles/ist-style.css"]).toHTML() %>
+      <%- @getBlock("styles").add(["//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/atom-one-light.min.css"]).toHTML() %>
+  </head>
+  <body>
+      <div class="main-container">
+        <div class="main-container__overlay"></div>
+
+        <%- @partial('top_header') %>
+
+        <div class="main-container__content container">
+
+            <%- @partial('main-menu') %>
+
+            <div id="content-div" class="style-guide">
+              <div class="content-div__wrapper">
+                <div class="row guide-parts no-gutter">
+                  <div class="page-header">
+                      <h2><%= @document.title %></h2>
+                  </div>
+                  <%- @content %>
+              </div>
+          </div>
+
+      <%- @getBlock("scripts").add(["//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js", "/scripts/bootstrap.min.js", "/scripts/istStyleGuide.js"]).toHTML() %>
+  </body>
+  </html>

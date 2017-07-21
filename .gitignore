@@ -1,11 +1,5 @@
-/node_modules
-/public/storage
-/public/hot
-/storage/*.key
-/vendor
+node_modules/*
+out/*
 /.idea
 .idea/
 .idea/*
-Homestead.json
-Homestead.yaml
-.env

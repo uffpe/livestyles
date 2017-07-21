@@ -1,0 +1,195 @@
+
+.btn {
+  border: 0 solid transparent;
+  font-weight: 600;
+  // padding: 6px 14px;
+  @include box-shadow(none);
+
+  .fa {
+    margin-left: 3px;
+    margin-right: 3px;
+    //vertical-align: middle;
+  }
+
+  &.btn-block {
+    background-color: white;
+    border: 1px solid $gandalf-the-grey;
+    color: $blue-steel-dark;
+    white-space: normal;
+
+    .fa {
+      color: $blue-steel-dark;
+    }
+    &:hover {
+      background-color: $blue-steel-xx-light;
+      color: $blue-steel-dark;
+    }
+    &:focus {
+      background-color: white;
+      color: $blue-steel-dark;
+    }
+    &:active {
+      background-color: $blue-steel-x-light;
+      color: $blue-steel-dark;
+    }
+    &[disabled] {
+      background-color: white;
+      color: $blue-steel-dark;
+    }
+    h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+      margin-bottom: 0.2em;
+    }
+    p {
+      font-weight: normal;
+      margin: 0;
+    }
+  }
+
+
+  &.btn-default {
+    background-color: $gandalf-the-grey;
+    border-color: transparent;
+    //border-width: 0 0 2px 0;
+    color: $blue-steel-dark;
+    i {
+      color: $blue-steel-dark;
+    }
+    &:active {
+      background-color: $grey-dark;
+      color: $blue-steel-dark;
+      @include box-shadow(none);
+    }
+    &:hover {
+      background-color: $blue-steel-xx-light;
+      color: $blue-steel-dark;
+      @include box-shadow(none);
+    }
+    &:focus {
+      background-color: $gandalf-the-grey;
+      color: $blue-steel-dark;
+      @include box-shadow(none);
+    }
+    &[disabled], &[disabled]:hover {
+      opacity: 0.5;
+      color: darken($grey-dark, 20%);
+      i {
+        color: darken($grey-dark, 20%);
+      }
+    }
+  }
+
+  &.btn-primary {
+    //border-width: 0 0 2px 0;
+    //border-color: $blue-steel-x-dark;
+    background-color: $blue-steel-base;
+    border-color: transparent;
+    color: white !important;
+
+    &:hover {
+      background-color: $blue-steel-light;
+      color: white;
+    }
+    &:focus {
+      background-color: $blue-steel-base;
+      color: white;
+    }
+    &:active {
+      //border-width: 2px 0 0 0;
+      background-color: $blue-steel-dark;
+      //padding: 4px 14px 8px;
+      color: white;
+    }
+    &[disabled] {
+      //border-color: $blue-steel-x-dark;
+      background-color: $blue-steel-base;
+    }
+  }
+
+  &.btn-secondary {
+    background-color: $blue-steel-light;
+    border-color: transparent;
+    color: white !important;
+
+    &:hover {
+      background-color: $blue-steel-x-light;
+      color: white;
+    }
+    &:focus {
+      background-color: $blue-steel-light;
+      color: white;
+    }
+    &:active {
+      background-color: $blue-steel-base;
+      color: white;
+    }
+    &[disabled] {
+      //border-color: $blue-steel-x-dark;
+      //background-color: $blue-steel-base;
+      background-color: $blue-steel-light;
+    }
+  }
+
+  &.valign {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &.height-small {
+    height: 50px;
+  }
+  &.height-medium {
+    height: 90px;
+  }
+  &.height-big {
+    height: 140px;
+  }
+}
+
+
+[class^=col-] {
+  > .btn-block {
+    margin-bottom: 20px;
+  }
+}
+
+
+.btn-group, .btn-group-vertical {
+  .btn + .btn {
+    margin-left:0;
+  }
+  > .btn:not(:last-child) {
+    border-width: 0 1px 0 0;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+  > .btn-default:not(:last-child) {
+    border-color: $grey-x-light;
+  }
+  > .btn-primary:not(:last-child) {
+    border-color: $blue-steel-x-light;
+  }
+
+  &.btn-block {
+    display: flex;
+    width: 100%;
+    > .btn {
+      flex-grow: 1;
+    }
+  }
+}
+
+.btn-group-vertical {
+  .btn + .btn {
+    margin-bottom:0;
+  }
+  > .btn:not(:last-child) {
+    border-width: 0 0 1px 0;
+    margin-bottom: 1px;
+  }
+}
+
+/*.btn-group-right {
+  float: right !important;
+  margin: -3px;
+}*/
+

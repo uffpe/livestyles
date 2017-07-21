@@ -1,0 +1,121 @@
+
+// Basic table styling
+.table {
+  > thead, > tbody {
+    > tr {
+      > td, > th {
+        border-color: $grey-x-light;
+        clear: both;
+        padding: 8px 6px;
+
+        //
+        //
+        //a, button {
+        //  i.fa {
+        //    color: white;
+        //  }
+        //}
+      }
+      &.tr-select {
+        cursor: pointer;
+        &:hover {
+          background-color: $blue-steel-xx-light;
+        }
+      }
+      border-bottom: 1px solid $grey-dark;
+    }
+  }
+
+  > thead {
+    tr {
+      background-color: $blue-steel-light;
+      th {
+        color: white;
+        font-size: 1em;
+        font-weight: normal;
+      }
+    }
+  }
+
+  > tbody {
+    tr > td {
+      > .fa {
+        color: $blue-steel-base;
+      }
+    }
+  }
+
+  &.table-striped {
+    > tbody {
+      > tr:nth-of-type(odd){
+        > td {
+          border-color: $grey-light;
+        }
+      }
+    }
+  }
+
+  @mixin table-rwd() {
+      thead {
+        display: none;
+      }
+      > tbody > tr > td {
+        display: block;
+        min-height: 38px;
+        padding: 8px 14px;
+        position: relative;
+        &[data-label] {
+          padding-left: 40%;
+          text-align: left;
+
+          &:before {
+            content: attr(data-label);
+            // float: left;
+            font-weight: bold;
+            left: 14px;
+            padding-right: 10px;
+            position: absolute;
+            top: 8px;
+            width: 35%;
+          }
+        }
+      }
+  }
+
+
+  &.table-rwd {
+    &:not([data-breakpoint]){
+      @media (max-width: 600px), (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+        @include table-rwd();
+      }
+    }
+    &.data-breakpoint {
+      @include table-rwd();
+    }
+  }
+
+/*
+  // Screen-width smaller than 480
+  &.rwd-table-xxs {
+    @media (max-width: $screen-xxs-max) {
+      @include table-rwd();
+    }
+  }
+
+  // Screen-width smaller than 650
+  &.rwd-table-xs {
+    @media (max-width: 650px), (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+      @include table-rwd();
+    }
+  }
+
+  // Screen-width smaller than 768
+  &.rwd-table-md {
+    @media (max-width: 767px), (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+      @include table-rwd();
+    }
+  }
+*/
+
+}
+

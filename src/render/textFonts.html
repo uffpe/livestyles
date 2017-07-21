@@ -1,0 +1,105 @@
+---
+title: "Text & fonts"
+layout: "default"
+menuIcon: "font"
+menuOrder: "010"
+isPage: true
+subMenu: [
+  {name:"Page header markup", link: "Pageheadermarkup"},
+  {name:"Font styling - Body and buttons", link: "FontstylingBodyandbuttons"},
+  {name:"Font styling - Headers", link: "FontstylingHeaders"},
+]
+---
+<div class="col-md-12">
+    <h3 class="underlined">Page header markup<a name="Pageheadermarkup" class="style_anchor"></a></h3>
+</div>
+
+<div class="col-md-12">
+  <p>All pages should start with a header stating the overall title for the page.</p>
+  <p></p>
+  <ul>
+      <li>The header must be wrapped in <code>.page-header</code> element.</li>
+      <li>For all normal pages this must be a <code>h2</code> header.</li>
+      <li>On a few special pages a <code>h1</code> header is used to distinguish these from the other normal content pages. An example is the the login page</li>
+  </ul>
+  <p></p>
+    <div class="panel panel-default panel-no-header panel-guide">
+      <div class="panel-heading">
+        <h5 class="panel-title">Example:</h5>
+      </div>
+      <div class="panel-body">
+        <!--<h5>Example:</h5>-->
+        <div>
+          <!-- Page header -->
+          <div class="page-header">
+              <h2>The page title</h2>
+          </div>
+        </div>
+        <div class="row no-gutter">
+          <div class="col-sm-12">
+            <pre>
+<code class="html"><!-- Page header -->
+<div class="page-header">
+    <h2>The page title</h2>
+</div></code>
+              </pre>
+            </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<div class="col-md-12">
+  <h3 class="underlined">Font styling - Body and buttons<a name="FontstylingBodyandbuttons" class="style_anchor"></a></h3>
+</div>
+<div class="col-md-12">
+                                                                    <p style="outline: none;"><b>Roboto</b> is used general body and button text. It is a departure from the IST brand but is chosen for its high level of readability in small sizes.</p>
+                            <p><code>font-family: "Roboto", Helvetica, Arial, sans-serif</code></p>
+                                                                <div class="panel panel-default panel-no-header panel-guide">
+                                    <div class="panel-heading">
+                                                                            </div>
+                                    <div class="panel-body">
+                                        <!--<h5>Example:</h5>-->
+                                        <div>
+<p>p - Body text</p>
+<p>"Roboto", Helvetica, Arial, sans-serif  - line-height: 1.5 - font-size: 14px - font-weight: 300</p>
+<hr>
+<strong>strong - Important body text</strong>
+<p>"Roboto", Helvetica, Arial, sans-serif  - line-height: 1.5 - font-size: 14px - font-weight: 500</p>
+<hr>
+<small>small - Caption text</small>
+<p>"Roboto", Helvetica, Arial, sans-serif  - line-height: 1 - font-size: 12px - font-weight: 300</p>
+<hr>
+<button class="btn btn-primary" type="button">Text on buttons</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-12">
+    <h3 class="underlined">Font styling - Headers<a name="FontstylingHeaders" class="style_anchor"></a></h3>
+</div>
+<div class="col-md-12">
+                                                                    <p style="outline: none;"><b style="outline: none;">Oswald</b> is the main ”IST-font” and is used for all headings.</p>
+                            <p><code>font-family: "Oswald", Helvetica, Arial, sans-serif</code></p>
+                                                                <div class="panel panel-default panel-no-header panel-guide">
+                                    <div class="panel-heading" style="outline: none;">
+                                                                            </div>
+                                    <div class="panel-body">
+                                        <!--<h5>Example:</h5>-->
+                                        <div>
+<h1>h1 - Big header</h1>
+<p>"Oswald", Helvetica, Arial, sans-serif  - line-height: 1.5 - font-size: 36px - font-weight: 500</p>
+<hr>
+<h2>h2 - Main UI header</h2>
+<p>"Oswald", Helvetica, Arial, sans-serif  - line-height: 1.5 - font-size: 30px - font-weight: 500</p>
+<hr>
+<h3>h3 - Sub header</h3>
+<p>"Oswald", Helvetica, Arial, sans-serif  - line-height: 1.5 - font-size: 24px - font-weight: 500</p>
+<hr>
+<h4>h4 - Small header</h4>
+<p>"Roboto", Helvetica, Arial, sans-serif  - line-height: 1.5 - font-size: 18px - font-weight: 500</p>
+            </div>
+    </div>
+  </div>
+</div>

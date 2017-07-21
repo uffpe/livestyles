@@ -1,0 +1,190 @@
+---
+title: "Lists"
+layout: "default"
+menuIcon: "list-ul"
+menuOrder: "040"
+isPage: true
+subMenu: [
+  {name: "Simple list-group of links", link: "Simplelistgroupoflinks"},
+  {name: "List with bagde and icon", link: "Listwithbadgeandicon"},
+  {name: "List-group condensed", link: "Listgroupcondensed"},
+  {name: "List-group overvie style", link: "Listgroupoverviewstyle"},
+  {name: "List of files (List group)", link: "ListoffilesListgroup"},
+  {name: "List-group icon sizes", link: "Listgroupiconsizes"},
+]
+---
+<pre><code class="html"><!-- List group -->
+<div class="list-group">
+  <a href="#" class="list-group-item">List element 1</a>
+  <a href="#" class="list-group-item">List element 2</a>
+  <a href="#" class="list-group-item">List element 3</a>
+</div>
+</code></pre>
+
+
+<div class="col-md-12">
+    <h3 class="underlined" style="outline: none;">Simple list-group of links<a name="Simplelistgroupoflinks" class="style_anchor"></a></h3>
+</div>
+
+<div class="col-md-12">
+  <p>
+    To create A simple group of links, wrap your links in a container with the class (<code>list-group</code>). Apply the (<code>.list-group-item</code>) to each link in the <b>.list-group</b>.
+  </p>
+  <div class="panel panel-default panel-no-header panel-guide">
+    <div class="panel-heading">
+      <h5 class="panel-title">
+          Example:
+      </h5>
+    </div>
+  <div class="panel-body">
+      <!--<h5>Example:</h5>-->
+      <div>
+<!-- List group -->
+<div class="list-group">
+  <a href="#" class="list-group-item">List element 1</a>
+  <a href="#" class="list-group-item">List element 2</a>
+  <a href="#" class="list-group-item">List element 3</a>
+</div></div>
+<div class="row no-gutter">
+
+  <div class="col-sm-12">
+<pre><code class="html">&lt;!-- List group --&gt;
+&lt;div class=&quot;list-group&quot;&gt;
+  &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;List element 1&lt;/a&gt;
+  &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;List element 2&lt;/a&gt;
+  &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;List element 3&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="col-md-12">
+      <h3 class="underlined">List with badge and icon<a name="Listwithbadgeandicon" class="style_anchor"></a></h3>
+  </div>
+  <div class="col-md-12">
+    <p style="outline: none;">It is possible to add an icon or a badge to the (<code>.list-group-item</code>) links.</p>
+     <ul>
+        <li><b>Icon: </b> include a <code>i</code> element with the relevant fa icon class - <code>fa fa-check</code>. Remember to add the <code>aria-hidden=true</code> attribute to hide the icon from scree-readers.</li>
+        <li><b>Label:</b> This can be included to add a text (i.e. "New") or a "number of unread elements" to the link, by using the class <code>badge</code>. If is good practise to add a <code>aria-label</code> with a short description to inform assistive technology (e.g. screen readers) what the badge represent.</li>
+    </ul>
+    <div class="panel panel-default panel-no-header panel-guide">
+      <div class="panel-heading">
+          <h5 class="panel-title">Example:</h5>
+      </div>
+      <div class="panel-body">
+          <!--<h5>Example:</h5>-->
+          <div>
+  <!-- List group -->
+  <div class="list-group">
+    <a href="#" class="list-group-item">
+      <i class="fa fa-comment-o" aria-hidden="true"></i>
+      Link with icon &amp; badge
+      <span class="badge" aria-label="Number of new comments">12</span>
+    </a>
+  </div></div>
+  <div class="row no-gutter">
+    <div class="col-sm-12">
+<pre>
+<code class="html"><!-- List group -->
+  <div class="list-group">
+    <a href="#" class="list-group-item">
+      <i class="fa fa-comment-o" aria-hidden="true"></i>
+      Link with icon & badge
+      <span class="badge" aria-label="Number of new comments">12</span>
+    </a>
+  </div>
+</code>
+</pre>
+      </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+<div class="col-md-12">
+    <h3 class="underlined" style="outline: none;">List-group condensed<a name="Listgroupcondensed" class="style_anchor"></a></h3>
+</div>
+<div class="col-md-12">
+                                                                    <p style="outline: none;">Applying a <code>.h4</code> class to the links in the list-group will make a list of header-like elements.</p>
+                    <p>This list-group variation is used on views that contains an overview of link to other views or subcategories (i.e. the Message overview).</p>
+                    <p>(<b>Icons</b> and <b>Badges</b> can be applied is needed.)</p>
+                                                                <div class="panel panel-default panel-no-header panel-guide">
+                                    <div class="panel-heading">
+                                                                                <h5 class="panel-title">
+                                            Example:
+                                        </h5>
+                                                                            </div>
+                                    <div class="panel-body">
+                                        <!--<h5>Example:</h5>-->
+                                        <div>
+<div class="col-xs-12 col-sm-6 col-md-6">
+<!-- Overview list group-->
+<div class="list-group list-condensed">
+    <a class="list-group-item">
+        <i class="fa fa-times icon-danger" aria-hidden="true"></i>
+        0B
+        <b class="txt">Bruce B</b>
+        <div class="pull-right" style="margin: -3px;">
+            <button class="btn btn-default btn-sm" type="button" title="Meld syg">
+                <i class="fa fa-medkit" aria-hidden="true"></i>
+            </button>
+            <button class="btn btn-default btn-sm" type="button" title="Opret en aftale">
+                <i class="fa fa-calendar" aria-hidden="true"></i>
+            </button>
+        </div>
+    </a>
+    <a class="list-group-item">
+        <i class="fa fa-times icon-danger" aria-hidden="true"></i>
+        0B
+        <b class="txt">Bruce B</b>
+        <div class="pull-right" style="margin: -3px;">
+            <button class="btn btn-default btn-sm" type="button" title="Meld syg">
+                <i class="fa fa-medkit" aria-hidden="true"></i>
+            </button>
+            <button class="btn btn-default btn-sm" type="button" title="Opret en aftale">
+                <i class="fa fa-calendar" aria-hidden="true"></i>
+            </button>
+        </div>
+    </a>
+    </div>
+  </div>
+    </div>
+      <div class="row no-gutter">
+        <div class="col-sm-12">
+          <pre><code class="html"><!-- Overview list group-->
+<div class="list-group list-condensed">
+  <a class="list-group-item">
+      <i class="fa fa-times icon-danger" aria-hidden="true"></i>
+      0B
+      <b class="txt">Bruce B</b>
+      <div class="pull-right" style="margin: -3px;">
+          <button class="btn btn-default btn-sm" type="button" title="Meld syg">
+              <i class="fa fa-medkit" aria-hidden="true"></i>
+          </button>
+          <button class="btn btn-default btn-sm" type="button" title="Opret en aftale">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+          </button>
+      </div>
+  </a>
+  <a class="list-group-item">
+      <i class="fa fa-times icon-danger" aria-hidden="true"></i>
+      0B
+      <b class="txt">Bruce B</b>
+      <div class="pull-right" style="margin: -3px;">
+          <button class="btn btn-default btn-sm" type="button" title="Meld syg">
+              <i class="fa fa-medkit" aria-hidden="true"></i>
+          </button>
+          <button class="btn btn-default btn-sm" type="button" title="Opret en aftale">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+          </button>
+      </div>
+  </a>
+</div></code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

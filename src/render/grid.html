@@ -1,0 +1,279 @@
+---
+title: "Grids and columns"
+layout: "default"
+menuIcon: "columns"
+menuOrder: "020"
+isPage: true
+subMenu: [
+  {name:"Grid system", link: "Gridsystem"}
+  {name:"Grid breakpointss", link: "Gridbreakpoints"}
+  {name:"Example: Mobile, tablet, desktop", link: "ExampleMobiletabletdesktop"}
+  {name:"Example: No padding", link: "ExampleNopadding"}
+  {name:"Example: Padding right only", link: "ExamplePaddingrightonly"}
+]
+---
+<div class="col-md-12">
+                                <h3 class="underlined" style="outline: none;">Grid system<a name="Gridsystem" class="style_anchor"></a></h3>
+                            </div>
+                            <div class="col-md-12">
+                                                                    <p>The layout of this website is based on the responsive and fluid 12 column grid-system provided by Bootstrap 3.
+                    Basically it is a series of rows and columns that contains the content of the pages.</p>
+                    <p><b>Short introduction:</b>
+                    </p><ul>
+                        <li>Rows must be placed within a <code>.container-fluid</code> for proper alignment and padding.</li>
+                        <li>Use rows (<code>.row</code> to create horizontal groups of columns.</li>
+                        <li>Content should be placed within columns, and only columns may be immediate children of rows.</li>
+                        <li>Columns create gutters (gaps between column content) via padding. That padding is offset in rows for the first and last column via negative margin on rows.</li>
+                        <li>Grid columns are created by specifying the number of twelve available columns you wish to span. For example, three equal columns would use three <code>.col-md-4</code>.</li>
+                    </ul>
+                    <p></p>
+                    <p>For a more thorough description of the grid system go to <a href="http://getbootstrap.com" target="_blank">Getbootstrap.com</a>.</p>
+                                                                <div class="panel panel-default panel-no-header panel-guide">
+                                    <div class="panel-heading">
+                                                                                <h5 class="panel-title">
+                                            Example:
+                                        </h5>
+                                                                            </div>
+                                    <div class="panel-body">
+                                        <!--<h5>Example:</h5>-->
+                                        <div>
+<div class="show-grid">
+<div class="row">
+    <div class="col-md-8">.col-md-8</div>
+    <div class="col-md-4">.col-md-4</div>
+</div>
+
+</div></div>
+<div class="row no-gutter">
+    <div class="col-sm-12">
+        <pre><code class="html"><div class="row">
+    <div class="col-md-8">.col-md-8</div>
+    <div class="col-md-4">.col-md-4</div>
+</div></code></pre>
+    </div>
+</div>
+                                                                            </div>
+                                </div>
+                                                                </div>
+                                                <div class="col-md-12">
+<h3 class="underlined">Grid breakpoints<a name="Gridbreakpoints" class="style_anchor"></a></h3>
+                            </div>
+                            <div class="col-md-12">
+                                                                    <p>The website makes use of a predefined set of breakpoints. These aims at different device sizes (or more specifically the screen-width of the device).</p>
+                                                                <div class="panel panel-default panel-no-header panel-guide">
+                                    <div class="panel-heading">
+                                                                            </div>
+                                    <div class="panel-body">
+                                        <!--<h5>Example:</h5>-->
+                                        <div>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th> <h5>Device width</h5> </th>
+                <th> <h5>Class prefix</h5> </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> <b>Extra small devices</b><br>Phones (&lt;768px) </td>
+                <td><code>.col-xs-</code></td>
+            </tr>
+            <tr>
+                <td> <b>Small devices </b><br>Tablets (≥768px) </td>
+                <td><code>.col-sm-</code></td>
+            </tr>
+            <tr>
+                <td> <b>Medium devices</b> <br>Desktops (≥992px) </td>
+                <td><code>.col-md-</code></td>
+            </tr>
+            <tr>
+                <td> <b>Large devices</b> <br>Desktops (≥1200px) </td>
+                <td><code>.col-lg-</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
+                                                                                                                    </div>
+                                </div>
+                                                                </div>
+                                                <div class="col-md-12">
+                                <h3 class="underlined">Example: Mobile, tablet, desktop<a name="ExampleMobiletabletdesktop" class="style_anchor"></a></h3>
+                            </div>
+                            <div class="col-md-12">
+                                                                    <p>The 12-columns grid is responsive and will shrink and expand to fit the device width (Or as you resize the browser window).
+                    Remember that the 12 columns has a total width of 100%.</p>
+                    <p>In the shown example the column are set up like this: </p>
+                    <ul>
+                        <li><b>Extra small devices:</b> Each will have a width of 100% (<code>.col-xs-12</code>)</li>
+                        <li><b>Small devices:</b> Each will have a width of 50% (<code>.col-sm-6</code>)</li>
+                        <li><b>Medium devices:</b> Each will have a width of 25% (<code>.col-md-3</code>)</li>
+                        <li><b>Large devices:</b> Is not set but will inherit from medium.</li>
+                    </ul>
+                    <p></p>
+                                                                <div class="panel panel-default panel-no-header panel-guide">
+                                    <div class="panel-heading">
+                                                                                <h5 class="panel-title">
+                                            Example:
+                                        </h5>
+                                                                            </div>
+                                    <div class="panel-body">
+                                        <!--<h5>Example:</h5>-->
+                                        <div>
+<!--
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-3">.col-xs-12 .col-sm-6 .col-md-3</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">.col-xs-12 .col-sm-6 .col-md-3</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">.col-xs-12 .col-sm-6 .col-md-3</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">.col-xs-12 .col-sm-6 .col-md-3</div>
+    </div>
+</div>
+-->
+
+<div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-3">
+            <img src="http://placekitten.com/250/160" class="img-responsive" alt="...">
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+            <img src="http://placekitten.com/250/160" class="img-responsive" alt="...">
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+            <img src="http://placekitten.com/250/160" class="img-responsive" alt="...">
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+            <img src="http://placekitten.com/250/160" class="img-responsive" alt="...">
+      </div>
+</div>
+</div>
+<div class="row no-gutter">
+  <div class="col-sm-12">
+    <pre>
+<code class="html"><div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+          <img src="http://placekitten.com/250/160" class="img-responsive" alt="..." >
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+          <img src="http://placekitten.com/250/160" class="img-responsive" alt="..." >
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+          <img src="http://placekitten.com/250/160" class="img-responsive" alt="..." >
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+          <img src="http://placekitten.com/250/160" class="img-responsive" alt="..." >
+    </div>
+</div></code>
+</pre>
+                                            </div>
+                                        </div>
+                                                                            </div>
+                                </div>
+                                                                </div>
+                                                <div class="col-md-12">
+                                <h3 class="underlined">Example: No padding<a name="ExampleNopadding" class="style_anchor"></a></h3>
+                            </div>
+                            <div class="col-md-12">
+                                                                    <div class="alert alert-danger">This element is not done!</div>
+
+                                                                <div class="panel panel-default panel-no-header panel-guide">
+                                    <div class="panel-heading">
+                                                                                <h5 class="panel-title">
+                                            Example:
+                                        </h5>
+                                                                            </div>
+                                    <div class="panel-body">
+                                        <!--<h5>Example:</h5>-->
+                                        <div>
+<div class="row no-gutter">
+      <div class="col-xs-12 col-sm-6 col-md-3">
+            <img src="http://placekitten.com/250/160" class="img-responsive" alt="...">
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+            <img src="http://placekitten.com/250/160" class="img-responsive" alt="...">
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+            <img src="http://placekitten.com/250/160" class="img-responsive" alt="...">
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+            <img src="http://placekitten.com/250/160" class="img-responsive" alt="...">
+      </div>
+</div>
+</div>
+<div class="row no-gutter">
+  <div class="col-sm-12">
+    <pre>
+    <code class="html"><div class="row no-gutter">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+          <img src="http://placekitten.com/250/160" class="img-responsive" alt="..." >
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+          <img src="http://placekitten.com/250/160" class="img-responsive" alt="..." >
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+          <img src="http://placekitten.com/250/160" class="img-responsive" alt="..." >
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+          <img src="http://placekitten.com/250/160" class="img-responsive" alt="..." >
+    </div>
+</div></code>
+</pre>
+                                            </div>
+                                        </div>
+                                                                            </div>
+                                </div>
+                                                                </div>
+                                                <div class="col-md-12">
+                                <h3 class="underlined">Example: Padding right only<a name="ExamplePaddingrightonly" class="style_anchor"></a></h3>
+                            </div>
+                            <div class="col-md-12">
+                                                                    <div class="alert alert-danger">This element is not done!</div>
+
+                                                                <div class="panel panel-default panel-no-header panel-guide">
+                                    <div class="panel-heading">
+                                                                                <h5 class="panel-title">
+                                            Example:
+                                        </h5>
+                                                                            </div>
+                                    <div class="panel-body">
+                                        <!--<h5>Example:</h5>-->
+                                        <div>
+
+    <div class="row single-gutter">
+          <div class="col-xs-12 col-sm-6 col-md-3">
+                <img src="http://placekitten.com/250/160" class="img-responsive" alt="...">
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3">
+                <img src="http://placekitten.com/250/160" class="img-responsive" alt="...">
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3">
+                <img src="http://placekitten.com/250/160" class="img-responsive" alt="...">
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3">
+                <img src="http://placekitten.com/250/160" class="img-responsive" alt="...">
+          </div>
+    </div>
+</div>
+                                                                                                                        <div class="row no-gutter">
+                                            <div class="col-sm-12">
+<pre>
+<code class="html"><div class="row single-gutter">
+  <div class="col-xs-12 col-sm-6 col-md-3">
+        <img src="http://placekitten.com/250/160" class="img-responsive" alt="..." >
+  </div>
+  <div class="col-xs-12 col-sm-6 col-md-3">
+        <img src="http://placekitten.com/250/160" class="img-responsive" alt="..." >
+  </div>
+  <div class="col-xs-12 col-sm-6 col-md-3">
+        <img src="http://placekitten.com/250/160" class="img-responsive" alt="..." >
+  </div>
+  <div class="col-xs-12 col-sm-6 col-md-3">
+        <img src="http://placekitten.com/250/160" class="img-responsive" alt="..." >
+  </div>
+</div></code>
+</pre>
+                                            </div>
+                                        </div>
+                                                                            </div>
+                                </div>
+                                                                </div>

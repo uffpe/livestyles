@@ -1,0 +1,61 @@
+#content-div {
+  .cke_chrome {
+    @include box-shadow(none);
+  }
+
+  .cke_top {
+    background-image: none;
+    background-color: $gandalf-the-grey;
+    border-color: $gandalf-the-grey;
+    @include box-shadow(none);
+
+    @media (max-width: $screen-xs-max){
+      //padding: 3px 4px 0px;
+    }
+  }
+
+  a.cke_button {
+    background-color: white;
+    border: 0;
+    padding: 6px 8px;
+
+    &:hover {
+      background: $blue-steel-xx-light;
+      color: $blue-steel-dark;
+    }
+    &:focus {
+      background-color: white;
+      color: $blue-steel-dark;
+    }
+    &:active {
+      background: $blue-steel-x-light;
+      color: $blue-steel-dark;
+    }
+    &[disabled] {
+      background: white;
+      color: $blue-steel-dark;
+    }
+
+    @media (max-width: $screen-xs-max){
+      padding: 10px 10px;
+    }
+  }
+
+  .cke_toolgroup {
+    border-radius: 0;
+    border: 1px solid $grey-dark;
+    background: white;
+    @include box-shadow(none);
+    @include border-radius(0px);
+  }
+
+  .cke_toolbar_separator {
+    background: $grey-dark;
+    margin: 5px 4px 0;
+
+    @media (max-width: $screen-xs-max){
+      margin: 7px 4px 0;
+      height: 24px;
+    }
+  }
+}

@@ -1,0 +1,146 @@
+
+.list-group-item {
+  > i {
+    color: $blue-steel-base;
+    padding-right: 5px;
+    text-align: center;
+    width: 25px;
+    width: 1.25em;
+  }
+}
+
+
+//
+// Overview H4 list
+// --------------------------------------------------
+
+.list-group-item {
+  &.h4 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    i {
+      //color: $custom-icon-color;
+      vertical-align: 0;
+    }
+  }
+}
+
+//
+// Condensed lists
+// --------------------------------------------------
+
+.list-group {
+  .list-group-item {
+    .btn {
+      margin-top: -6px;
+      &.btn-sm {
+        margin-top: -3px;
+      }
+    }
+  }
+  &.list-condensed {
+    .list-group-item {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+  }
+}
+
+//
+// List table
+// --------------------------------------------------
+//.list-table {
+//  display: table;
+//  .list-table-row {
+//    display: table-row;
+//  }
+//  .list-table-cell {
+//    display: table-cell;
+//  }
+//}
+
+
+//
+// Badges in lists (And menu lists)
+// --------------------------------------------------
+
+.list-group-item, .has-badge-wrapper {
+  .badge {
+    color: white;
+    background-color: $custom-icon-color;
+    line-height: 1em;
+    margin-top: 1px;
+    //@include box-shadow(0 1 px 2px rgba($gray-dark, 0.2));
+    //border: 1px solid $yellow-submarine-dark;
+  }
+}
+
+.nav  {
+  .list-group-item .badge {
+    margin-left: 6px;
+    margin-top: -3px;
+    float: none;
+  }
+  .list-group-submenu .list-group-item {
+    .badge {
+      margin-top: 0;
+    }
+  }
+}
+
+.list-group-item.h4 {
+  .badge {
+    margin-top: 4px;
+  }
+}
+
+
+
+ul.check_list {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+    margin-bottom: 10px;
+
+    i {
+      margin-bottom: -4px;
+    }
+  }
+}
+
+
+
+//
+// List of files
+// --------------------------------------------------
+
+.list-files {
+  margin-bottom: 0;
+
+  > .list-group-item {
+    background-color: transparent;
+    border: 0;
+    color: $brand-primary;
+    cursor: pointer;
+    padding: 3px 0;
+    text-decoration: none;
+
+    &:hover {
+      color: darken($link-color, 15%);
+      background-color: transparent;
+      .file-title {
+        text-decoration: none;
+      }
+    }
+    .file-info {
+      margin-left: 10px;
+      color: $blue-steel-x-dark;
+
+      @media (max-width: $screen-xs-max) {
+        display: none;
+      }
+    }
+  }
+}
