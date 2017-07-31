@@ -49,7 +49,16 @@ $guide_dialogs = [
     [
         'title' =>  'Modal - Custom open/close',
         'is_anchor' => true,
-        'desc' =>   '',
+        'desc' =>   '
+        <p>It is possible to trigger the modals via javascript using the <b>modal()</b> function: <code>$("#myModal").modal()</code></p>
+        <p>
+        <ul>
+            <li>Open the modal: <code>modal("show")</code></li>
+            <li>Hiding the modal: <code>.modal("hide")</code></li>
+            <li>Toggle the modal: <code>.modal("toggle")</code> (Hides the modal if open and vice versa)</li>
+        </ul>
+        </p>
+        ',
         'code' => '
 {code}<div class="form-group">
     <label for="yourName" class="control-label"> Fill out your name:</label>

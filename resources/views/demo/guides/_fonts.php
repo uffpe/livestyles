@@ -19,7 +19,7 @@ $guide_fonts = [
 </div>{/code}'],
     [
         'title' =>  'Font styling - Body and buttons',
-        'is_anchor' => true,
+        'is_anchor' => false,
         'desc' =>   '<p><b>Roboto</b> is used general body and button text. It is a departure from the IST brand but is chosen for its high level of readability in small sizes.</p>
                             <p><code>font-family: "Roboto", Helvetica, Arial, sans-serif</code></p>',
         'code' => '
