@@ -15,76 +15,95 @@ subMenu: [
   {name:"Panel - Messages", link: "PanelMessages"},
 ]
 ---
+
+
+<!-- Panel -->
 <div class="col-md-12">
     <h3 class="underlined">Panel<a name="Panel" class="style_anchor"></a></h3>
 </div>
 <div class="col-md-12">
   <p>We use panels to put HTML content in a box.</p>
   <p>Besides the <code>.panel</code> class a style variant should be added. Default variant is <code>.panel-default</code> (As used in the example).</p>
-  <div class="panel panel-default panel-no-header panel-guide">
-    <div class="panel-heading">
-      <h5 class="panel-title">
-        Example:
-      </h5>
-  </div>
-  <div class="panel-body">
-  <!--<h5>Example:</h5>-->
-  <div>
-  <div class="panel panel-default">
-    <div class="panel-body">
-        A default panel container with content - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    </div>
-  </div>
-</div>
-<div class="row no-gutter">
-  <div class="col-sm-12">
-    <pre>
-      <code class="html"><div class="panel panel-default">
+
+    <div class="panel panel-default panel-no-header panel-guide">
+        <div class="panel-heading">
+            <h5 class="panel-title">Example:</h5>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+
+                <!-- component example -->
+                <div class="col-sm-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            A default panel container with content - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </div>
+                    </div>
+                </div>
+                <!-- /component example -->
+
+                <!-- component markup -->
+                <div class="col-sm-12">
+
+<pre>
+<code class="html"><div class="panel panel-default">
   <div class="panel-body">
       A default panel container with content - Lorem ipsum dolor sit amet, consectetur adipiscing elit,
       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
   </div>
 </div></code>
-          </pre>
+</pre>
+
+                </div>
+                <!-- /component markup -->
+
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
 
+
+<!-- PanelHeaderandFooter -->
 <div class="col-md-12">
     <h3 class="underlined">Panel - Header and Footer<a name="PanelHeaderandFooter" class="style_anchor"></a></h3>
 </div>
 <div class="col-md-12">
-                                                                    <p><label>Panel header:</label> A heading container can be added to the panel with <code>.panel-heading</code>. To make the text stand out a h4 with a .panel-title class can be applied (See example below).</p>
-                           <p><label>Panel footer:</label> If needed this can be added through the <code>.panel-footer</code>. It is generally used to add buttons or links to the panel.</p>
-                                                                <div class="panel panel-default panel-no-header panel-guide">
-                                    <div class="panel-heading">
-                                                                                <h5 class="panel-title">
-                                            Example:
-                                        </h5>
-                                                                            </div>
-                                    <div class="panel-body">
-                                        <!--<h5>Example:</h5>-->
-                                        <div>
-<!-- Panel with Header and a Footer-->
-<div class="panel panel-default">
-    <div class="panel-heading">
-         <h4 class="panel-title">Panel header (h4)</h4>
-    </div>
+    <p><label>Panel header:</label> A heading container can be added to the panel with <code>.panel-heading</code>. To make the text stand out a h4 with a .panel-title class can be applied (See example below).</p>
+    <p><label>Panel footer:</label> If needed this can be added through the <code>.panel-footer</code>. It is generally used to add buttons or links to the panel.</p>
 
-    <div class="panel-body">
-        ...
-    </div>
 
-    <div class="panel-footer">
-        <button class="btn btn-default" type="button">Button in panel footer</button>
-    </div>
-</div></div>
-                                                                                                                        <div class="row no-gutter">
-                                            <div class="col-sm-12">
+    <div class="panel panel-default panel-no-header panel-guide">
+        <div class="panel-heading">
+            <h5 class="panel-title">Example:</h5>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+
+                <!-- component example -->
+                <div class="col-sm-12">
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                             <h4 class="panel-title">Panel header (h4)</h4>
+                        </div>
+
+                        <div class="panel-body">
+                            ...
+                        </div>
+
+                        <div class="panel-footer">
+                            <button class="btn btn-default" type="button">Button in panel footer</button>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /component example -->
+
+                <!-- component markup -->
+                <div class="col-sm-12">
+
 <pre>
-  <code class="html"><!-- Panel with Header and a Footer-->
+<code class="html"><!-- Panel with Header and a Footer-->
 <div class="panel panel-default">
   <div class="panel-heading">
        <h4 class="panel-title">Panel header (h4)</h4>
@@ -98,88 +117,158 @@ subMenu: [
       <button class="btn btn-default" type="button">Button in panel footer</button>
   </div>
 </div></code>
-            </pre>
+</pre>
+
+                </div>
+                <!-- /component markup -->
+
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
 
+
+<!-- Panelwithheadericon -->
+<div class="col-md-12">
+    <h3 class="underlined">Panel with header icon<a name="Panelwithheadericon" class="style_anchor"></a></h3>
+</div>
+<div class="col-md-12">
+    <p>When adding an icon to the header, make sure to keep a space before the title text</p>
+    <p>Since the icon itself is not relevant to screen-readers, the attribute <code>aria-hidden="true"</code> should be added (See more about this under WCAG.)</p>
+
+    <div class="panel panel-default panel-no-header panel-guide">
+        <div class="panel-heading">
+            <h5 class="panel-title">Example:</h5>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+
+                <!-- component example -->
+                <div class="col-sm-12">
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <i class="fa fa-check" aria-hidden="true"></i> Panel with icon
+                            </h4>
+                        </div>
+                        <div class="panel-body">
+                            ...
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- /component example -->
+
+                <!-- component markup -->
+                <div class="col-sm-12">
+
+<pre>
+<code class="html"><!-- Panel with a header icon -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+         <h4 class="panel-title">
+            <i class="fa fa-check" aria-hidden="true"></i> Panel with icon
+         </h4>
+    </div>
+
+    <div class="panel-body">
+        ...
+    </div>
+</div></code>
+</pre>
+
+                </div>
+                <!-- /component markup -->
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Panelvariations -->
 <div class="col-md-12">
   <h3 class="underlined">Panel variations<a name="Panelvariations" class="style_anchor"></a></h3>
 </div>
 <div class="col-md-12">
-                                                                    <p>Possible style variation for the panels.</p>
-                                                                <div class="panel panel-default panel-no-header panel-guide">
-                                    <div class="panel-heading">
-                                                                                <h5 class="panel-title">
-                                            Example:
-                                        </h5>
-                                                                            </div>
-                                    <div class="panel-body">
-                                        <!--<h5>Example:</h5>-->
-                                        <div>
-<!-- Panel - No variant -->
-<div class="panel">
-    <div class="panel-heading">
-         <h4 class="panel-title"><i class="fa fa-check" aria-hidden="true"></i> panel (no variation class)</h4>
-    </div>
-    <div class="panel-body"><p>...</p></div>
-</div>
-
-<!-- Panel-default -->
-<div class="panel panel-default">
-    <div class="panel-heading">
-         <h4 class="panel-title"><i class="fa fa-check" aria-hidden="true"></i> panel panel-default</h4>
-    </div>
-    <div class="panel-body"><p>...</p></div>
-</div>
+    <p>Possible style variation for the panels.</p>
 
 
-<!-- Panel-primary -->
-<div class="panel panel-primary">
-    <div class="panel-heading">
-         <h4 class="panel-title"><i class="fa fa-check" aria-hidden="true"></i> panel panel-primary</h4>
-    </div>
-    <div class="panel-body"><p>...</p></div>
-</div>
+    <div class="panel panel-default panel-no-header panel-guide">
+        <div class="panel-heading">
+            <h5 class="panel-title">Example:</h5>
+        </div>
+        <div class="panel-body">
+            <div class="row">
 
+                <!-- component example -->
+                <div class="col-sm-12">
+                    <!-- Panel - No variant -->
+                    <div class="panel">
+                        <div class="panel-heading">
+                             <h4 class="panel-title"><i class="fa fa-check" aria-hidden="true"></i> panel (no variation class)</h4>
+                        </div>
+                        <div class="panel-body"><p>...</p></div>
+                    </div>
 
-<!-- Panel-secondary -->
-<div class="panel panel-secondary">
-    <div class="panel-heading">
-         <h4 class="panel-title"><i class="fa fa-check" aria-hidden="true"></i> panel panel-secondary</h4>
-    </div>
-    <div class="panel-body"><p>...</p></div>
-</div>
+                    <!-- Panel-default -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                             <h4 class="panel-title"><i class="fa fa-check" aria-hidden="true"></i> panel panel-default</h4>
+                        </div>
+                        <div class="panel-body"><p>...</p></div>
+                    </div>
 
-<!-- Panel-tertiary -->
-<div class="panel panel-tertiary">
-    <div class="panel-heading">
-         <h4 class="panel-title"><i class="fa fa-check" aria-hidden="true"></i> panel panel-tertiary</h4>
-    </div>
-    <div class="panel-body"><p>...</p></div>
-</div>
+                    <!-- Panel-primary -->
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                             <h4 class="panel-title"><i class="fa fa-check" aria-hidden="true"></i> panel panel-primary</h4>
+                        </div>
+                        <div class="panel-body"><p>...</p></div>
+                    </div>
 
-<!-- Panel-grey -->
-<div class="panel panel-grey">
-    <div class="panel-heading">
-         <h4 class="panel-title"><i class="fa fa-check" aria-hidden="true"></i> panel panel-grey</h4>
-    </div>
-    <div class="panel-body"><p>...</p></div>
-</div>
+                    <!-- Panel-secondary -->
+                    <div class="panel panel-secondary">
+                        <div class="panel-heading">
+                             <h4 class="panel-title"><i class="fa fa-check" aria-hidden="true"></i> panel panel-secondary</h4>
+                        </div>
+                        <div class="panel-body"><p>...</p></div>
+                    </div>
 
-<!-- Panel-danger -->
-<div class="panel panel-danger">
-    <div class="panel-heading">
-         <h4 class="panel-title"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> panel panel-danger</h4>
-    </div>
-    <div class="panel-body"><p>...</p></div>
-</div></div>
-<div class="row no-gutter">
-  <div class="col-sm-12">
+                    <!-- Panel-tertiary -->
+                    <div class="panel panel-tertiary">
+                        <div class="panel-heading">
+                             <h4 class="panel-title"><i class="fa fa-check" aria-hidden="true"></i> panel panel-tertiary</h4>
+                        </div>
+                        <div class="panel-body"><p>...</p></div>
+                    </div>
+
+                    <!-- Panel-grey -->
+                    <div class="panel panel-grey">
+                        <div class="panel-heading">
+                             <h4 class="panel-title"><i class="fa fa-check" aria-hidden="true"></i> panel panel-grey</h4>
+                        </div>
+                        <div class="panel-body"><p>...</p></div>
+                    </div>
+
+                    <!-- Panel-danger -->
+                    <div class="panel panel-danger">
+                        <div class="panel-heading">
+                             <h4 class="panel-title"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> panel panel-danger</h4>
+                        </div>
+                        <div class="panel-body"><p>...</p></div>
+                    </div>
+
+                </div>
+                <!-- /component example -->
+
+                <!-- component markup -->
+                <div class="col-sm-12">
+
 <pre>
-  <code class="html"><!-- Panel-primary -->
+<code class="html"><!-- Panel-primary -->
 <div class="panel panel-primary">
     <div class="panel-heading">
          <h4 class="panel-title"><i class="fa fa-check" aria-hidden="true"></i> panel panel-primary</h4>
@@ -187,80 +276,90 @@ subMenu: [
     <div class="panel-body"><p>...</p></div>
 </div></code>
 </pre>
-</div>
-</div>
-</div>
-</div>
+
+                </div>
+                <!-- /component markup -->
+
+            </div>
+        </div>
+    </div>
 </div>
 
+
+<!-- Collapsiblepanel -->
 <div class="col-md-12">
   <h3 class="underlined">Collapsible panel<a name="Collapsiblepanel" class="style_anchor"></a></h3>
 </div>
 <div class="col-md-12">
-                                                                    <p>One of the often used elements is the collapsible panel. This type of panel has a <code>.toggle_collapse</code> button (an arrow at the right side) and the panel-body is placed within a div with <code>.panel-collapse</code>.</p>
-                    <p><b>Toggle-button:</b>
-                    </p><ul>
-                        <li>Include a <code>aria-label</code> or a <code>.sr-only</code> element to indicate what this does (ie. "Open stamkort info"). This is important to apply since the toggle-button is only an icon and by this does not have any descriptive text.</li>
-                        <li>The <code>aria-haspopup</code> on the button indicates that a popup i available. This is important to include because the panel-body is hidden from screen-readers when it is collapsed.</li>
-                    </ul>
-                    <p></p>
-                    <p><b>Panel-collapse:</b>
-                    </p><ul>
-                        <li>Use the <code>aria-label</code> on the panel-collapse to provide an accessible label to indicate what the dropdown panel is about (ie. "Stamkort info").</li>
-                    </ul>
-                    <p></p>
-                    <p><b>Collapse variations:</b>
-                    </p><ul>
-                        <li>To set the panel body to be <b>open from start</b>. This is done by using <code>aria-expanded=true</code> on toggle and insert the class <b>in</b> on the <code>panel-collapse</code></li>
-                        <li>The basic collapsible panel is with an arrow as the toggle button - The <code>.fa-chevron-up</code> icon. This icon has the up/down arrow function on toggle. In case the panel body is open from start, this should be set to <code>.fa-chevron-down</code>.</li>
-                        <li>It is possible to apply another icon if needed (See example below).</li>
-                        <li>The basic collapsible panel has an arrow as the toggle button - The <code>.fa-chevron-up</code> icon. In case the panel body is open from start, remember to set <code>aria-expanded=true</code>. This will change the arrow to be facing downwards (rotated 180°)</li>
-                    </ul>
-                    <p></p>
-                                                                <div class="panel panel-default panel-no-header panel-guide">
-                                    <div class="panel-heading">
-                                                                                <h5 class="panel-title">
-                                            Example:
-                                        </h5>
-                                                                            </div>
-                                    <div class="panel-body">
-                                        <!--<h5>Example:</h5>-->
-                                        <div>
-<!-- Collapse panel example 1 -->
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title"><i class="fa fa-check" aria-hidden="true"></i>
-            Header title
-        </h4>
-        <a href="#" class="toggle_collapse" aria-haspopup="true" aria-expanded="false">
-            <span class="sr-only">Open collapsible panel</span>
-            <i class="fa fa-chevron-up" aria-hidden="true"></i>
-        </a>
-    </div>
-    <div class="panel-collapse collapse" aria-label="Some Info Panel">
-        <div class="panel-body"><p>...</p></div>
-    </div>
-</div>
+    <p>One of the often used elements is the collapsible panel. This type of panel has a <code>.toggle_collapse</code> button (an arrow at the right side) and the panel-body is placed within a div with <code>.panel-collapse</code>.</p>
+    <p><b>Toggle-button:</b>
+    <ul>
+        <li>Include a <code>aria-label</code> or a <code>.sr-only</code> element to indicate what this does (ie. "Open stamkort info"). This is important to apply since the toggle-button is only an icon and by this does not have any descriptive text.</li>
+        <li>The <code>aria-haspopup</code> on the button indicates that a popup i available. This is important to include because the panel-body is hidden from screen-readers when it is collapsed.</li>
+    </ul>
+    </p>
+    <p><b>Panel-collapse:</b>
+    <ul>
+        <li>Use the <code>aria-label</code> on the panel-collapse to provide an accessible label to indicate what the dropdown panel is about (ie. "Stamkort info").</li>
+    </ul>
+    </p>
+    <p><b>Collapse variations:</b>
+    <ul>
+        <li>To set the panel body to be <b>open from start</b>. This is done by using <code>aria-expanded=true</code> on toggle and insert the class <b>in</b> on the <code>panel-collapse</code></li>
+        <li>The basic collapsible panel is with an arrow as the toggle button - The <code>.fa-chevron-up</code> icon. This icon has the up/down arrow function on toggle. In case the panel body is open from start, this should be set to <code>.fa-chevron-down</code>.</li>
+        <li>It is possible to apply another icon if needed (See example below).</li>
+        <li>The basic collapsible panel has an arrow as the toggle button - The <code>.fa-chevron-up</code> icon. In case the panel body is open from start, remember to set <code>aria-expanded=true</code>. This will change the arrow to be facing downwards (rotated 180&deg)</li>
+    </ul>
+    </p>
 
-<!-- Collapse panel example 2 -->
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title"><i class="fa fa-comment" aria-hidden="true"></i>
-            Header title - Alternate icon toggle
-        </h4>
-        <a href="#" class="toggle_collapse" aria-haspopup="true" aria-label="Open collapsible panel" aria-expanded="false">
-            <i class="fa fa-pencil" aria-hidden="true"></i>
-        </a>
-    </div>
-    <div class="panel-collapse collapse" aria-label="Some Info Panel">
-        <div class="panel-body"><p>...</p></div>
-    </div>
-</div>
-</div>
-                                                                                                                        <div class="row no-gutter">
-                                            <div class="col-sm-12">
+
+    <div class="panel panel-default panel-no-header panel-guide">
+        <div class="panel-heading">
+            <h5 class="panel-title">Example:</h5>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+
+                <!-- component example -->
+                <div class="col-sm-12">
+                    <!-- Collapse panel example 1 -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><i class="fa fa-check" aria-hidden="true"></i>
+                                Header title
+                            </h4>
+                            <a href="#" class="toggle_collapse" aria-haspopup="true" aria-expanded="false">
+                                <span class="sr-only">Open collapsible panel</span>
+                                <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="panel-collapse collapse" aria-label="Some Info Panel">
+                            <div class="panel-body"><p>...</p></div>
+                        </div>
+                    </div>
+
+                    <!-- Collapse panel example 2 -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><i class="fa fa-comment" aria-hidden="true"></i>
+                                Header title - Alternate icon toggle
+                            </h4>
+                            <a href="#" class="toggle_collapse" aria-haspopup="true" aria-label="Open collapsible panel" aria-expanded="false">
+                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="panel-collapse collapse" aria-label="Some Info Panel">
+                            <div class="panel-body"><p>...</p></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /component example -->
+
+                <!-- component markup -->
+                <div class="col-sm-12">
+
 <pre>
-  <code class="html"><!-- Collapse panel example 1 -->
+<code class="html"><!-- Collapse panel example 1 -->
 <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title"><i class="fa fa-check" aria-hidden="true"></i>
@@ -291,11 +390,17 @@ subMenu: [
     </div>
 </div></code>
 </pre>
+
+                </div>
+                <!-- /component markup -->
+
+            </div>
+        </div>
+    </div>
 </div>
-</div>
-</div>
-</div>
-</div>
+
+
+
 
 <div class="col-md-12">
     <h3 class="underlined">Panel with nested panels<a name="Panelwithnestedpanels" class="style_anchor"></a></h3>
