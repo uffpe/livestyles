@@ -1,5 +1,5 @@
 ---
-title: "Container / Panels"
+title: "Containers"
 layout: "default"
 menuIcon: "id-card-o"
 menuOrder: "030"
@@ -13,6 +13,7 @@ subMenu: [
   {name:"Selection panels", link: "Selectionpanels"},
   {name:"Selection panels variations", link: "Selectionpanelvariations"},
   {name:"Panel - Messages", link: "PanelMessages"},
+  {name:"Wells", link: "Wells"},
 ]
 ---
 
@@ -401,78 +402,82 @@ subMenu: [
 
 
 
-
+<!-- Panelwithnestedpanels -->
 <div class="col-md-12">
     <h3 class="underlined">Panel with nested panels<a name="Panelwithnestedpanels" class="style_anchor"></a></h3>
 </div>
 <div class="col-md-12">
-                                                                    <p>It is posible to have panels inside panels.
-                    </p><ul>
-                        <li>In the shown example the nested panel 2 is set to be open from start. This is done by using <code>aria-expanded=true</code> on toggle and insert the class <b>in</b> on the <code>panel-collapse</code></li>
-                        <li>To differentiate the inner panels these should use paragraph for the <code>panel-title</code> instead og the normal <b>H4</b> header.</li>
-                    </ul>
-                    <p></p>
-                                                                <div class="panel panel-default panel-no-header panel-guide">
-                                    <div class="panel-heading">
-                                                                                <h5 class="panel-title">
-                                            Example:
-                                        </h5>
-                                                                            </div>
-                                    <div class="panel-body">
-                                        <!--<h5>Example:</h5>-->
-                                        <div>
-<!-- Outer panel -->
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title"><i class="fa fa-list" aria-hidden="true"></i> Outer Panel - LongPanelTitleforRWDtesting</h4>
-        <a href="#" class="toggle_collapse" aria-haspopup="true" aria-expanded="false" aria-label="Open panel">
-            <i class="fa fa-chevron-down" aria-hidden="true"></i>
-        </a>
-    </div>
-    <div class="panel-collapse collapse" aria-label="Info Panel with panels">
-        <div class="panel-body">
-            <!-- Panel-group container -->
-            <div class="panel-group">
+    <p>It is posible to have panels inside panels.
+    </p><ul>
+        <li>In the shown example the nested panel 2 is set to be open from start. This is done by using <code>aria-expanded=true</code> on toggle and insert the class <b>in</b> on the <code>panel-collapse</code></li>
+        <li>To differentiate the inner panels these should use paragraph for the <code>panel-title</code> instead og the normal <b>H4</b> header.</li>
+    </ul>
 
-                <!-- Nested panel -->
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <p class="panel-title"><i class="fa fa-check" aria-hidden="true"></i>Inner panel 1</p>
-
-                        <a href="#" data-toggle="collapse" class="toggle_collapse" aria-label="Open inner panel 1" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                    <div class="panel-collapse collapse" aria-label="Info Panel">
-                        <div class="panel-body">...</div>
-                    </div>
-                </div>
-
-
-                <!-- Nested panel -->
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <p class="panel-title"><i class="fa fa-check" aria-hidden="true"></i>Inner panel 2 (Open from start)</p>
-
-                        <a href="#" data-toggle="collapse" class="toggle_collapse" aria-label="Open inner panel 2" aria-haspopup="true" aria-expanded="true">
-                            <i class="fa fa-chevron-up" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                    <div class="panel-collapse collapse in" aria-label="Info Panel">
-                        <div class="panel-body">...</div>
-                    </div>
-                </div>
-
-            </div>
+    <div class="panel panel-default panel-no-header panel-guide">
+        <div class="panel-heading">
+            <h5 class="panel-title">Example:</h5>
         </div>
-    </div>
-</div>
+        <div class="panel-body">
+            <div class="row">
 
-</div>
-                                                                                                                        <div class="row no-gutter">
-<div class="col-sm-12">
-  <pre>
-    <code class="html"><!-- Outer panel -->
+                <!-- component example -->
+                <div class="col-sm-12">
+
+                    <!-- Outer panel -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><i class="fa fa-list" aria-hidden="true"></i> Outer Panel - LongPanelTitleforRWDtesting</h4>
+                            <a href="#" class="toggle_collapse" aria-haspopup="true" aria-expanded="false" aria-label="Open panel">
+                                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="panel-collapse collapse" aria-label="Info Panel with panels">
+                            <div class="panel-body">
+                                <!-- Panel-group container -->
+                                <div class="panel-group">
+
+                                    <!-- Nested panel -->
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <p class="panel-title"><i class="fa fa-check" aria-hidden="true"></i>Inner panel 1</p>
+
+                                            <a href="#" data-toggle="collapse" class="toggle_collapse" aria-label="Open inner panel 1" aria-haspopup="true" aria-expanded="false">
+                                                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                        <div class="panel-collapse collapse" aria-label="Info Panel">
+                                            <div class="panel-body">...</div>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Nested panel -->
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <p class="panel-title"><i class="fa fa-check" aria-hidden="true"></i>Inner panel 2 (Open from start)</p>
+
+                                            <a href="#" data-toggle="collapse" class="toggle_collapse" aria-label="Open inner panel 2" aria-haspopup="true" aria-expanded="true">
+                                                <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                        <div class="panel-collapse collapse in" aria-label="Info Panel">
+                                            <div class="panel-body">...</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /component example -->
+
+                <!-- component markup -->
+                <div class="col-sm-12">
+
+<pre>
+<code class="html"><!-- Outer panel -->
 <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title"><i class="fa fa-list" aria-hidden="true"></i> Outer Panel - LongPanelTitleforRWDtesting</h4>
@@ -518,61 +523,73 @@ subMenu: [
         </div>
     </div>
 </div></code>
-  </pre>
-</div>
-</div>
-</div>
-</div>
+</pre>
+
+                </div>
+                <!-- /component markup -->
+
+            </div>
+        </div>
+    </div>
 </div>
 
+
+
+<!-- Selectionpanels -->
 <div class="col-md-12">
     <h3 class="underlined">Selection panels<a name="Selectionpanels" class="style_anchor"></a></h3>
 </div>
 <div class="col-md-12">
-                                                                    <p>This is a specific type of panel mainly used in modal dialogs such as Department selection. The panel has a link on the <code>panel-title</code> and a toggle collapse button to open the <code>panel-collapse</code> with ekstra information.</p>
-                            <p>
-                            </p><ul>
-                                <li>It is designed to have a link on the icon/title part and a toggle button for the collapsible panel-body. </li>
-                                <li>The element <code>.subtext</code> under the title is optional. </li>
-                                <li>In case there is no content in panel-body the <code>toggle_collapse</code> button and the <code>panel-collapse</code> can be omitted.</li>
-                            </ul>
-                            <p></p>
-                                                                <div class="panel panel-default panel-no-header panel-guide">
-                                    <div class="panel-heading">
-                                                                                <h5 class="panel-title">
-                                            Example:
-                                        </h5>
-                                                                            </div>
-                                    <div class="panel-body">
-                                        <!--<h5>Example:</h5>-->
-                                        <div>
-<!-- Selection: .panel-grey with subtext -->
-<div class="panel panel-grey panel_selector">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-            <a href="#juniorklub">
-                <i class="fa fa-home" aria-hidden="true"></i>
-                Juniorklub
-                <br><span class="subtext">This is subtext in small</span>
-                <span class="count">8 / 24</span>
-            </a>
-        </h4>
-        <a href="#" class="toggle_collapse" aria-haspopup="true" aria-expanded="false">
-            <span class="sr-only">Open this collapsible panel</span>
-            <i class="fa fa-chevron-up" aria-hidden="true"></i>
-        </a>
-    </div>
-    <div class="panel-collapse collapse" aria-label="Some Info Panel">
-        <div class="panel-body">
-        ...
+    <p>This is a specific type of panel mainly used in modal dialogs such as Department selection. The panel has a link on the <code>panel-title</code> and a toggle collapse button to open the <code>panel-collapse</code> with ekstra information.</p>
+    <p><ul>
+        <li>It is designed to have a link on the icon/title part and a toggle button for the collapsible panel-body. </li>
+        <li>The element <code>.subtext</code> under the title is optional. </li>
+        <li>In case there is no content in panel-body the <code>toggle_collapse</code> button and the <code>panel-collapse</code> can be omitted.</li>
+    </ul>
+    </p>
+
+
+    <div class="panel panel-default panel-no-header panel-guide">
+        <div class="panel-heading">
+            <h5 class="panel-title">Example:</h5>
         </div>
-    </div>
-</div>
-</div>
-                                                                                                                        <div class="row no-gutter">
-                                            <div class="col-sm-12">
+        <div class="panel-body">
+            <div class="row">
+
+                <!-- component example -->
+                <div class="col-sm-12">
+
+
+                    <div class="panel panel-grey panel_selector">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a href="#juniorklub">
+                                    <i class="fa fa-home" aria-hidden="true"></i>
+                                    Juniorklub
+                                    <br><span class="subtext">This is subtext in small</span>
+                                    <span class="count">8 / 24</span>
+                                </a>
+                            </h4>
+                            <a href="#" class="toggle_collapse" aria-haspopup="true" aria-expanded="false">
+                                <span class="sr-only">Open this collapsible panel</span>
+                                <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="panel-collapse collapse" aria-label="Some Info Panel">
+                            <div class="panel-body">
+                            ...
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /component example -->
+
+                <!-- component markup -->
+                <div class="col-sm-12">
+
 <pre>
-  <code class="html"><!-- Selection: .panel-grey with subtext -->
+<code class="html"><!-- Selection: .panel-grey with subtext -->
 <div class="panel panel-grey panel_selector">
   <div class="panel-heading">
       <h4 class="panel-title">
@@ -595,118 +612,130 @@ subMenu: [
   </div>
 </div></code>
 </pre>
-</div>
-</div>
-</div>
-</div>
+
+                </div>
+                <!-- /component markup -->
+
+            </div>
+        </div>
+    </div>
 </div>
 
+
+<!-- Selectionpanelvariations -->
 <div class="col-md-12">
   <h3 class="underlined">Selection panel variations<a name="Selectionpanelvariations" class="style_anchor"></a></h3>
 </div>
 <div class="col-md-12">
-                                                                    All the Panel variants can be used for selection panels (See under <b>Panel variations</b>). The following 3 is though mainly used with the <code>panel_selector</code>.
-                                                                <div class="panel panel-default panel-no-header panel-guide">
-                                    <div class="panel-heading">
-                                                                                <h5 class="panel-title">
-                                            Example:
-                                        </h5>
-                                                                            </div>
-                                    <div class="panel-body">
-                                        <!--<h5>Example:</h5>-->
-                                        <div>
-<!-- Panel-default -->
-<div class="panel panel-default panel_selector">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-            <a href="#juniorklub">
-                <i class="fa fa-home" aria-hidden="true"></i>
-                Panel-default (Joint departments)
-                <span class="count pull-right">8 / 24</span>
-            </a>
-        </h4>
-        <a href="#" class="toggle_collapse" aria-haspopup="true" aria-expanded="false">
-            <span class="sr-only">Open this collapsible panel</span>
-            <i class="fa fa-chevron-up" aria-hidden="true"></i>
-        </a>
-    </div>
-    <div class="panel-collapse collapse" aria-label="Some Info Panel">
-        <div class="panel-body">
-        ...
-        </div>
-    </div>
-</div>
-
-<!-- Panel-grey -->
-<div class="panel panel-grey panel_selector">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-            <a href="#juniorklub">
-                <i class="fa fa-home" aria-hidden="true"></i>
-                Panel-grey (Department)
-                <span class="count pull-right">8 / 24</span>
-            </a>
-        </h4>
-        <a href="#" class="toggle_collapse" aria-haspopup="true" aria-expanded="false">
-            <span class="sr-only">Open this collapsible panel</span>
-            <i class="fa fa-chevron-up" aria-hidden="true"></i>
-        </a>
-    </div>
-    <div class="panel-collapse collapse" aria-label="Some Info Panel">
-        <div class="panel-body">
-        ...
-        </div>
-    </div>
-</div>
-
-<!-- Panel-primary -->
-<div class="panel panel-primary panel_selector">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-            <a href="#juniorklub">
-                <i class="fa fa-home" aria-hidden="true"></i>
-                Panel-primary (Whole institution)
-                <span class="count pull-right">8 / 24</span>
-            </a>
-        </h4>
-        <a href="#" class="toggle_collapse" aria-haspopup="true" aria-expanded="false">
-            <span class="sr-only">Open this collapsible panel</span>
-            <i class="fa fa-chevron-up" aria-hidden="true"></i>
-        </a>
-    </div>
-    <div class="panel-collapse collapse" aria-label="Some Info Panel">
-        <div class="panel-body">
-        ...
-        </div>
-    </div>
-</div>
+    <p>All the Panel variants can be used for selection panels (See under <b>Panel variations</b>).
+        The following 3 is though mainly used with the <code>panel_selector</code>.</p>
 
 
-<!-- Panel-secondary --
-<div class="panel panel-secondary panel_selector">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-            <a href="#juniorklub">
-                <i class="fa fa-home" aria-hidden="true"></i>
-                Panel-secondary
-            </a>
-        </h4>
-        <a href="#" class="toggle_collapse" aria-haspopup="true" aria-expanded="false">
-            <span class="sr-only">Open this collapsible panel</span>
-            <i class="fa fa-chevron-up" aria-hidden="true"></i>
-        </a>
-    </div>
-    <div class="panel-collapse collapse" aria-label="Some Info Panel">
-        <div class="panel-body">
-        ...
+    <div class="panel panel-default panel-no-header panel-guide">
+        <div class="panel-heading">
+            <h5 class="panel-title">Example:</h5>
         </div>
-    </div>
-</div>
---></div>
-                                                                                                                        <div class="row no-gutter">
-<div class="col-sm-12">
-  <pre>
-    <code class="html"><!-- Panel-primary -->
+        <div class="panel-body">
+            <div class="row">
+
+                <!-- component example -->
+                <div class="col-sm-12">
+
+                    <!-- Panel-default -->
+                    <div class="panel panel-default panel_selector">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a href="#juniorklub">
+                                    <i class="fa fa-home" aria-hidden="true"></i>
+                                    Panel-default (Joint departments)
+                                    <span class="count pull-right">8 / 24</span>
+                                </a>
+                            </h4>
+                            <a href="#" class="toggle_collapse" aria-haspopup="true" aria-expanded="false">
+                                <span class="sr-only">Open this collapsible panel</span>
+                                <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="panel-collapse collapse" aria-label="Some Info Panel">
+                            <div class="panel-body">
+                            ...
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel-grey -->
+                    <div class="panel panel-grey panel_selector">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a href="#juniorklub">
+                                    <i class="fa fa-home" aria-hidden="true"></i>
+                                    Panel-grey (Department)
+                                    <span class="count pull-right">8 / 24</span>
+                                </a>
+                            </h4>
+                            <a href="#" class="toggle_collapse" aria-haspopup="true" aria-expanded="false">
+                                <span class="sr-only">Open this collapsible panel</span>
+                                <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="panel-collapse collapse" aria-label="Some Info Panel">
+                            <div class="panel-body">
+                            ...
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel-primary -->
+                    <div class="panel panel-primary panel_selector">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a href="#juniorklub">
+                                    <i class="fa fa-home" aria-hidden="true"></i>
+                                    Panel-primary (Whole institution)
+                                    <span class="count pull-right">8 / 24</span>
+                                </a>
+                            </h4>
+                            <a href="#" class="toggle_collapse" aria-haspopup="true" aria-expanded="false">
+                                <span class="sr-only">Open this collapsible panel</span>
+                                <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="panel-collapse collapse" aria-label="Some Info Panel">
+                            <div class="panel-body">
+                            ...
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel-secondary --
+                    <div class="panel panel-secondary panel_selector">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a href="#juniorklub">
+                                    <i class="fa fa-home" aria-hidden="true"></i>
+                                    Panel-secondary
+                                </a>
+                            </h4>
+                            <a href="#" class="toggle_collapse" aria-haspopup="true" aria-expanded="false">
+                                <span class="sr-only">Open this collapsible panel</span>
+                                <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="panel-collapse collapse" aria-label="Some Info Panel">
+                            <div class="panel-body">
+                            ...
+                            </div>
+                        </div>
+                    </div>
+                    -->
+                </div>
+                <!-- /component example -->
+
+                <!-- component markup -->
+                <div class="col-sm-12">
+
+<pre>
+<code class="html"><!-- Panel-primary -->
 <div class="panel panel-primary panel_selector">
   <div class="panel-heading">
       <h4 class="panel-title">
@@ -727,75 +756,88 @@ subMenu: [
       </div>
   </div>
 </div></code>
-  </pre>
-</div>
-</div>
-</div>
-</div>
+</pre>
+
+                </div>
+                <!-- /component markup -->
+
+            </div>
+        </div>
+    </div>
 </div>
 
+
+<!-- PanelMessages -->
 <div class="col-md-12">
   <h3 class="underlined">Panel - Messages<a name="PanelMessages" class="style_anchor"></a></h3>
 </div>
 <div class="col-md-12">
-                                                                    <p>This specific type of panels with is designed to be used on messages. It is intended to be used for conversational types of messages with either a <code>.panel-message-right</code> or a <code>.panel-message-left</code> variation.</p>
-                    <p>
-                    </p><ul>
-                        <li>Use the base class <code>panel-default</code> together with the left/right variation class</li>
-                        <li>To ensure that assistive technologies understands the purpose of the panels an <code>aria-label</code> with a short label for the specific message panel should be included.</li>
-                        <li><b>Date and time</b> can be included in the <code>panel-title</code> using a span with the class <code>panel-date</code>.</li>
-                        <li>A panel-footer with<b>list of attached files</b> can be included if files are present. See markup details for list-files under Guide menu item "Lists".</li>
-                    </ul>
-                    <p></p>
-                                                                <div class="panel panel-default panel-no-header panel-guide">
-                                    <div class="panel-heading">
-                                                                                <h5 class="panel-title">
-                                            Example:
-                                        </h5>
-                                                                            </div>
-                                    <div class="panel-body">
-                                        <!--<h5>Example:</h5>-->
-                                        <div>
-<!-- Message panel -->
-<div class="panel panel-default panel-message-right" aria-label="Message from Peter Parker">
-    <div class="panel-heading">
-         <h4 class="panel-title">Message panel right<span class="panel-date">16/05-2017 kl. 14:40</span></h4>
-    </div>
+    <p>This specific type of panels with is designed to be used on messages.
+        It is intended to be used for conversational types of messages with either a <code>.panel-message-right</code> or a <code>.panel-message-left</code> variation.</p>
+    <p>
+    </p><ul>
+        <li>Use the base class <code>panel-default</code> together with the left/right variation class</li>
+        <li>To ensure that assistive technologies understands the purpose of the panels an <code>aria-label</code> with a short label for the specific message panel should be included.</li>
+        <li><b>Date and time</b> can be included in the <code>panel-title</code> using a span with the class <code>panel-date</code>.</li>
+        <li>A panel-footer with<b>list of attached files</b> can be included if files are present. See markup details for list-files under Guide menu item "Lists".</li>
+    </ul>
+    <p></p>
 
-    <div class="panel-body">
-        ...
-    </div>
 
-    <div class="panel-footer">
-        <div class="list-group list-files">
-            <a href="#" class="list-group-item" data-id="" title="Download this file" onclick="...">
-                <i class="fa fa-download" aria-hidden="true"></i>
-                <span class="file-title">File-title-A.pdf</span>
-                <span class="file-info">(0.750 mb)</span>
-            </a>
-            <a href="#" class="list-group-item" data-id="" title="Download this file" onclick="...">
-                <i class="fa fa-download" aria-hidden="true"></i>
-                <span class="file-title">The title on file B.pdf</span>
-                <span class="file-info">(3.422 mb)</span>
-            </a>
+    <div class="panel panel-default panel-no-header panel-guide">
+        <div class="panel-heading">
+            <h5 class="panel-title">Example:</h5>
         </div>
-    </div>
-</div>
-<!-- Message panel -->
-<div class="panel panel-default panel-message-left" aria-label="Message from Clark Kent">
-    <div class="panel-heading">
-         <h4 class="panel-title">Message panel left (No attachments)<span class="panel-date">16/05-2017 kl. 14:40</span></h4>
-    </div>
+        <div class="panel-body">
+            <div class="row">
 
-    <div class="panel-body">
-        ...
-    </div>
+                <!-- component example -->
+                <div class="col-sm-12">
 
-</div></div>
-                                                                                                                        <div class="row no-gutter">
-<div class="col-sm-12">
-  <pre>
-    <code class="html"><!-- Message panel -->
+                    <!-- Message panel -->
+                    <div class="panel panel-default panel-message-right" aria-label="Message from Peter Parker">
+                        <div class="panel-heading">
+                             <h4 class="panel-title">Message panel right<span class="panel-date">16/05-2017 kl. 14:40</span></h4>
+                        </div>
+
+                        <div class="panel-body">
+                            ...
+                        </div>
+
+                        <div class="panel-footer">
+                            <div class="list-group list-files">
+                                <a href="#" class="list-group-item" data-id="" title="Download this file" onclick="...">
+                                    <i class="fa fa-download" aria-hidden="true"></i>
+                                    <span class="file-title">File-title-A.pdf</span>
+                                    <span class="file-info">(0.750 mb)</span>
+                                </a>
+                                <a href="#" class="list-group-item" data-id="" title="Download this file" onclick="...">
+                                    <i class="fa fa-download" aria-hidden="true"></i>
+                                    <span class="file-title">The title on file B.pdf</span>
+                                    <span class="file-info">(3.422 mb)</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Message panel -->
+                    <div class="panel panel-default panel-message-left" aria-label="Message from Clark Kent">
+                        <div class="panel-heading">
+                             <h4 class="panel-title">Message panel left (No attachments)<span class="panel-date">16/05-2017 kl. 14:40</span></h4>
+                        </div>
+
+                        <div class="panel-body">
+                            ...
+                        </div>
+
+                    </div>
+                </div>
+                <!-- /component example -->
+
+                <!-- component markup -->
+                <div class="col-sm-12">
+
+<pre>
+<code class="html"><!-- Message panel -->
 <div class="panel panel-default panel-message-right" aria-label="Message from Peter Parker">
     <div class="panel-heading">
          <h4 class="panel-title">Message panel right<span class="panel-date">16/05-2017 kl. 14:40</span></h4>
@@ -820,9 +862,57 @@ subMenu: [
         </div>
     </div>
 </div></code>
-  </pre>
+</pre>
+
+                </div>
+                <!-- /component markup -->
+
+            </div>
+        </div>
+    </div>
 </div>
+
+
+<!-- Wells -->
+<div class="col-md-12">
+    <h3 class="underlined">Wells<a name="Wells" class="style_anchor"></a></h3>
 </div>
-</div>
-</div>
+<div class="col-md-12">
+
+    <p>Wells are another simple container to insert HTML content in a box.</p>
+    <p>Because light grey backgroud color it can be usefull for framing content. For instance as a visual frame enhancing content or visually grouping specific content inside the white panel-body of a panel.</p>
+
+
+    <div class="panel panel-default panel-no-header panel-guide">
+        <div class="panel-heading">
+            <h5 class="panel-title">Example:</h5>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+
+                <!-- component example -->
+                <div class="col-sm-12">
+
+                    <div class="well">
+                        A well container with content...
+                    </div>
+
+                </div>
+                <!-- /component example -->
+
+                <!-- component markup -->
+                <div class="col-sm-12">
+
+<pre>
+<code class="html"><div class="well">
+    A well container with content...
+</div></code>
+</pre>
+
+                </div>
+                <!-- /component markup -->
+
+            </div>
+        </div>
+    </div>
 </div>
