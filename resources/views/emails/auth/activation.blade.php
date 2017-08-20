@@ -1,5 +1,5 @@
 @component('mail::message')
-# Activate your accound
+# Activate your account.
 
 Thanks for signing up, please activate your account.
 
